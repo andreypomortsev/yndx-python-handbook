@@ -1,0 +1,10 @@
+pandas
+numpy
+requests
+
+# test modules
+pytest
+pytest-cov
+pytest-spec
+coverage
+flake8
