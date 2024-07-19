@@ -1,5 +1,4 @@
 import os
-import pytest
 from io import StringIO
 
 from tests import solution_wrapper
