@@ -21,7 +21,7 @@ def setup_function():
     solution_wrapper.wrapper(PATH_TO_TEST_FILE)
 
 
-from tests import wrapped_a
+from tests import wrapped_a # noqa: E402
 
 
 def test_print_output(monkeypatch):
