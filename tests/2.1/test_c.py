@@ -20,7 +20,7 @@ def setup_function():
     solution_wrapper.wrapper(PATH_TO_TEST_FILE)
 
 
-from tests import wrapped_c # noqa: E402
+from tests import wrapped_c  # noqa: E402
 
 
 def test_yndx_one(monkeypatch):

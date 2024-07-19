@@ -20,7 +20,7 @@ def setup_function():
     solution_wrapper.wrapper(PATH_TO_TEST_FILE)
 
 
-from tests import wrapped_b # noqa: E402
+from tests import wrapped_b  # noqa: E402
 
 
 def test_print_input_ann(monkeypatch):
