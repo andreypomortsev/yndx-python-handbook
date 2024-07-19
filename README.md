@@ -1,4 +1,5 @@
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
+![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 ## Решения задач из учебника [Основы Python](https://education.yandex.ru/handbook/python) от Яндекс
 
 _"Хендбук по Python поможет овладеть основным синтаксисом и принципами языка. Для этого не потребуется специальной подготовки — достаточно знаний по информатике, логике и математике на уровне школьной программы. Кроме основных конструкций в учебнике рассмотрены разные подходы к программированию, реализованные на Python."_ **Яндекс**
