@@ -1,5 +1,6 @@
 [run]
-source = tests
+source = 
+    tests
 
 omit = 
     test*
