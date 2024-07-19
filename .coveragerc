@@ -1,0 +1,11 @@
+[run]
+source = tests
+
+omit = 
+    test*
+    *__init__*
+    solution_wrapper*
+
+[report]
+show_missing = True
+fail_under = 85
