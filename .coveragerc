@@ -1,0 +1,13 @@
+[run]
+source = 
+    tests
+
+omit =
+    conftest*
+    test*
+    *__init__*
+    solution_wrapper*
+
+[report]
+show_missing = True
+fail_under = 100
