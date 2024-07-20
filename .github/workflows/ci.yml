@@ -1,12 +1,6 @@
-name: CI
+name: Tests
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   build:
@@ -31,7 +25,7 @@ jobs:
 
       - name: Run Pytest with Coverage
         run:
-          pytest --cov-config=.coveragerc --cov-report=xml --spec
+          pytest --cov --cov-config=.coveragerc --cov-report=xml
         env:
           CI: true
 
@@ -39,4 +33,7 @@ jobs:
         uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage.xml
+          files: ./coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
