@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
+[![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 ## Решения задач из учебника [Основы Python](https://education.yandex.ru/handbook/python) от Яндекс
 
