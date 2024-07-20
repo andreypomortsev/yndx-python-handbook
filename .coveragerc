@@ -2,7 +2,8 @@
 source = 
     tests
 
-omit = 
+omit =
+    conftest*
     test*
     *__init__*
     solution_wrapper*
