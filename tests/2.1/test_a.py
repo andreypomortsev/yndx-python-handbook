@@ -1,4 +1,5 @@
 import os
+import importlib
 from io import StringIO
 
 from tests import solution_wrapper
@@ -16,12 +17,13 @@ def setup_function():
     # Получаем имя тестируемого файла
     tested_file_name = current_file_name.split("_")[-1]
     PATH_TO_TEST_FILE = os.path.join(current_dir, tested_file_name)
-
+    print("RUN")
     # Оборачиваем тестируемый файл в функцию main
     solution_wrapper.wrapper(PATH_TO_TEST_FILE)
 
-
-from test import wrapped_a  # noqa: E402
+    # Динамически импортируем wrapped_a после создания
+    global wrapped_a
+    wrapped_a = importlib.import_module("tests.wrapped_a")
 
 
 def test_print_output(monkeypatch):
@@ -44,7 +46,3 @@ def test_code_statement():
             "print('Привет, Яндекс!')\n",
         }
         assert line in expected_output
-
-
-# Удаляем временный файл
-# os.remove(os.path.join("tests", "wrapped_a.py"))

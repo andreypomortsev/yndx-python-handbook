@@ -1,4 +1,5 @@
 import os
+import importlib
 from io import StringIO
 
 from tests import solution_wrapper
@@ -19,8 +20,9 @@ def setup_function():
     # Оборачиваем тестируемый файл в функцию main
     solution_wrapper.wrapper(PATH_TO_TEST_FILE)
 
-
-from tests import wrapped_b  # noqa: E402
+    # Динамически импортируем wrapped_b после создания
+    global wrapped_b
+    wrapped_b = importlib.import_module("tests.wrapped_b")
 
 
 def test_print_input_ann(monkeypatch):

@@ -1,4 +1,5 @@
 import os
+import importlib
 from io import StringIO
 
 from tests import solution_wrapper
@@ -19,8 +20,9 @@ def setup_function():
     # Оборачиваем тестируемый файл в функцию main
     solution_wrapper.wrapper(PATH_TO_TEST_FILE)
 
-
-from tests import wrapped_c  # noqa: E402
+    # Динамически импортируем wrapped_c после создания
+    global wrapped_c
+    wrapped_c = importlib.import_module("tests.wrapped_c")
 
 
 def test_yndx_one(monkeypatch):
@@ -69,6 +71,7 @@ def test_print_empty_input(monkeypatch):
     expected_output = ""
 
     assert printed_output == expected_output
+
 
 # Удаляем временный файл
 # os.remove(os.path.join("tests", "wrapped_c.py"))
