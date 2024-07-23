@@ -1,7 +1,7 @@
 from io import StringIO
 
 
-def test_print_input_ann(monkeypatch, setup_environment):
+def test_first_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
     mock_input = StringIO("Ann")
@@ -17,7 +17,7 @@ def test_print_input_ann(monkeypatch, setup_environment):
     assert printed_output == expected_output
 
 
-def test_print_input_bob(monkeypatch, setup_environment):
+def test_second_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
     mock_input = StringIO("Bob")
