@@ -6,7 +6,8 @@ omit =
     conftest*
     test*
     *__init__*
-    solution_wrapper*
+    solutions/2.*
+    solutions/3.*
 
 [report]
 show_missing = True
