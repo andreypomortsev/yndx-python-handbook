@@ -1,7 +1,7 @@
 from io import StringIO
 
 
-def test_yndx_one(monkeypatch, setup_environment):
+def test_first_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
     mock_input = StringIO("2 + 2 = 4")
@@ -17,7 +17,7 @@ def test_yndx_one(monkeypatch, setup_environment):
     assert printed_output == expected_output
 
 
-def test_yndx_two(monkeypatch, setup_environment):
+def test_second_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
     mock_input = StringIO("2 * 2 = 4")
