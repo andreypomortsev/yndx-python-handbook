@@ -82,7 +82,9 @@ def setup_environment(
     tested_file_name = current_file_name.split("_")[-1]
 
     # Путь к тестируемому файлу для обертывания в функцию
-    path_to_test_file = os.path.join(abs_code_dir, file_dir, tested_file_name)
+    path_to_test_file = os.path.join(
+        abs_code_dir, "solutions", file_dir, tested_file_name
+    )
 
     # Оборачиваем тестируемый файл в функцию main, получаем путь файла
     path_to_the_wrapped_file = wrap_answer(path_to_test_file)
