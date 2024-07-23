@@ -6,5 +6,6 @@ requests
 pytest
 pytest-cov
 pytest-spec
+pytest-flake8
 coverage
 flake8
