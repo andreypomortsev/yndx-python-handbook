@@ -1,11 +1,14 @@
-import os
 import importlib
-import pytest
+import os
 import sys
-
-from typing import Generator
-from typing import Tuple
 from types import ModuleType
+from typing import Generator, Tuple
+
+import pytest
+from _pytest.main import Session
+
+from .utils import memory_limit, time_limit
+
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -105,10 +108,37 @@ def setup_environment(
 
 
 @pytest.hookimpl(tryfirst=True)
-def pytest_sessionfinish(session):
-    # Этот хук запускается после завершения тестирования
+def pytest_sessionfinish(session: Session):
+    """
+    Pytest hook, который запускается после завершения тестовой сессии.
+
+    Этот хук удаляет все временные файлы, созданные во время тестирования.
+
+    :param session: Текущая тестовая сессия Pytest.
+    """
     # Удаляем все временные файлы
     if hasattr(session.config, "wrapped_file_paths"):
         for path_to_the_wrapped_file in session.config.wrapped_file_paths:
             if os.path.exists(path_to_the_wrapped_file):
                 os.remove(path_to_the_wrapped_file)
+
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_call(item):
+    """
+    Pytest hook для применения ограничений по памяти и времени к тестам.
+
+    :param item: Тестовый элемент, к которому применяются ограничения.
+    """
+    memory_limit_marker = item.get_closest_marker("memory_limit")
+    time_limit_marker = item.get_closest_marker("time_limit")
+
+    if memory_limit_marker:
+        limit_mb = memory_limit_marker.args[0]
+        item.obj = memory_limit(limit_mb)(item.obj)
+
+    if time_limit_marker:
+        limit_seconds = time_limit_marker.args[0]
+        item.obj = time_limit(limit_seconds)(item.obj)
+
+    yield
