@@ -1,6 +1,12 @@
+import pytest
 from io import StringIO
 
+MEMORY_LIMIT = 64  # RAM в MB
+TIME_LIMIT = 1  # Временной лимит в сек
 
+
+@pytest.mark.memory_limit(MEMORY_LIMIT)
+@pytest.mark.time_limit(TIME_LIMIT)
 def test_first_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
@@ -17,6 +23,8 @@ def test_first_open_test(monkeypatch, setup_environment):
     assert printed_output == expected_output
 
 
+@pytest.mark.memory_limit(MEMORY_LIMIT)
+@pytest.mark.time_limit(TIME_LIMIT)
 def test_second_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
@@ -33,6 +41,8 @@ def test_second_open_test(monkeypatch, setup_environment):
     assert printed_output == expected_output
 
 
+@pytest.mark.memory_limit(MEMORY_LIMIT)
+@pytest.mark.time_limit(TIME_LIMIT)
 def test_print_input_bob_lower(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
@@ -49,6 +59,8 @@ def test_print_input_bob_lower(monkeypatch, setup_environment):
     assert printed_output == expected_output
 
 
+@pytest.mark.memory_limit(MEMORY_LIMIT)
+@pytest.mark.time_limit(TIME_LIMIT)
 def test_print_empty_input(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
@@ -65,6 +77,8 @@ def test_print_empty_input(monkeypatch, setup_environment):
     assert printed_output == expected_output
 
 
+@pytest.mark.memory_limit(MEMORY_LIMIT)
+@pytest.mark.time_limit(TIME_LIMIT)
 def test_print_whitespace_input(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
@@ -81,6 +95,8 @@ def test_print_whitespace_input(monkeypatch, setup_environment):
     assert printed_output == expected_output
 
 
+@pytest.mark.memory_limit(MEMORY_LIMIT)
+@pytest.mark.time_limit(TIME_LIMIT)
 def test_code_statement(setup_environment):
     _, PATH_TO_TEST_FILE = setup_environment
     with open(PATH_TO_TEST_FILE, encoding="UTF-8") as file:
