@@ -26,8 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Flake8 linting
-        run: |
-          pip install flake8
+        run:
           flake8 --max-line-length 79 .
 
       - name: Check Flake8 results
