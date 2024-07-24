@@ -10,15 +10,20 @@ TIME_LIMIT = 1  # Временной лимит в сек
 def test_first_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("Ann")
+    mock_input = StringIO("черешня\n2\n3\n10\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue().strip()
-    expected_output = "Как Вас зовут?\nПривет, Ann"
+    # Преобразование в лист помогает избежать проблемы с несколькими print
+    printed_output = mock_print.getvalue().rstrip().split()
+    expected_output = """Чек
+    черешня - 3кг - 2руб/кг
+    Итого: 6руб
+    Внесено: 10руб
+    Сдача: 4руб""".split()
 
     assert printed_output == expected_output
 
@@ -28,84 +33,84 @@ def test_first_open_test(monkeypatch, setup_environment):
 def test_second_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("Bob")
+    mock_input = StringIO("манго\n187\n43\n8041\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue().strip()
-    expected_output = "Как Вас зовут?\nПривет, Bob"
+    printed_output = mock_print.getvalue().rstrip().split()
+    expected_output = """Чек
+    манго - 43кг - 187руб/кг
+    Итого: 8041руб
+    Внесено: 8041руб
+    Сдача: 0руб""".split()
 
     assert printed_output == expected_output
 
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
-def test_print_input_bob_lower(monkeypatch, setup_environment):
+def test_briks_capitalized(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("bob")
+    mock_input = StringIO("Кирпичи\n187\n43\n108041\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue().strip()
-    expected_output = "Как Вас зовут?\nПривет, bob"
+    printed_output = mock_print.getvalue().rstrip().split()
+    expected_output = """Чек
+    Кирпичи - 43кг - 187руб/кг
+    Итого: 8041руб
+    Внесено: 108041руб
+    Сдача: 100000руб""".split()
 
     assert printed_output == expected_output
 
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
-def test_print_empty_input(monkeypatch, setup_environment):
+def test_zero_receipt(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("\n")
+    mock_input = StringIO("БаНаНы\n200\n0\n0\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue().strip("\n")
-    expected_output = "Как Вас зовут?\nПривет, "
+    printed_output = mock_print.getvalue().rstrip().split()
+    expected_output = """Чек
+    БаНаНы - 0кг - 200руб/кг
+    Итого: 0руб
+    Внесено: 0руб
+    Сдача: 0руб""".split()
 
     assert printed_output == expected_output
 
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
-def test_print_whitespace_input(monkeypatch, setup_environment):
+def test_two_words_product(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("   ")
+    mock_input = StringIO("Черная Смородина\n500\n1\n1000\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue().strip("\n")
-    expected_output = "Как Вас зовут?\nПривет,    "
+    printed_output = mock_print.getvalue().rstrip().split()
+    expected_output = """Чек
+    Черная Смородина - 1кг - 500руб/кг
+    Итого: 500руб
+    Внесено: 1000руб
+    Сдача: 500руб""".split()
 
     assert printed_output == expected_output
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
-def test_code_statement(setup_environment):
-    _, PATH_TO_TEST_FILE = setup_environment
-    with open(PATH_TO_TEST_FILE, encoding="UTF-8") as file:
-        lines = file.readlines()
-        line = "".join(lines)
-        expected_output = {
-            'print("Как Вас зовут?")\nprint(f"Привет, {input()}")',
-            "print('Как Вас зовут?')\nprint(f'Привет, {input()}')",
-            'print("Как Вас зовут?")\nprint(f"Привет, {input()}")\n',
-            "print('Как Вас зовут?')\nprint(f'Привет, {input()}')\n",
-        }
-        assert line in expected_output

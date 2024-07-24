@@ -10,7 +10,7 @@ TIME_LIMIT = 1  # Временной лимит в сек
 def test_first_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("Ann")
+    mock_input = StringIO("2\n3\n10\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
@@ -18,7 +18,7 @@ def test_first_open_test(monkeypatch, setup_environment):
     wrapped_module.main()
 
     printed_output = mock_print.getvalue().strip()
-    expected_output = "Как Вас зовут?\nПривет, Ann"
+    expected_output = "4"
 
     assert printed_output == expected_output
 
@@ -28,7 +28,7 @@ def test_first_open_test(monkeypatch, setup_environment):
 def test_second_open_test(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("Bob")
+    mock_input = StringIO("187\n43\n8041\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
@@ -36,17 +36,35 @@ def test_second_open_test(monkeypatch, setup_environment):
     wrapped_module.main()
 
     printed_output = mock_print.getvalue().strip()
-    expected_output = "Как Вас зовут?\nПривет, Bob"
+    expected_output = "0"
 
     assert printed_output == expected_output
 
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
-def test_print_input_bob_lower(monkeypatch, setup_environment):
+def test_zero_price(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("bob")
+    mock_input = StringIO("0\n43\n8041\n")
+    mock_print = StringIO()
+    monkeypatch.setattr("sys.stdin", mock_input)
+    monkeypatch.setattr("sys.stdout", mock_print)
+
+    wrapped_module.main()
+
+    printed_output = mock_print.getvalue().rstrip()
+    expected_output = "8041"
+
+    assert printed_output == expected_output
+
+
+@pytest.mark.memory_limit(MEMORY_LIMIT)
+@pytest.mark.time_limit(TIME_LIMIT)
+def test_zero_weight(monkeypatch, setup_environment):
+    wrapped_module, _ = setup_environment
+
+    mock_input = StringIO("10\n0\n1000\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
@@ -54,58 +72,25 @@ def test_print_input_bob_lower(monkeypatch, setup_environment):
     wrapped_module.main()
 
     printed_output = mock_print.getvalue().strip()
-    expected_output = "Как Вас зовут?\nПривет, bob"
+    expected_output = "1000"
 
     assert printed_output == expected_output
 
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
-def test_print_empty_input(monkeypatch, setup_environment):
+def test_big_nums(monkeypatch, setup_environment):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("\n")
+    mock_input = StringIO("1000000\n1000\n2000000000\n")
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue().strip("\n")
-    expected_output = "Как Вас зовут?\nПривет, "
+    printed_output = mock_print.getvalue().strip()
+    expected_output = "1000000000"
 
     assert printed_output == expected_output
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
-def test_print_whitespace_input(monkeypatch, setup_environment):
-    wrapped_module, _ = setup_environment
-
-    mock_input = StringIO("   ")
-    mock_print = StringIO()
-    monkeypatch.setattr("sys.stdin", mock_input)
-    monkeypatch.setattr("sys.stdout", mock_print)
-
-    wrapped_module.main()
-
-    printed_output = mock_print.getvalue().strip("\n")
-    expected_output = "Как Вас зовут?\nПривет,    "
-
-    assert printed_output == expected_output
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
-def test_code_statement(setup_environment):
-    _, PATH_TO_TEST_FILE = setup_environment
-    with open(PATH_TO_TEST_FILE, encoding="UTF-8") as file:
-        lines = file.readlines()
-        line = "".join(lines)
-        expected_output = {
-            'print("Как Вас зовут?")\nprint(f"Привет, {input()}")',
-            "print('Как Вас зовут?')\nprint(f'Привет, {input()}')",
-            'print("Как Вас зовут?")\nprint(f"Привет, {input()}")\n',
-            "print('Как Вас зовут?')\nprint(f'Привет, {input()}')\n",
-        }
-        assert line in expected_output
+    assert len(printed_output) == len(expected_output)

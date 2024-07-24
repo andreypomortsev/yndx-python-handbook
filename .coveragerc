@@ -4,8 +4,9 @@ source =
 
 omit =
     conftest*
-    test*
     *__init__*
+    utils*
+    test*
     solutions/2.*
     solutions/3.*
 
