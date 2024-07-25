@@ -4,8 +4,9 @@ weight = int(input())
 bill = int(input())
 total = int(price * weight)
 change = bill - total
-print(f"""Чек
+answer = f"""Чек
 {name} - {weight}кг - {price}руб/кг
 Итого: {total}руб
 Внесено: {bill}руб
-Сдача: {change}руб""")
+Сдача: {change}руб"""
+print(answer)

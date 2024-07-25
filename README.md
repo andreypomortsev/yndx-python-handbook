@@ -16,7 +16,7 @@ git clone https://github.com/andreypomortsev/yndx-python-handbook
 cd yndx-python-handbook
 ```
 #### Создаем виртуальную среду
-Все точно работает на **Python 3.12**
+Все точно работает на [**Python 3.12.4**](https://www.python.org/downloads/release/python-3124/)
 ```
 python3 -m venv .venv
 ```
@@ -59,7 +59,7 @@ pytest --cov
 ## Решения | Тесты
 
 <details>
-<summary>2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование</summary>
+<summary><h3>2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование</h3></summary>
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
@@ -69,6 +69,9 @@ pytest --cov
 | D. [Сдача](./solutions/2.1/d.py) | [✅](./tests/2.1/test_d.py) |
 | E. [Магазин](./solutions/2.1/e.py) | [✅](./tests/2.1/test_e.py) |
 | F. [Чек](./solutions/2.1/f.py) | [✅](./tests/2.1/test_f.py) |
+| G. [Делу — время, потехе — час](./solutions/2.1/g.py) | [✅](./tests/2.1/test_g.py) |
+| H. [Наказание](./solutions/2.1/h.py) | [✅](./tests/2.1/test_h.py) |
+| I. [Деловая колбаса](./solutions/2.1/i.py) | [✅](./tests/2.1/test_i.py) |
 
 </details>
 
