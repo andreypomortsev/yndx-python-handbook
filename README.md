@@ -16,7 +16,7 @@ git clone https://github.com/andreypomortsev/yndx-python-handbook
 cd yndx-python-handbook
 ```
 #### Создаем виртуальную среду
-Все точно работает на **Python 3.12**
+Все точно работает на [**Python 3.12.4**](https://www.python.org/downloads/release/python-3124/)
 ```
 python3 -m venv .venv
 ```
