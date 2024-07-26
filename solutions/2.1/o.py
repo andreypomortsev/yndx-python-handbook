@@ -17,4 +17,4 @@ if minutes >= 60:
 if hours > 23:
     hours %= 24
 
-print(f"{hours:02d}:{minutes:02d}")
+print(f"{hours:02d}:{minutes:02d}")  # noqa E231
