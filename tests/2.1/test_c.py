@@ -1,5 +1,7 @@
 import pytest
+
 from io import StringIO
+from tests.data.test_data_21 import c_test_data
 
 MEMORY_LIMIT = 64  # RAM в MB
 TIME_LIMIT = 1  # Временной лимит в сек
@@ -7,46 +9,17 @@ TIME_LIMIT = 1  # Временной лимит в сек
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
-def test_first_open_test(monkeypatch, setup_environment):
+@pytest.mark.parametrize(
+    "mock_input_text, expected_output, test_name",
+    c_test_data,
+    ids=[i[2] for i in c_test_data],  # Считываем названия тестов
+)
+def test_input_output(
+    monkeypatch, setup_environment, mock_input_text, expected_output, test_name
+):
     wrapped_module, _ = setup_environment
 
-    mock_input = StringIO("2 + 2 = 4")
-    mock_print = StringIO()
-    monkeypatch.setattr("sys.stdin", mock_input)
-    monkeypatch.setattr("sys.stdout", mock_print)
-
-    wrapped_module.main()
-
-    printed_output = mock_print.getvalue().strip()
-    expected_output = "2 + 2 = 4\n2 + 2 = 4\n2 + 2 = 4"
-
-    assert printed_output == expected_output
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
-def test_second_open_test(monkeypatch, setup_environment):
-    wrapped_module, _ = setup_environment
-
-    mock_input = StringIO("2 * 2 = 4")
-    mock_print = StringIO()
-    monkeypatch.setattr("sys.stdin", mock_input)
-    monkeypatch.setattr("sys.stdout", mock_print)
-
-    wrapped_module.main()
-
-    printed_output = mock_print.getvalue().strip()
-    expected_output = "2 * 2 = 4\n2 * 2 = 4\n2 * 2 = 4"
-
-    assert printed_output == expected_output
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
-def test_whitespace_input(monkeypatch, setup_environment):
-    wrapped_module, _ = setup_environment
-
-    mock_input = StringIO(" ")
+    mock_input = StringIO(mock_input_text)
     mock_print = StringIO()
     monkeypatch.setattr("sys.stdin", mock_input)
     monkeypatch.setattr("sys.stdout", mock_print)
@@ -54,24 +27,4 @@ def test_whitespace_input(monkeypatch, setup_environment):
     wrapped_module.main()
 
     printed_output = mock_print.getvalue()
-    expected_output = " \n \n \n"
-
-    assert printed_output == expected_output
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
-def test_print_empty_input(monkeypatch, setup_environment):
-    wrapped_module, _ = setup_environment
-
-    mock_input = StringIO("\n")
-    mock_print = StringIO()
-    monkeypatch.setattr("sys.stdin", mock_input)
-    monkeypatch.setattr("sys.stdout", mock_print)
-
-    wrapped_module.main()
-
-    printed_output = mock_print.getvalue().strip("\n")
-    expected_output = ""
-
-    assert printed_output == expected_output
+    assert printed_output in expected_output
