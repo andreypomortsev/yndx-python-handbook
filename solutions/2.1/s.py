@@ -19,6 +19,6 @@ receipt = f"""{"Чек".center(35, '=')}
 Итого:{' ' * total_spaces}{total}руб
 Внесено:{' ' * bill_spaces}{bill}руб
 Сдача:{' ' * change_spaces}{change}руб
-{'='*35}"""
+{'=' * 35}"""
 
 print(receipt)
