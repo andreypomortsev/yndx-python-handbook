@@ -27,4 +27,4 @@ def test_input_output(
     wrapped_module.main()
 
     printed_output = mock_print.getvalue()
-    assert printed_output in expected_output
+    assert printed_output == expected_output
