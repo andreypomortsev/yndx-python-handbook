@@ -4,3 +4,5 @@ exclude =
     .git,
     __pycache__,
     tests/data/*,
+ignore = 
+    E231
