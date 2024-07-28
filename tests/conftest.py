@@ -7,7 +7,7 @@ from typing import Generator, Tuple
 import pytest
 from _pytest.main import Session
 
-from .utils import memory_limit, time_limit, get_elephants_text
+from .utils import memory_limit, time_limit
 
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -105,11 +105,6 @@ def setup_environment(
     request.config.wrapped_file_paths.append(path_to_the_wrapped_file)
 
     yield wrapped_module, path_to_test_file
-
-
-@pytest.fixture
-def elephants():
-    return get_elephants_text()
 
 
 @pytest.hookimpl(tryfirst=True)
