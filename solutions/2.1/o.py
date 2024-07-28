@@ -4,11 +4,9 @@ delivery_time = int(input())
 
 if delivery_time < 60:
     minutes += delivery_time
-elif delivery_time > 60:
+else:
     hours += delivery_time // 60
     minutes += delivery_time % 60
-else:
-    hours += 1
 
 if minutes >= 60:
     hours += minutes // 60
