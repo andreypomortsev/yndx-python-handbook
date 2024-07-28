@@ -78,6 +78,11 @@ pytest --cov
 | M. [Дед Мороз и конфеты](./solutions/2.1/m.py) | [✅](./tests/2.1/test_m.py) |
 | N. [Шарики и ручки](./solutions/2.1/n.py) | [✅](./tests/2.1/test_n.py) |
 | O. [В ожидании доставки](./solutions/2.1/o.py) | [✅](./tests/2.1/test_o.py) |
+| P. [Доставка](./solutions/2.1/p.py) | [✅](./tests/2.1/test_p.py) |
+| Q. [Ошибка кассового аппарата](./solutions/2.1/q.py) | [✅](./tests/2.1/test_q.py) |
+| R. [Сдача 10](./solutions/2.1/r.py) | [✅](./tests/2.1/test_r.py) |
+| S. [Украшение чека](./solutions/2.1/s.py) | [✅](./tests/2.1/test_s.py) |
+| T. [Мухи отдельно, котлеты отдельно](./solutions/2.1/t.py) | [✅](./tests/2.1/test_t.py) |
 
 </details>
 

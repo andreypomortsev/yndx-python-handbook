@@ -1,7 +1,7 @@
 import pytest
 
 from io import StringIO
-from tests.data.test_data_21 import o_test_data
+from tests.data.test_data_21 import t_test_data
 
 MEMORY_LIMIT = 64  # RAM в MB
 TIME_LIMIT = 1  # Временной лимит в сек
@@ -11,8 +11,8 @@ TIME_LIMIT = 1  # Временной лимит в сек
 @pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "mock_input_text, expected_output, test_name",
-    o_test_data,
-    ids=[i[2] for i in o_test_data],  # Считываем названия тестов
+    t_test_data,
+    ids=[i[2] for i in t_test_data],  # Считываем названия тестов
 )
 def test_input_output(
     monkeypatch, setup_environment, mock_input_text, expected_output, test_name
