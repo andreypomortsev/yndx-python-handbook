@@ -1,8 +1,8 @@
 name = input()
-locker = int(input())
-group = locker // 100
-bed = locker // 10 % 10
-number = locker % 10
+locker = input()
+group = int(locker) // 100
+bed = int(locker) // 10 % 10
+number = int(locker) % 10
 answer = f"""Группа №{group}.
 {number}. {name}.
 Шкафчик: {locker}.
