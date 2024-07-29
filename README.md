@@ -73,6 +73,7 @@ pytest --cov
 | G. [Делу — время, потехе — час](./solutions/2.1/g.py) | [✅](./tests/2.1/test_g.py) |
 | H. [Наказание](./solutions/2.1/h.py) | [✅](./tests/2.1/test_h.py) |
 | I. [Деловая колбаса](./solutions/2.1/i.py) | [✅](./tests/2.1/test_i.py) |
+| J. [Детский сад — штаны на лямках](./solutions/2.1/j.py) | [✅](./tests/2.1/test_j.py) |
 | K. [Автоматизация игры](./solutions/2.1/k.py) | [✅](./tests/2.1/test_k.py) |
 | L. [Интересное сложение](./solutions/2.1/l.py) | [✅](./tests/2.1/test_l.py) |
 | M. [Дед Мороз и конфеты](./solutions/2.1/m.py) | [✅](./tests/2.1/test_m.py) |
