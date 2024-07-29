@@ -1,6 +1,7 @@
 [run]
 source = 
     tests
+    solutions
 
 omit =
     conftest*
