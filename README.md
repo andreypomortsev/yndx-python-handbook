@@ -86,6 +86,34 @@ pytest --cov
 | T. [Мухи отдельно, котлеты отдельно](./solutions/2.1/t.py) | [✅](./tests/2.1/test_t.py) |
 
 </details>
+<details>
+<summary><h3>2.2 Условный оператор</h3></summary>
+В этом параграфе для решения задач используется только пройденный материал из предыдущих параграфоф (2.1, 2.2).
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Просто здравствуй, просто как дела](./solutions/2.2/a.py) | [✅](./tests/2.2/test_a.py) |
+| B. [Кто быстрее?](./solutions/2.2/b.py) | [✅](./tests/2.2/test_b.py) |
+| C. [Кто быстрее на этот раз?](./solutions/2.2/c.py) | [✅](./tests/2.2/test_c.py) |
+| D. [Список победителей](./solutions/2.2/d.py) | [✅](./tests/2.2/test_d.py) |
+| E. [Яблоки](./solutions/2.2/e.py) | [✅](./tests/2.2/test_e.py) |
+| F. [Сила прокрастинации](./solutions/2.2/f.py) | [❌](./tests/2.2/test_f.py) |
+| G. [А роза упала на лапу Азора](./solutions/2.2/g.py) | [❌](./tests/2.2/test_g.py) |
+| H. [Зайка — 1](./solutions/2.2/h.py) | [❌](./tests/2.2/test_h.py) |
+| I. [Первому игроку приготовиться](./solutions/2.2/i.py) | [❌](./tests/2.2/test_i.py) |
+| J. [Лучшая защита — шифрование](./solutions/2.2/j.py) | [❌](./tests/2.2/test_j.py) |
+| K. [Красота спасёт мир](./solutions/2.2/k.py) | [❌](./tests/2.2/test_k.py) |
+| L. [Музыкальный инструмент](./solutions/2.2/l.py) | [❌](./tests/2.2/test_l.py) |
+| M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/m.py) | [❌](./tests/2.2/test_m.py) |
+| N. [Властелин Чисел: Две Башни](./solutions/2.2/n.py) | [❌](./tests/2.2/test_n.py) |
+| O. [Властелин Чисел: Возвращение Цезаря](./solutions/2.2/o.py) | [❌](./tests/2.2/test_o.py) |
+| P. [Легенды велогонок возвращаются: кто быстрее?](./solutions/2.2/p.py) | [❌](./tests/2.2/test_p.py) |
+| Q. [Корень зла](./solutions/2.2/q.py) | [❌](./tests/2.2/test_q.py) |
+| R. [Территория зла](./solutions/2.2/r.py) | [❌](./tests/2.2/test_r.py) |
+| S. [Автоматизация безопасности](./solutions/2.2/s.py) | [❌](./tests/2.2/test_s.py) |
+| T. [Зайка — 2](./solutions/2.2/t.py) | [❌](./tests/2.2/test_t.py) |
+
+</details>
 
 ## Автор
 
