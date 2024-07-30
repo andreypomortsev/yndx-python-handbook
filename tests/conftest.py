@@ -9,36 +9,46 @@ from _pytest.main import Session
 
 from .utils import memory_limit, time_limit
 
-
+# Добавить родительский каталог в системный путь
+# Это позволяет импортировать модули из родительского каталога
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 @pytest.fixture(scope="module")
 def wrap_answer() -> Generator:
-    def wrapper(file_name: str) -> None:
+    def wrapper(file_path: str, file_name: str) -> None:
         """
         Считывает решение из файла и оборачивает его в main функцию
         для получения информации о покрытии тестов во время тестирования.
 
         Args:
+            file_path (str): путь к файлу с решением.
             file_name (str): имя файла с решением.
-
         Returns:
             str: путь к обернутому файлу.
         """
-        with open(file_name, encoding="UTF-8") as file_in:
+        with open(file_path, encoding="UTF-8") as file_in:
             script = file_in.read()
 
-        letter = file_name.split(".py")[-2][-1]
+        # Добавляем отступы для обертывания в функцию
         indented_script = script.replace("\n", "\n    ").rstrip(" ")
-        wrapped_script = f"def main():\n    {indented_script}"  # noqa E231
 
+        # Обертываем считанный из файла код в функцию main
+        wrapped_script = f"def main():\n    {indented_script}"
+
+        # Определяем папку с тестами
         current_dir = os.path.dirname(__file__)
-        wrapped_file_name = f"wrapped_{letter}.py"
+
+        # Создаем имя решения обернутого в функцию
+        wrapped_file_name = f"wrapped_{file_name}.py"
+
+        # Создаем путь в которуй запишем файл для оценки покрытия тестами
         path_to_save = os.path.join(current_dir, wrapped_file_name)
 
         with open(path_to_save, "w", encoding="UTF-8") as file_out:
             file_out.write(wrapped_script)
+
+        # Возвращаем путь для его удаления файла после прохождения тестов
         return path_to_save
 
     return wrapper
@@ -49,8 +59,8 @@ def setup_environment(
     request, wrap_answer
 ) -> Generator[Tuple[ModuleType, str], None, None]:
     """
-    Фикстура для настройки тестовой среды, которая оборачивает тестируемый файл
-    в функцию main и динамически импортирует обернутый модуль.
+    Фикстура для настройки тестовой среды, которая оборачивает тестируемый
+    файл в функцию main и динамически импортирует обернутый модуль.
 
     Эта фикстура выполняет следующие действия:
     1. Определяет имя текущего файла и каталог тестов.
@@ -81,7 +91,7 @@ def setup_environment(
     # Название папки с тестируемым кодом
     file_dir = os.path.basename(test_dir)
 
-    # Получаем имя тестируемого файла
+    # Получаем имя тестируемого файла "test_a.py" -> "a.py"
     tested_file_name = current_file_name.split("_")[-1]
 
     # Путь к тестируемому файлу для обертывания в функцию
@@ -89,14 +99,14 @@ def setup_environment(
         abs_code_dir, "solutions", file_dir, tested_file_name
     )
 
-    # Оборачиваем тестируемый файл в функцию main, получаем путь файла
-    path_to_the_wrapped_file = wrap_answer(path_to_test_file)
+    # Получаем букву тестируемого файла "a.py" -> ["a", ""]
+    tested_file_name = tested_file_name.split(".py")[0]
 
-    # Получаем букву тестируемого файла
-    tested_file_letter = tested_file_name.split(".py")[-2][-1]
+    # Оборачиваем тестируемый файл в функцию main, получаем путь файла
+    path_to_the_wrapped_file = wrap_answer(path_to_test_file, tested_file_name)
 
     # Динамически импортируем wrapped файл после создания
-    wrapped_module_name = f"tests.wrapped_{tested_file_letter}"
+    wrapped_module_name = f"tests.wrapped_{tested_file_name}"
     wrapped_module = importlib.import_module(wrapped_module_name)
 
     # Добавляем пути временных файлов
