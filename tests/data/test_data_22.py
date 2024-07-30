@@ -94,3 +94,58 @@ b_test_data = [
     ("10.000000002\n10.000000001\n", "Петя\n", "float first bit greater"),
     ("10.000000001\n10.000000002\n", "Вася\n", "float second bit greater"),
 ]
+
+
+c_test_data = [
+    ("10\n5\n7\n", "Петя\n", "first open test"),
+    ("5\n7\n10\n", "Толя\n", "second open test"),
+    ("5\n10\n7\n", "Вася\n", "vasya wins"),
+    ("10.3\n10.2\n10.1\n", "Петя\n", "float petya wins"),
+    ("10.1\n10.2\n10.3\n", "Толя\n", "float tolya wins"),
+    ("10.1\n10.3\n10.2\n", "Вася\n", "float vasya wins"),
+    (
+        "0.0000000000000003\n0.0000000000000002\n0.0000000000000001\n",
+        "Петя\n",
+        "small float petya wins",
+    ),
+    (
+        "0.0000000000000001\n0.0000000000000002\n0.0000000000000003\n",
+        "Толя\n",
+        "small float tolya wins",
+    ),
+    (
+        "0.0000000000000001\n0.0000000000000003\n0.0000000000000002\n",
+        "Вася\n",
+        "small float vasya wins",
+    ),
+    (
+        "0.0000000000000003\n0\n0\n",
+        "Петя\n",
+        "small float and zeros petya wins",
+    ),
+    (
+        "0\n0\n0.0000000000000003\n",
+        "Толя\n",
+        "small float and zeros tolya wins",
+    ),
+    (
+        "0\n0.0000000000000003\n0\n",
+        "Вася\n",
+        "small float and zeros vasya wins",
+    ),
+    (
+        "100000000000000003\n100000000000000002\n100000000000000001\n",
+        "Петя\n",
+        "huge int petya wins",
+    ),
+    (
+        "100000000000000001\n100000000000000002\n100000000000000003\n",
+        "Толя\n",
+        "huge int tolya wins",
+    ),
+    (
+        "100000000000000001\n100000000000000003\n100000000000000002\n",
+        "Вася\n",
+        "huge int vasya wins",
+    ),
+]
