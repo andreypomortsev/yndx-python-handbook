@@ -80,3 +80,17 @@ a_test_data = [
         "double name bad",
     ),
 ]
+
+
+b_test_data = [
+    ("10\n5\n", "Петя\n", "first open test"),
+    ("5\n7\n", "Вася\n", "second open test"),
+    ("0\n5\n", "Вася\n", "zero speed one"),
+    ("10\n0\n", "Петя\n", "zero speed two"),
+    ("4.99\n4\n", "Петя\n", "float speed one"),
+    ("10\n10.01\n", "Вася\n", "float speed two"),
+    ("10.02\n10.01\n", "Петя\n", "float first greater"),
+    ("10.01\n10.02\n", "Вася\n", "float second greater"),
+    ("10.000000002\n10.000000001\n", "Петя\n", "float first bit greater"),
+    ("10.000000001\n10.000000002\n", "Вася\n", "float second bit greater"),
+]
