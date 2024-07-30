@@ -369,3 +369,18 @@ d_test_data = [
         "big float t p v",
     ),
 ]
+
+
+e_test_data = [
+    ("3\n5\n", "Вася\n", "first open test"),
+    ("10\n2\n", "Петя\n", "second open test"),
+    ("9\n3\n", "Ровно\n", "equal"),
+    ("0\n0\n", "Вася\n", "zero input"),
+    ("5\n9\n", "Вася\n", "min diff vasya"),
+    ("8\n1\n", "Петя\n", "min diff petya"),
+    ("1000000003\n1000000005\n", "Вася\n", "huge first open test"),
+    ("10000000010\n1000000002\n", "Петя\n", "huge second open test"),
+    ("1000000009\n1000000003\n", "Ровно\n", "huge equal"),
+    ("0\n9\n", "Вася\n", "zero to vasya"),
+    ("8\n0\n", "Петя\n", "zero to petya petya"),
+]
