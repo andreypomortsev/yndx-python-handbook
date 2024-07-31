@@ -97,11 +97,11 @@ pytest
 | C. [Кто быстрее на этот раз?](./solutions/2.2/c22.py) | [✅](./tests/2.2/test_c22.py) |
 | D. [Список победителей](./solutions/2.2/d22.py) | [✅](./tests/2.2/test_d22.py) |
 | E. [Яблоки](./solutions/2.2/e22.py) | [✅](./tests/2.2/test_e22.py) |
-| F. [Сила прокрастинации](./solutions/2.2/f22.py) | [❌](./tests/2.2/test_f22.py) |
-| G. [А роза упала на лапу Азора](./solutions/2.2/g22.py) | [❌](./tests/2.2/test_g22.py) |
-| H. [Зайка — 1](./solutions/2.2/h22.py) | [❌](./tests/2.2/test_h22.py) |
-| I. [Первому игроку приготовиться](./solutions/2.2/i22.py) | [❌](./tests/2.2/test_i22.py) |
-| J. [Лучшая защита — шифрование](./solutions/2.2/j22.py) | [❌](./tests/2.2/test_j22.py) |
+| F. [Сила прокрастинации](./solutions/2.2/f22.py) | [✅](./tests/2.2/test_f22.py) |
+| G. [А роза упала на лапу Азора](./solutions/2.2/g22.py) | [✅](./tests/2.2/test_g22.py) |
+| H. [Зайка — 1](./solutions/2.2/h22.py) | [✅](./tests/2.2/test_h22.py) |
+| I. [Первому игроку приготовиться](./solutions/2.2/i22.py) | [✅](./tests/2.2/test_i22.py) |
+| J. [Лучшая защита — шифрование](./solutions/2.2/j22.py) | [✅](./tests/2.2/test_j22.py) |
 | K. [Красота спасёт мир](./solutions/2.2/k22.py) | [❌](./tests/2.2/test_k22.py) |
 | L. [Музыкальный инструмент](./solutions/2.2/l22.py) | [❌](./tests/2.2/test_l22.py) |
 | M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/m22.py) | [❌](./tests/2.2/test_m22.py) |
