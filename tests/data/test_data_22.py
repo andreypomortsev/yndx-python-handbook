@@ -384,3 +384,91 @@ e_test_data = [
     ("0\n9\n", "Вася\n", "zero to vasya"),
     ("8\n0\n", "Петя\n", "zero to petya petya"),
 ]
+
+
+f_test_data = [
+    ("2022\n", "NO\n", "first open test"),
+    ("2020\n", "YES\n", "second open test"),
+    ("1900\n", "NO\n", "century without leap"),
+    ("2000\n", "YES\n", "century leap year"),
+    ("2100\n", "NO\n", "future non-leap century"),
+    ("2400\n", "YES\n", "future leap century"),
+    ("1800\n", "NO\n", "old century non-leap"),
+    ("1600\n", "YES\n", "old leap century"),
+    ("2024\n", "YES\n", "current leap year"),
+    ("2019\n", "NO\n", "recent non-leap year"),
+    ("0004\n", "YES\n", "second leap year"),
+    ("1\n", "NO\n", "the beginning"),
+]
+
+
+g_test_data = [
+    ("1234\n", "NO\n", "first open test"),
+    ("2332\n", "YES\n", "second open test"),
+    ("0001\n", "NO\n", "starts with zeros neg"),
+    ("1000\n", "NO\n", "ends with zeros neg"),
+    ("0990\n", "YES\n", "starts with zeros pos"),
+    ("7007\n", "YES\n", "middle zeros pos"),
+    ("3399\n", "NO\n", "different halves test"),
+    ("7177\n", "NO\n", "almost palindrome test"),
+    ("4141\n", "NO\n", "alternating digits test"),
+    ("0000\n", "YES\n", "all zeros pos"),
+    ("0300\n", "NO\n", "ends with zeros neg"),
+    ("1221\n", "YES\n", "common palindrome test"),
+    ("4004\n", "YES\n", "mirror palindrome test"),
+    ("1881\n", "YES\n", "eights and ones pos"),
+    ("7117\n", "YES\n", "reversed digits pos"),
+]
+
+
+h_test_data = [
+    ("березка елочка зайка волк березка\n", "YES\n", "first open test"),
+    (
+        "сосна сосна сосна елочка грибочки медведь\n",
+        "NO\n",
+        "second open test",
+    ),
+    (
+        "березка елочка волк березка "
+        "сосна сосна сосна елочка грибочки медведь "
+        "березка елочка волк березка "
+        "сосна сосна сосна елочка грибочки медведь "
+        "березка елочка волк березка "
+        "сосна сосна сосна елочка грибочки медведь "
+        "зайка сосна сосна сосна елочка грибочки медведь \n",
+        "YES\n",
+        "long line",
+    ),
+    ("березка елочка волк березка зайка\n", "YES\n", "last word"),
+    ("заика березка елочка волк березка\n", "NO\n", "misspelled"),
+]
+
+
+i_test_data = [
+    ("Вова\nАня\nБоря\n", "Аня\n", "first open test"),
+    ("Толя\nКоля\nВася\n", "Вася\n", "second open test"),
+    ("АHна\nАнна\nАнна\n", "АHна\n", "identical names"),
+    ("Гриша\nМиша\nДима\n", "Гриша\n", "names with different first letters"),
+    ("Яша\nЮра\nЯна\n", "Юра\n", "names with similar letters"),
+    ("Алекс\nАлла\nАльберт\n", "Алекс\n", "same first letters"),
+    ("Зина\nКатя\nЖеня\n", "Женя\n", "middle alphabet"),
+    ("Саша\nАня\nОля\n", "Аня\n", "mixed order"),
+    ("Лена\nАня\nВаля\n", "Аня\n", "alphabetical"),
+    ("Олег\nИгорь\nАртём\n", "Артём\n", "reverse order"),
+]
+
+
+j_test_data = [
+    ("123\n", "53\n", "first open test"),
+    ("741\n", "115\n", "second open test"),
+    ("111\n", "22\n", "all ones test"),
+    ("999\n", "1818\n", "max digits test"),
+    ("321\n", "53\n", "decreasing digits test"),
+    ("256\n", "117\n", "middle digit test"),
+    ("804\n", "84\n", "zero in middle test"),
+    ("500\n", "50\n", "leading zeros in sums test"),
+    ("111\n", "22\n", "all digits the same test"),
+    ("970\n", "167\n", "last digit zero test"),
+    ("000\n", "00\n", "all zeros test"),
+    ("001\n", "10\n", "leading zeros test"),
+]
