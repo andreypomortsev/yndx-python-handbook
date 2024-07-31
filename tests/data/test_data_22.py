@@ -396,5 +396,7 @@ f_test_data = [
     ("1800\n", "NO\n", "old century non-leap"),
     ("1600\n", "YES\n", "old leap century"),
     ("2024\n", "YES\n", "current leap year"),
-    ("2019\n", "NO\n", "recent non-leap year")
+    ("2019\n", "NO\n", "recent non-leap year"),
+    ("0004\n", "YES\n", "second leap year"),
+    ("1\n", "NO\n", "the beginning")
 ]
