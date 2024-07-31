@@ -384,3 +384,17 @@ e_test_data = [
     ("0\n9\n", "Вася\n", "zero to vasya"),
     ("8\n0\n", "Петя\n", "zero to petya petya"),
 ]
+
+
+f_test_data = [
+    ("2022\n", "NO\n", "first open test"),
+    ("2020\n", "YES\n", "second open test"),
+    ("1900\n", "NO\n", "century without leap"),
+    ("2000\n", "YES\n", "century leap year"),
+    ("2100\n", "NO\n", "future non-leap century"),
+    ("2400\n", "YES\n", "future leap century"),
+    ("1800\n", "NO\n", "old century non-leap"),
+    ("1600\n", "YES\n", "old leap century"),
+    ("2024\n", "YES\n", "current leap year"),
+    ("2019\n", "NO\n", "recent non-leap year")
+]
