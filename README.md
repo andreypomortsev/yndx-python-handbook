@@ -106,11 +106,11 @@ pytest
 | H. [Зайка — 1](./solutions/2.2/h22.py) | [✅](./tests/2.2/test_h22.py) |
 | I. [Первому игроку приготовиться](./solutions/2.2/i22.py) | [✅](./tests/2.2/test_i22.py) |
 | J. [Лучшая защита — шифрование](./solutions/2.2/j22.py) | [✅](./tests/2.2/test_j22.py) |
-| K. [Красота спасёт мир](./solutions/2.2/k22.py) | [❌](./tests/2.2/test_k22.py) |
-| L. [Музыкальный инструмент](./solutions/2.2/l22.py) | [❌](./tests/2.2/test_l22.py) |
-| M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/m22.py) | [❌](./tests/2.2/test_m22.py) |
-| N. [Властелин Чисел: Две Башни](./solutions/2.2/n22.py) | [❌](./tests/2.2/test_n22.py) |
-| O. [Властелин Чисел: Возвращение Цезаря](./solutions/2.2/o22.py) | [❌](./tests/2.2/test_o22.py) |
+| K. [Красота спасёт мир](./solutions/2.2/k22.py) | [✅](./tests/2.2/test_k22.py) |
+| L. [Музыкальный инструмент](./solutions/2.2/l22.py) | [✅](./tests/2.2/test_l22.py) |
+| M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/m22.py) | [✅](./tests/2.2/test_m22.py) |
+| N. [Властелин Чисел: Две Башни](./solutions/2.2/n22.py) | [✅](./tests/2.2/test_n22.py) |
+| O. [Властелин Чисел: Возвращение Цезаря](./solutions/2.2/o22.py) | [✅](./tests/2.2/test_o22.py) |
 | P. [Легенды велогонок возвращаются: кто быстрее?](./solutions/2.2/p22.py) | [❌](./tests/2.2/test_p22.py) |
 | Q. [Корень зла](./solutions/2.2/q22.py) | [❌](./tests/2.2/test_q22.py) |
 | R. [Территория зла](./solutions/2.2/r22.py) | [❌](./tests/2.2/test_r22.py) |
