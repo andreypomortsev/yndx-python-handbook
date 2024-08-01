@@ -472,3 +472,75 @@ j_test_data = [
     ("000\n", "00\n", "all zeros test"),
     ("001\n", "10\n", "leading zeros test"),
 ]
+
+
+k_test_data = [
+    ("123\n", "YES\n", "first open test"),
+    ("748\n", "NO\n", "second open test"),
+    ("321\n", "YES\n", "digits in descending order"),
+    ("921\n", "NO\n", "digits in descending order not beautiful"),
+    ("111\n", "YES\n", "same digits"),
+    ("555\n", "YES\n", "same digits middle condition still holds"),
+    ("532\n", "NO\n", "highest digit first, not beautiful"),
+    ("100\n", "NO\n", "edge case with small values and not beautiful"),
+]
+
+
+l_test_data = [
+    ("3\n3\n3\n", "YES\n", "first open test"),
+    ("1\n2\n3\n", "NO\n", "second open test"),
+    ("5\n5\n5\n", "YES\n", "equilateral triangle"),
+    ("2\n2\n3\n", "YES\n", "isosceles triangle"),
+    ("2\n3\n4\n", "YES\n", "scalene triangle"),
+    ("1\n1\n2\n", "NO\n", "not a triangle, sum equals third side"),
+    ("10\n1\n1\n", "NO\n", "not a triangle, one side much larger"),
+    ("0\n0\n0\n", "NO\n", "zero sides, invalid triangle"),
+    ("5\n10\n15\n", "NO\n", "degenerate case, sum equals third side"),
+    ("1000000\n1000000\n1000000\n", "YES\n", "large equilateral triangle"),
+]
+
+
+m_test_data = [
+    ("12\n13\n14\n", "1\n", "first open test"),
+    ("23\n13\n63\n", "3\n", "second open test"),
+    ("21\n22\n23\n", "2\n", "all first digits same"),
+    ("41\n43\n49\n", "4\n", "all first digits same, different middle digits"),
+    ("10\n20\n30\n", "0\n", "increasing first digits"),
+    ("59\n49\n39\n", "9\n", "decreasing first digits"),
+    ("77\n72\n77\n", "7\n", "two equal one bigger"),
+    ("88\n78\n88\n", "8\n", "two equal one smaller"),
+]
+
+
+n_test_data = [
+    ("103\n", "10 31\n", "first open test"),
+    ("787\n", "77 87\n", "second open test"),
+    ("567\n", "56 76\n", "digits in descending order"),
+    ("123\n", "12 32\n", "digits in ascending order"),
+    ("900\n", "90 90\n", "digit_three is 0, and digit_two is 0"),
+    ("505\n", "50 55\n", "digit_three > 0 and digit_two is 0"),
+    ("300\n", "30 30\n", "digit_three > 0, digit_two is 0, digit_one > 0"),
+    ("100\n", "10 10\n", "digit_three is 1 and others are 0"),
+    ("330\n", "30 33\n", "digit_two == digit_three"),
+    ("456\n", "45 65\n", "non-zero digits with ascending order"),
+]
+
+
+o_test_data = [
+    ("31\n11\n", "321\n", "first open test"),
+    ("49\n17\n", "911\n", "second open test"),
+    ("12\n34\n", "451\n", "simple ascending digits"),
+    ("98\n76\n", "956\n", "descending digits with no swaps needed"),
+    ("99\n99\n", "989\n", "maximum digits"),
+    ("10\n10\n", "110\n", "minimal non-zero digits"),
+    ("43\n56\n", "693\n", "mix of digits with different maximums"),
+    ("91\n19\n", "901\n", "mirrored digits"),
+    ("80\n70\n", "870\n", "leading zeros in tens place"),
+    ("12\n89\n", "901\n", "large difference between digits"),
+    ("56\n78\n", "835\n", "high middle digits"),
+    ("10\n20\n", "210\n", "zero in the units place"),
+    ("23\n12\n", "341\n", "reverse sorted digits"),
+    ("45\n67\n", "714\n", "close values with swapped digits"),
+    ("99\n10\n", "900\n", "large and small"),
+    ("74\n36\n", "703\n", "no change needed, different tens and units"),
+]
