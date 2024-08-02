@@ -1,6 +1,12 @@
-name: Tests
+name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -19,13 +25,27 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          - name: Run Flake8 linting
+          run: |
+            flake8 --max-line-length 79 .
+  
+      - name: Check Flake8 results
+        run: |
+          flake8_exit_status=$?
+          if [ $flake8_exit_status -ne 0 ]; then
+            echo "Linting failed with exit status $flake8_exit_status."
+            exit 1
+          fi
+
+      - name: Final linting status
+        run: echo "Linting passed."
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
       - name: Run Pytest with Coverage
         run:
-          pytest --cov --cov-config=.coveragerc --cov-report=xml
+          pytest --cov-report=xml
         env:
           CI: true
 
