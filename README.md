@@ -118,11 +118,42 @@ pytest --cov-report=html
 | M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/m22.py) | [✅](./tests/2.2/test_m22.py) |
 | N. [Властелин Чисел: Две Башни](./solutions/2.2/n22.py) | [✅](./tests/2.2/test_n22.py) |
 | O. [Властелин Чисел: Возвращение Цезаря](./solutions/2.2/o22.py) | [✅](./tests/2.2/test_o22.py) |
-| P. [Легенды велогонок возвращаются: кто быстрее?](./solutions/2.2/p22.py) | [❌](./tests/2.2/test_p22.py) |
-| Q. [Корень зла](./solutions/2.2/q22.py) | [❌](./tests/2.2/test_q22.py) |
-| R. [Территория зла](./solutions/2.2/r22.py) | [❌](./tests/2.2/test_r22.py) |
-| S. [Автоматизация безопасности](./solutions/2.2/s22.py) | [❌](./tests/2.2/test_s22.py) |
-| T. [Зайка — 2](./solutions/2.2/t22.py) | [❌](./tests/2.2/test_t22.py) |
+| P. [Легенды велогонок возвращаются: кто быстрее?](./solutions/2.2/p22.py) | [✅](./tests/2.2/test_p22.py) |
+| Q. [Корень зла](./solutions/2.2/q22.py) | [✅](./tests/2.2/test_q22.py) |
+| R. [Территория зла](./solutions/2.2/r22.py) | [✅](./tests/2.2/test_r22.py) |
+| S. [Автоматизация безопасности](./solutions/2.2/s22.py) | [✅](./tests/2.2/test_s22.py) |
+| T. [Зайка — 2](./solutions/2.2/t22.py) | [✅](./tests/2.2/test_t22.py) |
+
+</details>
+
+<details>
+<summary><h3>2.3 Циклы</h3></summary>
+В этом параграфе для решения задач используется только пройденный материал из предыдущих параграфоф (2.1 - 2.3).
+
+  #### [Тестовые данные для задач](./tests/data/test_data_23.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Раз, два, три! Ёлочка, гори!](./solutions/2.3/a23.py) | [❌](./tests/2.3/test_a23.py) |
+| B. [Зайка — 3](./solutions/2.3/b23.py) | [❌](./tests/2.3/test_b23.py) |
+| C. [Считалочка](./solutions/2.3/c23.py) | [❌](./tests/2.3/test_c23.py) |
+| D. [Считалочка 2.0](./solutions/2.3/d23.py) | [❌](./tests/2.3/test_d23.py) |
+| E. [Внимание! Акция!](./solutions/2.3/e23.py) | [❌](./tests/2.3/test_e23.py) |
+| F. [НОД](./solutions/2.3/f23.py) | [❌](./tests/2.3/test_f23.py) |
+| G. [НОК](./solutions/2.3/g23.py) | [❌](./tests/2.3/test_g23.py) |
+| H. [Излишняя автоматизация 2.0](./solutions/2.3/h23.py) | [❌](./tests/2.3/test_h23.py) |
+| I. [Факториал](./solutions/2.3/i23.py) | [❌](./tests/2.3/test_i23.py) |
+| J. [Маршрут построен](./solutions/2.3/j23.py) | [❌](./tests/2.3/test_j23.py) |
+| K. [Цифровая сумма](./solutions/2.3/k23.py) | [❌](./tests/2.3/test_k23.py) |
+| L. [Сильная цифра](./solutions/2.3/l23.py) | [❌](./tests/2.3/test_l23.py) |
+| M. [Первому игроку приготовиться 2.0](./solutions/2.3/m23.py) | [❌](./tests/2.3/test_m23.py) |
+| N. [Простая задача](./solutions/2.3/n23.py) | [❌](./tests/2.3/test_n23.py) |
+| O. [Зайка - 4](./solutions/2.3/o23.py) | [❌](./tests/2.3/test_o23.py) |
+| P. [А роза упала на лапу Азора 2.0](./solutions/2.3/p23.py) | [❌](./tests/2.3/test_p23.py) |
+| Q. [Чётная чистота](./solutions/2.3/q23.py) | [❌](./tests/2.3/test_q23.py) |
+| R. [Простая задача 2.0](./solutions/2.3/r23.py) | [❌](./tests/2.3/test_r23.py) |
+| S. [Игра в «Угадайку»](./solutions/2.3/s23.py) | [❌](./tests/2.3/test_s23.py) |
+| T. [Хайпанём немножечко!](./solutions/2.3/t23.py) | [❌](./tests/2.3/test_t23.py) |
 
 </details>
 
