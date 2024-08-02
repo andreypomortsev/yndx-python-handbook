@@ -1,3 +1,5 @@
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)](https://shields.io/)
+![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 ## Решения задач из учебника [Основы Python](https://education.yandex.ru/handbook/python) от Яндекс
@@ -41,6 +43,11 @@ pip3 install -r requirements
 ```
 pytest
 ```
+Тесты с отчетом в `html`:
+```
+pytest --cov-report=html
+```
+после прохождения тестов открываем файл: `htmlcov/index.html`
 
 Во время теста в папке `tests` будут созданы временные файлы `wrapped_*.py` которые удалятся после прохождения тестов.
 
