@@ -1,5 +1,6 @@
-[![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)](https://shields.io/)
+![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/andreypomortsev/yndx-python-handbook/main)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 ## Решения задач из учебника [Основы Python](https://education.yandex.ru/handbook/python) от Яндекс
@@ -134,11 +135,11 @@ pytest --cov-report=html
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Раз, два, три! Ёлочка, гори!](./solutions/2.3/a23.py) | [❌](./tests/2.3/test_a23.py) |
-| B. [Зайка — 3](./solutions/2.3/b23.py) | [❌](./tests/2.3/test_b23.py) |
-| C. [Считалочка](./solutions/2.3/c23.py) | [❌](./tests/2.3/test_c23.py) |
-| D. [Считалочка 2.0](./solutions/2.3/d23.py) | [❌](./tests/2.3/test_d23.py) |
-| E. [Внимание! Акция!](./solutions/2.3/e23.py) | [❌](./tests/2.3/test_e23.py) |
+| А. [Раз, два, три! Ёлочка, гори!](./solutions/2.3/a23.py) | [✅](./tests/2.3/test_a23.py) |
+| B. [Зайка — 3](./solutions/2.3/b23.py) | [✅](./tests/2.3/test_b23.py) |
+| C. [Считалочка](./solutions/2.3/c23.py) | [✅](./tests/2.3/test_c23.py) |
+| D. [Считалочка 2.0](./solutions/2.3/d23.py) | [✅](./tests/2.3/test_d23.py) |
+| E. [Внимание! Акция!](./solutions/2.3/e23.py) | [✅](./tests/2.3/test_e23.py) |
 | F. [НОД](./solutions/2.3/f23.py) | [❌](./tests/2.3/test_f23.py) |
 | G. [НОК](./solutions/2.3/g23.py) | [❌](./tests/2.3/test_g23.py) |
 | H. [Излишняя автоматизация 2.0](./solutions/2.3/h23.py) | [❌](./tests/2.3/test_h23.py) |

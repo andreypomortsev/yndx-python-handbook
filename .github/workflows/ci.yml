@@ -51,7 +51,7 @@ jobs:
           CI: true
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@6f9d2f5b5835a874f70e0b84f535ee438eb349c7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.xml
