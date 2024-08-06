@@ -152,11 +152,11 @@ pytest --cov-report=html
 | C. [Считалочка](./solutions/2.3/c23.py) | [✅](./tests/2.3/test_c23.py) |
 | D. [Считалочка 2.0](./solutions/2.3/d23.py) | [✅](./tests/2.3/test_d23.py) |
 | E. [Внимание! Акция!](./solutions/2.3/e23.py) | [✅](./tests/2.3/test_e23.py) |
-| F. [НОД](./solutions/2.3/f23.py) | [❌](./tests/2.3/test_f23.py) |
-| G. [НОК](./solutions/2.3/g23.py) | [❌](./tests/2.3/test_g23.py) |
-| H. [Излишняя автоматизация 2.0](./solutions/2.3/h23.py) | [❌](./tests/2.3/test_h23.py) |
-| I. [Факториал](./solutions/2.3/i23.py) | [❌](./tests/2.3/test_i23.py) |
-| J. [Маршрут построен](./solutions/2.3/j23.py) | [❌](./tests/2.3/test_j23.py) |
+| F. [НОД](./solutions/2.3/f23.py) | [✅](./tests/2.3/test_f23.py) |
+| G. [НОК](./solutions/2.3/g23.py) | [✅](./tests/2.3/test_g23.py) |
+| H. [Излишняя автоматизация 2.0](./solutions/2.3/h23.py) | [✅](./tests/2.3/test_h23.py) |
+| I. [Факториал](./solutions/2.3/i23.py) | [✅](./tests/2.3/test_i23.py) |
+| J. [Маршрут построен](./solutions/2.3/j23.py) | [✅](./tests/2.3/test_j23.py) |
 | K. [Цифровая сумма](./solutions/2.3/k23.py) | [❌](./tests/2.3/test_k23.py) |
 | L. [Сильная цифра](./solutions/2.3/l23.py) | [❌](./tests/2.3/test_l23.py) |
 | M. [Первому игроку приготовиться 2.0](./solutions/2.3/m23.py) | [❌](./tests/2.3/test_m23.py) |
