@@ -1,10 +1,10 @@
 x, y = 0, 0
-is_direction = False
+is_direction = True
 
 while (word := input()) != "СТОП":
     if is_direction:
         direction = word
-        is_direction = True
+        is_direction = False
     else:
         steps = int(word)
         match direction:
@@ -16,6 +16,6 @@ while (word := input()) != "СТОП":
                 y += steps
             case "ЗАПАД":
                 y -= steps
-        is_direction = False
+        is_direction = True
 
 print(x, y, sep="\n")
