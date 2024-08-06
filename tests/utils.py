@@ -81,11 +81,11 @@ def assert_equal(
     :param monkeypatch: Фикстура pytest, используемая для замены ввода и вывода
     :param mock_input_text: Входной текст для имитации ввода пользователя.
     :param expected_output: Ожидаемый текст вывода для сравнения.
-    :param equal: Флаг, определяющий способ сравнения. Если True,
-        проверяется равенство фактического и ожидаемого вывода. Если False,
+    :param is_set: Флаг, определяющий способ сравнения. Если False,
+        проверяется равенство фактического и ожидаемого вывода. Если True,
         проверяется, что фактический вывод содержится в ожидаемом.
-    :raises AssertionError: Если фактический вывод не соответствует ожидаемому
-        (или не содержится в ожидаемом, если equal=False).
+    :raises AssertionError: Если фактический вывод не содержится в ожидаемом
+        (или не соответствует ожидаемому, если is_set=False).
     """
     mock_input = StringIO(mock_input_text)
     mock_print = StringIO()
@@ -96,6 +96,12 @@ def assert_equal(
 
     printed_output = mock_print.getvalue()
     if is_set:
-        assert printed_output in expected_output
+        assert printed_output in expected_output, (
+            f"\nExpected output:\n{expected_output}\n\n"
+            f"Printed output:\n{printed_output}"
+        )
     else:
-        assert printed_output == expected_output
+        assert printed_output == expected_output, (
+            f"\nExpected output:\n{expected_output}\n\n"
+            f"Printed output:\n{printed_output}"
+        )
