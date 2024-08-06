@@ -1,6 +1,6 @@
 import pytest
 
-from tests.data.test_data_21 import n_test_data
+from tests.data.test_data_23 import n_test_data
 from tests.utils import assert_equal
 
 MEMORY_LIMIT = 64  # RAM в MB

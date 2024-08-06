@@ -1,4 +1,5 @@
 import signal
+from io import StringIO
 from types import FrameType
 from typing import Callable, Any
 
@@ -64,3 +65,37 @@ def time_limit(limit_seconds: int):
         return wrapper
 
     return decorator
+
+
+def assert_equal(
+    wrapped_module: Callable[..., None],
+    monkeypatch: Any,
+    mock_input_text: str,
+    expected_output: str,
+    is_set: bool = False,
+) -> None:
+    """
+    Запускает тест с заданным вводом и проверяет вывод.
+
+    :param wrapped_module: Модуль или функция, которые будут протестированы.
+    :param monkeypatch: Фикстура pytest, используемая для замены ввода и вывода
+    :param mock_input_text: Входной текст для имитации ввода пользователя.
+    :param expected_output: Ожидаемый текст вывода для сравнения.
+    :param equal: Флаг, определяющий способ сравнения. Если True,
+        проверяется равенство фактического и ожидаемого вывода. Если False,
+        проверяется, что фактический вывод содержится в ожидаемом.
+    :raises AssertionError: Если фактический вывод не соответствует ожидаемому
+        (или не содержится в ожидаемом, если equal=False).
+    """
+    mock_input = StringIO(mock_input_text)
+    mock_print = StringIO()
+    monkeypatch.setattr("sys.stdin", mock_input)
+    monkeypatch.setattr("sys.stdout", mock_print)
+
+    wrapped_module.main()
+
+    printed_output = mock_print.getvalue()
+    if is_set:
+        assert printed_output in expected_output
+    else:
+        assert printed_output == expected_output

@@ -151,7 +151,7 @@ g_test_data = [
     ("0\n99\n", "0\n", "first is zero"),
     ("88\n0\n", "0\n", "second is zero"),
     ("1\n99\n", "99\n", "first is one"),
-    ("88\n1\n", "88\n", "second is one")
+    ("88\n1\n", "88\n", "second is one"),
 ]
 
 
@@ -182,6 +182,89 @@ i_test_data = [
 j_test_data = [
     ("СЕВЕР\n2\nВОСТОК\n2\nСТОП\n", "2\n2\n", "first open test"),
     ("СЕВЕР\n2\nЮГ\n3\nЗАПАД\n4\nСТОП\n", "-1\n-4\n", "second open test"),
-    ("СЕВЕР\n99\nВОСТОК\n99\nЮГ\n99\nЗАПАД\n99\nСТОП\n", "0\n0\n", "counter clockwise circle"),
-    ("ЮГ\n1\nЗАПАД\n1\nСЕВЕР\n1\nВОСТОК\n1\nСТОП\n", "0\n0\n", "clockwise circle"),
+    (
+        "СЕВЕР\n99\nВОСТОК\n99\nЮГ\n99\nЗАПАД\n99\nСТОП\n",
+        "0\n0\n",
+        "counter clockwise circle",
+    ),
+    (
+        "ЮГ\n1\nЗАПАД\n1\nСЕВЕР\n1\nВОСТОК\n1\nСТОП\n",
+        "0\n0\n",
+        "clockwise circle",
+    ),
+]
+
+
+k_test_data = [
+    ("12345\n", "15\n", "first open test"),
+    ("100500\n", "6\n", "second open test"),
+    ("000000\n", "0\n", "zero"),
+    (
+        "19219391293124791237218461928312371941289128371928472813273563652\n",
+        "281\n",
+        "zero",
+    ),
+    ("1000000\n", "1\n", "one"),
+    ("1000001\n", "2\n", "two"),
+]
+
+
+l_test_data = [
+    ("12345\n", "5\n", "first open test"),
+    ("100500\n", "5\n", "second open test"),
+    ("1234543219\n", "9\n", "last is max"),
+    ("88888888888888888888\n", "8\n", "all equal"),
+    ("000000000\n", "0\n", "zero"),
+    ("987654321\n", "9\n", "first is max"),
+]
+
+
+m_test_data = [
+    ("3\nВова\nАня\nБоря\n", "Аня\n", "first open test"),
+    ("4\nТоля\nКоля\nВася\nЮля\n", "Вася\n", "second open test"),
+    ("4\nВасилий\nКоля\nВася\nЮля\n", "Василий\n", "longest wins"),
+    ("4\nВасилий\nКоля\nВасил\nЮля\n", "Васил\n", "substring"),
+    ("2\nAnna\nAmy\n", "Amy\n", "english names"),
+    ("1\nAnna\n", "Anna\n", "one english name"),
+    ("1\nИгнат\n", "Игнат\n", "one russian name"),
+]
+
+
+n_test_data = [
+    ("1\n", "NO\n", "first open test"),
+    ("67\n", "YES\n", "second open test"),
+    ("6\n", "NO\n", "six is not prime"),
+    ("3\n", "YES\n", "three is prime"),
+    ("103\n", "YES\n", "103 is prime"),
+    ("102\n", "NO\n", "102 is not prime"),
+    ("125\n", "NO\n", "125 is not prime"),
+]
+
+
+o_test_data = [
+    (
+        "3\nберезка елочка зайка волк березка\n"
+        "сосна сосна сосна елочка грибочки медведь\n"
+        "сосна сосна сосна белочка сосна белочка\n",
+        "1\n",
+        "first open test",
+    ),
+    (
+        "4\nзайка березка\n"
+        "березка зайка\n"
+        "березка елочка березка\n"
+        "елочка елочка елочка\n",
+        "2\n",
+        "second open test",
+    ),
+    (
+        "6\nзайкаберезка елочка зайка волк березка\n"
+        "сосна зайка сосна сосна зайка елочка грибочки медведь\n"
+        "\n"
+        "сосна сосна зайка сосна белочка сосна белочка зайка\n"
+        "сосна зайка сосна белочка сосна белочка зайка\n"
+        "сосна сосна зайка сосна сосна белочка зайка\n",
+        "5\n",
+        "bunnies everywhere",
+    ),
 ]
