@@ -135,3 +135,53 @@ e_test_data = [
         "huge numbers",
     ),
 ]
+
+
+f_test_data = [
+    ("12\n42\n", "6\n", "first open test"),
+    ("512\n625\n", "1\n", "second open test"),
+    ("0\n99\n", "99\n", "first is zero"),
+    ("88\n0\n", "88\n", "second is zero"),
+]
+
+
+g_test_data = [
+    ("12\n42\n", "84\n", "first open test"),
+    ("512\n625\n", "320000\n", "second open test"),
+    ("0\n99\n", "0\n", "first is zero"),
+    ("88\n0\n", "0\n", "second is zero"),
+    ("1\n99\n", "99\n", "first is one"),
+    ("88\n1\n", "88\n", "second is one")
+]
+
+
+h_test_data = [
+    ("2 + 2 = 4\n3\n", "2 + 2 = 4\n2 + 2 = 4\n2 + 2 = 4\n", "first open test"),
+    (
+        "Нельзя нажимать неизвестные кнопки!\n4\n",
+        "Нельзя нажимать неизвестные кнопки!\n"
+        "Нельзя нажимать неизвестные кнопки!\n"
+        "Нельзя нажимать неизвестные кнопки!\n"
+        "Нельзя нажимать неизвестные кнопки!\n",
+        "second open test",
+    ),
+    ("Яндекс не покрывает тестами свои задачи\n0\n", "", "zero repeat"),
+]
+
+
+i_test_data = [
+    ("3\n", "6\n", "first open test"),
+    ("5\n", "120\n", "second open test"),
+    ("0\n", "1\n", "zero factorial"),
+    ("1\n", "1\n", "one factorial"),
+    ("2\n", "2\n", "two factorial"),
+    ("19\n", "121645100408832000\n", "big factorial"),
+]
+
+
+j_test_data = [
+    ("СЕВЕР\n2\nВОСТОК\n2\nСТОП\n", "2\n2\n", "first open test"),
+    ("СЕВЕР\n2\nЮГ\n3\nЗАПАД\n4\nСТОП\n", "-1\n-4\n", "second open test"),
+    ("СЕВЕР\n99\nВОСТОК\n99\nЮГ\n99\nЗАПАД\n99\nСТОП\n", "0\n0\n", "counter clockwise circle"),
+    ("ЮГ\n1\nЗАПАД\n1\nСЕВЕР\n1\nВОСТОК\n1\nСТОП\n", "0\n0\n", "clockwise circle"),
+]
