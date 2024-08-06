@@ -16,8 +16,8 @@ def test_first_open_test(setup_environment, monkeypatch):
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue().strip()
-    expected_output = "Привет, Яндекс!"
+    printed_output = mock_print.getvalue()
+    expected_output = "Привет, Яндекс!\n"
 
     assert printed_output == expected_output
 
