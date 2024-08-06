@@ -80,7 +80,9 @@ pytest --cov-report=html
 
 <details>
 <summary><h3>2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование</h3></summary>
-В этом параграфе для решения задач используется только пройденный материал: строки, числа и форматирование.
+
+#### Для решения задач используется только материал из параграфа:
+- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
   
 ### [Тестовые данные для задач](./tests/data/test_data_21.py)
   
@@ -110,7 +112,10 @@ pytest --cov-report=html
 </details>
 <details>
 <summary><h3>2.2 Условный оператор</h3></summary>
-В этом параграфе для решения задач используется только пройденный материал из предыдущих параграфоф (2.1, 2.2).
+
+#### Для решения задач используется только пройденный материал из параграфоф:
+- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
+- [2.2 Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
 
 ### [Тестовые данные для задач](./tests/data/test_data_22.py)
 
@@ -141,7 +146,11 @@ pytest --cov-report=html
 
 <details>
 <summary><h3>2.3 Циклы</h3></summary>
-В этом параграфе для решения задач используется только пройденный материал из предыдущих параграфоф (2.1 - 2.3).
+
+#### Для решения задач используется только пройденный материал из параграфоф:
+- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
+- [2.2 Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
+- [2.3 Циклы](https://education.yandex.ru/handbook/python/article/cikly)
 
 ### [Тестовые данные для задач](./tests/data/test_data_23.py)
 
@@ -162,11 +171,47 @@ pytest --cov-report=html
 | M. [Первому игроку приготовиться 2.0](./solutions/2.3/m23.py) | [✅](./tests/2.3/test_m23.py) |
 | N. [Простая задача](./solutions/2.3/n23.py) | [✅](./tests/2.3/test_n23.py) |
 | O. [Зайка - 4](./solutions/2.3/o23.py) | [✅](./tests/2.3/test_o23.py) |
-| P. [А роза упала на лапу Азора 2.0](./solutions/2.3/p23.py) | [❌](./tests/2.3/test_p23.py) |
-| Q. [Чётная чистота](./solutions/2.3/q23.py) | [❌](./tests/2.3/test_q23.py) |
-| R. [Простая задача 2.0](./solutions/2.3/r23.py) | [❌](./tests/2.3/test_r23.py) |
-| S. [Игра в «Угадайку»](./solutions/2.3/s23.py) | [❌](./tests/2.3/test_s23.py) |
-| T. [Хайпанём немножечко!](./solutions/2.3/t23.py) | [❌](./tests/2.3/test_t23.py) |
+| P. [А роза упала на лапу Азора 2.0](./solutions/2.3/p23.py) | [✅](./tests/2.3/test_p23.py) |
+| Q. [Чётная чистота](./solutions/2.3/q23.py) | [✅](./tests/2.3/test_q23.py) |
+| R. [Простая задача 2.0](./solutions/2.3/r23.py) | [✅](./tests/2.3/test_r23.py) |
+| S. [Игра в «Угадайку»](./solutions/2.3/s23.py) | [✅](./tests/2.3/test_s23.py) |
+| T. [Хайпанём немножечко!](./solutions/2.3/t23.py) | [✅](./tests/2.3/test_t23.py) |
+
+</details>
+
+<details>
+<summary><h3>2.4 Вложенные циклы</h3></summary>
+
+#### Для решения задач используется только пройденный материал из параграфоф:
+- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
+- [2.2 Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
+- [2.3 Циклы](https://education.yandex.ru/handbook/python/article/cikly)
+- [2.4 Вложенные циклы](https://education.yandex.ru/handbook/python/article/vlozhennye-cikly)
+
+### [Тестовые данные для задач](./tests/data/test_data_24.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Раз, два, три! Ёлочка, гори!](./solutions/2.4/a24.py) | [❌](./tests/2.4/test_a24.py) |
+| B. [Зайка — 4](./solutions/2.4/b24.py) | [❌](./tests/2.4/test_b24.py) |
+| C. [Считалочка](./solutions/2.4/c24.py) | [❌](./tests/2.4/test_c24.py) |
+| D. [Считалочка 2.0](./solutions/2.4/d24.py) | [❌](./tests/2.4/test_d24.py) |
+| E. [Внимание! Акция!](./solutions/2.4/e24.py) | [❌](./tests/2.4/test_e24.py) |
+| F. [НОД](./solutions/2.4/f24.py) | [❌](./tests/2.4/test_f24.py) |
+| G. [НОК](./solutions/2.4/g24.py) | [❌](./tests/2.4/test_g24.py) |
+| H. [Излишняя автоматизация 2.0](./solutions/2.4/h24.py) | [❌](./tests/2.4/test_h24.py) |
+| I. [Факториал](./solutions/2.4/i24.py) | [❌](./tests/2.4/test_i24.py) |
+| J. [Маршрут построен](./solutions/2.4/j24.py) | [❌](./tests/2.4/test_j24.py) |
+| K. [Цифровая сумма](./solutions/2.4/k24.py) | [❌](./tests/2.4/test_k24.py) |
+| L. [Сильная цифра](./solutions/2.4/l24.py) | [❌](./tests/2.4/test_l24.py) |
+| M. [Первому игроку приготовиться 2.0](./solutions/2.4/m24.py) | [❌](./tests/2.4/test_m24.py) |
+| N. [Простая задача](./solutions/2.4/n24.py) | [❌](./tests/2.4/test_n24.py) |
+| O. [Зайка - 4](./solutions/2.4/o24.py) | [❌](./tests/2.4/test_o24.py) |
+| P. [А роза упала на лапу Азора 2.0](./solutions/2.4/p24.py) | [❌](./tests/2.4/test_p24.py) |
+| Q. [Чётная чистота](./solutions/2.4/q24.py) | [❌](./tests/2.4/test_q24.py) |
+| R. [Простая задача 2.0](./solutions/2.4/r24.py) | [❌](./tests/2.4/test_r24.py) |
+| S. [Игра в «Угадайку»](./solutions/2.4/s24.py) | [❌](./tests/2.4/test_s24.py) |
+| T. [Хайпанём немножечко!](./solutions/2.4/t24.py) | [❌](./tests/2.4/test_t24.py) |
 
 </details>
 
