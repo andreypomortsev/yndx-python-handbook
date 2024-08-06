@@ -192,26 +192,26 @@ pytest --cov-report=html
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Раз, два, три! Ёлочка, гори!](./solutions/2.4/a24.py) | [❌](./tests/2.4/test_a24.py) |
-| B. [Зайка — 4](./solutions/2.4/b24.py) | [❌](./tests/2.4/test_b24.py) |
-| C. [Считалочка](./solutions/2.4/c24.py) | [❌](./tests/2.4/test_c24.py) |
-| D. [Считалочка 2.0](./solutions/2.4/d24.py) | [❌](./tests/2.4/test_d24.py) |
-| E. [Внимание! Акция!](./solutions/2.4/e24.py) | [❌](./tests/2.4/test_e24.py) |
-| F. [НОД](./solutions/2.4/f24.py) | [❌](./tests/2.4/test_f24.py) |
-| G. [НОК](./solutions/2.4/g24.py) | [❌](./tests/2.4/test_g24.py) |
-| H. [Излишняя автоматизация 2.0](./solutions/2.4/h24.py) | [❌](./tests/2.4/test_h24.py) |
-| I. [Факториал](./solutions/2.4/i24.py) | [❌](./tests/2.4/test_i24.py) |
-| J. [Маршрут построен](./solutions/2.4/j24.py) | [❌](./tests/2.4/test_j24.py) |
-| K. [Цифровая сумма](./solutions/2.4/k24.py) | [❌](./tests/2.4/test_k24.py) |
-| L. [Сильная цифра](./solutions/2.4/l24.py) | [❌](./tests/2.4/test_l24.py) |
-| M. [Первому игроку приготовиться 2.0](./solutions/2.4/m24.py) | [❌](./tests/2.4/test_m24.py) |
-| N. [Простая задача](./solutions/2.4/n24.py) | [❌](./tests/2.4/test_n24.py) |
-| O. [Зайка - 4](./solutions/2.4/o24.py) | [❌](./tests/2.4/test_o24.py) |
-| P. [А роза упала на лапу Азора 2.0](./solutions/2.4/p24.py) | [❌](./tests/2.4/test_p24.py) |
-| Q. [Чётная чистота](./solutions/2.4/q24.py) | [❌](./tests/2.4/test_q24.py) |
-| R. [Простая задача 2.0](./solutions/2.4/r24.py) | [❌](./tests/2.4/test_r24.py) |
-| S. [Игра в «Угадайку»](./solutions/2.4/s24.py) | [❌](./tests/2.4/test_s24.py) |
-| T. [Хайпанём немножечко!](./solutions/2.4/t24.py) | [❌](./tests/2.4/test_t24.py) |
+| А. [Таблица умножения](./solutions/2.4/a24.py) | [❌](./tests/2.4/test_a24.py) |
+| B. [Не таблица умножения](./solutions/2.4/b24.py) | [❌](./tests/2.4/test_b24.py) |
+| C. [Новогоднее настроение](./solutions/2.4/c24.py) | [❌](./tests/2.4/test_c24.py) |
+| D. [Суммарная сумма](./solutions/2.4/d24.py) | [❌](./tests/2.4/test_d24.py) |
+| E. [Зайка — 5](./solutions/2.4/e24.py) | [❌](./tests/2.4/test_e24.py) |
+| F. [НОД 2.0](./solutions/2.4/f24.py) | [❌](./tests/2.4/test_f24.py) |
+| G. [На старт! Внимание! Марш!](./solutions/2.4/g24.py) | [❌](./tests/2.4/test_g24.py) |
+| H. [Максимальная сумма](./solutions/2.4/h24.py) | [❌](./tests/2.4/test_h24.py) |
+| I. [Большое число](./solutions/2.4/i24.py) | [❌](./tests/2.4/test_i24.py) |
+| J. [Мы делили апельсин](./solutions/2.4/j24.py) | [❌](./tests/2.4/test_j24.py) |
+| K. [Простая задача 3.0](./solutions/2.4/k24.py) | [❌](./tests/2.4/test_k24.py) |
+| L. [Числовой прямоугольник](./solutions/2.4/l24.py) | [❌](./tests/2.4/test_l24.py) |
+| M. [Числовой прямоугольник 2.0](./solutions/2.4/m24.py) | [❌](./tests/2.4/test_m24.py) |
+| N. [Числовая змейка](./solutions/2.4/n24.py) | [❌](./tests/2.4/test_n24.py) |
+| O. [Числовая змейка 2.0](./solutions/2.4/o24.py) | [❌](./tests/2.4/test_o24.py) |
+| P. [Редизайн таблицы умножения](./solutions/2.4/p24.py) | [❌](./tests/2.4/test_p24.py) |
+| Q. [А роза упала на лапу Азора 3.0](./solutions/2.4/q24.py) | [❌](./tests/2.4/test_q24.py) |
+| R. [Новогоднее настроение 2.0](./solutions/2.4/r24.py) | [❌](./tests/2.4/test_r24.py) |
+| S. [Числовой квадрат](./solutions/2.4/s24.py) | [❌](./tests/2.4/test_s24.py) |
+| T. [Математическая выгода](./solutions/2.4/t24.py) | [❌](./tests/2.4/test_t24.py) |
 
 </details>
 
