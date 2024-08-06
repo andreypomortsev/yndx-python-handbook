@@ -157,11 +157,11 @@ pytest --cov-report=html
 | H. [Излишняя автоматизация 2.0](./solutions/2.3/h23.py) | [✅](./tests/2.3/test_h23.py) |
 | I. [Факториал](./solutions/2.3/i23.py) | [✅](./tests/2.3/test_i23.py) |
 | J. [Маршрут построен](./solutions/2.3/j23.py) | [✅](./tests/2.3/test_j23.py) |
-| K. [Цифровая сумма](./solutions/2.3/k23.py) | [❌](./tests/2.3/test_k23.py) |
-| L. [Сильная цифра](./solutions/2.3/l23.py) | [❌](./tests/2.3/test_l23.py) |
-| M. [Первому игроку приготовиться 2.0](./solutions/2.3/m23.py) | [❌](./tests/2.3/test_m23.py) |
-| N. [Простая задача](./solutions/2.3/n23.py) | [❌](./tests/2.3/test_n23.py) |
-| O. [Зайка - 4](./solutions/2.3/o23.py) | [❌](./tests/2.3/test_o23.py) |
+| K. [Цифровая сумма](./solutions/2.3/k23.py) | [✅](./tests/2.3/test_k23.py) |
+| L. [Сильная цифра](./solutions/2.3/l23.py) | [✅](./tests/2.3/test_l23.py) |
+| M. [Первому игроку приготовиться 2.0](./solutions/2.3/m23.py) | [✅](./tests/2.3/test_m23.py) |
+| N. [Простая задача](./solutions/2.3/n23.py) | [✅](./tests/2.3/test_n23.py) |
+| O. [Зайка - 4](./solutions/2.3/o23.py) | [✅](./tests/2.3/test_o23.py) |
 | P. [А роза упала на лапу Азора 2.0](./solutions/2.3/p23.py) | [❌](./tests/2.3/test_p23.py) |
 | Q. [Чётная чистота](./solutions/2.3/q23.py) | [❌](./tests/2.3/test_q23.py) |
 | R. [Простая задача 2.0](./solutions/2.3/r23.py) | [❌](./tests/2.3/test_r23.py) |
