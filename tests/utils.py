@@ -96,6 +96,12 @@ def assert_equal(
 
     printed_output = mock_print.getvalue()
     if is_set:
-        assert printed_output in expected_output
+        assert printed_output in expected_output, (
+            f"\nExpected output:\n{expected_output}\n\n"
+            f"Printed output:\n{printed_output}"
+        )
     else:
-        assert printed_output == expected_output
+        assert printed_output == expected_output, (
+            f"\nExpected output:\n{expected_output}\n\n"
+            f"Printed output:\n{printed_output}"
+        )
