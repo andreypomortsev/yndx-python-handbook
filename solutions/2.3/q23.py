@@ -5,7 +5,7 @@ position = 1
 
 while numbers > 0:
     digit = numbers % 10
-    if digit % 2 != 0:
+    if not digit or digit % 2 != 0:
         clean_number += digit * position
         position *= 10
     numbers //= 10
