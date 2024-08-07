@@ -287,8 +287,8 @@ q_test_data = [
     ("1234\n", "13\n", "first open test"),
     ("123454321\n", "13531\n", "second open test"),
     ("135797535973\n", "135797535973\n", "all odd"),
-    ("2032134\n", "313\n", "loosing zero"),
-    ("1032134\n", "10313\n", "with zero"),
+    ("2032134\n", "313\n", "checking for zero"),
+    ("1032134\n", "1313\n", "with zero"),
 ]
 
 
