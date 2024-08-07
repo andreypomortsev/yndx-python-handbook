@@ -164,3 +164,6 @@ cython_debug/
 # Wrapped temp files for coverage testing for the first three modules
 tests/wrapped_*.py
 .DS_Store
+
+# Helper script to make a few files at once
+script.py
