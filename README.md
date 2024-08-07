@@ -192,11 +192,11 @@ pytest --cov-report=html
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Таблица умножения](./solutions/2.4/a24.py) | [❌](./tests/2.4/test_a24.py) |
-| B. [Не таблица умножения](./solutions/2.4/b24.py) | [❌](./tests/2.4/test_b24.py) |
-| C. [Новогоднее настроение](./solutions/2.4/c24.py) | [❌](./tests/2.4/test_c24.py) |
-| D. [Суммарная сумма](./solutions/2.4/d24.py) | [❌](./tests/2.4/test_d24.py) |
-| E. [Зайка — 5](./solutions/2.4/e24.py) | [❌](./tests/2.4/test_e24.py) |
+| А. [Таблица умножения](./solutions/2.4/a24.py) | [✅](./tests/2.4/test_a24.py) |
+| B. [Не таблица умножения](./solutions/2.4/b24.py) | [✅](./tests/2.4/test_b24.py) |
+| C. [Новогоднее настроение](./solutions/2.4/c24.py) | [✅](./tests/2.4/test_c24.py) |
+| D. [Суммарная сумма](./solutions/2.4/d24.py) | [✅](./tests/2.4/test_d24.py) |
+| E. [Зайка — 5](./solutions/2.4/e24.py) | [✅](./tests/2.4/test_e24.py) |
 | F. [НОД 2.0](./solutions/2.4/f24.py) | [❌](./tests/2.4/test_f24.py) |
 | G. [На старт! Внимание! Марш!](./solutions/2.4/g24.py) | [❌](./tests/2.4/test_g24.py) |
 | H. [Максимальная сумма](./solutions/2.4/h24.py) | [❌](./tests/2.4/test_h24.py) |
