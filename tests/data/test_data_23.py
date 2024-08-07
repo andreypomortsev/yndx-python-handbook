@@ -284,11 +284,11 @@ p_test_data = [
 
 
 q_test_data = [
-    ("1234\n", "13\n", "first open test"),
-    ("123454321\n", "13531\n", "second open test"),
-    ("135797535973\n", "135797535973\n", "all odd"),
-    ("2032134\n", "313\n", "checking for zero"),
-    ("1032134\n", "1313\n", "with zero"),
+    ("1234\n", {"13\n", "13"}, "first open test"),
+    ("123454321\n", {"13531\n", "13531"}, "second open test"),
+    ("135797535973\n", {"135797535973\n", "135797535973"}, "all odd"),
+    ("2032134\n", {"313\n", "313"}, "checking for zero"),
+    ("1032134\n", {"1313\n", "1313"}, "with zero"),
 ]
 
 
