@@ -197,11 +197,11 @@ pytest --cov-report=html
 | C. [Новогоднее настроение](./solutions/2.4/c24.py) | [✅](./tests/2.4/test_c24.py) |
 | D. [Суммарная сумма](./solutions/2.4/d24.py) | [✅](./tests/2.4/test_d24.py) |
 | E. [Зайка — 5](./solutions/2.4/e24.py) | [✅](./tests/2.4/test_e24.py) |
-| F. [НОД 2.0](./solutions/2.4/f24.py) | [❌](./tests/2.4/test_f24.py) |
-| G. [На старт! Внимание! Марш!](./solutions/2.4/g24.py) | [❌](./tests/2.4/test_g24.py) |
-| H. [Максимальная сумма](./solutions/2.4/h24.py) | [❌](./tests/2.4/test_h24.py) |
-| I. [Большое число](./solutions/2.4/i24.py) | [❌](./tests/2.4/test_i24.py) |
-| J. [Мы делили апельсин](./solutions/2.4/j24.py) | [❌](./tests/2.4/test_j24.py) |
+| F. [НОД 2.0](./solutions/2.4/f24.py) | [✅](./tests/2.4/test_f24.py) |
+| G. [На старт! Внимание! Марш!](./solutions/2.4/g24.py) | [✅](./tests/2.4/test_g24.py) |
+| H. [Максимальная сумма](./solutions/2.4/h24.py) | [✅](./tests/2.4/test_h24.py) |
+| I. [Большое число](./solutions/2.4/i24.py) | [✅](./tests/2.4/test_i24.py) |
+| J. [Мы делили апельсин](./solutions/2.4/j24.py) | [✅](./tests/2.4/test_j24.py) |
 | K. [Простая задача 3.0](./solutions/2.4/k24.py) | [❌](./tests/2.4/test_k24.py) |
 | L. [Числовой прямоугольник](./solutions/2.4/l24.py) | [❌](./tests/2.4/test_l24.py) |
 | M. [Числовой прямоугольник 2.0](./solutions/2.4/m24.py) | [❌](./tests/2.4/test_m24.py) |
