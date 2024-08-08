@@ -88,26 +88,26 @@ pytest --cov-report=html
   
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Привет, Яндекс!](./solutions/2.1/a.py) | [✅](./tests/2.1/test_a.py) |
-| B. [Привет, всем!](./solutions/2.1/b.py) | [✅](./tests/2.1/test_b.py) |
-| C. [Излишняя автоматизация](./solutions/2.1/c.py) | [✅](./tests/2.1/test_c.py) |
-| D. [Сдача](./solutions/2.1/d.py) | [✅](./tests/2.1/test_d.py) |
-| E. [Магазин](./solutions/2.1/e.py) | [✅](./tests/2.1/test_e.py) |
-| F. [Чек](./solutions/2.1/f.py) | [✅](./tests/2.1/test_f.py) |
-| G. [Делу — время, потехе — час](./solutions/2.1/g.py) | [✅](./tests/2.1/test_g.py) |
-| H. [Наказание](./solutions/2.1/h.py) | [✅](./tests/2.1/test_h.py) |
-| I. [Деловая колбаса](./solutions/2.1/i.py) | [✅](./tests/2.1/test_i.py) |
-| J. [Детский сад — штаны на лямках](./solutions/2.1/j.py) | [✅](./tests/2.1/test_j.py) |
-| K. [Автоматизация игры](./solutions/2.1/k.py) | [✅](./tests/2.1/test_k.py) |
-| L. [Интересное сложение](./solutions/2.1/l.py) | [✅](./tests/2.1/test_l.py) |
-| M. [Дед Мороз и конфеты](./solutions/2.1/m.py) | [✅](./tests/2.1/test_m.py) |
-| N. [Шарики и ручки](./solutions/2.1/n.py) | [✅](./tests/2.1/test_n.py) |
-| O. [В ожидании доставки](./solutions/2.1/o.py) | [✅](./tests/2.1/test_o.py) |
-| P. [Доставка](./solutions/2.1/p.py) | [✅](./tests/2.1/test_p.py) |
-| Q. [Ошибка кассового аппарата](./solutions/2.1/q.py) | [✅](./tests/2.1/test_q.py) |
-| R. [Сдача 10](./solutions/2.1/r.py) | [✅](./tests/2.1/test_r.py) |
-| S. [Украшение чека](./solutions/2.1/s.py) | [✅](./tests/2.1/test_s.py) |
-| T. [Мухи отдельно, котлеты отдельно](./solutions/2.1/t.py) | [✅](./tests/2.1/test_t.py) |
+| А. [Привет, Яндекс!](./solutions/2.1/21_a.py) | [✅](./tests/2.1/test_21_a.py) |
+| B. [Привет, всем!](./solutions/2.1/21_b.py) | [✅](./tests/2.1/test_21_b.py) |
+| C. [Излишняя автоматизация](./solutions/2.1/21_c.py) | [✅](./tests/2.1/test_21_c.py) |
+| D. [Сдача](./solutions/2.1/21_d.py) | [✅](./tests/2.1/test_21_d.py) |
+| E. [Магазин](./solutions/2.1/21_e.py) | [✅](./tests/2.1/test_21_e.py) |
+| F. [Чек](./solutions/2.1/21_f.py) | [✅](./tests/2.1/test_21_f.py) |
+| G. [Делу — время, потехе — час](./solutions/2.1/21_g.py) | [✅](./tests/2.1/test_21_g.py) |
+| H. [Наказание](./solutions/2.1/21_h.py) | [✅](./tests/2.1/test_21_h.py) |
+| I. [Деловая колбаса](./solutions/2.1/21_i.py) | [✅](./tests/2.1/test_21_i.py) |
+| J. [Детский сад — штаны на лямках](./solutions/2.1/21_j.py) | [✅](./tests/2.1/test_21_j.py) |
+| K. [Автоматизация игры](./solutions/2.1/21_k.py) | [✅](./tests/2.1/test_21_k.py) |
+| L. [Интересное сложение](./solutions/2.1/21_l.py) | [✅](./tests/2.1/test_21_l.py) |
+| M. [Дед Мороз и конфеты](./solutions/2.1/21_m.py) | [✅](./tests/2.1/test_21_m.py) |
+| N. [Шарики и ручки](./solutions/2.1/21_n.py) | [✅](./tests/2.1/test_21_n.py) |
+| O. [В ожидании доставки](./solutions/2.1/21_o.py) | [✅](./tests/2.1/test_21_o.py) |
+| P. [Доставка](./solutions/2.1/21_p.py) | [✅](./tests/2.1/test_21_p.py) |
+| Q. [Ошибка кассового аппарата](./solutions/2.1/21_q.py) | [✅](./tests/2.1/test_21_q.py) |
+| R. [Сдача 10](./solutions/2.1/21_r.py) | [✅](./tests/2.1/test_21_r.py) |
+| S. [Украшение чека](./solutions/2.1/21_s.py) | [✅](./tests/2.1/test_21_s.py) |
+| T. [Мухи отдельно, котлеты отдельно](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
 
 </details>
 <details>
@@ -121,26 +121,26 @@ pytest --cov-report=html
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Просто здравствуй, просто как дела](./solutions/2.2/a22.py) | [✅](./tests/2.2/test_a22.py) |
-| B. [Кто быстрее?](./solutions/2.2/b22.py) | [✅](./tests/2.2/test_b22.py) |
-| C. [Кто быстрее на этот раз?](./solutions/2.2/c22.py) | [✅](./tests/2.2/test_c22.py) |
-| D. [Список победителей](./solutions/2.2/d22.py) | [✅](./tests/2.2/test_d22.py) |
-| E. [Яблоки](./solutions/2.2/e22.py) | [✅](./tests/2.2/test_e22.py) |
-| F. [Сила прокрастинации](./solutions/2.2/f22.py) | [✅](./tests/2.2/test_f22.py) |
-| G. [А роза упала на лапу Азора](./solutions/2.2/g22.py) | [✅](./tests/2.2/test_g22.py) |
-| H. [Зайка — 1](./solutions/2.2/h22.py) | [✅](./tests/2.2/test_h22.py) |
-| I. [Первому игроку приготовиться](./solutions/2.2/i22.py) | [✅](./tests/2.2/test_i22.py) |
-| J. [Лучшая защита — шифрование](./solutions/2.2/j22.py) | [✅](./tests/2.2/test_j22.py) |
-| K. [Красота спасёт мир](./solutions/2.2/k22.py) | [✅](./tests/2.2/test_k22.py) |
-| L. [Музыкальный инструмент](./solutions/2.2/l22.py) | [✅](./tests/2.2/test_l22.py) |
-| M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/m22.py) | [✅](./tests/2.2/test_m22.py) |
-| N. [Властелин Чисел: Две Башни](./solutions/2.2/n22.py) | [✅](./tests/2.2/test_n22.py) |
-| O. [Властелин Чисел: Возвращение Цезаря](./solutions/2.2/o22.py) | [✅](./tests/2.2/test_o22.py) |
-| P. [Легенды велогонок возвращаются: кто быстрее?](./solutions/2.2/p22.py) | [✅](./tests/2.2/test_p22.py) |
-| Q. [Корень зла](./solutions/2.2/q22.py) | [✅](./tests/2.2/test_q22.py) |
-| R. [Территория зла](./solutions/2.2/r22.py) | [✅](./tests/2.2/test_r22.py) |
-| S. [Автоматизация безопасности](./solutions/2.2/s22.py) | [✅](./tests/2.2/test_s22.py) |
-| T. [Зайка — 2](./solutions/2.2/t22.py) | [✅](./tests/2.2/test_t22.py) |
+| А. [Просто здравствуй, просто как дела](./solutions/2.2/22_a.py) | [✅](./tests/2.2/test_22_a.py) |
+| B. [Кто быстрее?](./solutions/2.2/22_b.py) | [✅](./tests/2.2/test_22_b.py) |
+| C. [Кто быстрее на этот раз?](./solutions/2.2/22_c.py) | [✅](./tests/2.2/test_22_c.py) |
+| D. [Список победителей](./solutions/2.2/22_d.py) | [✅](./tests/2.2/test_22_d.py) |
+| E. [Яблоки](./solutions/2.2/22_e.py) | [✅](./tests/2.2/test_22_e.py) |
+| F. [Сила прокрастинации](./solutions/2.2/22_f.py) | [✅](./tests/2.2/test_22_f.py) |
+| G. [А роза упала на лапу Азора](./solutions/2.2/22_g.py) | [✅](./tests/2.2/test_22_g.py) |
+| H. [Зайка — 1](./solutions/2.2/22_h.py) | [✅](./tests/2.2/test_22_h.py) |
+| I. [Первому игроку приготовиться](./solutions/2.2/22_i.py) | [✅](./tests/2.2/test_22_i.py) |
+| J. [Лучшая защита — шифрование](./solutions/2.2/22_j.py) | [✅](./tests/2.2/test_22_j.py) |
+| K. [Красота спасёт мир](./solutions/2.2/22_k.py) | [✅](./tests/2.2/test_22_k.py) |
+| L. [Музыкальный инструмент](./solutions/2.2/22_l.py) | [✅](./tests/2.2/test_22_l.py) |
+| M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/22_m.py) | [✅](./tests/2.2/test_22_m.py) |
+| N. [Властелин Чисел: Две Башни](./solutions/2.2/22_n.py) | [✅](./tests/2.2/test_22_n.py) |
+| O. [Властелин Чисел: Возвращение Цезаря](./solutions/2.2/22_o.py) | [✅](./tests/2.2/test_22_o.py) |
+| P. [Легенды велогонок возвращаются: кто быстрее?](./solutions/2.2/22_p.py) | [✅](./tests/2.2/test_22_p.py) |
+| Q. [Корень зла](./solutions/2.2/22_q.py) | [✅](./tests/2.2/test_22_q.py) |
+| R. [Территория зла](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
+| S. [Автоматизация безопасности](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
+| T. [Зайка — 2](./solutions/2.2/22_t.py) | [✅](./tests/2.2/test_22_t.py) |
 
 </details>
 
@@ -156,26 +156,26 @@ pytest --cov-report=html
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Раз, два, три! Ёлочка, гори!](./solutions/2.3/a23.py) | [✅](./tests/2.3/test_a23.py) |
-| B. [Зайка — 3](./solutions/2.3/b23.py) | [✅](./tests/2.3/test_b23.py) |
-| C. [Считалочка](./solutions/2.3/c23.py) | [✅](./tests/2.3/test_c23.py) |
-| D. [Считалочка 2.0](./solutions/2.3/d23.py) | [✅](./tests/2.3/test_d23.py) |
-| E. [Внимание! Акция!](./solutions/2.3/e23.py) | [✅](./tests/2.3/test_e23.py) |
-| F. [НОД](./solutions/2.3/f23.py) | [✅](./tests/2.3/test_f23.py) |
-| G. [НОК](./solutions/2.3/g23.py) | [✅](./tests/2.3/test_g23.py) |
-| H. [Излишняя автоматизация 2.0](./solutions/2.3/h23.py) | [✅](./tests/2.3/test_h23.py) |
-| I. [Факториал](./solutions/2.3/i23.py) | [✅](./tests/2.3/test_i23.py) |
-| J. [Маршрут построен](./solutions/2.3/j23.py) | [✅](./tests/2.3/test_j23.py) |
-| K. [Цифровая сумма](./solutions/2.3/k23.py) | [✅](./tests/2.3/test_k23.py) |
-| L. [Сильная цифра](./solutions/2.3/l23.py) | [✅](./tests/2.3/test_l23.py) |
-| M. [Первому игроку приготовиться 2.0](./solutions/2.3/m23.py) | [✅](./tests/2.3/test_m23.py) |
-| N. [Простая задача](./solutions/2.3/n23.py) | [✅](./tests/2.3/test_n23.py) |
-| O. [Зайка - 4](./solutions/2.3/o23.py) | [✅](./tests/2.3/test_o23.py) |
-| P. [А роза упала на лапу Азора 2.0](./solutions/2.3/p23.py) | [✅](./tests/2.3/test_p23.py) |
-| Q. [Чётная чистота](./solutions/2.3/q23.py) | [✅](./tests/2.3/test_q23.py) |
-| R. [Простая задача 2.0](./solutions/2.3/r23.py) | [✅](./tests/2.3/test_r23.py) |
-| S. [Игра в «Угадайку»](./solutions/2.3/s23.py) | [✅](./tests/2.3/test_s23.py) |
-| T. [Хайпанём немножечко!](./solutions/2.3/t23.py) | [✅](./tests/2.3/test_t23.py) |
+| А. [Раз, два, три! Ёлочка, гори!](./solutions/2.3/23_a.py) | [✅](./tests/2.3/test_23_a.py) |
+| B. [Зайка — 3](./solutions/2.3/23_b.py) | [✅](./tests/2.3/test_23_b.py) |
+| C. [Считалочка](./solutions/2.3/23_c.py) | [✅](./tests/2.3/test_23_c.py) |
+| D. [Считалочка 2.0](./solutions/2.3/23_d.py) | [✅](./tests/2.3/test_23_d.py) |
+| E. [Внимание! Акция!](./solutions/2.3/23_e.py) | [✅](./tests/2.3/test_23_e.py) |
+| F. [НОД](./solutions/2.3/23_f.py) | [✅](./tests/2.3/test_23_f.py) |
+| G. [НОК](./solutions/2.3/23_g.py) | [✅](./tests/2.3/test_23_g.py) |
+| H. [Излишняя автоматизация 2.0](./solutions/2.3/23_h.py) | [✅](./tests/2.3/test_23_h.py) |
+| I. [Факториал](./solutions/2.3/23_i.py) | [✅](./tests/2.3/test_23_i.py) |
+| J. [Маршрут построен](./solutions/2.3/23_j.py) | [✅](./tests/2.3/test_23_j.py) |
+| K. [Цифровая сумма](./solutions/2.3/23_k.py) | [✅](./tests/2.3/test_23_k.py) |
+| L. [Сильная цифра](./solutions/2.3/23_l.py) | [✅](./tests/2.3/test_23_l.py) |
+| M. [Первому игроку приготовиться 2.0](./solutions/2.3/23_m.py) | [✅](./tests/2.3/test_23_m.py) |
+| N. [Простая задача](./solutions/2.3/23_n.py) | [✅](./tests/2.3/test_23_n.py) |
+| O. [Зайка - 4](./solutions/2.3/23_o.py) | [✅](./tests/2.3/test_23_o.py) |
+| P. [А роза упала на лапу Азора 2.0](./solutions/2.3/23_p.py) | [✅](./tests/2.3/test_23_p.py) |
+| Q. [Чётная чистота](./solutions/2.3/23_q.py) | [✅](./tests/2.3/test_23_q.py) |
+| R. [Простая задача 2.0](./solutions/2.3/23_r.py) | [✅](./tests/2.3/test_23_r.py) |
+| S. [Игра в «Угадайку»](./solutions/2.3/23_s.py) | [✅](./tests/2.3/test_23_s.py) |
+| T. [Хайпанём немножечко!](./solutions/2.3/23_t.py) | [✅](./tests/2.3/test_23_t.py) |
 
 </details>
 
@@ -192,26 +192,26 @@ pytest --cov-report=html
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Таблица умножения](./solutions/2.4/a24.py) | [✅](./tests/2.4/test_a24.py) |
-| B. [Не таблица умножения](./solutions/2.4/b24.py) | [✅](./tests/2.4/test_b24.py) |
-| C. [Новогоднее настроение](./solutions/2.4/c24.py) | [✅](./tests/2.4/test_c24.py) |
-| D. [Суммарная сумма](./solutions/2.4/d24.py) | [✅](./tests/2.4/test_d24.py) |
-| E. [Зайка — 5](./solutions/2.4/e24.py) | [✅](./tests/2.4/test_e24.py) |
-| F. [НОД 2.0](./solutions/2.4/f24.py) | [✅](./tests/2.4/test_f24.py) |
-| G. [На старт! Внимание! Марш!](./solutions/2.4/g24.py) | [✅](./tests/2.4/test_g24.py) |
-| H. [Максимальная сумма](./solutions/2.4/h24.py) | [✅](./tests/2.4/test_h24.py) |
-| I. [Большое число](./solutions/2.4/i24.py) | [✅](./tests/2.4/test_i24.py) |
-| J. [Мы делили апельсин](./solutions/2.4/j24.py) | [✅](./tests/2.4/test_j24.py) |
-| K. [Простая задача 3.0](./solutions/2.4/k24.py) | [✅](./tests/2.4/test_k24.py) |
-| L. [Числовой прямоугольник](./solutions/2.4/l24.py) | [✅](./tests/2.4/test_l24.py) |
-| M. [Числовой прямоугольник 2.0](./solutions/2.4/m24.py) | [✅](./tests/2.4/test_m24.py) |
-| N. [Числовая змейка](./solutions/2.4/n24.py) | [✅](./tests/2.4/test_n24.py) |
-| O. [Числовая змейка 2.0](./solutions/2.4/o24.py) | [✅](./tests/2.4/test_o24.py) |
-| P. [Редизайн таблицы умножения](./solutions/2.4/p24.py) | [❌](./tests/2.4/test_p24.py) |
-| Q. [А роза упала на лапу Азора 3.0](./solutions/2.4/q24.py) | [❌](./tests/2.4/test_q24.py) |
-| R. [Новогоднее настроение 2.0](./solutions/2.4/r24.py) | [❌](./tests/2.4/test_r24.py) |
-| S. [Числовой квадрат](./solutions/2.4/s24.py) | [❌](./tests/2.4/test_s24.py) |
-| T. [Математическая выгода](./solutions/2.4/t24.py) | [❌](./tests/2.4/test_t24.py) |
+| А. [Таблица умножения](./solutions/2.4/24_a.py) | [✅](./tests/2.4/test_24_a.py) |
+| B. [Не таблица умножения](./solutions/2.4/24_b.py) | [✅](./tests/2.4/test_24_b.py) |
+| C. [Новогоднее настроение](./solutions/2.4/24_c.py) | [✅](./tests/2.4/test_24_c.py) |
+| D. [Суммарная сумма](./solutions/2.4/24_d.py) | [✅](./tests/2.4/test_24_d.py) |
+| E. [Зайка — 5](./solutions/2.4/24_e.py) | [✅](./tests/2.4/test_24_e.py) |
+| F. [НОД 2.0](./solutions/2.4/24_f.py) | [✅](./tests/2.4/test_24_f.py) |
+| G. [На старт! Внимание! Марш!](./solutions/2.4/24_g.py) | [✅](./tests/2.4/test_24_g.py) |
+| H. [Максимальная сумма](./solutions/2.4/24_h.py) | [✅](./tests/2.4/test_24_h.py) |
+| I. [Большое число](./solutions/2.4/24_i.py) | [✅](./tests/2.4/test_24_i.py) |
+| J. [Мы делили апельсин](./solutions/2.4/24_j.py) | [✅](./tests/2.4/test_24_j.py) |
+| K. [Простая задача 3.0](./solutions/2.4/24_k.py) | [✅](./tests/2.4/test_24_k.py) |
+| L. [Числовой прямоугольник](./solutions/2.4/24_l.py) | [✅](./tests/2.4/test_24_l.py) |
+| M. [Числовой прямоугольник 2.0](./solutions/2.4/24_m.py) | [✅](./tests/2.4/test_24_m.py) |
+| N. [Числовая змейка](./solutions/2.4/24_n.py) | [✅](./tests/2.4/test_24_n.py) |
+| O. [Числовая змейка 2.0](./solutions/2.4/24_o.py) | [✅](./tests/2.4/test_24_o.py) |
+| P. [Редизайн таблицы умножения](./solutions/2.4/24_p.py) | [❌](./tests/2.4/test_24_p.py) |
+| Q. [А роза упала на лапу Азора 3.0](./solutions/2.4/24_q.py) | [❌](./tests/2.4/test_24_q.py) |
+| R. [Новогоднее настроение 2.0](./solutions/2.4/24_r.py) | [❌](./tests/2.4/test_24_r.py) |
+| S. [Числовой квадрат](./solutions/2.4/24_s.py) | [❌](./tests/2.4/test_24_s.py) |
+| T. [Математическая выгода](./solutions/2.4/24_t.py) | [❌](./tests/2.4/test_24_t.py) |
 
 </details>
 
