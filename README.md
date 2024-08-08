@@ -202,11 +202,11 @@ pytest --cov-report=html
 | H. [Максимальная сумма](./solutions/2.4/h24.py) | [✅](./tests/2.4/test_h24.py) |
 | I. [Большое число](./solutions/2.4/i24.py) | [✅](./tests/2.4/test_i24.py) |
 | J. [Мы делили апельсин](./solutions/2.4/j24.py) | [✅](./tests/2.4/test_j24.py) |
-| K. [Простая задача 3.0](./solutions/2.4/k24.py) | [❌](./tests/2.4/test_k24.py) |
-| L. [Числовой прямоугольник](./solutions/2.4/l24.py) | [❌](./tests/2.4/test_l24.py) |
-| M. [Числовой прямоугольник 2.0](./solutions/2.4/m24.py) | [❌](./tests/2.4/test_m24.py) |
-| N. [Числовая змейка](./solutions/2.4/n24.py) | [❌](./tests/2.4/test_n24.py) |
-| O. [Числовая змейка 2.0](./solutions/2.4/o24.py) | [❌](./tests/2.4/test_o24.py) |
+| K. [Простая задача 3.0](./solutions/2.4/k24.py) | [✅](./tests/2.4/test_k24.py) |
+| L. [Числовой прямоугольник](./solutions/2.4/l24.py) | [✅](./tests/2.4/test_l24.py) |
+| M. [Числовой прямоугольник 2.0](./solutions/2.4/m24.py) | [✅](./tests/2.4/test_m24.py) |
+| N. [Числовая змейка](./solutions/2.4/n24.py) | [✅](./tests/2.4/test_n24.py) |
+| O. [Числовая змейка 2.0](./solutions/2.4/o24.py) | [✅](./tests/2.4/test_o24.py) |
 | P. [Редизайн таблицы умножения](./solutions/2.4/p24.py) | [❌](./tests/2.4/test_p24.py) |
 | Q. [А роза упала на лапу Азора 3.0](./solutions/2.4/q24.py) | [❌](./tests/2.4/test_q24.py) |
 | R. [Новогоднее настроение 2.0](./solutions/2.4/r24.py) | [❌](./tests/2.4/test_r24.py) |
