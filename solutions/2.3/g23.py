@@ -1,8 +1,8 @@
 a = int(input())
 b = int(input())
 
-a_copy = int(a)
-b_copy = int(b)
+a_copy = a
+b_copy = b
 
 if not a:
     gcd = b
