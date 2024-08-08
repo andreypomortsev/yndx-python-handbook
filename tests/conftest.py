@@ -92,7 +92,7 @@ def setup_environment(
     file_dir = os.path.basename(test_dir)
 
     # Получаем имя тестируемого файла "test_a.py" -> "a.py"
-    tested_file_name = current_file_name.split("_")[-1]
+    tested_file_name = current_file_name.split("test_")[-1]
 
     # Путь к тестируемому файлу для обертывания в функцию
     path_to_test_file = os.path.join(
