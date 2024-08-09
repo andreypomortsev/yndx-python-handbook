@@ -298,32 +298,32 @@ def main():
 <summary><h3>3.1 Строки, кортежи, списки</h3></summary>
 
 #### Для решения задач используется только пройденный материал из параграфоф:
-- [3.1 Вложенные циклы](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
+- [3.1 Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
 
-### [Тестовые данные для задач](./tests/data/test_data_25.py)
+### [Тестовые данные для задач](./tests/data/test_data_31.py)
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Азбука](./solutions/2.5/25_a.py) | [✅](./tests/2.5/test_25_a.py) |
-| B. [Кручу-верчу](./solutions/2.5/25_b.py) | [✅](./tests/2.5/test_25_b.py) |
-| C. [Анонс новости](./solutions/2.5/25_c.py) | [✅](./tests/2.5/test_25_c.py) |
-| D. [Очистка данных](./solutions/2.5/25_d.py) | [✅](./tests/2.5/test_25_d.py) |
-| E. [А роза упала на лапу Азора 4.0](./solutions/2.5/25_e.py) | [✅](./tests/2.5/test_25_e.py) |
-| F. [Зайка — 6](./solutions/2.5/25_f.py) | [❌](./tests/2.5/test_25_f.py) |
-| G. [А и Б сидели на трубе](./solutions/2.5/25_g.py) | [❌](./tests/2.5/test_25_g.py) |
-| H. [Зайка — 7](./solutions/2.5/25_h.py) | [❌](./tests/2.5/test_25_h.py) |
-| I. [Без комментариев](./solutions/2.5/25_i.py) | [❌](./tests/2.5/test_25_i.py) |
-| J. [Частотный анализ на минималках](./solutions/2.5/25_j.py) | [❌](./tests/2.5/test_25_j.py) |
-| K. [Найдётся всё](./solutions/2.5/25_k.py) | [❌](./tests/2.5/test_25_k.py) |
-| L. [Меню питания](./solutions/2.5/25_l.py) | [❌](./tests/2.5/test_25_l.py) |
-| M. [Массовое возведение в степень](./solutions/2.5/25_m.py) | [❌](./tests/2.5/test_25_m.py) |
-| N. [Массовое возведение в степень 2.0](./solutions/2.5/25_n.py) | [❌](./tests/2.5/test_25_n.py) |
-| O. [НОД 3.0](./solutions/2.5/25_o.py) | [❌](./tests/2.5/test_25_o.py) |
-| P. [Анонс новости 2.0](./solutions/2.5/25_p.py) | [❌](./tests/2.5/test_25_p.py) |
-| Q. [А роза упала на лапу Азора 5.0](./solutions/2.5/25_q.py) | [❌](./tests/2.5/test_25_q.py) |
-| R. [RLE](./solutions/2.5/25_r.py) | [❌](./tests/2.5/test_25_r.py) |
-| S. [Польский калькулятор](./solutions/2.5/25_s.py) | [❌](./tests/2.5/test_25_s.py) |
-| T. [Польский калькулятор — 2](./solutions/2.5/25_t.py) | [❌](./tests/2.5/test_25_t.py) |
+| А. [Азбука](./solutions/3.1/31_a.py) | [✅](./tests/3.1/test_31_a.py) |
+| B. [Кручу-верчу](./solutions/3.1/31_b.py) | [✅](./tests/3.1/test_31_b.py) |
+| C. [Анонс новости](./solutions/3.1/31_c.py) | [✅](./tests/3.1/test_31_c.py) |
+| D. [Очистка данных](./solutions/3.1/31_d.py) | [✅](./tests/3.1/test_31_d.py) |
+| E. [А роза упала на лапу Азора 4.0](./solutions/3.1/31_e.py) | [✅](./tests/3.1/test_31_e.py) |
+| F. [Зайка — 6](./solutions/3.1/31_f.py) | [❌](./tests/3.1/test_31_f.py) |
+| G. [А и Б сидели на трубе](./solutions/3.1/31_g.py) | [❌](./tests/3.1/test_31_g.py) |
+| H. [Зайка — 7](./solutions/3.1/31_h.py) | [❌](./tests/3.1/test_31_h.py) |
+| I. [Без комментариев](./solutions/3.1/31_i.py) | [❌](./tests/3.1/test_31_i.py) |
+| J. [Частотный анализ на минималках](./solutions/3.1/31_j.py) | [❌](./tests/3.1/test_31_j.py) |
+| K. [Найдётся всё](./solutions/3.1/31_k.py) | [❌](./tests/3.1/test_31_k.py) |
+| L. [Меню питания](./solutions/3.1/31_l.py) | [❌](./tests/3.1/test_31_l.py) |
+| M. [Массовое возведение в степень](./solutions/3.1/31_m.py) | [❌](./tests/3.1/test_31_m.py) |
+| N. [Массовое возведение в степень 3.0](./solutions/3.1/31_n.py) | [❌](./tests/3.1/test_31_n.py) |
+| O. [НОД 3.0](./solutions/3.1/31_o.py) | [❌](./tests/3.1/test_31_o.py) |
+| P. [Анонс новости 3.0](./solutions/3.1/31_p.py) | [❌](./tests/3.1/test_31_p.py) |
+| Q. [А роза упала на лапу Азора 1.0](./solutions/3.1/31_q.py) | [❌](./tests/3.1/test_31_q.py) |
+| R. [RLE](./solutions/3.1/31_r.py) | [❌](./tests/3.1/test_31_r.py) |
+| S. [Польский калькулятор](./solutions/3.1/31_s.py) | [❌](./tests/3.1/test_31_s.py) |
+| T. [Польский калькулятор — 3](./solutions/3.1/31_t.py) | [❌](./tests/3.1/test_31_t.py) |
 
 </details>
 
