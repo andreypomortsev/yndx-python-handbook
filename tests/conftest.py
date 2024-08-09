@@ -7,7 +7,7 @@ from typing import Generator, Tuple
 import pytest
 from _pytest.main import Session
 
-from .utils import memory_limit, time_limit
+from .utils import memory_limit, time_limit, get_tested_file_details
 
 # Добавить родительский каталог в системный путь
 # Это позволяет импортировать модули из родительского каталога
@@ -82,25 +82,8 @@ def setup_environment(
     tuple: Кортеж, содержащий импортированный модуль и путь
     к тестируемому файлу.
     """
-    current_file_name = os.path.basename(request.module.__file__)
-    test_dir = os.path.dirname(request.module.__file__)
-
-    # Абсолюный путь в корневой каталог
-    abs_code_dir = os.path.abspath(os.path.join(test_dir, "..", ".."))
-
-    # Название папки с тестируемым кодом
-    file_dir = os.path.basename(test_dir)
-
-    # Получаем имя тестируемого файла "test_a.py" -> "a.py"
-    tested_file_name = current_file_name.split("test_")[-1]
-
-    # Путь к тестируемому файлу для обертывания в функцию
-    path_to_test_file = os.path.join(
-        abs_code_dir, "solutions", file_dir, tested_file_name
-    )
-
-    # Получаем букву тестируемого файла "a.py" -> ["a", ""]
-    tested_file_name = tested_file_name.split(".py")[0]
+    # Получаем путь к файлу с решением и его имя
+    path_to_test_file, tested_file_name = get_tested_file_details(request)
 
     # Оборачиваем тестируемый файл в функцию main, получаем путь файла
     path_to_the_wrapped_file = wrap_answer(path_to_test_file, tested_file_name)
