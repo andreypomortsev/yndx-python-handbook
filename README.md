@@ -26,7 +26,7 @@ cd yndx-python-handbook
 #### Создаем виртуальную среду
 
 Все точно работает на [**Python 3.12.4**](https://www.python.org/downloads/release/python-3124/)
-```
+```sh
 python3 -m venv .venv
 ```
 
@@ -34,34 +34,114 @@ python3 -m venv .venv
 
 - На macOS и Linux:
 
-  ```bash
+  ```sh
   source .venv/bin/activate
   ```
 
 - На Windows:
 
-  ```bash
+  ```PowerShell
   .venv\Scripts\activate
   ```
 
 #### Устанавливаемм все необходимое
 
-```
+```sh
 pip3 install -r requirements
 ```
 
 #### Запускаем тесты
-
-```
+Все тесты в репозитории:
+```sh
 pytest
 ```
-Тесты с отчетом в `html`:
+Все тесты одного парагарафа (вместо `2.1` укажите нужный параграф) приведенный код запустит тесты для всех задач из параграфа [2.1](./solutions/2.1/):
+```sh
+pytest tests/2.1
 ```
+Тест одной задачи (вместо `2.3` укажите нужный параграф, вместо `test_23_a.py` укажите тест для нужной задачи) приведенный код запустит тесты для задачи **A. Раз, два, три! Ёлочка, гори!**  из парагарафа [2.3](./solutions/2.3/):
+```sh
+pytest tests/2.3/test_23_a.py
+```
+Тесты с отчетом в `html`*:
+_*можно использовать как для всех тестов так и для отдельных задач и параграфоф (папок)_
+```sh
 pytest --cov-report=html
 ```
 после прохождения тестов открываем файл: `htmlcov/index.html`
 
-Во время теста в папке `tests` будут созданы временные файлы `wrapped_*.py` которые удалятся после прохождения тестов.
+Во время теста в папке `tests` временно создаются файлы `wrapped_*.py`.
+
+<details>
+<summary><h4>Почему создаются временные файлы?</h4></summary>
+
+Для определения покрытия кода тестами обычно импортируется тестируемая функция, и инструмент coverage может наблюдать, какие строки исполнялись, а какие нет. Когда в файле решений нет функций, как в первых трех параграфах учебника, когда ещё не задано определение функции, мы можем протестировать код из файла, но не получить покрытия строк тестами. Поэтому я написал функцию `wrap_answer` [см. здесь](./tests/conftest.py). Эта функция запускается при старте тестов с параметрами: путь к тестируемому файлу и имя этого файла. Она считывает содержимое решения задачи из заданного файла, оборачивает его в функцию main и сохраняет в файл с именем `wrapped_(адрес папки)_(буква задачи).py`. Уже этот файл проверяется тестами, и coverage видит, какие строки выполнялись, а какие нет, что позволяет получить информацию о покрытии тестами решения.
+
+**Пример:**
+
+_Решение задачи Q из параграфа 2.2_
+Файл `22_q.py` до:
+
+```python
+a = float(input())
+b = float(input())
+c = float(input())
+
+if not a:
+    if not b and not c:  # a == b == c == 0
+        print("Infinite solutions")
+    elif not b and c:  # a == b == 0 and c != 0
+        print("No solution")
+    else:  # a == 0 and b != 0 линейное уравнение
+        print(round(-c / b, 2))
+else:
+    discriminant = b**2 - 4 * a * c
+    if discriminant >= 0:
+        root1 = round((-b + discriminant**0.5) / (2 * a), 2)
+        root2 = round((-b - discriminant**0.5) / (2 * a), 2)
+        if not discriminant:
+            print(root2)
+        elif root1 < root2:  # Условие выполняется при a < 0
+            print(root1, root2)
+        else:
+            print(root2, root1)
+    else:  # Дискриминант меньше 0
+        print("No solution")
+
+```
+
+Файл `wrapped_22_q.py` после применения `wrap_answer` к `22_q.py`:
+```python
+def main():
+    a = float(input())
+    b = float(input())
+    c = float(input())
+
+    if not a:
+      if not b and not c:  # a == b == c == 0
+          print("Infinite solutions")
+      elif not b and c:  # a == b == 0 and c != 0
+          print("No solution")
+      else:  # a == 0 and b != 0 линейное уравнение
+          print(round(-c / b, 2))
+    else:
+      discriminant = b**2 - 4 * a * c
+      if discriminant >= 0:
+          root1 = round((-b + discriminant**0.5) / (2 * a), 2)
+          root2 = round((-b - discriminant**0.5) / (2 * a), 2)
+          if not discriminant:
+              print(root2)
+          elif root1 < root2:  # Условие выполняется при a < 0
+              print(root1, root2)
+          else:
+              print(root2, root1)
+      else:  # Дискриминант меньше 0
+          print("No solution")
+```
+
+После того как отчет по покрытию готов, файлы удаляются. 
+
+</details>
 
 ### Проверка Вашего кода
 
@@ -207,11 +287,44 @@ pytest --cov-report=html
 | M. [Числовой прямоугольник 2.0](./solutions/2.4/24_m.py) | [✅](./tests/2.4/test_24_m.py) |
 | N. [Числовая змейка](./solutions/2.4/24_n.py) | [✅](./tests/2.4/test_24_n.py) |
 | O. [Числовая змейка 2.0](./solutions/2.4/24_o.py) | [✅](./tests/2.4/test_24_o.py) |
-| P. [Редизайн таблицы умножения](./solutions/2.4/24_p.py) | [❌](./tests/2.4/test_24_p.py) |
-| Q. [А роза упала на лапу Азора 3.0](./solutions/2.4/24_q.py) | [❌](./tests/2.4/test_24_q.py) |
-| R. [Новогоднее настроение 2.0](./solutions/2.4/24_r.py) | [❌](./tests/2.4/test_24_r.py) |
-| S. [Числовой квадрат](./solutions/2.4/24_s.py) | [❌](./tests/2.4/test_24_s.py) |
-| T. [Математическая выгода](./solutions/2.4/24_t.py) | [❌](./tests/2.4/test_24_t.py) |
+| P. [Редизайн таблицы умножения](./solutions/2.4/24_p.py) | [✅](./tests/2.4/test_24_p.py) |
+| Q. [А роза упала на лапу Азора 3.0](./solutions/2.4/24_q.py) | [✅](./tests/2.4/test_24_q.py) |
+| R. [Новогоднее настроение 2.0](./solutions/2.4/24_r.py) | [✅](./tests/2.4/test_24_r.py) |
+| S. [Числовой квадрат](./solutions/2.4/24_s.py) | [✅](./tests/2.4/test_24_s.py) |
+| T. [Математическая выгода](./solutions/2.4/24_t.py) | [✅](./tests/2.4/test_24_t.py) |
+
+</details>
+
+<details>
+<summary><h3>3.1 Строки, кортежи, списки</h3></summary>
+
+#### Для решения задач используется только пройденный материал из параграфоф:
+- [3.1 Вложенные циклы](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
+
+### [Тестовые данные для задач](./tests/data/test_data_25.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Азбука](./solutions/2.5/25_a.py) | [❌](./tests/2.5/test_25_a.py) |
+| B. [Кручу-верчу](./solutions/2.5/25_b.py) | [❌](./tests/2.5/test_25_b.py) |
+| C. [Анонс новости](./solutions/2.5/25_c.py) | [❌](./tests/2.5/test_25_c.py) |
+| D. [Очистка данных](./solutions/2.5/25_d.py) | [❌](./tests/2.5/test_25_d.py) |
+| E. [А роза упала на лапу Азора 4.0](./solutions/2.5/25_e.py) | [❌](./tests/2.5/test_25_e.py) |
+| F. [Зайка — 6](./solutions/2.5/25_f.py) | [❌](./tests/2.5/test_25_f.py) |
+| G. [А и Б сидели на трубе](./solutions/2.5/25_g.py) | [❌](./tests/2.5/test_25_g.py) |
+| H. [Зайка — 7](./solutions/2.5/25_h.py) | [❌](./tests/2.5/test_25_h.py) |
+| I. [Без комментариев](./solutions/2.5/25_i.py) | [❌](./tests/2.5/test_25_i.py) |
+| J. [Частотный анализ на минималках](./solutions/2.5/25_j.py) | [❌](./tests/2.5/test_25_j.py) |
+| K. [Найдётся всё](./solutions/2.5/25_k.py) | [❌](./tests/2.5/test_25_k.py) |
+| L. [Меню питания](./solutions/2.5/25_l.py) | [❌](./tests/2.5/test_25_l.py) |
+| M. [Массовое возведение в степень](./solutions/2.5/25_m.py) | [❌](./tests/2.5/test_25_m.py) |
+| N. [Массовое возведение в степень 2.0](./solutions/2.5/25_n.py) | [❌](./tests/2.5/test_25_n.py) |
+| O. [НОД 3.0](./solutions/2.5/25_o.py) | [❌](./tests/2.5/test_25_o.py) |
+| P. [Анонс новости 2.0](./solutions/2.5/25_p.py) | [❌](./tests/2.5/test_25_p.py) |
+| Q. [А роза упала на лапу Азора 5.0](./solutions/2.5/25_q.py) | [❌](./tests/2.5/test_25_q.py) |
+| R. [RLE](./solutions/2.5/25_r.py) | [❌](./tests/2.5/test_25_r.py) |
+| S. [Польский калькулятор](./solutions/2.5/25_s.py) | [❌](./tests/2.5/test_25_s.py) |
+| T. [Польский калькулятор — 2](./solutions/2.5/25_t.py) | [❌](./tests/2.5/test_25_t.py) |
 
 </details>
 

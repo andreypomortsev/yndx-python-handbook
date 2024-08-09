@@ -1,9 +1,11 @@
+import os
 import signal
 from io import StringIO
 from types import FrameType
-from typing import Callable, Any
+from typing import Callable, Tuple, Any
 
 import psutil
+from pytest import FixtureRequest
 
 
 class MemoryLimitExceeded(Exception):
@@ -105,3 +107,39 @@ def assert_equal(
             f"\nExpected output:\n{expected_output}\n\n"
             f"Printed output:\n{printed_output}"
         )
+
+
+def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
+    """
+    Функция для получения пути к тестируемому файлу и его имени.
+
+    Аргументы:
+        request: Объект запроса pytest, содержащий информацию о текущем тесте.
+
+    Возвращает:
+        tuple: Кортеж, содержащий путь к тестируемому файлу и его имя
+                без расширения.
+    """
+    # Получаем имя файла текущего модуля теста
+    file_name = os.path.basename(request.module.__file__)
+
+    # Получаем путь к директории, в которой находится текущий модуль теста
+    dir_name = os.path.dirname(request.module.__file__)
+
+    # Абсолюный путь в корневой каталог
+    abs_code_dir = os.path.abspath(os.path.join(dir_name, "..", ".."))
+
+    # Название папки с тестируемым кодом
+    file_dir = os.path.basename(dir_name)
+
+    # Получаем имя тестируемого файла "test_21_a.py" -> "a.py"
+    tested_file_name = file_name.split("test_")[-1]
+
+    # Путь к тестируемому файлу для обертывания в функцию
+    path_to_test_file = os.path.join(
+        abs_code_dir, "solutions", file_dir, tested_file_name
+    )
+
+    # Получаем букву тестируемого файла "a.py" -> ["a", ""]
+    tested_file_name = tested_file_name.split(".py")[0]
+    return path_to_test_file, tested_file_name
