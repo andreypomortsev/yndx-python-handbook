@@ -26,7 +26,7 @@ cd yndx-python-handbook
 #### Создаем виртуальную среду
 
 Все точно работает на [**Python 3.12.4**](https://www.python.org/downloads/release/python-3124/)
-```
+```sh
 python3 -m venv .venv
 ```
 
@@ -34,43 +34,114 @@ python3 -m venv .venv
 
 - На macOS и Linux:
 
-  ```bash
+  ```sh
   source .venv/bin/activate
   ```
 
 - На Windows:
 
-  ```bash
+  ```PowerShell
   .venv\Scripts\activate
   ```
 
 #### Устанавливаемм все необходимое
 
-```
+```sh
 pip3 install -r requirements
 ```
 
 #### Запускаем тесты
 Все тесты в репозитории:
-```
+```sh
 pytest
 ```
 Все тесты одного парагарафа (вместо `2.1` укажите нужный параграф) приведенный код запустит тесты для всех задач из параграфа [2.1](./solutions/2.1/):
-```
+```sh
 pytest tests/2.1
 ```
 Тест одной задачи (вместо `2.3` укажите нужный параграф, вместо `test_23_a.py` укажите тест для нужной задачи) приведенный код запустит тесты для задачи **A. Раз, два, три! Ёлочка, гори!**  из парагарафа [2.3](./solutions/2.3/):
-```
+```sh
 pytest tests/2.3/test_23_a.py
 ```
 Тесты с отчетом в `html`*:
-__*можно использовать как для всех тестов так и для отдельных задач и параграфоф (папок)__
-```
+_*можно использовать как для всех тестов так и для отдельных задач и параграфоф (папок)_
+```sh
 pytest --cov-report=html
 ```
 после прохождения тестов открываем файл: `htmlcov/index.html`
 
-Во время теста в папке `tests` будут созданы временные файлы `wrapped_*.py` которые удалятся после прохождения тестов.
+Во время теста в папке `tests` временно создаются файлы `wrapped_*.py`.
+
+<details>
+<summary><h4>Почему создаются временные файлы?</h4></summary>
+
+Для определения покрытия кода тестами обычно импортируется тестируемая функция, и инструмент coverage может наблюдать, какие строки исполнялись, а какие нет. Когда в файле решений нет функций, как в первых трех параграфах учебника, когда ещё не задано определение функции, мы можем протестировать код из файла, но не получить покрытия строк тестами. Поэтому я написал функцию `wrap_answer` [см. здесь](./tests/conftest.py). Эта функция запускается при старте тестов с параметрами: путь к тестируемому файлу и имя этого файла. Она считывает содержимое решения задачи из заданного файла, оборачивает его в функцию main и сохраняет в файл с именем `wrapped_(адрес папки)_(буква задачи).py`. Уже этот файл проверяется тестами, и coverage видит, какие строки выполнялись, а какие нет, что позволяет получить информацию о покрытии тестами решения.
+
+**Пример:**
+
+_Решение задачи Q из параграфа 2.2_
+Файл `22_q.py` до:
+
+```python
+a = float(input())
+b = float(input())
+c = float(input())
+
+if not a:
+    if not b and not c:  # a == b == c == 0
+        print("Infinite solutions")
+    elif not b and c:  # a == b == 0 and c != 0
+        print("No solution")
+    else:  # a == 0 and b != 0 линейное уравнение
+        print(round(-c / b, 2))
+else:
+    discriminant = b**2 - 4 * a * c
+    if discriminant >= 0:
+        root1 = round((-b + discriminant**0.5) / (2 * a), 2)
+        root2 = round((-b - discriminant**0.5) / (2 * a), 2)
+        if not discriminant:
+            print(root2)
+        elif root1 < root2:  # Условие выполняется при a < 0
+            print(root1, root2)
+        else:
+            print(root2, root1)
+    else:  # Дискриминант меньше 0
+        print("No solution")
+
+```
+
+Файл `wrapped_22_q.py` после применения `wrap_answer` к `22_q.py`:
+```python
+def main():
+    a = float(input())
+    b = float(input())
+    c = float(input())
+
+    if not a:
+      if not b and not c:  # a == b == c == 0
+          print("Infinite solutions")
+      elif not b and c:  # a == b == 0 and c != 0
+          print("No solution")
+      else:  # a == 0 and b != 0 линейное уравнение
+          print(round(-c / b, 2))
+    else:
+      discriminant = b**2 - 4 * a * c
+      if discriminant >= 0:
+          root1 = round((-b + discriminant**0.5) / (2 * a), 2)
+          root2 = round((-b - discriminant**0.5) / (2 * a), 2)
+          if not discriminant:
+              print(root2)
+          elif root1 < root2:  # Условие выполняется при a < 0
+              print(root1, root2)
+          else:
+              print(root2, root1)
+      else:  # Дискриминант меньше 0
+          print("No solution")
+```
+
+После того как отчет по покрытию готов, файлы удаляются. 
+
+</details>
 
 ### Проверка Вашего кода
 
