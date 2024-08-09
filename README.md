@@ -1,7 +1,6 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/t/andreypomortsev/yndx-python-handbook)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
@@ -305,11 +304,11 @@ def main():
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Азбука](./solutions/2.5/25_a.py) | [❌](./tests/2.5/test_25_a.py) |
-| B. [Кручу-верчу](./solutions/2.5/25_b.py) | [❌](./tests/2.5/test_25_b.py) |
-| C. [Анонс новости](./solutions/2.5/25_c.py) | [❌](./tests/2.5/test_25_c.py) |
-| D. [Очистка данных](./solutions/2.5/25_d.py) | [❌](./tests/2.5/test_25_d.py) |
-| E. [А роза упала на лапу Азора 4.0](./solutions/2.5/25_e.py) | [❌](./tests/2.5/test_25_e.py) |
+| А. [Азбука](./solutions/2.5/25_a.py) | [✅](./tests/2.5/test_25_a.py) |
+| B. [Кручу-верчу](./solutions/2.5/25_b.py) | [✅](./tests/2.5/test_25_b.py) |
+| C. [Анонс новости](./solutions/2.5/25_c.py) | [✅](./tests/2.5/test_25_c.py) |
+| D. [Очистка данных](./solutions/2.5/25_d.py) | [✅](./tests/2.5/test_25_d.py) |
+| E. [А роза упала на лапу Азора 4.0](./solutions/2.5/25_e.py) | [✅](./tests/2.5/test_25_e.py) |
 | F. [Зайка — 6](./solutions/2.5/25_f.py) | [❌](./tests/2.5/test_25_f.py) |
 | G. [А и Б сидели на трубе](./solutions/2.5/25_g.py) | [❌](./tests/2.5/test_25_g.py) |
 | H. [Зайка — 7](./solutions/2.5/25_h.py) | [❌](./tests/2.5/test_25_h.py) |
