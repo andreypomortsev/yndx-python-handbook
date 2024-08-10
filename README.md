@@ -309,11 +309,11 @@ def main():
 | C. [Анонс новости](./solutions/3.1/31_c.py) | [✅](./tests/3.1/test_31_c.py) |
 | D. [Очистка данных](./solutions/3.1/31_d.py) | [✅](./tests/3.1/test_31_d.py) |
 | E. [А роза упала на лапу Азора 4.0](./solutions/3.1/31_e.py) | [✅](./tests/3.1/test_31_e.py) |
-| F. [Зайка — 6](./solutions/3.1/31_f.py) | [❌](./tests/3.1/test_31_f.py) |
-| G. [А и Б сидели на трубе](./solutions/3.1/31_g.py) | [❌](./tests/3.1/test_31_g.py) |
-| H. [Зайка — 7](./solutions/3.1/31_h.py) | [❌](./tests/3.1/test_31_h.py) |
-| I. [Без комментариев](./solutions/3.1/31_i.py) | [❌](./tests/3.1/test_31_i.py) |
-| J. [Частотный анализ на минималках](./solutions/3.1/31_j.py) | [❌](./tests/3.1/test_31_j.py) |
+| F. [Зайка — 6](./solutions/3.1/31_f.py) | [✅](./tests/3.1/test_31_f.py) |
+| G. [А и Б сидели на трубе](./solutions/3.1/31_g.py) | [✅](./tests/3.1/test_31_g.py) |
+| H. [Зайка — 7](./solutions/3.1/31_h.py) | [✅](./tests/3.1/test_31_h.py) |
+| I. [Без комментариев](./solutions/3.1/31_i.py) | [✅](./tests/3.1/test_31_i.py) |
+| J. [Частотный анализ на минималках](./solutions/3.1/31_j.py) | [✅](./tests/3.1/test_31_j.py) |
 | K. [Найдётся всё](./solutions/3.1/31_k.py) | [❌](./tests/3.1/test_31_k.py) |
 | L. [Меню питания](./solutions/3.1/31_l.py) | [❌](./tests/3.1/test_31_l.py) |
 | M. [Массовое возведение в степень](./solutions/3.1/31_m.py) | [❌](./tests/3.1/test_31_m.py) |
