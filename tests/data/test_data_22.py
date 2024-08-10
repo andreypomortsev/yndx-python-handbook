@@ -880,8 +880,18 @@ t_test_data = [
         "sorting check",
     ),
     (
-        "пёс зайка\nзайка пес\nзайка пёс\n",
-        "зайка пес 9\n",
-        "sorting check",
+        "пес\nзайка\n зайка\n",
+        " зайка 6\n",
+        "second third line comp",
+    ),
+    (
+        "пес\n зайка\nзайка\n",
+        " зайка 6\n",
+        "second third line comp s>t",
+    ),
+    (
+        "зайка\nпес\n зайка\n",
+        " зайка 6\n",
+        "first third line comp f>t",
     ),
 ]
