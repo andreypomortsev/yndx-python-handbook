@@ -15,10 +15,10 @@ while line := input():
                 break
 
         if char in ["'", '"']:
-            if not stack:
-                stack.append(char)
-            elif char == stack[-1]:
+            if stack and char == stack[-1]:
                 stack.pop()
+            else:
+                stack.append(char)
 
     if not flag:
         print(line)
