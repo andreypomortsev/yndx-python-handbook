@@ -338,6 +338,23 @@ i_test_data = [
         'print("вася")\n',
         "Nikolai's test",
     ),
+    (
+        're, stroka = "#", "#"\n'
+        "while stroka != "
+        ":\n"
+        "    stroka = input()\n"
+        "    t = stroka.split(re)\n"
+        "    if not t[0].isspace() and len(t[0]) != 0:\n"
+        "        print(t[0].rstrip())\n\n",
+        're, stroka = "#", "#"\n'
+        "while stroka != "
+        ":\n"
+        "    stroka = input()\n"
+        "    t = stroka.split(re)\n"
+        "    if not t[0].isspace() and len(t[0]) != 0:\n"
+        "        print(t[0].rstrip())\n",
+        "Valerii's test",
+    ),
 ]
 
 j_test_data = [

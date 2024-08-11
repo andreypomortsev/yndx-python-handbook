@@ -1,7 +1,7 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
-![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
+![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Решения задач из учебника [Основы Python](https://education.yandex.ru/handbook/python) от Яндекс
