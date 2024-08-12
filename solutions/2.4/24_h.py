@@ -1,6 +1,6 @@
 n = int(input())
 
-winner, max_number = None, None
+winner, max_number = None, 0
 
 for _ in range(n):
     name = input()
@@ -11,7 +11,7 @@ for _ in range(n):
         sum_of_digits += number % 10
         number //= 10
 
-    if not max_number or sum_of_digits >= max_number:
+    if sum_of_digits >= max_number:
         max_number = sum_of_digits
         winner = name
 
