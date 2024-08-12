@@ -314,11 +314,11 @@ def main():
 | H. [Зайка — 7](./solutions/3.1/31_h.py) | [✅](./tests/3.1/test_31_h.py) |
 | I. [Без комментариев](./solutions/3.1/31_i.py) | [✅](./tests/3.1/test_31_i.py) |
 | J. [Частотный анализ на минималках](./solutions/3.1/31_j.py) | [✅](./tests/3.1/test_31_j.py) |
-| K. [Найдётся всё](./solutions/3.1/31_k.py) | [❌](./tests/3.1/test_31_k.py) |
-| L. [Меню питания](./solutions/3.1/31_l.py) | [❌](./tests/3.1/test_31_l.py) |
-| M. [Массовое возведение в степень](./solutions/3.1/31_m.py) | [❌](./tests/3.1/test_31_m.py) |
-| N. [Массовое возведение в степень 3.0](./solutions/3.1/31_n.py) | [❌](./tests/3.1/test_31_n.py) |
-| O. [НОД 3.0](./solutions/3.1/31_o.py) | [❌](./tests/3.1/test_31_o.py) |
+| K. [Найдётся всё](./solutions/3.1/31_k.py) | [✅](./tests/3.1/test_31_k.py) |
+| L. [Меню питания](./solutions/3.1/31_l.py) | [✅](./tests/3.1/test_31_l.py) |
+| M. [Массовое возведение в степень](./solutions/3.1/31_m.py) | [✅](./tests/3.1/test_31_m.py) |
+| N. [Массовое возведение в степень 3.0](./solutions/3.1/31_n.py) | [✅](./tests/3.1/test_31_n.py) |
+| O. [НОД 3.0](./solutions/3.1/31_o.py) | [✅](./tests/3.1/test_31_o.py) |
 | P. [Анонс новости 3.0](./solutions/3.1/31_p.py) | [❌](./tests/3.1/test_31_p.py) |
 | Q. [А роза упала на лапу Азора 1.0](./solutions/3.1/31_q.py) | [❌](./tests/3.1/test_31_q.py) |
 | R. [RLE](./solutions/3.1/31_r.py) | [❌](./tests/3.1/test_31_r.py) |
