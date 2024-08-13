@@ -577,3 +577,212 @@ o_test_data = [
     ("0\n", "0\n", "single zero input"),
     ("-1234567890\n", "1234567890\n", "single large negative input"),
 ]
+
+p_test_data = [
+    (
+        "144\n5\n"
+        "Энтузиаст написал программу для управления громкостью с помощью жестов, чтоб не вставать с дивана\n"
+        "Благодаря ей он может регулировать громкость,\n"
+        "показывая расстояние между большим и указательным пальцами.\n"
+        "Для этого ему понадобилась веб-камера, знания Python и\n"
+        "библиотека для работы с компьютерным зрением.\n",
+        "Энтузиаст написал программу для управления громкостью с помощью жестов, чтоб не вставать с дивана\n"
+        "Благодаря ей он может регулировать громкость...\n",
+        "first open test",
+    ),
+    (
+        "121\n5\n"
+        "Энтузиаст написал программу для управления громкостью с помощью жестов, чтоб не вставать с дивана\n"
+        "Благодаря ей он может регулировать громкость,\n"
+        "показывая расстояние между большим и указательным пальцами.\n"
+        "Для этого ему понадобилась веб-камера, знания Python и\n"
+        "библиотека для работы с компьютерным зрением.\n",
+        "Энтузиаст написал программу для управления громкостью с помощью жестов, чтоб не вставать с дивана\n"
+        "Благодаря ей он может...\n",
+        "second open test",
+    ),
+    (
+        "71\n1\n"
+        "Энтузиаст написал программу для управления громкостью с помощью жестов.\n",
+        "Энтузиаст написал программу для управления громкостью с помощью жестов.\n",
+        "exact length one line",
+    ),
+    (
+        "71\n4\n"
+        "Энтузиаст написал \n"
+        "программу для управления \n"
+        "громкостью \n"
+        "с помощью жестов.\n",
+        "Энтузиаст написал \n"
+        "программу для управления \n"
+        "громкостью \n"
+        "с помощью жестов.\n",
+        "exact length few lines",
+    ),
+    (
+        "72\n1\n"
+        "Энтузиаст написал программу для управления громкостью с помощью жестов.\n",
+        "Энтузиаст написал программу для управления громкостью с помощью жестов.\n",
+        "the title is lesser than the length one line",
+    ),
+    (
+        "72\n4\n"
+        "Энтузиаст написал \n"
+        "программу для управления \n"
+        "громкостью \n"
+        "с помощью жестов.\n",
+        "Энтузиаст написал \n"
+        "программу для управления \n"
+        "громкостью \n"
+        "с помощью жестов.\n",
+        "the title is lesser than the length few lines",
+    ),
+    (
+        "70\n1\n"
+        "Энтузиаст написал программу для управления громкостью с помощью жестов.\n",
+        "Энтузиаст написал программу для управления громкостью с помощью жес...\n",
+        "the title is larger than the length",
+    ),
+    ("10\n2\n12345\n123\n", "12345\n123\n", "Sergey Klochko's first test"),
+    (
+        "10\n7\n123\n\n\n\n\n\n1234567890\n",
+        "123\n\n\n\n\n\n1234...\n",
+        "Sergey Klochko's second test",
+    ),
+    ("4\n5\n1\n2\n3\n4\n5\n", "1...\n", "Sergey Klochko's third test"),
+    ("3\n4\n1\n2\n3\n4\n", "...\n", "Nikolai's first test"),
+    (
+        "10\n2\n12345\n123456\n",
+        "12345\n12...\n",
+        "Valerii Glebov's first test",
+    ),
+    (
+        "10\n2\n12345\n12345\n",
+        "12345\n12345\n",
+        "Valerii Glebov's second test",
+    ),
+]
+
+q_test_data = [
+    ("А роза упала на лапу Азора\n", "YES\n", "first open test"),
+    ("Мама мыла раму\n", "NO\n", "second open test"),
+    ("Race Car\n", "YES\n", "race car"),
+    ("Race CarS\n", "NO\n", "race cars"),
+    ("\n", "YES\n", "no input"),
+    ("race truck\n", "NO\n", "two words"),
+    ("racEcar\n", "YES\n", "racEcar"),
+    ("12 21\n", "YES\n", "two numbers"),
+]
+
+r_test_data = [
+    (
+        "010000100001111111110111110000000000000011111111\n",
+        "0 1\n"
+        "1 1\n"
+        "0 4\n"
+        "1 1\n"
+        "0 4\n"
+        "1 9\n"
+        "0 1\n"
+        "1 5\n"
+        "0 14\n"
+        "1 8\n",
+        "first open test",
+    ),
+    (
+        "0110000000100001000\n",
+        "0 1\n1 2\n0 7\n1 1\n0 4\n1 1\n0 3\n",
+        "second open test",
+    ),
+    (
+        "0000000000000000000\n",
+        "0 19\n",
+        "only zeros",
+    ),
+    (
+        "0\n",
+        "0 1\n",
+        "one zero",
+    ),
+    (
+        "1\n",
+        "1 1\n",
+        "one one",
+    ),
+    (
+        "11111111111111111111\n",
+        "1 20\n",
+        "only ones",
+    ),
+    (
+        "10101010101010101010\n",
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n"
+        "1 1\n"
+        "0 1\n",
+        "mix of ones and zeros",
+    ),
+]
+
+s_test_data = [
+    ("7 2 3 * -\n", "1\n", "subtraction after multiplication"),
+    ("10 15 - 7 *\n", "-35\n", "multiplication after subtraction"),
+    ("10 15 - 7 * -215 -\n", "180\n", "subtraction with negative result"),
+    ("10 15 - 7 * -215 +\n", "-250\n", "addition with negative operand"),
+    ("3 4 +\n", "7\n", "simple addition"),
+    (
+        "15 7 1 1 + - * 3 * 2 1 1 + + -\n",
+        "221\n",
+        "complex expression with multiple operators",
+    ),
+    ("5 1 2 + 4 * + 3 -\n", "14\n", "nested operations"),
+    ("0 3 *\n", "0\n", "multiplication by zero"),
+    ("2 5 - -2 -\n", "-1\n", "handling of negative results in subtraction"),
+]
+
+t_test_data = [
+    ("7 1 10 100 # * @ - + + ~\n", "-10016\n", "first open test"),
+    ("10 15 - 7 *\n", "-35\n", "second open test"),
+    (
+        "10 # +\n",
+        "20\n",
+        "duplication of the top stack value followed by addition",
+    ),
+    ("1 2 3 @ * /\n", "0\n", "rotating top three elements of the stack"),
+    ("5 3 4 * +\n", "17\n", "simple addition after multiplication"),
+    ("6 2 /\n", "3\n", "simple division case"),
+    ("4 !\n", "24\n", "factorial operation simple case"),
+    ("-5 ~\n", "5\n", "negation of a negative number"),
+    ("0 1 2 @ + -\n", "-1\n", "rotation of stack top three elements"),
+    (
+        "10 2 3 * + 4 -\n",
+        "12\n",
+        "complex operation with addition and subtraction",
+    ),
+    (
+        "5 -1 2 + 4 * + 3 -\n",
+        "6\n",
+        "operation with addition, multiplication, and subtraction",
+    ),
+    (
+        "500000000 300000000 4000000000 * -20 @ * -\n",
+        "1200000010000000000\n",
+        "complex operation with rotation and multiplication",
+    ),
+]
