@@ -2,10 +2,11 @@ import importlib
 import os
 import sys
 from types import ModuleType
-from typing import Generator, Tuple
+from typing import Callable, Generator, Tuple
 
 import pytest
 from _pytest.main import Session
+from pytest import FixtureRequest
 
 from .utils import memory_limit, time_limit, get_tested_file_details
 
@@ -15,16 +16,17 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 @pytest.fixture(scope="module")
-def wrap_answer() -> Generator:
-    def wrapper(file_path: str, file_name: str) -> None:
+def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
+    def wrapper(file_path: str, file_name: str) -> str:
         """
         Считывает решение из файла и оборачивает его в main функцию
         для получения информации о покрытии тестов во время тестирования.
 
-        Args:
+        Аргументы:
             file_path (str): путь к файлу с решением.
             file_name (str): имя файла с решением.
-        Returns:
+
+        Возвращает:
             str: путь к обернутому файлу.
         """
         with open(file_path, encoding="UTF-8") as file_in:
@@ -56,7 +58,7 @@ def wrap_answer() -> Generator:
 
 @pytest.fixture(scope="module")
 def setup_environment(
-    request, wrap_answer
+    request: FixtureRequest, wrap_answer: Callable[..., None]
 ) -> Generator[Tuple[ModuleType, str], None, None]:
     """
     Фикстура для настройки тестовой среды, которая оборачивает тестируемый
@@ -74,13 +76,14 @@ def setup_environment(
         в конфигурации тестов для последующего удаления.
 
     Аргументы:
-    request -- объект, предоставляющий информацию о тестовом запросе.
-    wrap_answer -- функция, которая оборачивает файл в функцию main и
-    возвращает путь к обернутому файлу.
+        request (FixtureRequest): объект, предоставляющий информацию
+            о тестовом запросе.
+        wrap_answer (Callable[..., None]): функция, которая оборачивает файл
+            в функцию main и возвращает путь к обернутому файлу.
 
     Возвращает:
-    tuple: Кортеж, содержащий импортированный модуль и путь
-    к тестируемому файлу.
+        tuple: Кортеж, содержащий импортированный модуль и путь
+            к тестируемому файлу.
     """
     # Получаем путь к файлу с решением и его имя
     path_to_test_file, tested_file_name = get_tested_file_details(request)
@@ -101,13 +104,14 @@ def setup_environment(
 
 
 @pytest.hookimpl(tryfirst=True)
-def pytest_sessionfinish(session: Session):
+def pytest_sessionfinish(session: Session) -> None:
     """
     Pytest hook, который запускается после завершения тестовой сессии.
 
     Этот хук удаляет все временные файлы, созданные во время тестирования.
 
-    :param session: Текущая тестовая сессия Pytest.
+    Аргументы:
+        session (Session): Текущая тестовая сессия Pytest.
     """
     # Удаляем все временные файлы
     if hasattr(session.config, "wrapped_file_paths"):
@@ -117,11 +121,13 @@ def pytest_sessionfinish(session: Session):
 
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_call(item):
+def pytest_runtest_call(item: pytest.Item) -> Generator[None, None, None]:
     """
     Pytest hook для применения ограничений по памяти и времени к тестам.
 
-    :param item: Тестовый элемент, к которому применяются ограничения.
+    Аргументы:
+        item (pytest.Item): Тестовый элемент, к которому применяются
+            ограничения.
     """
     memory_limit_marker = item.get_closest_marker("memory_limit")
     time_limit_marker = item.get_closest_marker("time_limit")
