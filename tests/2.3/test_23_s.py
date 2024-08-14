@@ -23,5 +23,4 @@ def test_input_output(
         monkeypatch,
         mock_input_text,
         expected_output,
-        isinstance(expected_output, set),
     )
