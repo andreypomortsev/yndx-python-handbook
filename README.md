@@ -334,15 +334,15 @@ def main():
 - [3.1 Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
 - [3.2 Множества, словари](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari)
 
-### [Тестовые данные для задач](./tests/data/test_data_31.py)
+### [Тестовые данные для задач](./tests/data/test_data_32.py)
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Символическая выжимка](./solutions/3.2/32_a.py) | [❌](./tests/3.2/test_32_a.py) |
-| B. [Символическая разница](./solutions/3.2/32_b.py) | [❌](./tests/3.2/test_32_b.py) |
-| C. [Зайка — 8](./solutions/3.2/32_c.py) | [❌](./tests/3.2/test_32_c.py) |
-| D. [Кашееды](./solutions/3.2/32_d.py) | [❌](./tests/3.2/test_32_d.py) |
-| E. [Кашееды — 2](./solutions/3.2/32_e.py) | [❌](./tests/3.2/test_32_e.py) |
+| А. [Символическая выжимка](./solutions/3.2/32_a.py) | [✅](./tests/3.2/test_32_a.py) |
+| B. [Символическая разница](./solutions/3.2/32_b.py) | [✅](./tests/3.2/test_32_b.py) |
+| C. [Зайка — 8](./solutions/3.2/32_c.py) | [✅](./tests/3.2/test_32_c.py) |
+| D. [Кашееды](./solutions/3.2/32_d.py) | [✅](./tests/3.2/test_32_d.py) |
+| E. [Кашееды — 2](./solutions/3.2/32_e.py) | [✅](./tests/3.2/test_32_e.py) |
 | F. [Кашееды — 3](./solutions/3.2/32_f.py) | [❌](./tests/3.2/test_32_f.py) |
 | G. [Азбука Морзе](./solutions/3.2/32_g.py) | [❌](./tests/3.2/test_32_g.py) |
 | H. [Кашееды — 4](./solutions/3.2/32_h.py) | [❌](./tests/3.2/test_32_h.py) |
