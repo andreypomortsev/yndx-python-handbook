@@ -2,7 +2,7 @@ import os
 import signal
 from io import StringIO
 from types import FrameType
-from typing import Callable, Tuple, Any
+from typing import Callable, Tuple, Any, Union
 
 import psutil
 from pytest import FixtureRequest
@@ -20,9 +20,13 @@ def memory_limit(limit_mb: int):
     """
     Декоратор для ограничения использования памяти в функции.
 
-    :param limit_mb: Максимально допустимое использование памяти в мегабайтах.
-    :raises MemoryLimitExceeded: Исключение, если использование памяти \
-        превышает указанный лимит.
+    Аргументы:
+        limit_mb (int): Максимально допустимое использование памяти
+            в мегабайтах.
+
+    Исключения:
+        MemoryLimitExceeded: Исключение, если использование памяти
+            превышает указанный лимит.
     """
 
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
@@ -46,10 +50,14 @@ def memory_limit(limit_mb: int):
 def time_limit(limit_seconds: int):
     """
     Декоратор для ограничения времени выполнения функции.
-
-    :param limit_seconds: Максимально допустимое время выполнения в секундах.
-    :raises TimeLimitExceeded: Исключение, если время выполнения превышает \
-        указанный лимит.
+    
+    Аргументы:
+        limit_seconds (int): Максимально допустимое время выполнения
+            в секундах.
+    
+    Исключения:
+        TimeLimitExceeded: Исключение, если время выполнения превышает \
+            указанный лимит.
     """
 
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
@@ -69,25 +77,72 @@ def time_limit(limit_seconds: int):
     return decorator
 
 
+def generate_error_msg(
+    expected_output: str, printed_output: Union[str, set, tuple]
+) -> str:
+    """
+    Формирует сообщение с напечатанными данными и ожидаемыми.
+
+    Аргументы:
+        printed_output (str): Ответ выданные модулем.
+        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода,
+            могут быть: списком, множеством или кортежем.
+
+    Возвращает:
+        str: Сообщение с напечатанными данными и ожидаемыми.
+    """
+    return (
+        f"\nExpected output:\n{expected_output}\n\n"
+        f"Printed output:\n{printed_output}"
+    )
+
+
+def compare_output(
+    printed_output: str, expected_output: Union[str, set, tuple]
+) -> None:
+    """
+    Сравнивает напечатанный вывод с ожидаемым выводом.
+
+    Аргументы:
+        printed_output (str): Ответ выданные модулем.
+        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода,
+            могут быть: списком, множеством или кортежем.
+    Исключения:
+        AssertionError: Если фактический вывод не совпадает с ожидаемым.
+    """
+    instance_type = type(expected_output)
+    error_msg = generate_error_msg(printed_output, expected_output)
+
+    if instance_type is set:
+        assert printed_output in expected_output, error_msg
+
+    elif instance_type is tuple:
+        printed_output = set(printed_output)
+        expected_output = set(expected_output[0])
+        error_msg = generate_error_msg(printed_output, expected_output)
+
+        assert printed_output == expected_output, error_msg
+
+    elif instance_type is str:
+        assert printed_output == expected_output, error_msg
+
+
 def assert_equal(
     wrapped_module: Callable[..., None],
     monkeypatch: Any,
     mock_input_text: str,
-    expected_output: str,
-    is_set: bool = False,
+    expected_output: Union[str, set, tuple],
 ) -> None:
     """
     Запускает тест с заданным вводом и проверяет вывод.
 
-    :param wrapped_module: Модуль или функция, которые будут протестированы.
-    :param monkeypatch: Фикстура pytest, используемая для замены ввода и вывода
-    :param mock_input_text: Входной текст для имитации ввода пользователя.
-    :param expected_output: Ожидаемый текст вывода для сравнения.
-    :param is_set: Флаг, определяющий способ сравнения. Если False,
-        проверяется равенство фактического и ожидаемого вывода. Если True,
-        проверяется, что фактический вывод содержится в ожидаемом.
-    :raises AssertionError: Если фактический вывод не содержится в ожидаемом
-        (или не соответствует ожидаемому, если is_set=False).
+    Аргументы:
+        wrapped_module (Callable[..., None]): Модуль или функция,
+            которые будут протестированы.
+        monkeypatch (Any): Фикстура pytest, используемая для замены
+            ввода и вывода
+        mock_input_text (str): Входной текст для имитации ввода пользователя.
+        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода.
     """
     mock_input = StringIO(mock_input_text)
     mock_print = StringIO()
@@ -97,16 +152,7 @@ def assert_equal(
     wrapped_module.main()
 
     printed_output = mock_print.getvalue()
-    if is_set:
-        assert printed_output in expected_output, (
-            f"\nExpected output:\n{expected_output}\n\n"
-            f"Printed output:\n{printed_output}"
-        )
-    else:
-        assert printed_output == expected_output, (
-            f"\nExpected output:\n{expected_output}\n\n"
-            f"Printed output:\n{printed_output}"
-        )
+    compare_output(printed_output, expected_output)
 
 
 def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
@@ -114,10 +160,11 @@ def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
     Функция для получения пути к тестируемому файлу и его имени.
 
     Аргументы:
-        request: Объект запроса pytest, содержащий информацию о текущем тесте.
+        request (FixtureRequest): Объект запроса pytest, содержащий информацию
+            о текущем тесте.
 
     Возвращает:
-        tuple: Кортеж, содержащий путь к тестируемому файлу и его имя
+        Tuple[str, str]: Кортеж, содержащий путь к тестируемому файлу и его имя
                 без расширения.
     """
     # Получаем имя файла текущего модуля теста
