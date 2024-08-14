@@ -150,7 +150,7 @@ def assert_equal(
         monkeypatch (Any): Фикстура pytest, используемая для замены
             ввода и вывода
         mock_input_text (str): Входной текст для имитации ввода пользователя.
-        expected_output (Union[str, set, tuple, list]): Ожидаемые данные вывода.
+        expected_output (Union[str, set, tuple, list]): Ожидаемые данные вывода
     """
     mock_input = StringIO(mock_input_text)
     mock_print = StringIO()
