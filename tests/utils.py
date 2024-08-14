@@ -50,11 +50,11 @@ def memory_limit(limit_mb: int):
 def time_limit(limit_seconds: int):
     """
     Декоратор для ограничения времени выполнения функции.
-    
+
     Аргументы:
         limit_seconds (int): Максимально допустимое время выполнения
             в секундах.
-    
+
     Исключения:
         TimeLimitExceeded: Исключение, если время выполнения превышает \
             указанный лимит.
@@ -98,7 +98,7 @@ def generate_error_msg(
 
 
 def compare_output(
-    printed_output: str, expected_output: Union[str, set, tuple]
+    printed_output: str, expected_output: Union[str, set, tuple, list]
 ) -> None:
     """
     Сравнивает напечатанный вывод с ожидаемым выводом.
@@ -106,7 +106,7 @@ def compare_output(
     Аргументы:
         printed_output (str): Ответ выданные модулем.
         expected_output (Union[str, set, tuple]): Ожидаемые данные вывода,
-            могут быть: списком, множеством или кортежем.
+            могут быть: строкой, списком, множеством или кортежем.
     Исключения:
         AssertionError: Если фактический вывод не совпадает с ожидаемым.
     """
@@ -115,12 +115,20 @@ def compare_output(
 
     if instance_type is set:
         assert printed_output in expected_output, error_msg
+    # Передаются тесты в которых нужно оценить результат печати set
+    # Так как множества неупорядочные приходится преобразовывать в set
+    # Для сравнения двух множеств
+    elif instance_type in {tuple, list}:
+        if instance_type is tuple:  # Когда set распечатан в одну строку
+            printed_output = set(printed_output)
+            expected_output = set(expected_output[0])
+        else:  # Когда set распечатан в несколько строк
+            printed_output = set(printed_output.split())
+            expected_output = set(expected_output[0].split())
 
-    elif instance_type is tuple:
-        printed_output = set(printed_output)
-        expected_output = set(expected_output[0])
         error_msg = generate_error_msg(printed_output, expected_output)
 
+        # Сравниваем преобразованные в множества строки
         assert printed_output == expected_output, error_msg
 
     elif instance_type is str:
@@ -131,7 +139,7 @@ def assert_equal(
     wrapped_module: Callable[..., None],
     monkeypatch: Any,
     mock_input_text: str,
-    expected_output: Union[str, set, tuple],
+    expected_output: Union[str, set, tuple, list],
 ) -> None:
     """
     Запускает тест с заданным вводом и проверяет вывод.
@@ -142,7 +150,7 @@ def assert_equal(
         monkeypatch (Any): Фикстура pytest, используемая для замены
             ввода и вывода
         mock_input_text (str): Входной текст для имитации ввода пользователя.
-        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода.
+        expected_output (Union[str, set, tuple, list]): Ожидаемые данные вывода.
     """
     mock_input = StringIO(mock_input_text)
     mock_print = StringIO()
