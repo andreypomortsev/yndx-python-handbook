@@ -343,11 +343,11 @@ def main():
 | C. [Зайка — 8](./solutions/3.2/32_c.py) | [✅](./tests/3.2/test_32_c.py) |
 | D. [Кашееды](./solutions/3.2/32_d.py) | [✅](./tests/3.2/test_32_d.py) |
 | E. [Кашееды — 2](./solutions/3.2/32_e.py) | [✅](./tests/3.2/test_32_e.py) |
-| F. [Кашееды — 3](./solutions/3.2/32_f.py) | [❌](./tests/3.2/test_32_f.py) |
-| G. [Азбука Морзе](./solutions/3.2/32_g.py) | [❌](./tests/3.2/test_32_g.py) |
-| H. [Кашееды — 4](./solutions/3.2/32_h.py) | [❌](./tests/3.2/test_32_h.py) |
-| I. [Зайка — 9](./solutions/3.2/32_i.py) | [❌](./tests/3.2/test_32_i.py) |
-| J. [Транслитерация](./solutions/3.2/32_j.py) | [❌](./tests/3.2/test_32_j.py) |
+| F. [Кашееды — 3](./solutions/3.2/32_f.py) | [✅](./tests/3.2/test_32_f.py) |
+| G. [Азбука Морзе](./solutions/3.2/32_g.py) | [✅](./tests/3.2/test_32_g.py) |
+| H. [Кашееды — 4](./solutions/3.2/32_h.py) | [✅](./tests/3.2/test_32_h.py) |
+| I. [Зайка — 9](./solutions/3.2/32_i.py) | [✅](./tests/3.2/test_32_i.py) |
+| J. [Транслитерация](./solutions/3.2/32_j.py) | [✅](./tests/3.2/test_32_j.py) |
 | K. [Однофамильцы](./solutions/3.2/32_k.py) | [❌](./tests/3.2/test_32_k.py) |
 | L. [Однофамильцы — 2](./solutions/3.2/32_l.py) | [❌](./tests/3.2/test_32_l.py) |
 | M. [Дайте чего-нибудь новенького!](./solutions/3.2/32_m.py) | [❌](./tests/3.2/test_32_m.py) |
