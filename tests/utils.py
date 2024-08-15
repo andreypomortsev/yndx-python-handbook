@@ -123,8 +123,8 @@ def compare_output(
             printed_output = set(printed_output)
             expected_output = set(expected_output[0])
         else:  # Когда set распечатан в несколько строк
-            printed_output = set(printed_output.split())
-            expected_output = set(expected_output[0].split())
+            printed_output = set(printed_output.split("\n"))
+            expected_output = set(expected_output[0].split("\n"))
 
         error_msg = generate_error_msg(printed_output, expected_output)
 
