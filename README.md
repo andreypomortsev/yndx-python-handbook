@@ -348,11 +348,11 @@ def main():
 | H. [Кашееды — 4](./solutions/3.2/32_h.py) | [✅](./tests/3.2/test_32_h.py) |
 | I. [Зайка — 9](./solutions/3.2/32_i.py) | [✅](./tests/3.2/test_32_i.py) |
 | J. [Транслитерация](./solutions/3.2/32_j.py) | [✅](./tests/3.2/test_32_j.py) |
-| K. [Однофамильцы](./solutions/3.2/32_k.py) | [❌](./tests/3.2/test_32_k.py) |
-| L. [Однофамильцы — 2](./solutions/3.2/32_l.py) | [❌](./tests/3.2/test_32_l.py) |
-| M. [Дайте чего-нибудь новенького!](./solutions/3.2/32_m.py) | [❌](./tests/3.2/test_32_m.py) |
-| N. [Это будет шедевр!](./solutions/3.2/32_n.py) | [❌](./tests/3.2/test_32_n.py) |
-| O. [Двоичная статистика!](./solutions/3.2/32_o.py) | [❌](./tests/3.2/test_32_o.py) |
+| K. [Однофамильцы](./solutions/3.2/32_k.py) | [✅](./tests/3.2/test_32_k.py) |
+| L. [Однофамильцы — 2](./solutions/3.2/32_l.py) | [✅](./tests/3.2/test_32_l.py) |
+| M. [Дайте чего-нибудь новенького!](./solutions/3.2/32_m.py) | [✅](./tests/3.2/test_32_m.py) |
+| N. [Это будет шедевр!](./solutions/3.2/32_n.py) | [✅](./tests/3.2/test_32_n.py) |
+| O. [Двоичная статистика!](./solutions/3.2/32_o.py) | [✅](./tests/3.2/test_32_o.py) |
 | P. [Зайка — 10](./solutions/3.2/32_p.py) | [❌](./tests/3.2/test_32_p.py) |
 | Q. [Друзья друзей](./solutions/3.2/32_q.py) | [❌](./tests/3.2/test_32_q.py) |
 | R. [Карта сокровищ](./solutions/3.2/32_r.py) | [❌](./tests/3.2/test_32_r.py) |
