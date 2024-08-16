@@ -1,3 +1,6 @@
+from types import ModuleType
+from typing import Tuple
+
 import pytest
 
 from tests.data.test_data_23 import d_test_data
@@ -15,8 +18,12 @@ TIME_LIMIT = 1  # Временной лимит в сек
     ids=[i[2] for i in d_test_data],  # Считываем названия тестов
 )
 def test_input_output(
-    monkeypatch, setup_environment, mock_input_text, expected_output, test_name
-):
+    monkeypatch: pytest.MonkeyPatch,
+    setup_environment: Tuple[ModuleType, str],
+    mock_input_text: str,
+    expected_output: str,
+    test_name: str,
+) -> None:
     wrapped_module, _ = setup_environment
     assert_equal(
         wrapped_module,
