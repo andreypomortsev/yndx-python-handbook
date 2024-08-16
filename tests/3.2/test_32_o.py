@@ -7,7 +7,6 @@ import pytest
 
 from tests.data.test_data_32 import o_test_data
 
-
 MEMORY_LIMIT = 64  # RAM в MB
 TIME_LIMIT = 1  # Временной лимит в сек
 

@@ -1,6 +1,6 @@
-import pytest
-
 from io import StringIO
+
+import pytest
 
 MEMORY_LIMIT = 64  # RAM в MB
 TIME_LIMIT = 1  # Временной лимит в сек

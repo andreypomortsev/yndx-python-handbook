@@ -8,7 +8,7 @@ import pytest
 from _pytest.main import Session
 from pytest import FixtureRequest
 
-from .utils import memory_limit, time_limit, get_tested_file_details
+from .utils import get_tested_file_details, memory_limit, time_limit
 
 # Добавить родительский каталог в системный путь
 # Это позволяет импортировать модули из родительского каталога

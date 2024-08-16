@@ -353,11 +353,36 @@ def main():
 | M. [Дайте чего-нибудь новенького!](./solutions/3.2/32_m.py) | [✅](./tests/3.2/test_32_m.py) |
 | N. [Это будет шедевр!](./solutions/3.2/32_n.py) | [✅](./tests/3.2/test_32_n.py) |
 | O. [Двоичная статистика!](./solutions/3.2/32_o.py) | [✅](./tests/3.2/test_32_o.py) |
-| P. [Зайка — 10](./solutions/3.2/32_p.py) | [❌](./tests/3.2/test_32_p.py) |
-| Q. [Друзья друзей](./solutions/3.2/32_q.py) | [❌](./tests/3.2/test_32_q.py) |
-| R. [Карта сокровищ](./solutions/3.2/32_r.py) | [❌](./tests/3.2/test_32_r.py) |
-| S. [Частная собственность](./solutions/3.2/32_s.py) | [❌](./tests/3.2/test_32_s.py) |
-| T. [Простая задача 4.0](./solutions/3.2/32_t.py) | [❌](./tests/3.2/test_32_t.py) |
+| P. [Зайка — 10](./solutions/3.2/32_p.py) | [✅](./tests/3.2/test_32_p.py) |
+| Q. [Друзья друзей](./solutions/3.2/32_q.py) | [✅](./tests/3.2/test_32_q.py) |
+| R. [Карта сокровищ](./solutions/3.2/32_r.py) | [✅](./tests/3.2/test_32_r.py) |
+| S. [Частная собственность](./solutions/3.2/32_s.py) | [✅](./tests/3.2/test_32_s.py) |
+| T. [Простая задача 4.0](./solutions/3.2/32_t.py) | [✅](./tests/3.2/test_32_t.py) |
+
+</details>
+
+<details>
+<summary><h3>3.3 Списочные выражения. Модель памяти для типов языка Python</h3></summary>
+
+#### Для решения задач используется только пройденный материал из параграфоф:
+- [3.1 Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
+- [3.2 Множества, словари](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari)
+- [3.3 Списочные выражения. Модель памяти для типов языка Python](https://education.yandex.ru/handbook/python/article/spisochnye-vyrazheniya-model-pamyati-dlya-tipov-yazyka-python)
+
+### [Тестовые данные для задач](./tests/data/test_data_33.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Список квадратов](./solutions/3.3/33_a.py) | [❌](./tests/3.3/test_33_a.py) |
+| B. [Таблица умножения 2.0](./solutions/3.3/33_b.py) | [❌](./tests/3.3/test_33_b.py) |
+| C. [Длины всех слов](./solutions/3.3/33_c.py) | [❌](./tests/3.3/test_33_c.py) |
+| D. [Множество нечетных чисел](./solutions/3.3/33_d.py) | [❌](./tests/3.3/test_33_d.py) |
+| E. [Множество всех полных квадратов](./solutions/3.3/33_e.py) | [❌](./tests/3.3/test_33_e.py) |
+| F. [Буквенная статистика](./solutions/3.3/33_f.py) | [❌](./tests/3.3/test_33_f.py) |
+| G. [Делители](./solutions/3.3/33_g.py) | [❌](./tests/3.3/test_33_g.py) |
+| H. [Аббревиатура](./solutions/3.3/33_h.py) | [❌](./tests/3.3/test_33_h.py) |
+| I. [Преобразование в строку](./solutions/3.3/33_i.py) | [❌](./tests/3.3/test_33_i.py) |
+| J. [RLE наоборот](./solutions/3.3/33_j.py) | [❌](./tests/3.3/test_33_j.py) |
 
 </details>
 
