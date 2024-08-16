@@ -78,7 +78,7 @@ def time_limit(limit_seconds: int):
 
 
 def generate_error_msg(
-    expected_output: str, printed_output: Union[str, set, tuple]
+    printed_output: str, expected_output: Union[str, set, tuple]
 ) -> str:
     """
     Формирует сообщение с напечатанными данными и ожидаемыми.
