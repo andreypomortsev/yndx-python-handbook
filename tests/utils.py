@@ -1,7 +1,7 @@
 import os
 import signal
 from io import StringIO
-from types import FrameType
+from types import FrameType, ModuleType
 from typing import Callable, Tuple, Any, Union
 
 import psutil
@@ -61,7 +61,7 @@ def time_limit(limit_seconds: int):
     """
 
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
-        def handler(signum: int | float, frame: FrameType) -> None:
+        def handler(signum: Union[int, float], frame: FrameType) -> None:
             msg = f"Слишком долго: {limit_seconds} сек."
             raise TimeLimitExceeded(msg)
 
@@ -136,7 +136,7 @@ def compare_output(
 
 
 def assert_equal(
-    wrapped_module: Callable[..., None],
+    wrapped_module: ModuleType,
     monkeypatch: Any,
     mock_input_text: str,
     expected_output: Union[str, set, tuple, list],
@@ -145,7 +145,7 @@ def assert_equal(
     Запускает тест с заданным вводом и проверяет вывод.
 
     Аргументы:
-        wrapped_module (Callable[..., None]): Модуль или функция,
+        wrapped_module (ModuleType): Модуль или функция,
             которые будут протестированы.
         monkeypatch (Any): Фикстура pytest, используемая для замены
             ввода и вывода
