@@ -22,14 +22,14 @@ git clone https://github.com/andreypomortsev/yndx-python-handbook
 cd yndx-python-handbook
 ```
 
-#### Создаем виртуальную среду
+### Создаем виртуальную среду
 
 Все точно работает на [**Python 3.12.4**](https://www.python.org/downloads/release/python-3124/)
 ```sh
 python3 -m venv .venv
 ```
 
-#### Активируем виртуальную среду
+### Активируем виртуальную среду
 
 - На macOS и Linux:
 
@@ -43,30 +43,39 @@ python3 -m venv .venv
   .venv\Scripts\activate
   ```
 
-#### Устанавливаемм все необходимое
+### Устанавливаемм все необходимое
 
 ```sh
 pip3 install -r requirements
 ```
 
-#### Запускаем тесты
+### Запускаем тесты
+
 Все тесты в репозитории:
+
 ```sh
 pytest
 ```
+
 Все тесты одного парагарафа (вместо `2.1` укажите нужный параграф) приведенный код запустит тесты для всех задач из параграфа [2.1](./solutions/2.1/):
+
 ```sh
 pytest tests/2.1
 ```
+
 Тест одной задачи (вместо `2.3` укажите нужный параграф, вместо `test_23_a.py` укажите тест для нужной задачи) приведенный код запустит тесты для задачи **A. Раз, два, три! Ёлочка, гори!**  из парагарафа [2.3](./solutions/2.3/):
+
 ```sh
 pytest tests/2.3/test_23_a.py
 ```
+
 Тесты с отчетом в `html`*:
-_*можно использовать как для всех тестов так и для отдельных задач и параграфоф (папок)_
+*_можно использовать как для всех тестов так и для отдельных задач и параграфоф (папок)_
+
 ```sh
 pytest --cov-report=html
 ```
+
 после прохождения тестов открываем файл: `htmlcov/index.html`
 
 Во время теста в папке `tests` временно создаются файлы `wrapped_*.py`.
@@ -110,6 +119,7 @@ else:
 ```
 
 Файл `wrapped_22_q.py` после применения `wrap_answer` к `22_q.py`:
+
 ```python
 def main():
     a = float(input())
@@ -153,14 +163,13 @@ def main():
 - Если тесты не прошли, названия неудачных тестов будут выделены красным цветом. Перейдите в папку с тестами, откройте соответствующий файл и проверьте входные данные.
 - Исправьте код в соответствии с выявленными проблемами, снова запустите тесты и повторяйте процесс до тех пор, пока все тесты не пройдут успешно.
 
-Кроме правильного ответа Яндекс проверяет еще и на соответствие кода [PEP8](https://github.com/Searge/mipt_oop/blob/master/week_1/readme.md), поэтому научитесь пользоваться линтерами: [flake8](https://flake8.pycqa.org/en/latest/), [black](https://black.readthedocs.io/en/stable/index.html), etc...
+Кроме правильного ответа Яндекс проверяет еще и на соответствие кода [PEP8](https://github.com/Searge/mipt_oop/blob/master/week_1/readme.md), поэтому научитесь пользоваться линтерами: [flake8](https://flake8.pycqa.org/en/latest/) или [pylint](https://pypi.org/project/pylint/) и форматером кода, я использую [black](https://black.readthedocs.io/en/stable/index.html).
 
 ## Решения | Тесты
 
 <details>
 <summary><h3>2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование</h3></summary>
 
-#### Для решения задач используется только материал из параграфа:
 - [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
   
 ### [Тестовые данные для задач](./tests/data/test_data_21.py)
@@ -189,11 +198,10 @@ def main():
 | T. [Мухи отдельно, котлеты отдельно](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
 
 </details>
+
 <details>
 <summary><h3>2.2 Условный оператор</h3></summary>
 
-#### Для решения задач используется только пройденный материал из параграфоф:
-- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
 - [2.2 Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
 
 ### [Тестовые данные для задач](./tests/data/test_data_22.py)
@@ -226,9 +234,6 @@ def main():
 <details>
 <summary><h3>2.3 Циклы</h3></summary>
 
-#### Для решения задач используется только пройденный материал из параграфоф:
-- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
-- [2.2 Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
 - [2.3 Циклы](https://education.yandex.ru/handbook/python/article/cikly)
 
 ### [Тестовые данные для задач](./tests/data/test_data_23.py)
@@ -261,10 +266,6 @@ def main():
 <details>
 <summary><h3>2.4 Вложенные циклы</h3></summary>
 
-#### Для решения задач используется только пройденный материал из параграфоф:
-- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
-- [2.2 Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
-- [2.3 Циклы](https://education.yandex.ru/handbook/python/article/cikly)
 - [2.4 Вложенные циклы](https://education.yandex.ru/handbook/python/article/vlozhennye-cikly)
 
 ### [Тестовые данные для задач](./tests/data/test_data_24.py)
@@ -297,7 +298,6 @@ def main():
 <details>
 <summary><h3>3.1 Строки, кортежи, списки</h3></summary>
 
-#### Для решения задач используется только пройденный материал из параграфоф:
 - [3.1 Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
 
 ### [Тестовые данные для задач](./tests/data/test_data_31.py)
@@ -330,8 +330,6 @@ def main():
 <details>
 <summary><h3>3.2 Множества, словари</h3></summary>
 
-#### Для решения задач используется только пройденный материал из параграфоф:
-- [3.1 Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
 - [3.2 Множества, словари](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari)
 
 ### [Тестовые данные для задач](./tests/data/test_data_32.py)
@@ -364,27 +362,57 @@ def main():
 <details>
 <summary><h3>3.3 Списочные выражения. Модель памяти для типов языка Python</h3></summary>
 
-#### Для решения задач используется только пройденный материал из параграфоф:
-- [3.1 Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
-- [3.2 Множества, словари](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari)
 - [3.3 Списочные выражения. Модель памяти для типов языка Python](https://education.yandex.ru/handbook/python/article/spisochnye-vyrazheniya-model-pamyati-dlya-tipov-yazyka-python)
 
 ### [Тестовые данные для задач](./tests/data/test_data_33.py)
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Список квадратов](./solutions/3.3/33_a.py) | [❌](./tests/3.3/test_33_a.py) |
-| B. [Таблица умножения 2.0](./solutions/3.3/33_b.py) | [❌](./tests/3.3/test_33_b.py) |
-| C. [Длины всех слов](./solutions/3.3/33_c.py) | [❌](./tests/3.3/test_33_c.py) |
-| D. [Множество нечетных чисел](./solutions/3.3/33_d.py) | [❌](./tests/3.3/test_33_d.py) |
-| E. [Множество всех полных квадратов](./solutions/3.3/33_e.py) | [❌](./tests/3.3/test_33_e.py) |
-| F. [Буквенная статистика](./solutions/3.3/33_f.py) | [❌](./tests/3.3/test_33_f.py) |
-| G. [Делители](./solutions/3.3/33_g.py) | [❌](./tests/3.3/test_33_g.py) |
-| H. [Аббревиатура](./solutions/3.3/33_h.py) | [❌](./tests/3.3/test_33_h.py) |
-| I. [Преобразование в строку](./solutions/3.3/33_i.py) | [❌](./tests/3.3/test_33_i.py) |
-| J. [RLE наоборот](./solutions/3.3/33_j.py) | [❌](./tests/3.3/test_33_j.py) |
+| А. [Список квадратов](./solutions/3.3/33_a.py) | [✅](./tests/3.3/test_33_a.py) |
+| B. [Таблица умножения 2.0](./solutions/3.3/33_b.py) | [✅](./tests/3.3/test_33_b.py) |
+| C. [Длины всех слов](./solutions/3.3/33_c.py) | [✅](./tests/3.3/test_33_c.py) |
+| D. [Множество нечетных чисел](./solutions/3.3/33_d.py) | [✅](./tests/3.3/test_33_d.py) |
+| E. [Множество всех полных квадратов](./solutions/3.3/33_e.py) | [✅](./tests/3.3/test_33_e.py) |
+| F. [Буквенная статистика](./solutions/3.3/33_f.py) | [✅](./tests/3.3/test_33_f.py) |
+| G. [Делители](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
+| H. [Аббревиатура](./solutions/3.3/33_h.py) | [✅](./tests/3.3/test_33_h.py) |
+| I. [Преобразование в строку](./solutions/3.3/33_i.py) | [✅](./tests/3.3/test_33_i.py) |
+| J. [RLE наоборот](./solutions/3.3/33_j.py) | [✅](./tests/3.3/test_33_j.py) |
 
 </details>
+
+<details>
+<summary><h3>3.4 Встроенные возможности по работе с коллекциями</h3></summary>
+
+- [3.4 Списочные выражения. Модель памяти для типов языка Python](https://education.yandex.ru/handbook/python/article/spisochnye-vyrazheniya-model-pamyati-dlya-tipov-yazyka-python)
+
+### [Тестовые данные для задач](./tests/data/test_data_34.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Автоматизация списка](./solutions/3.4/34_a.py) | [❌](./tests/3.4/test_34_a.py) |
+| B. [Сборы на прогулку](./solutions/3.4/34_b.py) | [❌](./tests/3.4/test_34_b.py) |
+| C. [Рациональная считалочка](./solutions/3.4/34_c.py) | [❌](./tests/3.4/test_34_c.py) |
+| D. [Словарная ёлка](./solutions/3.4/34_d.py) | [❌](./tests/3.4/test_34_d.py) |
+| E. [Список покупок](./solutions/3.4/34_e.py) | [❌](./tests/3.4/test_34_e.py) |
+| F. [Колода карт](./solutions/3.4/34_f.py) | [❌](./tests/3.4/test_34_f.py) |
+| G. [Игровая сетка](./solutions/3.4/34_g.py) | [❌](./tests/3.4/test_34_g.py) |
+| H. [Меню питания 2.0](./solutions/3.4/34_h.py) | [❌](./tests/3.4/test_34_h.py) |
+| I. [Таблица умножения 3.0](./solutions/3.4/34_i.py) | [❌](./tests/3.4/test_34_i.py) |
+| J. [Мы делили апельсин 2.0](./solutions/3.4/34_j.py) | [❌](./tests/3.4/test_34_j.py) |
+| K. [Числовой прямоугольник 3.0](./solutions/3.4/34_k.py) | [❌](./tests/3.4/test_34_k.py) |
+| L. [Список покупок 2.0](./solutions/3.4/34_l.py) | [❌](./tests/3.4/test_34_l.py) |
+| M. [Расстановка спортсменов](./solutions/3.4/34_m.py) | [❌](./tests/3.4/test_34_m.py) |
+| N. [Спортивные гадания](./solutions/3.4/34_n.py) | [❌](./tests/3.4/test_34_n.py) |
+| O. [Список покупок 3.0](./solutions/3.4/34_o.py) | [❌](./tests/3.4/test_34_o.py) |
+| P. [Расклад таков...](./solutions/3.4/34_p.py) | [❌](./tests/3.4/test_34_p.py) |
+| Q. [А есть ещё варианты?](./solutions/3.4/34_q.py) | [❌](./tests/3.4/test_34_q.py) |
+| R. [Таблица истинности](./solutions/3.4/34_r.py) | [❌](./tests/3.4/test_34_r.py) |
+| S. [Таблица истинности 2](./solutions/3.4/34_s.py) | [❌](./tests/3.4/test_34_s.py) |
+| T. [Таблица истинности 3](./solutions/3.4/34_t.py) | [❌](./tests/3.4/test_34_t.py) |
+
+</details>
+
 
 ## Автор
 

@@ -1,14 +1,19 @@
 import importlib
 import os
 import sys
-from types import ModuleType
+from types import CodeType, ModuleType
 from typing import Callable, Generator, Tuple
 
 import pytest
 from _pytest.main import Session
 from pytest import FixtureRequest
 
-from .utils import get_tested_file_details, memory_limit, time_limit
+from .utils import (
+    compile_string,
+    get_tested_file_details,
+    memory_limit,
+    time_limit,
+)
 
 # Добавить родительский каталог в системный путь
 # Это позволяет импортировать модули из родительского каталога
@@ -101,6 +106,37 @@ def setup_environment(
     request.config.wrapped_file_paths.append(path_to_the_wrapped_file)
 
     yield wrapped_module, path_to_test_file
+
+
+@pytest.fixture(scope="module")
+def setup_environment_comprehension(
+    request: FixtureRequest,
+) -> Generator[CodeType, None, None]:
+    """
+    Фикстура для настройки тестовой среды, которая компилирует
+    list/dict/set comprehension из файла в объект типа CodeType,
+    готовый к исполнению.
+
+    Эта фикстура выполняет следующие действия:
+    1. Получает путь к файлу с решением -> `get_tested_file_details`.
+    2. Компилирует код из файла в объект типа CodeType -> `compile_string`.
+    3. Возвращает объект CodeType, который можно использовать в тестах.
+
+    Аргументы:
+        request (FixtureRequest): Объект, предоставляющий информацию
+            о тестовом запросе.
+
+    Возвращает:
+        Generator[CodeType, None, None]: Генератор, который возвращает
+            объект CodeType.
+    """
+    # Получаем путь к файлу с решением
+    path_to_test_file, _ = get_tested_file_details(request)
+
+    # Компилируем list/dict/set comprehension в готовый к исполнению код
+    ready_to_eval = compile_string(path_to_test_file)
+
+    yield ready_to_eval
 
 
 @pytest.hookimpl(tryfirst=True)
