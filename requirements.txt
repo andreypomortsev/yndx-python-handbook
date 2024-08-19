@@ -1,19 +1,14 @@
-pandas
-numpy
-requests
-
 # test modules
-pytest
-pytest-cov
-pytest-spec
-pytest-flake8
-pytest-timeout
+pytest==8.2.2
+pytest-cov==5.0.0
+pytest-flake8==1.2.2
+pytest-spec==3.2.0
 
 # Performance checking
-psutil
+psutil==6.0.0
 
 # Test coverage
-coverage
+coverage==7.6.0
 
 # Linting
-flake8
+flake8==5.0.4
