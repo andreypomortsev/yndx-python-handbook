@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-
 friends = defaultdict(set)
 friends_2 = defaultdict(set)
 
