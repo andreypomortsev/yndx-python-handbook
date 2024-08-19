@@ -4,12 +4,14 @@ source =
     solutions
 
 omit =
-    conftest*
-    *__init__*
+    conftest.py
+    *__init__.py
     utils*
-    test*
     solutions/2.*
     solutions/3.*
+    tests/data/*
+    tests/2.*
+    tests/3.*
 
 [report]
 show_missing = True
