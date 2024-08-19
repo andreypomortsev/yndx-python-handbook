@@ -13,7 +13,7 @@ TIME_LIMIT = 1  # Временной лимит в сек
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
-    "mock_input_text, expected_output, test_name",
+    "mock_input_text, expected_output, _",  # _ - название теста
     i_test_data,
     ids=[i[2] for i in i_test_data],  # Считываем названия тестов
 )
@@ -22,7 +22,7 @@ def test_input_output(
     setup_environment: Tuple[ModuleType, str],
     mock_input_text: str,
     expected_output: str,
-    test_name: str,
+    _: str,
 ) -> None:
     wrapped_module, _ = setup_environment
     assert_equal(
