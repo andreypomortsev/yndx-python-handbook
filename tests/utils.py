@@ -1,8 +1,9 @@
+import ast
 import os
 import signal
 from io import StringIO
-from types import FrameType, ModuleType
-from typing import Callable, Tuple, Any, Union
+from types import CodeType, FrameType, ModuleType
+from typing import Any, Callable, Tuple, Union
 
 import psutil
 from pytest import FixtureRequest
@@ -196,5 +197,24 @@ def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
     )
 
     # Получаем букву тестируемого файла "a.py" -> ["a", ""]
-    tested_file_name = tested_file_name.split(".py")[0]
-    return path_to_test_file, tested_file_name
+    tested_file_letter = tested_file_name.split(".py")[0]
+
+    return path_to_test_file, tested_file_letter
+
+
+def compile_string(path_to_solution: str) -> CodeType:
+    """
+    Читает код из файла и компилирует его в объект типа CodeType.
+
+    Аргументы:
+        path_to_solution (str): Путь к файлу, содержащему код.
+
+    Возвращает:
+        CodeType: Скомпилированный код в виде объекта CodeType.
+    """
+    with open(path_to_solution, "r", encoding="UTF-8") as file:
+        code = file.read()
+    parsed = ast.parse(code, mode="eval")
+    compiled_code = compile(parsed, filename="<ast>", mode="eval")
+
+    return compiled_code
