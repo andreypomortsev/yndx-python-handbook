@@ -7,6 +7,8 @@ omit =
     conftest.py
     *__init__.py
     utils*
+    *test_2*
+    *test_3*
     solutions/2.*
     solutions/3.*
     tests/data/*
