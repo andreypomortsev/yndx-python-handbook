@@ -1,6 +1,8 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
+![Python 3.10](https://img.shields.io/badge/Python-3.10-green.svg)
+![Python 3.11](https://img.shields.io/badge/Python-3.11-green.svg)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
@@ -24,10 +26,16 @@ cd yndx-python-handbook
 
 ### Создаем виртуальную среду
 
-Все точно работает на [**Python 3.12.4**](https://www.python.org/downloads/release/python-3124/)
+Все протестированно на
+
+- [**Python 3.10**](https://www.python.org/downloads/release/python-31014/)
+- [**Python 3.11**](https://www.python.org/downloads/release/python-3119/)
+- [**Python 3.12**](https://www.python.org/downloads/release/python-3124/)
+
 ```sh
-python3 -m venv .venv
+make setup
 ```
+
 
 ### Активируем виртуальную среду
 
@@ -46,7 +54,13 @@ python3 -m venv .venv
 ### Устанавливаемм все необходимое
 
 ```sh
-pip3 install -r requirements
+make install
+```
+
+### Форматируем код по PEP8
+
+```sh
+make format
 ```
 
 ### Запускаем тесты
@@ -54,13 +68,13 @@ pip3 install -r requirements
 Все тесты в репозитории:
 
 ```sh
-pytest
+make test
 ```
 
-Все тесты одного парагарафа (вместо `2.1` укажите нужный параграф) приведенный код запустит тесты для всех задач из параграфа [2.1](./solutions/2.1/):
+Все тесты одного парагарафа (вместо `21` укажите нужный параграф) приведенный код запустит тесты для всех задач из параграфа [2.1](./solutions/2.1/):
 
 ```sh
-pytest tests/2.1
+make test-21
 ```
 
 Тест одной задачи (вместо `2.3` укажите нужный параграф, вместо `test_23_a.py` укажите тест для нужной задачи) приведенный код запустит тесты для задачи **A. Раз, два, три! Ёлочка, гори!**  из парагарафа [2.3](./solutions/2.3/):
@@ -73,7 +87,7 @@ pytest tests/2.3/test_23_a.py
 *_можно использовать как для всех тестов так и для отдельных задач и параграфоф (папок)_
 
 ```sh
-pytest --cov-report=html
+make test-html
 ```
 
 после прохождения тестов открываем файл: `htmlcov/index.html`
