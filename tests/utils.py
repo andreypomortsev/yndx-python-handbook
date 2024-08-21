@@ -214,7 +214,12 @@ def compile_string(path_to_solution: str) -> CodeType:
     """
     with open(path_to_solution, "r", encoding="UTF-8") as file:
         code = file.read()
-    parsed = ast.parse(code, mode="eval")
-    compiled_code = compile(parsed, filename="<ast>", mode="eval")
 
-    return compiled_code
+    parsed = ast.parse(code, mode="eval")
+    white_list = (ast.ListComp, ast.DictComp, ast.SetComp, ast.Call)
+
+    if isinstance(parsed.body, white_list):
+        compiled_code = compile(parsed, filename="<ast>", mode="eval")
+        return compiled_code
+
+    raise TypeError(f"Неправильный тип данных: {parsed.body}")
