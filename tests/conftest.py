@@ -8,12 +8,7 @@ import pytest
 from _pytest.main import Session
 from pytest import FixtureRequest
 
-from .utils import (
-    compile_string,
-    get_tested_file_details,
-    memory_limit,
-    time_limit,
-)
+from . import utils
 
 # Добавить родительский каталог в системный путь
 # Это позволяет импортировать модули из родительского каталога
@@ -91,7 +86,9 @@ def setup_environment(
             к тестируемому файлу.
     """
     # Получаем путь к файлу с решением и его имя
-    path_to_test_file, tested_file_name = get_tested_file_details(request)
+    path_to_test_file, tested_file_name = utils.get_tested_file_details(
+        request
+    )
 
     # Оборачиваем тестируемый файл в функцию main, получаем путь файла
     path_to_the_wrapped_file = wrap_answer(path_to_test_file, tested_file_name)
@@ -131,10 +128,10 @@ def setup_environment_comprehension(
             объект CodeType.
     """
     # Получаем путь к файлу с решением
-    path_to_test_file, _ = get_tested_file_details(request)
+    path_to_test_file, _ = utils.get_tested_file_details(request)
 
     # Компилируем list/dict/set comprehension в готовый к исполнению код
-    ready_to_eval = compile_string(path_to_test_file)
+    ready_to_eval = utils.compile_string(path_to_test_file)
 
     yield ready_to_eval
 
@@ -170,10 +167,10 @@ def pytest_runtest_call(item: pytest.Item) -> Generator[None, None, None]:
 
     if memory_limit_marker:
         limit_mb = memory_limit_marker.args[0]
-        item.obj = memory_limit(limit_mb)(item.obj)
+        item.obj = utils.memory_limit(limit_mb)(item.obj)
 
     if time_limit_marker:
         limit_seconds = time_limit_marker.args[0]
-        item.obj = time_limit(limit_seconds)(item.obj)
+        item.obj = utils.time_limit(limit_seconds)(item.obj)
 
     yield
