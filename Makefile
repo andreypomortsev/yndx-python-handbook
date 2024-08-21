@@ -11,7 +11,7 @@ format:
 lint:
 	flake8 .
 
-test: test-21 test-22 test-23 test-24 test-31 test-32 test-33 test-34
+test: lint test-21 test-22 test-23 test-24 test-31 test-32 test-33 test-34
 
 test-html:
 	pytest --cov-report=html
