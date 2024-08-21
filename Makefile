@@ -6,7 +6,7 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
 format:
-	black . --line-length=79
+	black . --line-length=79 && isort .
 
 lint:
 	flake8 --max-line-length 79 .
