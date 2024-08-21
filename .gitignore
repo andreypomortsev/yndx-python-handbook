@@ -167,3 +167,6 @@ tests/wrapped_*.py
 
 # Helper script to make a few files at once
 script.py
+
+# VSCode testing
+.vscode
