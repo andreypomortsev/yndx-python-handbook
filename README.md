@@ -400,11 +400,11 @@ def main():
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Автоматизация списка](./solutions/3.4/34_a.py) | [❌](./tests/3.4/test_34_a.py) |
-| B. [Сборы на прогулку](./solutions/3.4/34_b.py) | [❌](./tests/3.4/test_34_b.py) |
-| C. [Рациональная считалочка](./solutions/3.4/34_c.py) | [❌](./tests/3.4/test_34_c.py) |
-| D. [Словарная ёлка](./solutions/3.4/34_d.py) | [❌](./tests/3.4/test_34_d.py) |
-| E. [Список покупок](./solutions/3.4/34_e.py) | [❌](./tests/3.4/test_34_e.py) |
+| А. [Автоматизация списка](./solutions/3.4/34_a.py) | [✅](./tests/3.4/test_34_a.py) |
+| B. [Сборы на прогулку](./solutions/3.4/34_b.py) | [✅](./tests/3.4/test_34_b.py) |
+| C. [Рациональная считалочка](./solutions/3.4/34_c.py) | [✅](./tests/3.4/test_34_c.py) |
+| D. [Словарная ёлка](./solutions/3.4/34_d.py) | [✅](./tests/3.4/test_34_d.py) |
+| E. [Список покупок](./solutions/3.4/34_e.py) | [✅](./tests/3.4/test_34_e.py) |
 | F. [Колода карт](./solutions/3.4/34_f.py) | [❌](./tests/3.4/test_34_f.py) |
 | G. [Игровая сетка](./solutions/3.4/34_g.py) | [❌](./tests/3.4/test_34_g.py) |
 | H. [Меню питания 2.0](./solutions/3.4/34_h.py) | [❌](./tests/3.4/test_34_h.py) |
