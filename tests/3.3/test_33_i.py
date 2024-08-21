@@ -23,7 +23,9 @@ def test_comprehensions(
 ) -> None:
     # Считываем код для проверки и компилируем его из строки в код
     to_execute = setup_environment_comprehension
-
-    printed_output = eval(to_execute, variables)
+    safe_globals = {
+        "__builtins__": {"map": map, "str": str, "set": set, "sorted": sorted}
+    }
+    printed_output = eval(to_execute, safe_globals, variables)
 
     assert printed_output == expected_output
