@@ -12,3 +12,6 @@ coverage==7.6.0
 
 # Linting
 flake8==5.0.4
+
+# Formatting
+black==24.4.2
