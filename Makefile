@@ -9,10 +9,9 @@ format:
 	black . --line-length=79 && isort .
 
 lint:
-	flake8 --max-line-length 79 .
+	flake8 .
 
-test:
-	pytest
+test: test-21 test-22 test-23 test-24 test-31 test-32 test-33
 
 test-html:
 	pytest --cov-report=html
