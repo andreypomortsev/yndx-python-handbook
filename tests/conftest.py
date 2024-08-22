@@ -37,7 +37,9 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
 
         # Обертываем считанный из файла код в функцию main
         if args:
-            wrapped_script = f"def main({args}):\n    return {indented_script}"  # noqa E271
+            wrapped_script = (
+                f"def main({args}):\n    return {indented_script}"  # noqa E271
+            )
         else:
             wrapped_script = f"def main():\n    {indented_script}"
 

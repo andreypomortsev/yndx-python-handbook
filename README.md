@@ -36,7 +36,6 @@ cd yndx-python-handbook
 make setup
 ```
 
-
 ### Активируем виртуальную среду
 
 - На macOS и Linux:
@@ -409,11 +408,11 @@ def main():
 | C. [Рациональная считалочка](./solutions/3.4/34_c.py) | [✅](./tests/3.4/test_34_c.py) |
 | D. [Словарная ёлка](./solutions/3.4/34_d.py) | [✅](./tests/3.4/test_34_d.py) |
 | E. [Список покупок](./solutions/3.4/34_e.py) | [✅](./tests/3.4/test_34_e.py) |
-| F. [Колода карт](./solutions/3.4/34_f.py) | [❌](./tests/3.4/test_34_f.py) |
-| G. [Игровая сетка](./solutions/3.4/34_g.py) | [❌](./tests/3.4/test_34_g.py) |
-| H. [Меню питания 2.0](./solutions/3.4/34_h.py) | [❌](./tests/3.4/test_34_h.py) |
-| I. [Таблица умножения 3.0](./solutions/3.4/34_i.py) | [❌](./tests/3.4/test_34_i.py) |
-| J. [Мы делили апельсин 2.0](./solutions/3.4/34_j.py) | [❌](./tests/3.4/test_34_j.py) |
+| F. [Колода карт](./solutions/3.4/34_f.py) | [✅](./tests/3.4/test_34_f.py) |
+| G. [Игровая сетка](./solutions/3.4/34_g.py) | [✅](./tests/3.4/test_34_g.py) |
+| H. [Меню питания 2.0](./solutions/3.4/34_h.py) | [✅](./tests/3.4/test_34_h.py) |
+| I. [Таблица умножения 3.0](./solutions/3.4/34_i.py) | [✅](./tests/3.4/test_34_i.py) |
+| J. [Мы делили апельсин 2.0](./solutions/3.4/34_j.py) | [✅](./tests/3.4/test_34_j.py) |
 | K. [Числовой прямоугольник 3.0](./solutions/3.4/34_k.py) | [❌](./tests/3.4/test_34_k.py) |
 | L. [Список покупок 2.0](./solutions/3.4/34_l.py) | [❌](./tests/3.4/test_34_l.py) |
 | M. [Расстановка спортсменов](./solutions/3.4/34_m.py) | [❌](./tests/3.4/test_34_m.py) |
