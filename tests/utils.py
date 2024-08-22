@@ -1,8 +1,7 @@
-import ast
 import os
 import signal
 from io import StringIO
-from types import CodeType, FrameType, ModuleType
+from types import FrameType, ModuleType
 from typing import Any, Callable, Tuple, Union
 
 import psutil
@@ -140,7 +139,7 @@ def assert_equal(
     wrapped_module: ModuleType,
     monkeypatch: Any,
     mock_input_text: str,
-    expected_output: Union[str, set, tuple, list],
+    expected_output: Union[str, set, tuple, list]
 ) -> None:
     """
     Запускает тест с заданным вводом и проверяет вывод.
@@ -188,7 +187,7 @@ def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
     # Название папки с тестируемым кодом
     file_dir = os.path.basename(dir_name)
 
-    # Получаем имя тестируемого файла "test_21_a.py" -> "a.py"
+    # Получаем имя тестируемого файла "test_21_a.py" -> "21_a.py"
     tested_file_name = file_name.split("test_")[-1]
 
     # Путь к тестируемому файлу для обертывания в функцию
@@ -196,30 +195,7 @@ def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
         abs_code_dir, "solutions", file_dir, tested_file_name
     )
 
-    # Получаем букву тестируемого файла "a.py" -> ["a", ""]
-    tested_file_letter = tested_file_name.split(".py")[0]
+    # Получаем букву тестируемого файла "21_a.py" -> ["21_a", ""]
+    tested_file_name = tested_file_name.split(".py")[0]
 
-    return path_to_test_file, tested_file_letter
-
-
-def compile_string(path_to_solution: str) -> CodeType:
-    """
-    Читает код из файла и компилирует его в объект типа CodeType.
-
-    Аргументы:
-        path_to_solution (str): Путь к файлу, содержащему код.
-
-    Возвращает:
-        CodeType: Скомпилированный код в виде объекта CodeType.
-    """
-    with open(path_to_solution, "r", encoding="UTF-8") as file:
-        code = file.read()
-
-    parsed = ast.parse(code, mode="eval")
-    white_list = (ast.ListComp, ast.DictComp, ast.SetComp, ast.Call)
-
-    if isinstance(parsed.body, white_list):
-        compiled_code = compile(parsed, filename="<ast>", mode="eval")
-        return compiled_code
-
-    raise TypeError(f"Неправильный тип данных: {parsed.body}")
+    return path_to_test_file, tested_file_name
