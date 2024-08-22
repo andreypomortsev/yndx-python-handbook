@@ -1,12 +1,12 @@
 import importlib
 import os
 import sys
-from types import CodeType, ModuleType
-from typing import Callable, Generator, Tuple
+from types import ModuleType
+from typing import Callable, Generator, Tuple, Union
 
 import pytest
+from _pytest.fixtures import SubRequest
 from _pytest.main import Session
-from pytest import FixtureRequest
 
 from . import utils
 
@@ -17,7 +17,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 @pytest.fixture(scope="module")
 def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
-    def wrapper(file_path: str, file_name: str) -> str:
+    def wrapper(file_path: str, file_name: str, args: Union[str, None]) -> str:
         """
         Считывает решение из файла и оборачивает его в main функцию
         для получения информации о покрытии тестов во время тестирования.
@@ -36,7 +36,10 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
         indented_script = script.replace("\n", "\n    ").rstrip(" ")
 
         # Обертываем считанный из файла код в функцию main
-        wrapped_script = f"def main():\n    {indented_script}"
+        if args:
+            wrapped_script = f"def main({args}):\n    return {indented_script}"  # noqa E271
+        else:
+            wrapped_script = f"def main():\n    {indented_script}"
 
         # Определяем папку с тестами
         current_dir = os.path.dirname(__file__)
@@ -58,7 +61,7 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
 
 @pytest.fixture(scope="module")
 def setup_environment(
-    request: FixtureRequest, wrap_answer: Callable[..., None]
+    request: SubRequest, wrap_answer: Callable[..., None]
 ) -> Generator[Tuple[ModuleType, str], None, None]:
     """
     Фикстура для настройки тестовой среды, которая оборачивает тестируемый
@@ -76,7 +79,7 @@ def setup_environment(
         в конфигурации тестов для последующего удаления.
 
     Аргументы:
-        request (FixtureRequest): объект, предоставляющий информацию
+        request (SubRequest): объект, предоставляющий информацию
             о тестовом запросе.
         wrap_answer (Callable[..., None]): функция, которая оборачивает файл
             в функцию main и возвращает путь к обернутому файлу.
@@ -90,8 +93,27 @@ def setup_environment(
         request
     )
 
+    # "33_a" -> "33", "a"
+    module, letter = tested_file_name.split("_")
+
+    if module == "33":
+        test_data_module_name = f"tests.data.test_data_{module}"
+        test_data = importlib.import_module(test_data_module_name)
+
+        # Получаем доступ к тестовым данным List[Tuple[Dict[Any]]]
+        input_data = getattr(test_data, f"{letter}_test_data", None)
+
+        if isinstance(input_data[0][0], dict):
+            args = ", ".join(key for key in input_data[0][0])
+        else:
+            args = None
+    else:
+        args = None
+
     # Оборачиваем тестируемый файл в функцию main, получаем путь файла
-    path_to_the_wrapped_file = wrap_answer(path_to_test_file, tested_file_name)
+    path_to_the_wrapped_file = wrap_answer(
+        path_to_test_file, tested_file_name, args
+    )
 
     # Динамически импортируем wrapped файл после создания
     wrapped_module_name = f"tests.wrapped_{tested_file_name}"
@@ -103,37 +125,6 @@ def setup_environment(
     request.config.wrapped_file_paths.append(path_to_the_wrapped_file)
 
     yield wrapped_module, path_to_test_file
-
-
-@pytest.fixture(scope="module")
-def setup_environment_comprehension(
-    request: FixtureRequest,
-) -> Generator[CodeType, None, None]:
-    """
-    Фикстура для настройки тестовой среды, которая компилирует
-    list/dict/set comprehension из файла в объект типа CodeType,
-    готовый к исполнению.
-
-    Эта фикстура выполняет следующие действия:
-    1. Получает путь к файлу с решением -> `get_tested_file_details`.
-    2. Компилирует код из файла в объект типа CodeType -> `compile_string`.
-    3. Возвращает объект CodeType, который можно использовать в тестах.
-
-    Аргументы:
-        request (FixtureRequest): Объект, предоставляющий информацию
-            о тестовом запросе.
-
-    Возвращает:
-        Generator[CodeType, None, None]: Генератор, который возвращает
-            объект CodeType.
-    """
-    # Получаем путь к файлу с решением
-    path_to_test_file, _ = utils.get_tested_file_details(request)
-
-    # Компилируем list/dict/set comprehension в готовый к исполнению код
-    ready_to_eval = utils.compile_string(path_to_test_file)
-
-    yield ready_to_eval
 
 
 @pytest.hookimpl(tryfirst=True)
