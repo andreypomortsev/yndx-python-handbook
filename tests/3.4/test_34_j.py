@@ -3,7 +3,7 @@ from typing import Tuple
 
 import pytest
 
-from tests.data.test_data_34 import j_test_data
+from tests.data.test_data_24 import j_test_data
 from tests.utils import assert_equal
 
 MEMORY_LIMIT = 64  # RAM в MB
