@@ -139,7 +139,7 @@ def assert_equal(
     wrapped_module: ModuleType,
     monkeypatch: Any,
     mock_input_text: str,
-    expected_output: Union[str, set, tuple, list]
+    expected_output: Union[str, set, tuple, list],
 ) -> None:
     """
     Запускает тест с заданным вводом и проверяет вывод.
