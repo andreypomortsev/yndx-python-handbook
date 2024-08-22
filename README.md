@@ -1,6 +1,8 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
+![Python 3.10.14](https://img.shields.io/badge/Python-3.10.14-orange.svg)
+![Python 3.11.9](https://img.shields.io/badge/Python-3.11.9-yellow.svg)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
@@ -26,6 +28,8 @@ cd yndx-python-handbook
 
 Все протестированно на
 
+- [**Python 3.10.14**](https://www.python.org/downloads/release/python-31014/)
+- [**Python 3.11.9**](https://www.python.org/downloads/release/python-31014/)
 - [**Python 3.12**](https://www.python.org/downloads/release/python-3124/)
 
 ```sh
