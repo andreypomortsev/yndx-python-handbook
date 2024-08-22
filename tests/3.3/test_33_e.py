@@ -1,6 +1,5 @@
-import math
-from math import pow
-from types import CodeType
+from types import ModuleType
+from typing import Dict, List, Set, Tuple, Union
 
 import pytest
 
@@ -9,25 +8,33 @@ from tests.data.test_data_33 import e_test_data
 MEMORY_LIMIT = 64  # RAM в MB
 TIME_LIMIT = 1  # Временной лимит в сек
 
+OUTPUT_TYPES = Union[
+    str,
+    List[Tuple[str, int]],
+    List[int],
+    List[List[int]],
+    Set[int],
+    Dict[str, Union[int, List[int]]],
+]
+
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
-    "variables, expected_output, _",  # _ - название теста
+    "input_data, expected_output, _",  # _ - название теста
     e_test_data,
     ids=[i[2] for i in e_test_data],  # Считываем названия тестов
 )
-def test_comprehensions(
-    setup_environment_comprehension: CodeType,
-    variables: dict,
-    expected_output: str,
+def test_input_output(
+    setup_environment: Tuple[ModuleType, str],
+    input_data: Dict[str, Union[str, int, List[int]]],
+    expected_output: OUTPUT_TYPES,
     _: str,
 ) -> None:
-    # Считываем код для проверки и компилируем его из строки в код
-    to_execute = setup_environment_comprehension
-    safe_globals = {
-        "__builtins__": {"int": int, "math.pow": math.pow, "pow": pow}
-    }
-    printed_output = eval(to_execute, safe_globals, variables)
 
-    assert printed_output == expected_output
+    variable_values = [value for value in input_data.values()]
+    wrapped_module, _ = setup_environment
+
+    returned_output = wrapped_module.main(*variable_values)
+
+    assert returned_output == expected_output
