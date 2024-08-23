@@ -413,11 +413,11 @@ def main():
 | H. [Меню питания 2.0](./solutions/3.4/34_h.py) | [✅](./tests/3.4/test_34_h.py) |
 | I. [Таблица умножения 3.0](./solutions/3.4/34_i.py) | [✅](./tests/3.4/test_34_i.py) |
 | J. [Мы делили апельсин 2.0](./solutions/3.4/34_j.py) | [✅](./tests/3.4/test_34_j.py) |
-| K. [Числовой прямоугольник 3.0](./solutions/3.4/34_k.py) | [❌](./tests/3.4/test_34_k.py) |
-| L. [Список покупок 2.0](./solutions/3.4/34_l.py) | [❌](./tests/3.4/test_34_l.py) |
-| M. [Расстановка спортсменов](./solutions/3.4/34_m.py) | [❌](./tests/3.4/test_34_m.py) |
-| N. [Спортивные гадания](./solutions/3.4/34_n.py) | [❌](./tests/3.4/test_34_n.py) |
-| O. [Список покупок 3.0](./solutions/3.4/34_o.py) | [❌](./tests/3.4/test_34_o.py) |
+| K. [Числовой прямоугольник 3.0](./solutions/3.4/34_k.py) | [✅](./tests/3.4/test_34_k.py) |
+| L. [Список покупок 2.0](./solutions/3.4/34_l.py) | [✅](./tests/3.4/test_34_l.py) |
+| M. [Расстановка спортсменов](./solutions/3.4/34_m.py) | [✅](./tests/3.4/test_34_m.py) |
+| N. [Спортивные гадания](./solutions/3.4/34_n.py) | [✅](./tests/3.4/test_34_n.py) |
+| O. [Список покупок 3.0](./solutions/3.4/34_o.py) | [✅](./tests/3.4/test_34_o.py) |
 | P. [Расклад таков...](./solutions/3.4/34_p.py) | [❌](./tests/3.4/test_34_p.py) |
 | Q. [А есть ещё варианты?](./solutions/3.4/34_q.py) | [❌](./tests/3.4/test_34_q.py) |
 | R. [Таблица истинности](./solutions/3.4/34_r.py) | [❌](./tests/3.4/test_34_r.py) |
