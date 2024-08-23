@@ -7,4 +7,6 @@ exclude =
     .venv/*,
     script.py,
 ignore = 
-    E231
+    E231,
+    W503
+

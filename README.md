@@ -418,14 +418,45 @@ def main():
 | M. [Расстановка спортсменов](./solutions/3.4/34_m.py) | [✅](./tests/3.4/test_34_m.py) |
 | N. [Спортивные гадания](./solutions/3.4/34_n.py) | [✅](./tests/3.4/test_34_n.py) |
 | O. [Список покупок 3.0](./solutions/3.4/34_o.py) | [✅](./tests/3.4/test_34_o.py) |
-| P. [Расклад таков...](./solutions/3.4/34_p.py) | [❌](./tests/3.4/test_34_p.py) |
-| Q. [А есть ещё варианты?](./solutions/3.4/34_q.py) | [❌](./tests/3.4/test_34_q.py) |
-| R. [Таблица истинности](./solutions/3.4/34_r.py) | [❌](./tests/3.4/test_34_r.py) |
-| S. [Таблица истинности 2](./solutions/3.4/34_s.py) | [❌](./tests/3.4/test_34_s.py) |
-| T. [Таблица истинности 3](./solutions/3.4/34_t.py) | [❌](./tests/3.4/test_34_t.py) |
+| P. [Расклад таков...](./solutions/3.4/34_p.py) | [✅](./tests/3.4/test_34_p.py) |
+| Q. [А есть ещё варианты?](./solutions/3.4/34_q.py) | [✅](./tests/3.4/test_34_q.py) |
+| R. [Таблица истинности](./solutions/3.4/34_r.py) | [✅](./tests/3.4/test_34_r.py) |
+| S. [Таблица истинности 2](./solutions/3.4/34_s.py) | [✅](./tests/3.4/test_34_s.py) |
+| T. [Таблица истинности 3](./solutions/3.4/34_t.py) | [✅](./tests/3.4/test_34_t.py) |
 
 </details>
 
+<details>
+<summary><h3>3.5 Встроенные возможности по работе с коллекциями</h3></summary>
+
+- [3.5 Потоковый ввод/вывод. Работа с текстовыми файлами. JSON](https://education.yandex.ru/handbook/python/article/potokovyj-vvodvyvod-rabota-s-tekstovymi-fajlami-json)
+
+### [Тестовые данные для задач](./tests/data/test_data_35.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [A+B+...](./solutions/3.5/35_a.py) | [❌](./tests/3.5/test_35_a.py) |
+| B. [Средний рост](./solutions/3.5/35_b.py) | [❌](./tests/3.5/test_35_b.py) |
+| C. [Без комментариев 2.0](./solutions/3.5/35_c.py) | [❌](./tests/3.5/test_35_c.py) |
+| D. [Найдётся всё 2.0](./solutions/3.5/35_d.py) | [❌](./tests/3.5/test_35_d.py) |
+| E. [А роза упала на лапу Азора 6.0](./solutions/3.5/35_e.py) | [❌](./tests/3.5/test_35_e.py) |
+| F. [Транслитерация 2.0](./solutions/3.5/35_f.py) | [❌](./tests/3.5/test_35_f.py) |
+| G. [Файловая статистика](./solutions/3.5/35_g.py) | [❌](./tests/3.5/test_35_g.py) |
+| H. [Файловая разница](./solutions/3.5/35_h.py) | [❌](./tests/3.5/test_35_h.py) |
+| I. [Файловая чистка](./solutions/3.5/35_i.py) | [❌](./tests/3.5/test_35_i.py) |
+| J. [Хвост](./solutions/3.5/35_j.py) | [❌](./tests/3.5/test_35_j.py) |
+| K. [Файловая статистика 2.0](./solutions/3.5/35_k.py) | [❌](./tests/3.5/test_35_k.py) |
+| L. [Разделяй и властвуй](./solutions/3.5/35_l.py) | [❌](./tests/3.5/test_35_l.py) |
+| M. [Обновление данных](./solutions/3.5/35_m.py) | [❌](./tests/3.5/test_35_m.py) |
+| N. [Слияние данных](./solutions/3.5/35_n.py) | [❌](./tests/3.5/test_35_n.py) |
+| O. [Поставь себя на моё место](./solutions/3.5/35_o.py) | [❌](./tests/3.5/test_35_o.py) |
+| P. [Найдётся всё 3.0](./solutions/3.5/35_p.py) | [❌](./tests/3.5/test_35_p.py) |
+| Q. [Прятки](./solutions/3.5/35_q.py) | [❌](./tests/3.5/test_35_q.py) |
+| R. [Сколько вешать в байтах?](./solutions/3.5/35_r.py) | [❌](./tests/3.5/test_35_r.py) |
+| S. [Это будет наш секрет](./solutions/3.5/35_s.py) | [❌](./tests/3.5/test_35_s.py) |
+| T. [Файловая сумма](./solutions/3.5/35_t.py) | [❌](./tests/3.5/test_35_t.py) |
+
+</details>
 
 ## Автор
 
