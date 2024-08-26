@@ -251,9 +251,14 @@ i_test_data = [
         "name = input() #  Сохраняем имя\n"
         'print(f"Hello, {name}!") #  Здороваемся# Конец моей супер-пупер программы\n'
         "\n",
-        'print("What is your name?")\n'
-        "name = input()\n"
-        'print(f"Hello, {name}!")\n',
+        {
+            'print("What is your name?")\n'
+            "name = input()\n"
+            'print(f"Hello, {name}!")\n',
+            'print("What is your name?")\n'
+            "name = input()\n"
+            'print(f"Hello, {name}!")\n\n',
+        },
         "first open test",
     ),
     (
@@ -261,7 +266,10 @@ i_test_data = [
         "for i in range(10): # Считаем до 10\n"
         "    print(i) # выводим число\n"
         "\n",
-        "for i in range(10):\n    print(i)\n",
+        {
+            "for i in range(10):\n    print(i)\n",
+            "for i in range(10):\n    print(i)\n\n",
+        },
         "second open test",
     ),
     (
@@ -273,14 +281,24 @@ i_test_data = [
         "        print(line[:index])\n"
         "    else:\n"
         "        print(line)\n\n",
-        "while (line := input()):\n"
-        '    index = line.find("#")\n'
-        "    if not index:\n"
-        "        continue\n"
-        "    if index > 0:\n"
-        "        print(line[:index])\n"
-        "    else:\n"
-        "        print(line)\n",
+        {
+            "while (line := input()):\n"
+            '    index = line.find("#")\n'
+            "    if not index:\n"
+            "        continue\n"
+            "    if index > 0:\n"
+            "        print(line[:index])\n"
+            "    else:\n"
+            "        print(line)\n",
+            "while (line := input()):\n"
+            '    index = line.find("#")\n'
+            "    if not index:\n"
+            "        continue\n"
+            "    if index > 0:\n"
+            "        print(line[:index])\n"
+            "    else:\n"
+            "        print(line)\n\n",
+        },
         "a wrong solution",
     ),
     (
@@ -308,34 +326,62 @@ i_test_data = [
         "            break\n"
         "    if not flag:\n"
         "        print(line)\n\n",
-        "while line := input():\n"
-        '    index = line.find("#")\n'
-        "    if index == -1:\n"
-        "        print(line)\n"
-        "        continue\n"
-        "    if not index:\n"
-        "        continue\n"
-        "    stack = "
-        "\n"
-        "    flag = False\n"
-        "    for i in range(len(line)):\n"
-        "        char = line[i]\n"
-        """        if char in "\"'":\n"""
-        "            if not stack:\n"
-        "                stack += char\n"
-        "            elif char == stack[-1]:\n"
-        "                stack = stack[:-1]\n"
-        "        if char == '#' and not stack:\n"
-        '            print(f"{line[:i].rstrip()}")\n'
-        "            flag = True\n"
-        "            break\n"
-        "    if not flag:\n"
-        "        print(line)\n",
+        {
+            "while line := input():\n"
+            '    index = line.find("#")\n'
+            "    if index == -1:\n"
+            "        print(line)\n"
+            "        continue\n"
+            "    if not index:\n"
+            "        continue\n"
+            "    stack = "
+            "\n"
+            "    flag = False\n"
+            "    for i in range(len(line)):\n"
+            "        char = line[i]\n"
+            """        if char in "\"'":\n"""
+            "            if not stack:\n"
+            "                stack += char\n"
+            "            elif char == stack[-1]:\n"
+            "                stack = stack[:-1]\n"
+            "        if char == '#' and not stack:\n"
+            '            print(f"{line[:i].rstrip()}")\n'
+            "            flag = True\n"
+            "            break\n"
+            "    if not flag:\n"
+            "        print(line)\n",
+            "while line := input():\n"
+            '    index = line.find("#")\n'
+            "    if index == -1:\n"
+            "        print(line)\n"
+            "        continue\n"
+            "    if not index:\n"
+            "        continue\n"
+            "    stack = "
+            "\n"
+            "    flag = False\n"
+            "    for i in range(len(line)):\n"
+            "        char = line[i]\n"
+            """        if char in "\"'":\n"""
+            "            if not stack:\n"
+            "                stack += char\n"
+            "            elif char == stack[-1]:\n"
+            "                stack = stack[:-1]\n"
+            "        if char == '#' and not stack:\n"
+            '            print(f"{line[:i].rstrip()}")\n'
+            "            flag = True\n"
+            "            break\n"
+            "    if not flag:\n"
+            "        print(line)\n\n",
+        },
         "the right solution",
     ),
     (
         """print("вася") # ну не "петя" же \n\n""",
-        'print("вася")\n',
+        {
+            'print("вася")\n',
+            'print("вася")\n\n',
+        },
         "Nikolai's test",
     ),
     (
@@ -346,13 +392,22 @@ i_test_data = [
         "    t = stroka.split(re)\n"
         "    if not t[0].isspace() and len(t[0]) != 0:\n"
         "        print(t[0].rstrip())\n\n",
-        're, stroka = "#", "#"\n'
-        "while stroka != "
-        ":\n"
-        "    stroka = input()\n"
-        "    t = stroka.split(re)\n"
-        "    if not t[0].isspace() and len(t[0]) != 0:\n"
-        "        print(t[0].rstrip())\n",
+        {
+            're, stroka = "#", "#"\n'
+            "while stroka != "
+            ":\n"
+            "    stroka = input()\n"
+            "    t = stroka.split(re)\n"
+            "    if not t[0].isspace() and len(t[0]) != 0:\n"
+            "        print(t[0].rstrip())\n",
+            're, stroka = "#", "#"\n'
+            "while stroka != "
+            ":\n"
+            "    stroka = input()\n"
+            "    t = stroka.split(re)\n"
+            "    if not t[0].isspace() and len(t[0]) != 0:\n"
+            "        print(t[0].rstrip())\n\n",
+        },
         "Valerii's test",
     ),
 ]

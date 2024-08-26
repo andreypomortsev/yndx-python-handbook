@@ -435,11 +435,11 @@ def main():
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [A+B+...](./solutions/3.5/35_a.py) | [❌](./tests/3.5/test_35_a.py) |
-| B. [Средний рост](./solutions/3.5/35_b.py) | [❌](./tests/3.5/test_35_b.py) |
-| C. [Без комментариев 2.0](./solutions/3.5/35_c.py) | [❌](./tests/3.5/test_35_c.py) |
-| D. [Найдётся всё 2.0](./solutions/3.5/35_d.py) | [❌](./tests/3.5/test_35_d.py) |
-| E. [А роза упала на лапу Азора 6.0](./solutions/3.5/35_e.py) | [❌](./tests/3.5/test_35_e.py) |
+| А. [A+B+...](./solutions/3.5/35_a.py) | [✅](./tests/3.5/test_35_a.py) |
+| B. [Средний рост](./solutions/3.5/35_b.py) | [✅](./tests/3.5/test_35_b.py) |
+| C. [Без комментариев 2.0](./solutions/3.5/35_c.py) | [✅](./tests/3.5/test_35_c.py) |
+| D. [Найдётся всё 2.0](./solutions/3.5/35_d.py) | [✅](./tests/3.5/test_35_d.py) |
+| E. [А роза упала на лапу Азора 6.0](./solutions/3.5/35_e.py) | [✅](./tests/3.5/test_35_e.py) |
 | F. [Транслитерация 2.0](./solutions/3.5/35_f.py) | [❌](./tests/3.5/test_35_f.py) |
 | G. [Файловая статистика](./solutions/3.5/35_g.py) | [❌](./tests/3.5/test_35_g.py) |
 | H. [Файловая разница](./solutions/3.5/35_h.py) | [❌](./tests/3.5/test_35_h.py) |
