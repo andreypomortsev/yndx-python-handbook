@@ -44,5 +44,8 @@ test-33:
 test-34:
 	pytest tests/3.4/
 
+test-35:
+	pytest tests/3.5/
+
 debug:
 	pytest -vv
