@@ -10,5 +10,6 @@ for word in sorted(words):
         print(word)
     else:
         mid = length // 2
-        if word[:mid].lower() == word[mid + length % 2 :][::-1].lower():
+        index = mid + length % 2
+        if word[:mid].lower() == word[index:][::-1].lower():
             print(word)
