@@ -14,38 +14,14 @@ lint:
 test: lint 
 	pytest
 
-test-html:
-	pytest --cov-report=html
+test-dir-%:
+	pytest tests/$*/
 
-test-xml:
-	pytest --cov-report=xml
+test-file-%:
+	./fileTest.sh $*
 
-test-21:
-	pytest tests/2.1/
-
-test-22:
-	pytest tests/2.2/
-
-test-23:
-	pytest tests/2.3/
-
-test-24:
-	pytest tests/2.4/
-
-test-31:
-	pytest tests/3.1/
-
-test-32:
-	pytest tests/3.2/
-
-test-33:
-	pytest tests/3.3/
-
-test-34:
-	pytest tests/3.4/
-
-test-35:
-	pytest tests/3.5/
+test-report-%:
+	pytest --cov-report=$*
 
 debug:
 	pytest -vv
