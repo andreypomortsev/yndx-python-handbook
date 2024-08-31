@@ -3,10 +3,8 @@ from typing import Dict, List, Set, Tuple, Union
 
 import pytest
 
+from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_33 import f_test_data
-
-MEMORY_LIMIT = 64  # RAM в MB
-TIME_LIMIT = 1  # Временной лимит в сек
 
 OUTPUT_TYPES = Union[
     str,
