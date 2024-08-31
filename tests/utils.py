@@ -5,6 +5,7 @@ from types import FrameType, ModuleType
 from typing import Any, Callable, Tuple, Union
 
 import psutil
+from _pytest.fixtures import SubRequest
 from pytest import FixtureRequest
 
 
@@ -199,3 +200,12 @@ def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
     tested_file_name = tested_file_name.split(".py")[0]
 
     return path_to_test_file, tested_file_name
+
+
+def add_file_to_cleanup(
+    request: SubRequest, path_to_the_temp_file: str
+) -> None:
+    # Добавляем пути временных файлов
+    if not hasattr(request.config, "temp_file_paths"):
+        request.config.temp_file_paths = []
+    request.config.temp_file_paths.append(path_to_the_temp_file)
