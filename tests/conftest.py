@@ -131,9 +131,7 @@ def make_test_files(
     request: SubRequest,
     setup_environment: pytest.fixture,
 ) -> Generator[
-    Callable[
-        [Union[Tuple[str], str], Union[Tuple[str], str]], ModuleType
-    ],
+    Callable[[Union[Tuple[str], str], Union[Tuple[str], str]], ModuleType],
     None,
     None,
 ]:

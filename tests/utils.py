@@ -116,7 +116,7 @@ def compare_output(
 
     if instance_type is set:
         assert printed_output in expected_output, error_msg
-    
+
     # Передаются тесты в которых нужно оценить результат печати set
     # Так как множества неупорядочные приходится преобразовывать в set
     # Для сравнения двух множеств

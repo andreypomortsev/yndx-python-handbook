@@ -37,7 +37,7 @@ def test_input_output(
     wrapped_module.main()
 
     directory_path = os.path.dirname(file_path)
-    
+
     # Файл лежит в root дериктории проекта
     answer_path = os.path.join(directory_path, "..", output_file)
     temp_files(answer_path)
