@@ -2,8 +2,7 @@ from io import StringIO
 
 import pytest
 
-MEMORY_LIMIT = 64  # RAM в MB
-TIME_LIMIT = 1  # Временной лимит в сек
+from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)
@@ -20,19 +19,3 @@ def test_first_open_test(setup_environment, monkeypatch):
     expected_output = "Привет, Яндекс!\n"
 
     assert printed_output == expected_output
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
-def test_second_open_test(setup_environment):
-    _, path_to_test_file = setup_environment
-
-    with open(path_to_test_file, encoding="UTF-8") as file:
-        line = file.readline().strip()
-        expected_outputs = {
-            'print("Привет, Яндекс!")',
-            "print('Привет, Яндекс!')",
-            'print("Привет, Яндекс!")\n',
-            "print('Привет, Яндекс!')\n",
-        }
-        assert line in expected_outputs

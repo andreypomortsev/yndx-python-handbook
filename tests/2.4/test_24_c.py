@@ -3,11 +3,9 @@ from typing import Tuple
 
 import pytest
 
+from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_24 import c_test_data
 from tests.utils import assert_equal
-
-MEMORY_LIMIT = 64  # RAM в MB
-TIME_LIMIT = 1  # Временной лимит в сек
 
 
 @pytest.mark.memory_limit(MEMORY_LIMIT)

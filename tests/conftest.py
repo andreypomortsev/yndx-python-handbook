@@ -88,7 +88,7 @@ def setup_environment(
 
     Возвращает:
         tuple: Кортеж, содержащий импортированный модуль и путь
-            к тестируемому файлу.
+            к обернутому тестируемому файлу.
     """
     # Получаем путь к файлу с решением и его имя
     path_to_test_file, tested_file_name = utils.get_tested_file_details(
@@ -121,12 +121,76 @@ def setup_environment(
     wrapped_module_name = f"tests.wrapped_{tested_file_name}"
     wrapped_module = importlib.import_module(wrapped_module_name)
 
-    # Добавляем пути временных файлов
-    if not hasattr(request.config, "wrapped_file_paths"):
-        request.config.wrapped_file_paths = []
-    request.config.wrapped_file_paths.append(path_to_the_wrapped_file)
+    utils.add_file_to_cleanup(request, path_to_the_wrapped_file)
 
-    yield wrapped_module, path_to_test_file
+    yield wrapped_module, path_to_the_wrapped_file
+
+
+@pytest.fixture(scope="module")
+def make_test_files(
+    request: SubRequest,
+    setup_environment: pytest.fixture,
+) -> Generator[
+    Callable[[Union[Tuple[str], str], Union[Tuple[str], str]], ModuleType],
+    None,
+    None,
+]:
+    """
+    Фикстура для создания тестовых файлов и добавления их в список для удаления
+    после завершения тестов.
+
+    Эта фикстура выполняет следующие действия:
+    1. Создаёт тестовый файл с данными из переменной `mock_input_text`.
+    2. Добавляет путь к файлу в список для удаления после завершения тестов.
+
+    Аргументы:
+        request (SubRequest): объект, дающий информацию о тестовом запросе.
+        setup_environment (pytest.fixture): фикстура для настройки тестовой
+            среды.
+
+    Возвращает:
+        Generator[
+            Callable[
+                [Union[Tuple[str], str],
+                Union[Tuple[str], str]],
+                ModuleType
+            ]:
+        Генератор, который возвращает функцию для создания тестовых файлов.
+        Эта функция принимает имена файлов и данные для записи в файлы,
+        а затем возвращает объект окружения тестирования.
+    """
+
+    def _create_test_file(
+        file_names: Union[Tuple[str], str],
+        mock_input_texts: Union[Tuple[str], str],
+    ) -> ModuleType:
+        """
+        Создаёт тестовый файл с указанным именем и записывает в него данные из
+        переменной `mock_input_texts`. Добавляет путь к файлу в список
+        для удаления после завершения тестов.
+
+        Аргументы:
+            file_names (Union[Tuple[str], str]): Имена файлов
+            mock_input_texts (Union[Tuple[str], str]): Данные для записи
+                в файлы.
+
+        Возвращает:
+            ModuleType: Объект окружения тестирования.
+        """
+        # Если условие выполняется, значит нужно создать несколько файлов
+        if isinstance(file_names, str):
+            file_names = (file_names,)
+            mock_input_texts = (mock_input_texts,)
+
+        for file_name, input_text in zip(file_names, mock_input_texts):
+            with open(file_name, "w", encoding="UTF-8") as file:
+                file.write(input_text)
+
+            utils.add_file_to_cleanup(request, file_name)
+
+        return setup_environment
+
+    yield _create_test_file
 
 
 @pytest.hookimpl(tryfirst=True)
@@ -140,10 +204,10 @@ def pytest_sessionfinish(session: Session) -> None:
         session (Session): Текущая тестовая сессия Pytest.
     """
     # Удаляем все временные файлы
-    if hasattr(session.config, "wrapped_file_paths"):
-        for path_to_the_wrapped_file in session.config.wrapped_file_paths:
-            if os.path.exists(path_to_the_wrapped_file):
-                os.remove(path_to_the_wrapped_file)
+    if hasattr(session.config, "temp_file_paths"):
+        for temp_file_path in session.config.temp_file_paths:
+            if os.path.exists(temp_file_path):
+                os.remove(temp_file_path)
 
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
@@ -167,3 +231,43 @@ def pytest_runtest_call(item: pytest.Item) -> Generator[None, None, None]:
         item.obj = utils.time_limit(limit_seconds)(item.obj)
 
     yield
+
+
+@pytest.fixture
+def temp_files(request: SubRequest) -> Callable[[str], None]:
+    """
+    Создает временные файлы для тестов и добавляет их в список
+    на удаление после выполнения тестов.
+
+    Фикстура позволяет добавлять пути к временным файлам, которые
+    должны быть удалены после завершения тестовой сессии.
+
+    Аргументы:
+        request (SubRequest): объект, предоставляющий информацию
+            о тестовом запросе.
+
+    Возвращает:
+        Callable[[str], None]: Функция, которая принимает путь к файлу
+            и добавляет его в список на удаление.
+    """
+    files_to_cleanup = []
+
+    def add_file(file_path: str) -> None:
+        """
+        Добавляет путь к файлу в список для удаления.
+
+        Аргументы:
+            file_path (str): путь к файлу, который нужно удалить.
+        """
+        files_to_cleanup.append(file_path)
+
+    def cleanup() -> None:
+        """
+        Удаляет все файлы, добавленные в список `files_to_cleanup`.
+        """
+        for file_path in files_to_cleanup:
+            if os.path.exists(file_path):
+                os.remove(file_path)
+
+    request.addfinalizer(cleanup)
+    return add_file

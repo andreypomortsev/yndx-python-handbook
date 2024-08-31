@@ -5,6 +5,7 @@ from types import FrameType, ModuleType
 from typing import Any, Callable, Tuple, Union
 
 import psutil
+from _pytest.fixtures import SubRequest
 from pytest import FixtureRequest
 
 
@@ -78,15 +79,15 @@ def time_limit(limit_seconds: int):
 
 
 def generate_error_msg(
-    printed_output: str, expected_output: Union[str, set, tuple]
+    printed_output: str, expected_output: Union[str, set, tuple, list]
 ) -> str:
     """
     Формирует сообщение с напечатанными данными и ожидаемыми.
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода,
-            могут быть: списком, множеством или кортежем.
+        expected_output (Union[str, set, tuple, list]): Ожидаемые данные
+        вывода, могут быть: стрококй, списком, множеством или кортежем.
 
     Возвращает:
         str: Сообщение с напечатанными данными и ожидаемыми.
@@ -105,8 +106,8 @@ def compare_output(
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода,
-            могут быть: строкой, списком, множеством или кортежем.
+        expected_output (Union[str, set, tuple, list]): Ожидаемые данные
+            вывода, могут быть: строкой, списком, множеством или кортежем.
     Исключения:
         AssertionError: Если фактический вывод не совпадает с ожидаемым.
     """
@@ -115,6 +116,7 @@ def compare_output(
 
     if instance_type is set:
         assert printed_output in expected_output, error_msg
+
     # Передаются тесты в которых нужно оценить результат печати set
     # Так как множества неупорядочные приходится преобразовывать в set
     # Для сравнения двух множеств
@@ -199,3 +201,12 @@ def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
     tested_file_name = tested_file_name.split(".py")[0]
 
     return path_to_test_file, tested_file_name
+
+
+def add_file_to_cleanup(
+    request: SubRequest, path_to_the_temp_file: str
+) -> None:
+    # Добавляем пути временных файлов
+    if not hasattr(request.config, "temp_file_paths"):
+        request.config.temp_file_paths = []
+    request.config.temp_file_paths.append(path_to_the_temp_file)

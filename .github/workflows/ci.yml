@@ -48,7 +48,7 @@ jobs:
 
       - name: Run Pytest with Coverage
         run:
-          make test-xml
+          make test-report-xml
         env:
           CI: true
 
