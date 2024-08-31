@@ -130,23 +130,65 @@ def setup_environment(
 def make_test_files(
     request: SubRequest,
     setup_environment: pytest.fixture,
-) -> Generator[Tuple[ModuleType, str], None, None]:
+) -> Generator[
+    Callable[
+        [Union[Tuple[str], str], Union[Tuple[str], str]], ModuleType
+    ],
+    None,
+    None,
+]:
     """
-    Создает тестовый файл записывая в него данные из переменной
-    mock_input_text добавляет путь к файлу в список для удаления после тестов
+    Фикстура для создания тестовых файлов и добавления их в список для удаления
+    после завершения тестов.
+
+    Эта фикстура выполняет следующие действия:
+    1. Создаёт тестовый файл с данными из переменной `mock_input_text`.
+    2. Добавляет путь к файлу в список для удаления после завершения тестов.
+
+    Аргументы:
+        request (SubRequest): объект, дающий информацию о тестовом запросе.
+        setup_environment (pytest.fixture): фикстура для настройки тестовой
+            среды.
+
+    Возвращает:
+        Generator[
+            Callable[
+                [Union[Tuple[str], str],
+                Union[Tuple[str], str]],
+                ModuleType
+            ]:
+        Генератор, который возвращает функцию для создания тестовых файлов.
+        Эта функция принимает имена файлов и данные для записи в файлы,
+        а затем возвращает объект окружения тестирования.
     """
 
     def _create_test_file(
-        file_name: str, mock_input_text: str
-    ) -> Tuple[ModuleType, str]:
+        file_names: Union[Tuple[str], str],
+        mock_input_texts: Union[Tuple[str], str],
+    ) -> ModuleType:
         """
-        Записывает mock_input_text в файл и добавляет адрес
-        в список для удаления после всех тестов
-        """
-        with open(file_name, "w", encoding="UTF-8") as file:
-            file.write(mock_input_text)
+        Создаёт тестовый файл с указанным именем и записывает в него данные из
+        переменной `mock_input_texts`. Добавляет путь к файлу в список
+        для удаления после завершения тестов.
 
-        utils.add_file_to_cleanup(request, file_name)
+        Аргументы:
+            file_names (Union[Tuple[str], str]): Имена файлов
+            mock_input_texts (Union[Tuple[str], str]): Данные для записи
+                в файлы.
+
+        Возвращает:
+            ModuleType: Объект окружения тестирования.
+        """
+        # Если условие выполняется, значит нужно создать несколько файлов
+        if isinstance(file_names, str):
+            file_names = (file_names,)
+            mock_input_texts = (mock_input_texts,)
+
+        for file_name, input_text in zip(file_names, mock_input_texts):
+            with open(file_name, "w", encoding="UTF-8") as file:
+                file.write(input_text)
+
+            utils.add_file_to_cleanup(request, file_name)
 
         return setup_environment
 
