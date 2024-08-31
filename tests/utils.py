@@ -79,14 +79,14 @@ def time_limit(limit_seconds: int):
 
 
 def generate_error_msg(
-    printed_output: str, expected_output: Union[str, set, tuple]
+    printed_output: str, expected_output: Union[str, set, tuple, list]
 ) -> str:
     """
     Формирует сообщение с напечатанными данными и ожидаемыми.
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода,
+        expected_output (Union[str, set, tuple, list]): Ожидаемые данные вывода,
             могут быть: списком, множеством или кортежем.
 
     Возвращает:
@@ -106,7 +106,7 @@ def compare_output(
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[str, set, tuple]): Ожидаемые данные вывода,
+        expected_output (Union[str, set, tuple, list]): Ожидаемые данные вывода,
             могут быть: строкой, списком, множеством или кортежем.
     Исключения:
         AssertionError: Если фактический вывод не совпадает с ожидаемым.
@@ -116,6 +116,7 @@ def compare_output(
 
     if instance_type is set:
         assert printed_output in expected_output, error_msg
+    
     # Передаются тесты в которых нужно оценить результат печати set
     # Так как множества неупорядочные приходится преобразовывать в set
     # Для сравнения двух множеств
