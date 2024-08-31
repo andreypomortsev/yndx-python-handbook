@@ -5,6 +5,7 @@ source =
 
 omit =
     conftest.py
+    constants.py
     *__init__.py
     utils*
     *test_2*
