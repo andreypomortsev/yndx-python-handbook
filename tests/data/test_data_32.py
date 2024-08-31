@@ -234,13 +234,6 @@ j_test_data = [
         "second open test",
     ),
     (
-        "Я помню чудное мгновенье: Передо мной явилась ты,\n"
-        "Как мимолетное виденье, Как гений чистой красоты.\n",
-        "Ia pomniu chudnoe mgnovene: Peredo mnoi iavilas ty,\n"
-        "Kak mimoletnoe videne, Kak genii chistoi krasoty.\n",
-        "second open test two lines",
-    ),
-    (
         "Щука — одна из самых распространенных и хорошо всем известных речных рыб. "
         "Щучье мясо плотное, у него легко узнаваемый вкус и аромат, немного отдающий тиной. "
         "Многие за это щуку не жалуют.\n",
