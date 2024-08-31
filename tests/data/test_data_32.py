@@ -234,11 +234,11 @@ j_test_data = [
         "second open test",
     ),
     (
-        "Я помню чудное мгновенье: Передо мной явилась ты, "
+        "Я помню чудное мгновенье: Передо мной явилась ты,\n"
         "Как мимолетное виденье, Как гений чистой красоты.\n",
-        "Ia pomniu chudnoe mgnovene: Peredo mnoi iavilas ty, "
+        "Ia pomniu chudnoe mgnovene: Peredo mnoi iavilas ty,\n"
         "Kak mimoletnoe videne, Kak genii chistoi krasoty.\n",
-        "second open test",
+        "second open test two lines",
     ),
     (
         "Щука — одна из самых распространенных и хорошо всем известных речных рыб. "
