@@ -462,11 +462,11 @@ def main():
 | H. [Файловая разница](./solutions/3.5/35_h.py) | [✅](./tests/3.5/test_35_h.py) |
 | I. [Файловая чистка](./solutions/3.5/35_i.py) | [✅](./tests/3.5/test_35_i.py) |
 | J. [Хвост](./solutions/3.5/35_j.py) | [✅](./tests/3.5/test_35_j.py) |
-| K. [Файловая статистика 2.0](./solutions/3.5/35_k.py) | [❌](./tests/3.5/test_35_k.py) |
-| L. [Разделяй и властвуй](./solutions/3.5/35_l.py) | [❌](./tests/3.5/test_35_l.py) |
-| M. [Обновление данных](./solutions/3.5/35_m.py) | [❌](./tests/3.5/test_35_m.py) |
-| N. [Слияние данных](./solutions/3.5/35_n.py) | [❌](./tests/3.5/test_35_n.py) |
-| O. [Поставь себя на моё место](./solutions/3.5/35_o.py) | [❌](./tests/3.5/test_35_o.py) |
+| K. [Файловая статистика 2.0](./solutions/3.5/35_k.py) | [✅](./tests/3.5/test_35_k.py) |
+| L. [Разделяй и властвуй](./solutions/3.5/35_l.py) | [✅](./tests/3.5/test_35_l.py) |
+| M. [Обновление данных](./solutions/3.5/35_m.py) | [✅](./tests/3.5/test_35_m.py) |
+| N. [Слияние данных](./solutions/3.5/35_n.py) | [✅](./tests/3.5/test_35_n.py) |
+| O. [Поставь себя на моё место](./solutions/3.5/35_o.py) | [✅](./tests/3.5/test_35_o.py) |
 | P. [Найдётся всё 3.0](./solutions/3.5/35_p.py) | [❌](./tests/3.5/test_35_p.py) |
 | Q. [Прятки](./solutions/3.5/35_q.py) | [❌](./tests/3.5/test_35_q.py) |
 | R. [Сколько вешать в байтах?](./solutions/3.5/35_r.py) | [❌](./tests/3.5/test_35_r.py) |
