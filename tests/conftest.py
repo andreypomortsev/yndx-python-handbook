@@ -1,4 +1,5 @@
 import importlib
+import json
 import os
 import sys
 from types import ModuleType
@@ -183,8 +184,12 @@ def make_test_files(
             mock_input_texts = (mock_input_texts,)
 
         for file_name, input_text in zip(file_names, mock_input_texts):
-            with open(file_name, "w", encoding="UTF-8") as file:
-                file.write(input_text)
+            if file_name.lower().endswith("json"):
+                with open(file_name, "w", encoding="UTF-8") as json_file:
+                    json.dump(input_text, json_file)
+            else:
+                with open(file_name, "w", encoding="UTF-8") as file:
+                    file.write(input_text)
 
             utils.add_file_to_cleanup(request, file_name)
 
