@@ -352,3 +352,520 @@ j_test_data = [
         "few empty plus text",
     ),
 ]
+
+k_test_data = [
+    (
+        ("numbers.txt", "statistics.json"),
+        "1 2 3 4 5\n-5 -4 -3 -2 -1\n10 20\n20 10\n",
+        {
+            "count": 14,
+            "positive_count": 9,
+            "min": -5,
+            "max": 20,
+            "sum": 60,
+            "average": 4.29,
+        },
+        "first open test",
+    ),
+    (
+        ("numbers.txt", "statistics.json"),
+        "1 2 3 4 5 -5 -4 -3 -2 -1 10 20 20 10\n",
+        {
+            "count": 14,
+            "positive_count": 9,
+            "min": -5,
+            "max": 20,
+            "sum": 60,
+            "average": 4.29,
+        },
+        "first open test one line",
+    ),
+    (
+        ("numbers.txt", "statistics.json"),
+        "1 2 3 4 5\n-5 -4 -3 -2 -1\n10 20\n-20 -10\n",
+        {
+            "count": 14,
+            "positive_count": 7,
+            "min": -20,
+            "max": 20,
+            "sum": 0,
+            "average": 0.0,
+        },
+        "average 0",
+    ),
+    (
+        ("1.txt", "2.json"),
+        "1 2 3 4 5 -5 -4 -3 -2 -1 10 20 -20 -10\n",
+        {
+            "count": 14,
+            "positive_count": 7,
+            "min": -20,
+            "max": 20,
+            "sum": 0,
+            "average": 0.0,
+        },
+        "one line average 0",
+    ),
+    (
+        ("numbers.txt", "statistics.json"),
+        "\n-5 -4 -3 -2 -1\n\n-20 -10\n",
+        {
+            "count": 7,
+            "positive_count": 0,
+            "min": -20,
+            "max": -1,
+            "sum": -45,
+            "average": -6.43,
+        },
+        "only negative numbers",
+    ),
+    (
+        ("only positive numbers.txt", "num-statistics.json"),
+        "\n5 4 3 2 1\n\n20 10\n",
+        {
+            "count": 7,
+            "positive_count": 7,
+            "min": 1,
+            "max": 20,
+            "sum": 45,
+            "average": 6.43,
+        },
+        "only positive numbers",
+    ),
+    (
+        ("only positive numbers.txt", "num-statistics.json"),
+        "0 0 0 0 0 0 0 0\n5 4 3 2 1\n\n20 10\n",
+        {
+            "count": 15,
+            "positive_count": 7,
+            "min": 0,
+            "max": 20,
+            "sum": 45,
+            "average": 3.0,
+        },
+        "positive numbers and zeros",
+    ),
+    (
+        ("zeros", "indeed.json"),
+        "0 0 0 0 0 0 0 0\n-5 -4 -3 -2 -1\n\n-20 -10\n",
+        {
+            "count": 15,
+            "positive_count": 0,
+            "min": -20,
+            "max": 0,
+            "sum": -45,
+            "average": -3.0,
+        },
+        "negative numbers and zeros",
+    ),
+    (
+        ("one_negative_num", "indeed.json"),
+        "-10\n",
+        {
+            "count": 1,
+            "positive_count": 0,
+            "min": -10,
+            "max": -10,
+            "sum": -10,
+            "average": -10.0,
+        },
+        "one negative number",
+    ),
+    (
+        ("one_positive_num.log", "indeed.json"),
+        "330\n",
+        {
+            "count": 1,
+            "positive_count": 1,
+            "min": 330,
+            "max": 330,
+            "sum": 330,
+            "average": 330.0,
+        },
+        "one positive number",
+    ),
+]
+
+l_test_data = [
+    (
+        ("numbers.txt", "even.txt", "odd.txt", "eq.txt"),
+        "650975472 591084323 629700 1504180 577023\n"
+        "8460612246 42161437 29409368 58531725 5725268 2198001838\n"
+        "796451 69358 7195510 975628465 9756641\n"
+        "44200289 126541 979391 93479581 291170 28987042 86139603\n",
+        (
+            "629700 1504180\n"
+            "8460612246 29409368 5725268 2198001838\n"
+            "975628465\n"
+            "44200289 28987042\n",
+            "650975472 591084323 577023\n"
+            "58531725\n"
+            "796451 69358 7195510 9756641\n"
+            "979391 93479581 291170\n",
+            "\n42161437\n\n126541 86139603\n",
+        ),
+        "first open test",
+    ),
+    (
+        ("1", "2", "3", "RESULT"),
+        "1\n2\n3\n\n4\n",
+        (
+            "\n2\n\n\n4\n",
+            "1\n\n3\n\n\n",
+            "\n\n\n\n\n",
+        ),
+        "one empty line single nums",
+    ),
+    (
+        ("input.txt", "even.txt", "odd.txt", "eq.txt"),
+        "650975472 591084323 629700 1504180 577023\n"
+        "8460612246 42161437 29409368 58531725 5725268 2198001838\n\n"
+        "796451 69358 7195510 975628465 9756641\n"
+        "44200289 126541 979391 93479581 291170 28987042 86139603\n",
+        (
+            "629700 1504180\n"
+            "8460612246 29409368 5725268 2198001838\n\n"
+            "975628465\n"
+            "44200289 28987042\n",
+            "650975472 591084323 577023\n"
+            "58531725\n\n"
+            "796451 69358 7195510 9756641\n"
+            "979391 93479581 291170\n",
+            "\n42161437\n\n\n126541 86139603\n",
+        ),
+        "one empty line big nums",
+    ),
+    (
+        ("input", "even.txt", "odd.txt", "eq.txt"),
+        "3223244435694 0 0 0 0\n"
+        "111111 333333 3333333 333330000000\n"
+        "100 2200144\n",
+        (
+            "3223244435694 0 0 0 0\n" "333330000000\n" "100 2200144\n",
+            "\n" "111111 333333 3333333\n" "\n",
+            "\n\n\n",
+        ),
+        "even or odd nums",
+    ),
+    (
+        ("input", "even", "odd.txt", "eq.txt"),
+        "21 21 21 21\n"
+        "36 67 89 90\n"
+        "12\n"
+        "29\n"
+        "90\n"
+        "98\n"
+        "21\n"
+        "16\n"
+        "9023\n",
+        (
+            "\n\n\n\n\n\n\n\n\n",
+            "\n\n\n\n\n\n\n\n\n",
+            "21 21 21 21\n"
+            "36 67 89 90\n"
+            "12\n"
+            "29\n"
+            "90\n"
+            "98\n"
+            "21\n"
+            "16\n"
+            "9023\n",
+        ),
+        "equal nums",
+    ),
+    (
+        ("input", "even", "odd.txt", "eq.txt"),
+        "2 62 26 24\n"
+        "436 267 892 290\n"
+        "212\n"
+        "292\n"
+        "904\n"
+        "698\n"
+        "216\n"
+        "616\n"
+        "90238\n",
+        (
+            "2 62 26 24\n"
+            "436 267 892 290\n"
+            "212\n"
+            "292\n"
+            "904\n"
+            "698\n"
+            "216\n"
+            "616\n"
+            "90238\n",
+            "\n\n\n\n\n\n\n\n\n",
+            "\n\n\n\n\n\n\n\n\n",
+        ),
+        "all even nums",
+    ),
+    (
+        ("input", "even.log", "odd", "equal"),
+        "231 13623 23136 31924\n"
+        "43576 27967 97892 27909\n"
+        "29253 7521279\n"
+        "698335 29253\n"
+        "90455 6165533\n"
+        "698335 2925312111\n"
+        "216535 7521279\n"
+        "6165533 6165533\n"
+        "902385353\n",
+        (
+            "\n\n\n\n\n\n\n\n\n",
+            "231 13623 23136 31924\n"
+            "43576 27967 97892 27909\n"
+            "29253 7521279\n"
+            "698335 29253\n"
+            "90455 6165533\n"
+            "698335 2925312111\n"
+            "216535 7521279\n"
+            "6165533 6165533\n"
+            "902385353\n",
+            "\n\n\n\n\n\n\n\n\n",
+        ),
+        "all odd nums",
+    ),
+]
+
+m_test_data = [
+    (
+        "data.json",
+        "one == один\ntwo == два\nthree == три\n",
+        {"one": 1, "three": 2},
+        {"one": "один", "three": "три", "two": "два"},
+        "first open test",
+    ),
+    (
+        "another_data.json",
+        "21 == двадцать-один\n",
+        {"21": 1, "three": 2},
+        {"21": "двадцать-один", "three": 2},
+        "one line",
+    ),
+    (
+        "yet_another_data.json",
+        "' ' == empty string\n",
+        {"21": 21, "three": 2},
+        {"' '": "empty string", "21": 21, "three": 2},
+        "add a value",
+    ),
+    (
+        "fancy_data.json",
+        'language_info == {"name": "python", "user": None}\n'
+        'metadata == {"kernelspec": {"name": "python3", "display_name": "Python 3"}}\n',
+        {
+            "type": "notebook",
+            "metadata": {
+                "kernelspec": {"name": "python3", "display_name": "Python 3"},
+                "language_info": {"name": "python"},
+            },
+        },
+        {
+            "type": "notebook",
+            "metadata": {
+                "kernelspec": {"name": "python3", "display_name": "Python 3"}
+            },
+            "language_info": {"name": "python", "user": None},
+        },
+        "moving jsons",
+    ),
+    (
+        "yet_another_data.json",
+        "' ' == ['empty string']\n",
+        {"21": 21, "three": 2},
+        {"' '": ["empty string"], "21": 21, "three": 2},
+        "add a list as a value",
+    ),
+]
+
+n_test_data = [
+    (
+        ("users.json", "updates.json"),
+        (
+            [
+                {"name": "Ann", "address": "Flower st."},
+                {
+                    "name": "Bob",
+                    "address": "Summer st.",
+                    "phone": "+7 (123) 456-78-90",
+                },
+            ],
+            [
+                {
+                    "name": "Ann",
+                    "address": "Awesome st.",
+                    "phone": "+7 (098) 765-43-21",
+                },
+                {"name": "Bob", "address": "Winter st."},
+            ],
+        ),
+        {
+            "Ann": {
+                "address": "Flower st.",
+                "phone": "+7 (098) 765-43-21",
+            },
+            "Bob": {
+                "address": "Winter st.",
+                "phone": "+7 (123) 456-78-90",
+            },
+        },
+        "first open test",
+    ),
+    (
+        ("1.json", "2.json"),
+        (
+            [
+                {"name": "Ann", "address": "Flower st."},
+                {"name": "Vova", "address": "Bunker st."},
+                {
+                    "name": "Bob",
+                    "address": "Summer st.",
+                    "phone": "+7 (123) 456-78-90",
+                },
+            ],
+            [
+                {
+                    "name": "Ann",
+                    "address": "Awesome st.",
+                    "phone": "+7 (098) 765-43-21",
+                },
+                {"name": "Bob", "address": "Winter st."},
+                {
+                    "name": "Vova",
+                    "phone": "+ 31 (0)70 515 8515",
+                    "address": "Oude Waalsdorperweg st.",
+                },
+            ],
+        ),
+        {
+            "Ann": {
+                "address": "Flower st.",
+                "phone": "+7 (098) 765-43-21",
+            },
+            "Bob": {
+                "address": "Winter st.",
+                "phone": "+7 (123) 456-78-90",
+            },
+            "Vova": {
+                "address": "Oude Waalsdorperweg st.",
+                "phone": "+ 31 (0)70 515 8515",
+            },
+        },
+        "more users",
+    ),
+]
+
+o_test_data = [
+    (
+        "4\n12\n3\n100\n0\n",
+        [
+            {
+                "points": 10,
+                "tests": [
+                    {"input": "2 2", "pattern": "4"},
+                    {"input": "4 3", "pattern": "7"},
+                ],
+            },
+            {
+                "points": 30,
+                "tests": [
+                    {"input": "2 1", "pattern": "3"},
+                    {"input": "25 4", "pattern": "29"},
+                    {"input": "3 -3", "pattern": "0"},
+                ],
+            },
+        ],
+        "25\n",
+        "first open test",
+    ),
+    (
+        "12\n4\n7\n3\n29\n0\n987\n229\n100\n2210\n",
+        [
+            {
+                "points": 60,
+                "tests": [
+                    {"input": "22 -2", "pattern": "12"},
+                    {"input": "2 2", "pattern": "4"},
+                    {"input": "4 3", "pattern": "7"},
+                ],
+            },
+            {
+                "points": 30,
+                "tests": [
+                    {"input": "2 1", "pattern": "3"},
+                    {"input": "25 4", "pattern": "29"},
+                    {"input": "3 -3", "pattern": "0"},
+                ],
+            },
+            {
+                "points": 4,
+                "tests": [
+                    {"input": "32 12", "pattern": "987"},
+                    {"input": "235 -114", "pattern": "229"},
+                    {"input": "30 -93", "pattern": "100"},
+                    {"input": "1093 34343", "pattern": "2210"},
+                ],
+            },
+        ],
+        "94\n",
+        "nailed it!",
+    ),
+    (
+        "120\n40\n70\n30\n290\n90\n9807\n2029\n10\n210\n",
+        [
+            {
+                "points": 60,
+                "tests": [
+                    {"input": "22 -2", "pattern": "12"},
+                    {"input": "2 2", "pattern": "4"},
+                    {"input": "4 3", "pattern": "7"},
+                ],
+            },
+            {
+                "points": 30,
+                "tests": [
+                    {"input": "2 1", "pattern": "3"},
+                    {"input": "25 4", "pattern": "29"},
+                    {"input": "3 -3", "pattern": "0"},
+                ],
+            },
+            {
+                "points": 4,
+                "tests": [
+                    {"input": "32 12", "pattern": "987"},
+                    {"input": "235 -114", "pattern": "229"},
+                    {"input": "30 -93", "pattern": "100"},
+                    {"input": "1093 34343", "pattern": "2210"},
+                ],
+            },
+        ],
+        "0\n",
+        "failed it!",
+    ),
+    (
+        "4\n",
+        [
+            {
+                "points": 100,
+                "tests": [
+                    {"input": "2 2", "pattern": "4"},
+                ],
+            }
+        ],
+        "100\n",
+        "very imprtant test passed",
+    ),
+    (
+        "4\n",
+        [
+            {
+                "points": 100,
+                "tests": [
+                    {"input": "2 2", "pattern": "24"},
+                ],
+            }
+        ],
+        "0\n",
+        "very imprtant test failed",
+    ),
+]
