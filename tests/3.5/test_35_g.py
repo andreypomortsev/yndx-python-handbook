@@ -1,5 +1,5 @@
 from types import ModuleType
-from typing import Callable, Set, Union
+from typing import Callable, Optional, Set, Union
 
 import pytest
 
@@ -21,7 +21,7 @@ def test_input_output(
     mock_input_text: str,
     expected_output: Union[Set[str], str],
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
 ) -> None:
 
     wrapped_module, _ = make_test_files(file_name, mock_input_text)

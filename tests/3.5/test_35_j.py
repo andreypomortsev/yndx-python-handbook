@@ -1,5 +1,5 @@
 from types import ModuleType
-from typing import Callable, Set
+from typing import Callable, Optional, Set
 
 import pytest
 
@@ -22,7 +22,7 @@ def test_input_output(
     lines_to_read: str,
     expected_output: Set[str],
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
 ) -> None:
 
     # Создаем файлы с тестовыми данными для функции

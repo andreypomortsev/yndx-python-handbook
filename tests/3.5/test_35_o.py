@@ -1,5 +1,5 @@
 from types import ModuleType
-from typing import Any, Callable, Dict, List
+from typing import Any, Callable, Dict, List, Optional
 
 import pytest
 
@@ -21,7 +21,7 @@ def test_input_output(
     json_data: List[Dict[str, Any]],
     expected_output: str,
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
 ) -> None:
     file_name = TEST_FILE_NAMES["3.5"]["o"]
 

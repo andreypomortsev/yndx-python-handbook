@@ -1,7 +1,7 @@
 import os
 from io import StringIO
 from types import ModuleType
-from typing import Callable, List, Tuple
+from typing import Callable, List, Optional, Tuple
 
 import pytest
 
@@ -22,7 +22,7 @@ def test_input_output(
     mock_input_text: str,
     expected_outputs: List[str],
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
     temp_files: str,
 ) -> None:
     input_file, output_files = file_names[0], file_names[1:]

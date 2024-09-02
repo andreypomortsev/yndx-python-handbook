@@ -2,7 +2,7 @@ import json
 import os
 from io import StringIO
 from types import ModuleType
-from typing import Callable, Dict, Tuple, Union
+from typing import Callable, Dict, Optional, Tuple, Union
 
 import pytest
 
@@ -23,7 +23,7 @@ def test_input_output(
     mock_input_text: str,
     expected_output: Dict[str, Union[int, float]],
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
     temp_files: str,
 ) -> None:
     input_file, output_file = file_names

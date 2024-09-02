@@ -2,7 +2,7 @@ import json
 import os
 from io import StringIO
 from types import ModuleType
-from typing import Any, Callable, Dict
+from typing import Any, Callable, Dict, Optional
 
 import pytest
 
@@ -24,7 +24,7 @@ def test_input_output(
     json_data: Dict[Any, Any],
     expected_output: Dict[Any, Any],
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
 ) -> None:
     # Создаем файлы с тестовыми данными для функции
     wrapped_module, file_path = make_test_files(file_name, json_data)
