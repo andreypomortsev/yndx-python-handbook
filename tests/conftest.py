@@ -164,6 +164,7 @@ def make_test_files(
     def _create_test_file(
         file_names: Union[Tuple[str], str],
         mock_input_texts: Union[Tuple[str], str],
+        mode: str = "w"
     ) -> ModuleType:
         """
         Создаёт тестовый файл с указанным именем и записывает в него данные из
@@ -174,21 +175,21 @@ def make_test_files(
             file_names (Union[Tuple[str], str]): Имена файлов
             mock_input_texts (Union[Tuple[str], str]): Данные для записи
                 в файлы.
+            mode (str): В каком режиме записывать файлы.
 
         Возвращает:
             ModuleType: Объект окружения тестирования.
         """
-        # Если условие выполняется, значит нужно создать несколько файлов
         if isinstance(file_names, str):
             file_names = (file_names,)
             mock_input_texts = (mock_input_texts,)
 
         for file_name, input_text in zip(file_names, mock_input_texts):
             if file_name.lower().endswith("json"):
-                with open(file_name, "w", encoding="UTF-8") as json_file:
+                with open(file_name, mode, encoding="UTF-8") as json_file:
                     json.dump(input_text, json_file)
             else:
-                with open(file_name, "w", encoding="UTF-8") as file:
+                with open(file_name, mode, encoding="UTF-8") as file:
                     file.write(input_text)
 
             utils.add_file_to_cleanup(request, file_name)
