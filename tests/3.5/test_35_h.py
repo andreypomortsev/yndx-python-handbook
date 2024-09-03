@@ -1,7 +1,7 @@
 import os
 from io import StringIO
 from types import ModuleType
-from typing import Callable, Set, Tuple, Union
+from typing import Callable, Optional, Set, Tuple, Union
 
 import pytest
 
@@ -22,7 +22,7 @@ def test_input_output(
     mock_input_texts: Union[Tuple[str], str],
     expected_output: Set[str],
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
     temp_files: str,
 ) -> None:
     # Создаем файлы с тестовыми данными для функции

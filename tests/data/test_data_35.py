@@ -869,3 +869,178 @@ o_test_data = [
         "very imprtant test failed",
     ),
 ]
+
+p_test_data = [
+    (
+        "Мама мыла РАМУ\nfirst.txt\nsecond.txt\n",
+        (
+            "В этом файле говорится    о том что МАМА   \nмылА\nРаму\n",
+            "А в этом не говорится",
+        ),
+        "first.txt\n",
+        "first open test",
+    ),
+    (
+        "Where am I\nsecond.txt\nfirst.txt\n",
+        (
+            "В этом файле говорится    о том что МАМА   \nмылА\nРаму\n",
+            "А в этом не говорится",
+        ),
+        "404. Not Found\n",
+        "404",
+    ),
+    (
+        "Where am I\nsecond.txt\nfirst.txt\none more\nanother.log\none_more.csv\nemptyfile.txt\n",
+        (
+            "В этом файле говорится    о том что МАМА   \nмылА\nРаму\n",
+            "А в этом не говорится",
+            "where can I&nbsp;find\na cup of coffee\n\n\n\n at 10 AM\n",
+            "Where&nbsp;am&nbsp;I",
+            "&nbsp;&nbsp;&nbsp;&nbsp;",
+            "\n\n\n\n\n\n\n\n\n\n",
+        ),
+        "another.log\n",
+        "&nbsp; test",
+    ),
+]
+
+q_test_data = [
+    ("᥈୥ᙬᱬᝯ, ᭷ᝯ୲੬๤!", {"Hello, world!", "Hello, world!\n"}, "first open test"),
+    (
+        "䥉†䑄楩獳汬楩歫敥†瑴潯†睷牲楩瑴敥†瑴敥獳瑴獳†晦潯牲†瑴桨楩獳†敥硸敥牲捣楩獳敥",
+        {
+            "I Dislike to write tests for this exercise",
+            "I Dislike to write tests for this exercise\n",
+        },
+        "chinesse",
+    ),
+    (
+        "I Dislike to write tests for this exercise!",
+        {
+            "I Dislike to write tests for this exercise!",
+            "I Dislike to write tests for this exercise!\n",
+        },
+        "english",
+    ),
+    ("", {"", "\n"}, "empty"),
+    (
+        "乎潯ਊ煱畵楩敥牲潯ਊ灰牲潯扢慡牲ਊ敥獳瑴敥ਊ灰牲潯扢汬敥浭慡⸮ਊ",
+        {
+            "No\nquiero\nprobar\neste\nproblema.",
+            "No\nquiero\nprobar\neste\nproblema.\n",
+        },
+        "spanish",
+    ),
+]
+
+r_test_data = [
+    ("file.txt\n", 67, "67Б", "first open test"),
+    ("another_file.txt\n", 193, "193Б", "second open test"),
+    ("temp.log\n", 1023, "1023Б", "almost Kb"),
+    ("empty.sql\n", 1024, "1КБ", "one Kb"),
+    ("query.sql\n", 102400, "100КБ", "Kb"),
+    ("procedures.sql\n", 1047552, "1023КБ", "almost Mb"),
+    ("photo.jpg\n", 1048576, "1МБ", "one Mb"),
+    ("photo.raw\n", 138412032, "132МБ", "few Mb"),
+    ("photo.mpeg\n", 138412037, "133МБ", "a few Mb more"),
+    ("photos.tar\n", 1072693248, "1023МБ", "1023 Mb"),
+    ("a_file.mp4\n", 1073741824, "1ГБ", "one Gb"),
+    ("another_file.mp4\n", 20401094656, "19ГБ", "few Gb"),
+    ("another_file.avro\n", 1099511627776, "1024ГБ", "1024 Gb"),
+]
+
+s_test_data = [
+    ("3\n", "Hello, world!", "Khoor, zruog!", "first open test"),
+    (
+        "-10\n",
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "QRSTUVWXYZABCDEFGHIJKLMNOP",
+        "second open test",
+    ),
+    ("0\n", "Hello, world!", "Hello, world!", "zero shift"),
+    ("26\n", "Hello, world!", "Hello, world!", "26 shift"),
+    ("-26\n", "Hello, world!", "Hello, world!", "-26 shift"),
+    ("0\n", "Hello,\nworld!", "Hello,\nworld!", "zero shift two line"),
+    ("26\n", "Hello,\nworld!", "Hello,\nworld!", "26 shift two lines"),
+    ("-26\n", "Hello,\nworld!", "Hello,\nworld!", "-26 shift two lines"),
+    (
+        "-30\n",
+        "abcdefghijklmnopqrstuvwxyz",
+        "wxyzabcdefghijklmnopqrstuv",
+        "big negative shift",
+    ),
+    (
+        "-4\n",
+        "abcdefghijklmnopqrstuvwxyz",
+        "wxyzabcdefghijklmnopqrstuv",
+        "small negative shift",
+    ),
+    (
+        "4\n",
+        "abcdefghijklmnopqrstuvwxyz",
+        "efghijklmnopqrstuvwxyzabcd",
+        "small positive shift",
+    ),
+    (
+        "30\n",
+        "abcdefghi\njklmnopqrstuvwxyz",
+        "efghijklm\nnopqrstuvwxyzabcd",
+        "big positive shift",
+    ),
+]
+
+t_test_data = [
+    (
+        b"".join(
+            map(lambda x: x.to_bytes(2, byteorder="big"), [1, 2, 3, 4, 5])
+        ),
+        "15\n",
+        "first open test",
+    ),
+    (
+        bytes.fromhex("00ff0101"),
+        "512\n",
+        "second open test",
+    ),
+    (
+        int(0).to_bytes(2, byteorder="big"),
+        "0\n",
+        "zero",
+    ),
+    (
+        int(65535).to_bytes(2, byteorder="big"),
+        "65535\n",
+        "16 bit",
+    ),
+    (
+        b"".join(
+            map(
+                lambda x: x.to_bytes(2, byteorder="big"),
+                [60000, 5000, 500, 30, 6],
+            )
+        ),
+        "0\n",
+        "cut to 0",
+    ),
+    # Исправить измерение памяти при тестах
+    # (
+    #     b"".join(
+    #         map(
+    #             lambda x: x.to_bytes(2, byteorder="big"),
+    #             (1 for _ in range(262144)),
+    #         )
+    #     ),
+    #     "0\n",
+    #     "long file to zero",
+    # ),
+    # (
+    #     b"".join(
+    #         map(
+    #             lambda x: x.to_bytes(2, byteorder="big"),
+    #             (1 for _ in range(262143)),
+    #         )
+    #     ),
+    #     "65535\n",
+    #     "long file",
+    # ),
+]

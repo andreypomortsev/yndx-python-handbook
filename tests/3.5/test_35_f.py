@@ -1,6 +1,6 @@
 import os
 from types import ModuleType
-from typing import Callable
+from typing import Callable, Optional
 
 import pytest
 
@@ -19,7 +19,7 @@ def test_input_output(
     mock_input_text: str,
     expected_output: str,
     _: str,
-    make_test_files: Callable[[str, str], ModuleType],
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
     temp_files: str,
 ) -> None:
     read_data, written_data = TEST_FILE_NAMES["3.5"]["f"]

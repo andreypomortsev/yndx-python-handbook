@@ -140,7 +140,7 @@ def compare_output(
 def assert_equal(
     wrapped_module: ModuleType,
     monkeypatch: Any,
-    mock_input_text: str,
+    mock_input_text: Union[str, None],
     expected_output: Union[str, set, tuple, list],
 ) -> None:
     """
