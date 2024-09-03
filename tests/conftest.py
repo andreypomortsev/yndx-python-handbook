@@ -164,7 +164,7 @@ def make_test_files(
     def _create_test_file(
         file_names: Union[Tuple[str], str],
         mock_input_texts: Union[Tuple[str], str],
-        mode: str = "w"
+        mode: str = "w",
     ) -> ModuleType:
         """
         Создаёт тестовый файл с указанным именем и записывает в него данные из
@@ -186,10 +186,17 @@ def make_test_files(
 
         for file_name, input_text in zip(file_names, mock_input_texts):
             if file_name.lower().endswith("json"):
+
                 with open(file_name, mode, encoding="UTF-8") as json_file:
                     json.dump(input_text, json_file)
+
             else:
-                with open(file_name, mode, encoding="UTF-8") as file:
+                if mode == "wb":
+                    encoding = None
+                else:
+                    encoding = "UTF-8"
+
+                with open(file_name, mode, encoding=encoding) as file:
                     file.write(input_text)
 
             utils.add_file_to_cleanup(request, file_name)
