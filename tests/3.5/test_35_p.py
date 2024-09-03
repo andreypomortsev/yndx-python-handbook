@@ -1,5 +1,5 @@
 from types import ModuleType
-from typing import Tuple
+from typing import Callable, Optional, Tuple
 
 import pytest
 
@@ -11,21 +11,26 @@ from tests.utils import assert_equal
 @pytest.mark.memory_limit(MEMORY_LIMIT)
 @pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
-    "mock_input_text, expected_output, _",  # _ - название теста
+    "mock_input_texts, files_data, expected_output, _",
     p_test_data,
-    ids=[i[2] for i in p_test_data],  # Считываем названия тестов
+    ids=[i[-1] for i in p_test_data],  # Считываем названия тестов
 )
 def test_input_output(
     monkeypatch: pytest.MonkeyPatch,
-    setup_environment: Tuple[ModuleType, str],
-    mock_input_text: str,
+    mock_input_texts: str,
+    files_data: Tuple[str],
     expected_output: str,
     _: str,
+    make_test_files: Callable[[str, str, Optional[str]], ModuleType],
 ) -> None:
-    wrapped_module, _ = setup_environment
+    # Извлекаем и очищаем имена файлов
+    file_names = mock_input_texts.split("\n")[1:]
+
+    wrapped_module, _ = make_test_files(file_names, files_data)
+
     assert_equal(
         wrapped_module,
         monkeypatch,
-        mock_input_text,
+        mock_input_texts,
         expected_output,
     )
