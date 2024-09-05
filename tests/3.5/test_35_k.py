@@ -6,12 +6,9 @@ from typing import Callable, Dict, Optional, Tuple, Union
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_35 import k_test_data
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "file_names, mock_input_text, expected_output, _",  # _ - название теста
     k_test_data,

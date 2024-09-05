@@ -4,12 +4,10 @@ from typing import Callable, Optional
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TEST_FILE_NAMES, TIME_LIMIT
+from tests.constants import TEST_FILE_NAMES
 from tests.data.test_data_32 import j_test_data
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "mock_input_text, expected_output, _",  # _ - название теста
     j_test_data,

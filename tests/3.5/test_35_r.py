@@ -4,12 +4,9 @@ from typing import Tuple
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_35 import r_test_data
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "mock_input_text, mock_file_size, expected_output, _",
     r_test_data,

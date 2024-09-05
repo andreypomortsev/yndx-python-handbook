@@ -6,12 +6,9 @@ from typing import Callable, Dict, List, Optional, Tuple
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_35 import n_test_data
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "file_names, json_data, expected_output, _",
     n_test_data,

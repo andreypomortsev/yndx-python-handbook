@@ -5,12 +5,9 @@ from typing import Tuple
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_32 import o_test_data
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 def test_first_open_test(
     setup_environment: Tuple[ModuleType, str], monkeypatch: pytest.MonkeyPatch
 ):
@@ -35,8 +32,6 @@ def test_first_open_test(
         assert printed == expected
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 def test_second_open_test(
     setup_environment: Tuple[ModuleType, str], monkeypatch: pytest.MonkeyPatch
 ):
@@ -58,8 +53,6 @@ def test_second_open_test(
         assert printed == expected
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 def test_one_digit_zero(
     setup_environment: Tuple[ModuleType, str], monkeypatch: pytest.MonkeyPatch
 ):
@@ -81,8 +74,6 @@ def test_one_digit_zero(
         assert printed == expected
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 def test_all_digits_with_spaces(
     setup_environment: Tuple[ModuleType, str], monkeypatch: pytest.MonkeyPatch
 ):

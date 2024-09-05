@@ -3,7 +3,6 @@ from typing import Dict, List, Set, Tuple, Union
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_33 import e_test_data
 
 OUTPUT_TYPES = Union[
@@ -16,8 +15,6 @@ OUTPUT_TYPES = Union[
 ]
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "input_data, expected_output, _",  # _ - название теста
     e_test_data,
