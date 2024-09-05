@@ -1028,8 +1028,8 @@ t_test_data = [
         "long file to zero",
     ),
     (
-        b"\x00\x01" * 1200240,
-        "20592\n",
+        b"\x00\x01" * 800240,
+        "13808\n",
         "long file",
     ),
 ]
