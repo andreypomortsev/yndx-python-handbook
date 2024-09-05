@@ -36,13 +36,22 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
         # Добавляем отступы для обертывания в функцию
         indented_script = script.replace("\n", "\n    ").rstrip(" ")
 
+        imports = (
+            "from tests.utils import time_limit, memory_limit\n"
+            "from tests.constants import TIME_LIMIT, MEMORY_LIMIT\n\n"
+        )
+        decorators = "@time_limit(TIME_LIMIT)\n"
+
         # Обертываем считанный из файла код в функцию main
         if args:
             wrapped_script = (
-                f"def main({args}):\n    return {indented_script}"  # noqa E271
+                f"{imports}{decorators}def main({args}):\n"
+                f"    return {indented_script}"  # noqa E271
             )
         else:
-            wrapped_script = f"def main():\n    {indented_script}"
+            wrapped_script = (
+                f"{imports}{decorators}def main():\n    {indented_script}"
+            )
 
         # Определяем папку с тестами
         current_dir = os.path.dirname(__file__)
