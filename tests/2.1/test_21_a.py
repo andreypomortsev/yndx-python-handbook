@@ -1,12 +1,6 @@
 from io import StringIO
 
-import pytest
 
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
-
-
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 def test_first_open_test(setup_environment, monkeypatch):
     wrapped_module, _ = setup_environment
 

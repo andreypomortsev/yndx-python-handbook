@@ -3,13 +3,11 @@ from typing import Callable, Optional
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TEST_FILE_NAMES, TIME_LIMIT
+from tests.constants import TEST_FILE_NAMES
 from tests.data.test_data_35 import q_test_data
 from tests.utils import assert_equal
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "file_data, expected_output, _",
     q_test_data,

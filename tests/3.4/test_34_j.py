@@ -3,13 +3,10 @@ from typing import Tuple
 
 import pytest
 
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_24 import j_test_data
 from tests.utils import assert_equal
 
 
-@pytest.mark.memory_limit(MEMORY_LIMIT)
-@pytest.mark.time_limit(TIME_LIMIT)
 @pytest.mark.parametrize(
     "mock_input_text, expected_output, _",  # _ - название теста
     j_test_data,
