@@ -40,7 +40,7 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
             "from tests.utils import time_limit, memory_limit\n"
             "from tests.constants import TIME_LIMIT, MEMORY_LIMIT\n\n"
         )
-        decorators = "@time_limit(TIME_LIMIT)\n"
+        decorators = "@time_limit(TIME_LIMIT)\n@memory_limit(MEMORY_LIMIT)\n"
 
         # Обертываем считанный из файла код в функцию main
         if args:
