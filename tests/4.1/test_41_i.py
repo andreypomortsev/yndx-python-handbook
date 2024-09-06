@@ -1,28 +1,39 @@
-from types import ModuleType
-from typing import Tuple
+from typing import Callable
 
 import pytest
 
+from tests import utils
 from tests.data.test_data_41 import i_test_data
-from tests.utils import assert_equal
 
 
 @pytest.mark.parametrize(
-    "mock_input_text, expected_output, _",
+    "arg, expected_output, _",
     i_test_data,
     ids=[i[-1] for i in i_test_data],
 )
 def test_input_output(
-    monkeypatch: pytest.MonkeyPatch,
-    setup_environment: Tuple[ModuleType, str],
-    mock_input_text: str,
-    expected_output: str,
+    decorated_function: Callable,
+    arg: int,
+    expected_output: int,
     _: str,
 ) -> None:
-    wrapped_module, _ = setup_environment
-    assert_equal(
-        wrapped_module,
-        monkeypatch,
-        mock_input_text,
-        expected_output,
-    )
+    returned_output = decorated_function(arg)
+
+    assert returned_output == expected_output
+
+
+@pytest.mark.slow
+@pytest.mark.xfail(reason="Слишком большие числа на входе.")
+def test_time_overload(
+    decorated_function: Callable,
+):
+    """
+    Проверяет, что функция вызывает TimeLimitExceeded при использовании слишком
+    больших чисел.
+
+    Аргументы:
+        decorated_function (Callable): Декорированная функция для тестирования.
+    """
+    a = 2305843009213693951
+    with pytest.raises(utils.TimeLimitExceeded):
+        decorated_function(a)

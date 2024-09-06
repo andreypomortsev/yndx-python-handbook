@@ -1,28 +1,37 @@
-from types import ModuleType
-from typing import Tuple
+from io import StringIO
+from typing import Callable, Tuple
 
 import pytest
 
 from tests.data.test_data_41 import f_test_data
-from tests.utils import assert_equal
 
 
 @pytest.mark.parametrize(
-    "mock_input_text, expected_output, _",
+    "args, expected_output, _",
     f_test_data,
     ids=[i[-1] for i in f_test_data],
 )
 def test_input_output(
     monkeypatch: pytest.MonkeyPatch,
-    setup_environment: Tuple[ModuleType, str],
-    mock_input_text: str,
+    decorated_function: Callable,
+    args: Tuple[str],
     expected_output: str,
     _: str,
 ) -> None:
-    wrapped_module, _ = setup_environment
-    assert_equal(
-        wrapped_module,
-        monkeypatch,
-        mock_input_text,
-        expected_output,
-    )
+
+    outputs = []
+
+    for input in args:
+        # Считываем print с функции
+        mock_stdout = StringIO()
+        monkeypatch.setattr("sys.stdout", mock_stdout)
+
+        decorated_function(input)
+        printed = mock_stdout.getvalue()
+
+        if printed:
+            outputs.append(printed)
+
+    printed_output = "".join(outputs)
+
+    assert printed_output == expected_output
