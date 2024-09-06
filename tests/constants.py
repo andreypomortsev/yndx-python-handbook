@@ -10,3 +10,18 @@ TEST_FILE_NAMES = {
         "t": "numbers.num",
     },
 }
+
+TEST_FUNCTION_NAMES = {
+    "4.1": {
+        "a": "print_hello",
+        "b": "gcd",
+        "c": "number_length",
+        "d": "month",
+        "e": "split_numbers",
+        "f": "modern_print",
+        "g": "can_eat",
+        "h": "is_palindrome",
+        "i": "is_prime",
+        "j": "merge",
+    }
+}
