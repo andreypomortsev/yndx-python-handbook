@@ -2,6 +2,7 @@ import importlib
 import json
 import os
 import sys
+from pathlib import Path
 from types import ModuleType
 from typing import Callable, Generator, Tuple, Union
 
@@ -10,6 +11,7 @@ from _pytest.fixtures import SubRequest
 from _pytest.main import Session
 
 from . import utils
+from .constants import MEMORY_LIMIT, TEST_FUNCTION_NAMES, TIME_LIMIT
 
 # Добавить родительский каталог в системный путь
 # Это позволяет импортировать модули из родительского каталога
@@ -38,7 +40,7 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
 
         imports = (
             "from tests.utils import time_limit, memory_limit\n"
-            "from tests.constants import TIME_LIMIT, MEMORY_LIMIT\n\n"
+            "from tests.constants import TIME_LIMIT, MEMORY_LIMIT\n\n\n"
         )
         decorators = "@time_limit(TIME_LIMIT)\n@memory_limit(MEMORY_LIMIT)\n"
 
@@ -293,3 +295,79 @@ def temp_files(request: SubRequest) -> Callable[[str], None]:
 
     request.addfinalizer(cleanup)
     return add_file
+
+
+@pytest.fixture
+def load_module() -> Callable[[str], ModuleType]:
+    """
+    Загружает модуль Python из указанного файла с использованием importlib.
+
+    Фикстура возвращает функцию, которая принимает путь к файлу,
+    загружает модуль из этого файла и возвращает его.
+
+    Аргументы:
+        file_path (str): Путь к файлу модуля, который нужно загрузить.
+
+    Возвращает:
+        Callable[[str], ModuleType]: Функция, которая загружает и
+            возвращает модуль.
+    """
+
+    def _load_module(file_path: str) -> ModuleType:
+        file_path = Path(file_path).resolve()
+        spec = importlib.util.spec_from_file_location(
+            "solution", str(file_path)
+        )
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)  # Загружает и выполняет модуль
+
+        return module
+
+    return _load_module
+
+
+@pytest.fixture
+def decorated_function(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+) -> Callable:
+    """
+    Предоставляет декорированную функцию с ограничениями по времени и памяти.
+
+    Аргументы:
+        load_module (Callable[[str], ModuleType]): Фикстура для загрузки
+            модуля.
+        request (pytest.FixtureRequest): Объект запроса pytest.
+        function_name (str): Имя тестируемой функции.
+
+    Возвращает:
+        Callable: Декорированная функция с ограничениями по времени и памяти.
+
+    Исключения:
+        AttributeError: Если функция с указанным именем не найдена в модуле.
+    """
+    testing_file_path, file_name = utils.get_tested_file_details(request)
+
+    solution = load_module(testing_file_path)
+
+    # Пример: solutions/4.1/21_a.py -> solutions/4.1/
+    dir_path = Path(testing_file_path).parent
+
+    # Пример: solutions/4.1/21_a.py -> 4.1
+    file_dir = dir_path.name
+
+    # Получаем a из 41_a
+    solution_letter = file_name[-1]
+    function_name = TEST_FUNCTION_NAMES[file_dir][solution_letter]
+
+    # Импортируем модуль для тестов
+    solution = load_module(testing_file_path)
+    func = getattr(solution, function_name, None)
+
+    if func is None:
+        raise AttributeError(f"Функция {function_name} не найдена в модуле")
+
+    decorated_func = utils.memory_limit(MEMORY_LIMIT)(func)
+    decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
+
+    return decorated_func
