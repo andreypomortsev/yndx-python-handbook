@@ -1,20 +1,14 @@
 import os
 import signal
+import tracemalloc
 from io import StringIO
 from types import FrameType, ModuleType
-from typing import Any, Callable, Tuple, Union
+from typing import Any, Callable, List, Set, Tuple, Union
 
-import psutil
 from _pytest.fixtures import SubRequest
 from pytest import FixtureRequest
 
-
-class MemoryLimitExceeded(Exception):
-    pass
-
-
-class TimeLimitExceeded(Exception):
-    pass
+from .errors import MemoryLimitExceeded, TimeLimitExceeded
 
 
 def memory_limit(limit_mb: int):
@@ -32,16 +26,25 @@ def memory_limit(limit_mb: int):
 
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         def wrapper(*args, **kwargs):
-            process = psutil.Process()
+            tracemalloc.start()
+            snapshot_before = tracemalloc.take_snapshot()
 
-            # Конвертируем в MB
-            mem_usage = process.memory_info().rss / (1024 * 1024)
+            result = func(*args, **kwargs)
+
+            _, peak = tracemalloc.get_traced_memory()
+            tracemalloc.stop()
+
+            snapshot_before_stats = snapshot_before.statistics("lineno")
+            memory_at_snapshot = sum(
+                stat.size for stat in snapshot_before_stats
+            )
+            mem_usage = (peak - memory_at_snapshot) // (1024 * 1024)
 
             if mem_usage > limit_mb:
                 msg = f"Использовано: {mem_usage: .2f} MB, лимит {limit_mb} MB"
                 raise MemoryLimitExceeded(msg)
 
-            return func(*args, **kwargs)
+            return result
 
         return wrapper
 
@@ -63,7 +66,7 @@ def time_limit(limit_seconds: int):
 
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         def handler(signum: Union[int, float], frame: FrameType) -> None:
-            msg = f"Слишком долго: {limit_seconds} сек."
+            msg = f"Тест занял больше лимита в {limit_seconds} сек."
             raise TimeLimitExceeded(msg)
 
         def wrapper(*args, **kwargs):
@@ -79,15 +82,16 @@ def time_limit(limit_seconds: int):
 
 
 def generate_error_msg(
-    printed_output: str, expected_output: Union[str, set, tuple, list]
+    printed_output: str,
+    expected_output: Union[Set[str], Tuple[str], List[str]],
 ) -> str:
     """
     Формирует сообщение с напечатанными данными и ожидаемыми.
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[str, set, tuple, list]): Ожидаемые данные
-        вывода, могут быть: стрококй, списком, множеством или кортежем.
+        expected_output (Union[Set[str], Tuple[str], List[str]],): Ожидаемые
+            данные вывода, могут быть: стрококй, списком, set или кортежем.
 
     Возвращает:
         str: Сообщение с напечатанными данными и ожидаемыми.
@@ -99,42 +103,39 @@ def generate_error_msg(
 
 
 def compare_output(
-    printed_output: str, expected_output: Union[str, set, tuple, list]
+    printed_output: str,
+    expected_output: Union[Set[str], Tuple[str], List[str]],
 ) -> None:
     """
     Сравнивает напечатанный вывод с ожидаемым выводом.
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[str, set, tuple, list]): Ожидаемые данные
-            вывода, могут быть: строкой, списком, множеством или кортежем.
+        expected_output (Union[Set[str], Tuple[str], List[str]],): Ожидаемые
+            данные вывода, могут быть: строкой, списком, set или кортежем.
     Исключения:
         AssertionError: Если фактический вывод не совпадает с ожидаемым.
     """
-    instance_type = type(expected_output)
-    error_msg = generate_error_msg(printed_output, expected_output)
-
-    if instance_type is set:
+    if isinstance(expected_output, set):
+        error_msg = generate_error_msg(printed_output, expected_output)
         assert printed_output in expected_output, error_msg
+        return
 
     # Передаются тесты в которых нужно оценить результат печати set
     # Так как множества неупорядочные приходится преобразовывать в set
     # Для сравнения двух множеств
-    elif instance_type in {tuple, list}:
-        if instance_type is tuple:  # Когда set распечатан в одну строку
-            printed_output = set(printed_output)
-            expected_output = set(expected_output[0])
-        else:  # Когда set распечатан в несколько строк
-            printed_output = set(printed_output.split("\n"))
-            expected_output = set(expected_output[0].split("\n"))
+    if isinstance(expected_output, tuple):
+        # Когда set распечатан в одну строку
+        printed_output = set(printed_output)
+        expected_output = set(expected_output[0])
 
-        error_msg = generate_error_msg(printed_output, expected_output)
+    if isinstance(expected_output, list):
+        # Когда set распечатан в несколько строк
+        printed_output = set(printed_output.split("\n"))
+        expected_output = set(expected_output[0].split("\n"))
 
-        # Сравниваем преобразованные в множества строки
-        assert printed_output == expected_output, error_msg
-
-    elif instance_type is str:
-        assert printed_output == expected_output, error_msg
+    error_msg = generate_error_msg(printed_output, expected_output)
+    assert printed_output == expected_output, error_msg
 
 
 def assert_equal(
@@ -184,7 +185,7 @@ def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
     dir_name = os.path.dirname(request.module.__file__)
 
     # Абсолюный путь в корневой каталог
-    abs_code_dir = os.path.abspath(os.path.join(dir_name, "..", ".."))
+    abs_code_dir = os.path.join(dir_name, "..", "..")
 
     # Название папки с тестируемым кодом
     file_dir = os.path.basename(dir_name)
@@ -207,6 +208,8 @@ def add_file_to_cleanup(
     request: SubRequest, path_to_the_temp_file: str
 ) -> None:
     # Добавляем пути временных файлов
-    if not hasattr(request.config, "temp_file_paths"):
+    try:
+        request.config.temp_file_paths.append(path_to_the_temp_file)
+    except AttributeError:
         request.config.temp_file_paths = []
-    request.config.temp_file_paths.append(path_to_the_temp_file)
+        request.config.temp_file_paths.append(path_to_the_temp_file)
