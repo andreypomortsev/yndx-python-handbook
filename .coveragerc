@@ -4,10 +4,11 @@ source =
     solutions
 
 omit =
+    __init__.py
     conftest.py
     constants.py
     tests/data/*
-    tests/*
+    test_*
 
 [report]
 show_missing = True
