@@ -2,6 +2,7 @@ import importlib
 import json
 import os
 import sys
+import time
 from pathlib import Path
 from types import ModuleType
 from typing import Callable, Generator, Tuple, Union
@@ -106,7 +107,6 @@ def setup_environment(
     path_to_test_file, tested_file_name = utils.get_tested_file_details(
         request
     )
-
     # "33_a" -> "33", "a"
     module, letter = tested_file_name.split("_")
 
@@ -371,3 +371,31 @@ def decorated_function(
     decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
 
     return decorated_func
+
+
+@pytest.fixture
+def time_spender() -> Callable[..., None]:
+    """
+    Используется для теста декоратора utils.time_limit
+    """
+
+    def spend_time(sleep_time: Union[None, float]) -> None:
+        if sleep_time is None:
+            sleep_time = 0.99
+        time.sleep(sleep_time)
+
+    return spend_time
+
+
+@pytest.fixture
+def time_waster() -> Callable[..., None]:
+    """
+    Используется для теста декоратора utils.time_limit
+    """
+
+    def waste_time(sleep_time: Union[None, float]) -> None:
+        if sleep_time is None:
+            sleep_time = 1.01
+        time.sleep(sleep_time)
+
+    return waste_time
