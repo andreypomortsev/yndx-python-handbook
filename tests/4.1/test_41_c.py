@@ -10,7 +10,7 @@ from tests.data.test_data_41 import c_test_data
     c_test_data,
     ids=[i[-1] for i in c_test_data],
 )
-def test_input_output(
+def test_number_length(
     decorated_function: Callable,
     arg: int,
     expected_output: int,

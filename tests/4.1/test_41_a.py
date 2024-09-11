@@ -11,7 +11,7 @@ from tests.data.test_data_41 import a_test_data
     a_test_data,
     ids=[i[-1] for i in a_test_data],
 )
-def test_input_output(
+def test_print_hello(
     monkeypatch: pytest.MonkeyPatch,
     decorated_function: Callable,
     arg: str,

@@ -10,7 +10,7 @@ from tests.data.test_data_41 import e_test_data
     e_test_data,
     ids=[i[-1] for i in e_test_data],
 )
-def test_input_output(
+def test_split_numbers(
     decorated_function: Callable,
     arg: str,
     expected_output: Tuple[int],

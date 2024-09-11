@@ -11,7 +11,7 @@ from tests.data.test_data_41 import i_test_data
     i_test_data,
     ids=[i[-1] for i in i_test_data],
 )
-def test_input_output(
+def test_is_prime(
     decorated_function: Callable,
     arg: int,
     expected_output: int,
@@ -24,7 +24,7 @@ def test_input_output(
 
 @pytest.mark.slow
 @pytest.mark.xfail(reason="Слишком большие числа на входе.")
-def test_time_overload(
+def test_is_prime_time_overload(
     decorated_function: Callable,
 ):
     """

@@ -10,7 +10,7 @@ from tests.data.test_data_41 import h_test_data
     h_test_data,
     ids=[i[-1] for i in h_test_data],
 )
-def test_input_output(
+def test_is_palindrome(
     decorated_function: Callable,
     args: Any,
     expected_output: bool,

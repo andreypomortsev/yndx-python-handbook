@@ -10,7 +10,7 @@ from tests.data.test_data_41 import b_test_data
     b_test_data,
     ids=[i[-1] for i in b_test_data],
 )
-def test_input_output(
+def test_gcd(
     decorated_function: Callable,
     args: Tuple[int],
     expected_output: str,
