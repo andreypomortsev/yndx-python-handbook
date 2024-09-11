@@ -22,7 +22,7 @@ def test_make_matrix(
 
     returned_output[0][0] = "c"
     expected_output[0][0] = "c"
-    
+
     error_msg = "Все строки матрицы являются одним и тем же списком."
-    
+
     assert returned_output == expected_output, error_msg

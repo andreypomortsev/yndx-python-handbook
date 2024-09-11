@@ -10,7 +10,7 @@ from tests.data.test_data_42 import d_test_data
     d_test_data,
     ids=[i[-1] for i in d_test_data],
 )
-def test_input_output(
+def test_month(
     decorated_function: Callable,
     args: Tuple[Tuple[int]],
     expected_output: Tuple[int],
