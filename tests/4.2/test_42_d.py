@@ -2,18 +2,18 @@ from typing import Callable, Tuple
 
 import pytest
 
-from tests.data.test_data_41 import b_test_data
+from tests.data.test_data_42 import d_test_data
 
 
 @pytest.mark.parametrize(
     "args, expected_output, _",
-    b_test_data,
-    ids=[i[-1] for i in b_test_data],
+    d_test_data,
+    ids=[i[-1] for i in d_test_data],
 )
-def test_gcd(
+def test_month(
     decorated_function: Callable,
-    args: Tuple[int],
-    expected_output: str,
+    args: Tuple[Tuple[int]],
+    expected_output: Tuple[int],
     _: str,
 ) -> None:
     returned_output = decorated_function(*args)

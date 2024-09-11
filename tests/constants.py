@@ -23,5 +23,12 @@ TEST_FUNCTION_NAMES = {
         "h": "is_palindrome",
         "i": "is_prime",
         "j": "merge",
-    }
+    },
+    "4.2": {
+        "a": "make_list",
+        "b": "make_matrix",
+        "c": "gcd",
+        "d": "month",
+        "e": "to_string",
+    },
 }

@@ -10,7 +10,7 @@ from tests.data.test_data_41 import j_test_data
     j_test_data,
     ids=[i[-1] for i in j_test_data],
 )
-def test_input_output(
+def test_merge(
     decorated_function: Callable,
     args: Tuple[Tuple[int]],
     expected_output: Tuple[int],

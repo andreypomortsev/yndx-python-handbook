@@ -10,7 +10,7 @@ from tests.data.test_data_41 import g_test_data
     g_test_data,
     ids=[i[-1] for i in g_test_data],
 )
-def test_input_output(
+def test_can_eat(
     decorated_function: Callable,
     args: Tuple[Tuple[int]],
     expected_output: bool,
