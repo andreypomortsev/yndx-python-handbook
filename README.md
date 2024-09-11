@@ -503,6 +503,28 @@ def main():
 
 </details>
 
+<details>
+<summary><h3>4.2 Позиционные и именованные аргументы. Функции высших порядков. Лямбда-функции</h3></summary>
+
+- [4.2 Позиционные и именованные аргументы. Функции высших порядков. Лямбда-функции](https://education.yandex.ru/handbook/python/article/pozicionnye-i-imenovannye-argumenty-funkcii-vysshih-poryadkov-lyambda-funkcii)
+
+### [Тестовые данные для задач](./tests/data/test_data_42.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Генератор списков](./solutions/4.2/42_a.py) | [✅](./tests/4.2/test_42_a.py) |
+| B. [Генератор матриц](./solutions/4.2/42_b.py) | [✅](./tests/4.2/test_42_b.py) |
+| C. [Функциональный нод 2.0](./solutions/4.2/42_c.py) | [✅](./tests/4.2/test_42_c.py) |
+| D. [Имя of the month 2.0](./solutions/4.2/42_d.py) | [✅](./tests/4.2/test_42_d.py) |
+| E. [Подготовка данных](./solutions/4.2/42_e.py) | [✅](./tests/4.2/test_42_e.py) |
+| F. [Кофейня](./solutions/4.2/42_f.py) | [❌](./tests/4.2/test_42_f.py) |
+| G. [В эфире рубрика «Эксперименты»](./solutions/4.2/42_g.py) | [❌](./tests/4.2/test_42_g.py) |
+| H. [Длинная сортировка](./solutions/4.2/42_h.py) | [❌](./tests/4.2/test_42_h.py) |
+| I. [Чётная фильтрация](./solutions/4.2/42_i.py) | [❌](./tests/4.2/test_42_i.py) |
+| J. [Ключевой секрет](./solutions/4.2/42_j.py) | [❌](./tests/4.2/test_42_j.py) |
+
+</details>
+
 ## Создание Issue
 
 Если вы обнаружили ошибку, очепятку или баг в проекте, пожалуйста, создайте новый issue, следуя этому шаблону:
