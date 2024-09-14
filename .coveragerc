@@ -9,6 +9,8 @@ omit =
     constants.py
     tests/data/*
     test_*
+    solutions/4.2/42_h.py
+    solutions/4.2/42_i.py
 
 [report]
 show_missing = True

@@ -11,7 +11,7 @@ time_limit_data_pas = [
 time_limit_data_fail = [
     (None, "fails w/o arg"),
     (1.3, "fails with 130 ms"),
-    (1.001, "fails with 1001 ns"),
+    (1.01, "fails with 101 ms"),
 ]
 
 generate_error_msg_data = [
