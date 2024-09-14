@@ -30,5 +30,7 @@ TEST_FUNCTION_NAMES = {
         "c": "gcd",
         "d": "month",
         "e": "to_string",
+        "f": "order",
+        "j": "secret_replace",
     },
 }
