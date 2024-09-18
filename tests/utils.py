@@ -213,3 +213,12 @@ def add_file_to_cleanup(
     except AttributeError:
         request.config.temp_file_paths = []
         request.config.temp_file_paths.append(path_to_the_temp_file)
+
+
+def count_function_calls(func: Callable[..., Any]) -> Callable[..., Any]:
+    def wrapper(*args, **kwargs):
+        wrapper.call_count += 1
+        return func(*args, **kwargs)
+
+    wrapper.call_count = 0
+    return wrapper
