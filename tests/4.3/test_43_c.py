@@ -1,4 +1,5 @@
-from typing import Callable, Tuple
+from types import ModuleType
+from typing import Tuple
 
 import pytest
 
@@ -6,16 +7,30 @@ from tests.data.test_data_43 import c_test_data
 
 
 @pytest.mark.parametrize(
-    "args, expected_output, _",
+    "numbers, expected_output, _",
     c_test_data,
     ids=[i[-1] for i in c_test_data],
 )
-def test_input_output(
-    decorated_function: Callable,
-    args: Tuple[Tuple[int]],
-    expected_output: Tuple[int],
+def test_make_equation(
+    setup_environment: Tuple[ModuleType, str],
+    numbers: Tuple[int],
+    expected_output: str,
     _: str,
 ) -> None:
-    returned_output = decorated_function(*args)
+    wrapped_module, _ = setup_environment
 
-    assert returned_output == expected_output
+    returned_output = wrapped_module.make_equation(*numbers)
+
+    real_calls = wrapped_module.make_equation.call_count
+    expected_calls = len(numbers)
+
+    try:
+        assert real_calls == expected_calls, (
+            "Функция `make_equation` должна быть реализована "
+            "при помощи рекурсии."
+        )
+        assert returned_output == expected_output
+
+    finally:
+        # Сбрасываем счетчик вызова функции, независимо от результата теста
+        wrapped_module.make_equation.call_count = 0
