@@ -28,7 +28,7 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
 
         Аргументы:
             file_path (str): путь к файлу с решением.
-            file_name (str): имя файла с решением.
+            file_name (str): имя файла с решением: "43_a".
 
         Возвращает:
             str: путь к обернутому файлу.
@@ -39,14 +39,30 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
         # Добавляем отступы для обертывания в функцию
         indented_script = script.replace("\n", "\n    ").rstrip(" ")
 
+        recursion_counter = counter_decorator = ""
+
+        recursive = file_name.startswith("43")
+
+        # Добавляем декоратор для подсчета вызовов декорируемой функции
+        if recursive:
+            recursion_counter = ", count_function_calls"
+            counter_decorator = "@count_function_calls\n"
+
         imports = (
-            "from tests.utils import time_limit, memory_limit\n"
+            "from tests.utils import time_limit,"
+            f" memory_limit{recursion_counter}\n"
             "from tests.constants import TIME_LIMIT, MEMORY_LIMIT\n\n\n"
         )
-        decorators = "@time_limit(TIME_LIMIT)\n@memory_limit(MEMORY_LIMIT)\n"
+        decorators = (
+            f"{counter_decorator}"
+            "@time_limit(TIME_LIMIT)\n"
+            "@memory_limit(MEMORY_LIMIT)\n"
+        )
 
+        if recursive:
+            wrapped_script = f"{imports}{decorators}" f"{script}"
         # Обертываем считанный из файла код в функцию main
-        if args:
+        elif args:
             wrapped_script = (
                 f"{imports}{decorators}def main({args}):\n"
                 f"    return {indented_script}"  # noqa E271
@@ -56,11 +72,11 @@ def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
                 f"{imports}{decorators}def main():\n    {indented_script}"
             )
 
-        # Определяем папку с тестами
-        current_dir = os.path.dirname(__file__)
-
         # Создаем имя решения обернутого в функцию
         wrapped_file_name = f"wrapped_{file_name}.py"
+
+        # Определяем папку с тестами "tests"
+        current_dir = os.path.dirname(__file__)
 
         # Создаем путь в которуй запишем файл для оценки покрытия тестами
         path_to_save = os.path.join(current_dir, wrapped_file_name)
@@ -338,7 +354,6 @@ def decorated_function(
         load_module (Callable[[str], ModuleType]): Фикстура для загрузки
             модуля.
         request (pytest.FixtureRequest): Объект запроса pytest.
-        function_name (str): Имя тестируемой функции.
 
     Возвращает:
         Callable: Декорированная функция с ограничениями по времени и памяти.

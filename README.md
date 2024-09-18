@@ -526,6 +526,28 @@ def main():
 
 </details>
 
+<details>
+<summary><h3>4.3. Рекурсия. Декораторы. Генераторы</h3></summary>
+
+- [4.3. Рекурсия. Декораторы. Генераторы](https://education.yandex.ru/handbook/python/article/rekursiya-dekoratory-generatory)
+
+### [Тестовые данные для задач](./tests/data/test_data_43.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Рекурсивный сумматор](./solutions/4.3/43_a.py) | [✅](./tests/4.3/test_43_a.py) |
+| B. [Рекурсивный сумматор цифр](./solutions/4.3/43_b.py) | [✅](./tests/4.3/test_43_b.py) |
+| C. [Многочлен N-ой степени](./solutions/4.3/43_c.py) | [✅](./tests/4.3/test_43_c.py) |
+| D. [Декор результата](./solutions/4.3/43_d.py) | [✅](./tests/4.3/test_43_d.py) |
+| E. [Накопление результата](./solutions/4.3/43_e.py) | [✅](./tests/4.3/test_43_e.py) |
+| F. [Сортировка слиянием](./solutions/4.3/43_f.py) | [❌](./tests/4.3/test_43_f.py) |
+| G. [Однотипность не порок](./solutions/4.3/43_g.py) | [❌](./tests/4.3/test_43_g.py) |
+| H. [Генератор Фибоначчи](./solutions/4.3/43_h.py) | [❌](./tests/4.3/test_43_h.py) |
+| I. [Циклический генератор](./solutions/4.3/43_i.py) | [❌](./tests/4.3/test_43_i.py) |
+| J. ["Выпрямление" списка](./solutions/4.3/43_j.py) | [❌](./tests/4.3/test_43_j.py) |
+
+</details>
+
 ## Создание Issue
 
 Если вы обнаружили ошибку, очепятку или баг в проекте, пожалуйста, создайте новый issue, следуя этому шаблону:

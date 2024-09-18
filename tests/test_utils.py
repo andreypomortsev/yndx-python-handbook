@@ -41,7 +41,7 @@ def test_time_limit_fails(
     assert str(exc_info.value) == "Тест занял больше лимита в 1 сек."
 
 
-def test_memory_limit_with_args_passes():
+def test_memory_limit_with_args_passes() -> None:
     @utils.memory_limit(MEMORY_LIMIT)
     def low_ram(n: int) -> List[int]:
         return list(range(n))
@@ -49,7 +49,7 @@ def test_memory_limit_with_args_passes():
     assert list(range(10)) == low_ram(10)
 
 
-def test_memory_limit_with_args_fails():
+def test_memory_limit_with_args_fails() -> None:
     memory_limit = 1
 
     @utils.memory_limit(memory_limit)
@@ -67,7 +67,7 @@ def test_memory_limit_with_args_fails():
     assert f"лимит {memory_limit} MB" in str(exc_info.value)
 
 
-def test_memory_limit_no_args_passes():
+def test_memory_limit_no_args_passes() -> None:
     @utils.memory_limit(MEMORY_LIMIT)
     def low_ram() -> List[int]:
         return list(range(10))
@@ -75,7 +75,7 @@ def test_memory_limit_no_args_passes():
     assert list(range(10)) == low_ram()
 
 
-def test_memory_limit_no_args_fails():
+def test_memory_limit_no_args_fails() -> None:
     memory_limit = 4
 
     @utils.memory_limit(memory_limit)
@@ -181,3 +181,53 @@ def test_add_file_to_cleanup(
     result = mock_request.config.temp_file_paths
 
     assert result == expected_paths
+
+
+def test_count_function_calls_zero_calls() -> None:
+    @utils.count_function_calls
+    def factorial(n: int) -> int:
+        if n == 0:
+            return 1
+        return n * factorial(n - 1)
+
+    assert factorial.call_count == 0
+
+
+def test_count_function_calls_one_call() -> None:
+    @utils.count_function_calls
+    def factorial(n: int) -> int:
+        if n == 0:
+            return 1
+        return n * factorial(n - 1)
+
+    result = factorial(0)
+
+    assert result == 1
+    assert factorial.call_count == 1
+
+
+def test_count_function_calls_six_call() -> None:
+    @utils.count_function_calls
+    def factorial(n: int) -> int:
+        if n == 0:
+            return 1
+        return n * factorial(n - 1)
+
+    result = factorial(5)
+
+    assert result == 120
+    assert factorial.call_count == 6
+
+
+def test_count_function_calls_reset() -> None:
+    @utils.count_function_calls
+    def factorial(n: int) -> int:
+        if n == 0:
+            return 1
+        return n * factorial(n - 1)
+
+    factorial(3)
+    assert factorial.call_count == 4
+
+    factorial.call_count = 0
+    assert factorial.call_count == 0

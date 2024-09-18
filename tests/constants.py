@@ -33,4 +33,9 @@ TEST_FUNCTION_NAMES = {
         "f": "order",
         "j": "secret_replace",
     },
+    "4.3": {
+        "a": "recursive_sum",
+        "b": "recursive_digit_sum",
+        "c": "make_equation",
+    },
 }
