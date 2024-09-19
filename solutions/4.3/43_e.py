@@ -1,12 +1,14 @@
-from typing import Any, Callable, List, Optional
+from typing import Callable, List, Optional, TypeVar
+
+T = TypeVar("T")
 
 
 def result_accumulator(
-    func: Callable[..., Any]
-) -> Callable[..., Optional[List[Any]]]:
+    func: Callable[..., T]
+) -> Callable[..., Optional[List[T]]]:
     def wrapper(
-        *args: Any, method: str = "accumulate", **kwargs: Any
-    ) -> Optional[List[Any]]:
+        *args, method: str = "accumulate", **kwargs
+    ) -> Optional[List[T]]:
         if not hasattr(wrapper, "results"):
             wrapper.results = []
 
