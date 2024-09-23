@@ -129,3 +129,110 @@ test_data_e_get_sum_of_ords = [
     ((" ",), {}, None, "whitespace"),
     (("Very interesting!",), {"method": "drop"}, [32, 1683], "mixed"),
 ]
+
+f_test_data = [
+    ([3, 2, 1], [1, 2, 3], "first open test"),
+    ([3, 1, 5, 3], [1, 3, 3, 5], "second open test"),
+    ([100, 200, 400, 600, 101], [100, 101, 200, 400, 600], "odd length"),
+    ([13], [13], "one number"),
+    ([6, 7, 8, 9, 10], [6, 7, 8, 9, 10], "already sorted"),
+    ([10, 9, 8, 7, 6], [6, 7, 8, 9, 10], "reverse sorted"),
+]
+
+test_data_g_a_plus_b = [
+    (
+        (3, 5.2),
+        "Обнаружены различные типы данных\nFail\n",
+        "first open test 1",
+    ),
+    (
+        (7, "9"),
+        "Обнаружены различные типы данных\nFail\n",
+        "first open test 2",
+    ),
+    ((-3, 5), "2\n", "first open test 3"),
+]
+
+test_data_g_combine_text = [
+    (("Hello,", "world!"), "Hello, world!\n", "first open test 1"),
+    (
+        (2, "+", 2, "=", 4),
+        "Обнаружены различные типы данных\nFail\n",
+        "first open test 2",
+    ),
+    (
+        ("Список из 30", 0, "можно получить так", [0] * 30),
+        "Обнаружены различные типы данных\nFail\n",
+        "first open test 3",
+    ),
+]
+
+test_data_g_get_sum_of_ords = [
+    (("Hello, world!",), "1161\n", "hello world"),
+    (
+        ("Декораторы это круто =)", True),
+        "Обнаружены различные типы данных\nFail\n",
+        "different types",
+    ),
+    ((" ", 123.1), "Обнаружены различные типы данных\nFail\n", "whitespace"),
+    (
+        ("Very interesting!", 12 + 13j),
+        "Обнаружены различные типы данных\nFail\n",
+        "complex",
+    ),
+]
+
+h_test_data = [
+    (5, " ", "0 1 1 2 3\n", "first open test"),
+    (10, ", ", "0, 1, 1, 2, 3, 5, 8, 13, 21, 34\n", "second open test"),
+    (6, "", "011235\n", "no separation"),
+    (1, " ", "0\n", "one"),
+    (2, "\t", "0\t1\n", "two"),
+    (3, "\n", "0\n1\n1\n", "three"),
+    (0, "\n", "\n", "zero -> None"),
+]
+
+i_test_data = [
+    ([1, 2, 3], 5, "1 2 3 1 2\n", "first open test"),
+    ([1, 2, 3, 4], 15, "1 2 3 4 1 2 3 4 1 2 3 4 1 2 3\n", "second open test"),
+    ("iterable", 8, "i t e r a b l e\n", "string"),
+    (
+        (
+            "Who",
+            "loves",
+            23,
+            4 + 7j,
+        ),
+        7,
+        "Who loves 23 (4+7j) Who loves 23\n",
+        "mixed types",
+    ),
+    (
+        (
+            "Who",
+            "loves",
+            23,
+            4 + 7j,
+        ),
+        1,
+        "Who\n",
+        "short mixed types",
+    ),
+    (range(5), 5, "0 1 2 3 4\n", "range"),
+    (range(-5, 0, 1), 5, "-5 -4 -3 -2 -1\n", "negative range"),
+    (range(-5, 0, 1), 3, "-5 -4 -3\n", "negative range short"),
+    (range(-3, 0, 1), 6, "-3 -2 -1 -3 -2 -1\n", "long negative range"),
+]
+
+j_test_data = [
+    ([1, 2, [3]], [1, 2, 3], "first open test"),
+    ([1, [2, [3, 4]], 5, 6], [1, 2, 3, 4, 5, 6], "second open test"),
+    ([[[[[[[1]]]]]]], [1], "deep"),
+    (
+        [[3, 2], [[[[5], 6]], 12], 31, [[[21], 3]]],
+        [3, 2, 5, 6, 12, 31, 21, 3],
+        "everything and between",
+    ),
+    ([1], [1], "one element"),
+    ([[[[[[[[], 2], 1]]]]]], [2, 1], "with empty list"),
+]
