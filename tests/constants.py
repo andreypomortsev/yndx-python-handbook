@@ -37,5 +37,6 @@ TEST_FUNCTION_NAMES = {
         "a": "recursive_sum",
         "b": "recursive_digit_sum",
         "c": "make_equation",
+        "j": "make_linear",
     },
 }
