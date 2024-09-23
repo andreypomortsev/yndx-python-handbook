@@ -1,21 +1,34 @@
-from typing import Callable, Tuple
+from io import StringIO
+from types import ModuleType
+from typing import Tuple
 
 import pytest
+from _pytest.monkeypatch import MonkeyPatch
 
 from tests.data.test_data_43 import h_test_data
 
 
 @pytest.mark.parametrize(
-    "args, expected_output, _",
+    "number, separator, expected_output, _",
     h_test_data,
     ids=[i[-1] for i in h_test_data],
 )
-def test_input_output(
-    decorated_function: Callable,
-    args: Tuple[Tuple[int]],
-    expected_output: Tuple[int],
+def test_fibonacci(
+    monkeypatch: MonkeyPatch,
+    setup_environment: Tuple[ModuleType, str],
+    number: int,
+    separator: str,
+    expected_output: str,
     _: str,
 ) -> None:
-    returned_output = decorated_function(*args)
+    wrapped_module, _ = setup_environment
 
-    assert returned_output == expected_output
+    returned_output = wrapped_module.fibonacci(number)
+
+    mock_print = StringIO()
+    monkeypatch.setattr("sys.stdout", mock_print)
+
+    print(*returned_output, sep=separator)
+    printed_output = mock_print.getvalue()
+
+    assert printed_output == expected_output

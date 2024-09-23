@@ -3,6 +3,7 @@ from types import ModuleType
 from typing import Callable, Tuple
 
 import pytest
+from _pytest.monkeypatch import MonkeyPatch
 
 from tests import utils
 from tests.data.test_data_43 import (test_data_d_a_plus_b,
@@ -16,7 +17,7 @@ from tests.data.test_data_43 import (test_data_d_a_plus_b,
     ids=[data[2] for data in test_data_d_a_plus_b],
 )
 def test_answer_a_plus_b(
-    monkeypatch: pytest.MonkeyPatch,
+    monkeypatch: MonkeyPatch,
     request: pytest.FixtureRequest,
     load_module: Callable[[str], ModuleType],
     args: Tuple[int],
@@ -44,7 +45,7 @@ def test_answer_a_plus_b(
     ids=[data[2] for data in test_data_d_get_letters],
 )
 def test_answer_get_letters(
-    monkeypatch: pytest.MonkeyPatch,
+    monkeypatch: MonkeyPatch,
     request: pytest.FixtureRequest,
     load_module: Callable[[str], ModuleType],
     args: Tuple[str],
@@ -72,7 +73,7 @@ def test_answer_get_letters(
     ids=[data[2] for data in test_data_d_get_sum_of_ords],
 )
 def test_answer_get_sum_of_ords(
-    monkeypatch: pytest.MonkeyPatch,
+    monkeypatch: MonkeyPatch,
     request: pytest.FixtureRequest,
     load_module: Callable[[str], ModuleType],
     args: Tuple[str],
