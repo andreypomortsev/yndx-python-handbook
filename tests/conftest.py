@@ -20,7 +20,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 @pytest.fixture(scope="module")
-def wrap_answer() -> Generator[Callable[[str, str], str], None, None]:
+def wrap_answer() -> Callable[[str, str, str | None], str]:
     def wrapper(file_path: str, file_name: str, args: Union[str, None]) -> str:
         """
         Считывает решение из файла и оборачивает его в main функцию
@@ -157,7 +157,7 @@ def setup_environment(
 @pytest.fixture(scope="module")
 def make_test_files(
     request: SubRequest,
-    setup_environment: pytest.fixture,
+    setup_environment: Generator[Tuple[ModuleType, str], None, None],
 ) -> Generator[
     Callable[[Union[Tuple[str], str], Union[Tuple[str], str]], ModuleType],
     None,
@@ -173,8 +173,8 @@ def make_test_files(
 
     Аргументы:
         request (SubRequest): объект, дающий информацию о тестовом запросе.
-        setup_environment (pytest.fixture): фикстура для настройки тестовой
-            среды.
+        setup_environment (Generator[Tuple[ModuleType, str], None, None]):
+            фикстура для настройки тестовой среды.
 
     Возвращает:
         Generator[
@@ -189,8 +189,8 @@ def make_test_files(
     """
 
     def _create_test_file(
-        file_names: Union[Tuple[str], str],
-        mock_input_texts: Union[Tuple[str], str],
+        file_names: Tuple[str] | str,
+        mock_input_texts: Tuple[str] | str,
         mode: str = "w",
     ) -> ModuleType:
         """
