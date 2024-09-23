@@ -1,12 +1,5 @@
-from typing import Any, Callable, List, Optional
-
-
-def result_accumulator(
-    func: Callable[..., Any]
-) -> Callable[..., Optional[List[Any]]]:
-    def wrapper(
-        *args: Any, method: str = "accumulate", **kwargs: Any
-    ) -> Optional[List[Any]]:
+def result_accumulator(func):
+    def wrapper(*args, method: str = "accumulate", **kwargs):
         if not hasattr(wrapper, "results"):
             wrapper.results = []
 

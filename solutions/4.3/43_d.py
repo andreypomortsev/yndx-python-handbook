@@ -1,8 +1,5 @@
-from typing import Any, Callable
-
-
-def answer(func: Callable[..., Any]) -> str:
-    def wrapper(*args, **kwargs):
+def answer(func):
+    def wrapper(*args, **kwargs) -> str:
         return f"Результат функции: {func(*args, **kwargs)}"
 
     return wrapper

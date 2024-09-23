@@ -104,15 +104,16 @@ def generate_error_msg(
 
 def compare_output(
     printed_output: str,
-    expected_output: Union[Set[str], Tuple[str], List[str]],
+    expected_output: Union[Set[str], Tuple[str], List[str], str],
 ) -> None:
     """
     Сравнивает напечатанный вывод с ожидаемым выводом.
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[Set[str], Tuple[str], List[str]],): Ожидаемые
-            данные вывода, могут быть: строкой, списком, set или кортежем.
+        expected_output (Union[Set[str], Tuple[str], List[str]], str):
+            Ожидаемые данные вывода, могут быть: строкой, списком, set
+            или кортежем.
     Исключения:
         AssertionError: Если фактический вывод не совпадает с ожидаемым.
     """
