@@ -540,11 +540,11 @@ def main():
 | C. [Многочлен N-ой степени](./solutions/4.3/43_c.py) | [✅](./tests/4.3/test_43_c.py) |
 | D. [Декор результата](./solutions/4.3/43_d.py) | [✅](./tests/4.3/test_43_d.py) |
 | E. [Накопление результата](./solutions/4.3/43_e.py) | [✅](./tests/4.3/test_43_e.py) |
-| F. [Сортировка слиянием](./solutions/4.3/43_f.py) | [❌](./tests/4.3/test_43_f.py) |
-| G. [Однотипность не порок](./solutions/4.3/43_g.py) | [❌](./tests/4.3/test_43_g.py) |
-| H. [Генератор Фибоначчи](./solutions/4.3/43_h.py) | [❌](./tests/4.3/test_43_h.py) |
-| I. [Циклический генератор](./solutions/4.3/43_i.py) | [❌](./tests/4.3/test_43_i.py) |
-| J. ["Выпрямление" списка](./solutions/4.3/43_j.py) | [❌](./tests/4.3/test_43_j.py) |
+| F. [Сортировка слиянием](./solutions/4.3/43_f.py) | [✅](./tests/4.3/test_43_f.py) |
+| G. [Однотипность не порок](./solutions/4.3/43_g.py) | [✅](./tests/4.3/test_43_g.py) |
+| H. [Генератор Фибоначчи](./solutions/4.3/43_h.py) | [✅](./tests/4.3/test_43_h.py) |
+| I. [Циклический генератор](./solutions/4.3/43_i.py) | [✅](./tests/4.3/test_43_i.py) |
+| J. ["Выпрямление" списка](./solutions/4.3/43_j.py) | [✅](./tests/4.3/test_43_j.py) |
 
 </details>
 
