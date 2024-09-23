@@ -116,7 +116,7 @@ def test_generate_error_msg(
 )
 def test_compare_output_passes(
     printed: str,
-    expected: Union[str, Set[str], Tuple[str], List[str]],
+    expected: Union[str, Set[str], Tuple[str], List[str], str],
     _: str,
 ) -> None:
     result = utils.compare_output(printed, expected)
