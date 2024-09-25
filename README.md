@@ -207,7 +207,7 @@ def main():
 
 <summary><h3>2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование</h3></summary>
 
-- [2.1 Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
+- [Теория Ввод и вывод данных. Операции с числами, строками. Форматирование](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye)
   
 ### [Тестовые данные для задач](./tests/data/test_data_21.py)
   
@@ -239,7 +239,7 @@ def main():
 <details>
 <summary><h3>2.2 Условный оператор</h3></summary>
 
-- [2.2 Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
+- [Теория Условный оператор](https://education.yandex.ru/handbook/python/article/uslovnyy-operator)
 
 ### [Тестовые данные для задач](./tests/data/test_data_22.py)
 
@@ -271,7 +271,7 @@ def main():
 <details>
 <summary><h3>2.3 Циклы</h3></summary>
 
-- [2.3 Циклы](https://education.yandex.ru/handbook/python/article/cikly)
+- [Теория Циклы](https://education.yandex.ru/handbook/python/article/cikly)
 
 ### [Тестовые данные для задач](./tests/data/test_data_23.py)
 
@@ -303,7 +303,7 @@ def main():
 <details>
 <summary><h3>2.4 Вложенные циклы</h3></summary>
 
-- [2.4 Вложенные циклы](https://education.yandex.ru/handbook/python/article/vlozhennye-cikly)
+- [Теория Вложенные циклы](https://education.yandex.ru/handbook/python/article/vlozhennye-cikly)
 
 ### [Тестовые данные для задач](./tests/data/test_data_24.py)
 
@@ -335,7 +335,7 @@ def main():
 <details>
 <summary><h3>3.1 Строки, кортежи, списки</h3></summary>
 
-- [3.1 Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
+- [Теория Строки, кортежи, списки](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski)
 
 ### [Тестовые данные для задач](./tests/data/test_data_31.py)
 
@@ -367,7 +367,7 @@ def main():
 <details>
 <summary><h3>3.2 Множества, словари</h3></summary>
 
-- [3.2 Множества, словари](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari)
+- [Теория Множества, словари](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari)
 
 ### [Тестовые данные для задач](./tests/data/test_data_32.py)
 
@@ -399,7 +399,7 @@ def main():
 <details>
 <summary><h3>3.3 Списочные выражения. Модель памяти для типов языка Python</h3></summary>
 
-- [3.3 Списочные выражения. Модель памяти для типов языка Python](https://education.yandex.ru/handbook/python/article/spisochnye-vyrazheniya-model-pamyati-dlya-tipov-yazyka-python)
+- [Теория Списочные выражения. Модель памяти для типов языка Python](https://education.yandex.ru/handbook/python/article/spisochnye-vyrazheniya-model-pamyati-dlya-tipov-yazyka-python)
 
 ### [Тестовые данные для задач](./tests/data/test_data_33.py)
 
@@ -421,7 +421,7 @@ def main():
 <details>
 <summary><h3>3.4 Встроенные возможности по работе с коллекциями</h3></summary>
 
-- [3.4 Встроенные возможности по работе с коллекциями](https://education.yandex.ru/handbook/python/article/vstroennye-vozmozhnosti-po-rabote-s-kollekciyami)
+- [Теория Встроенные возможности по работе с коллекциями](https://education.yandex.ru/handbook/python/article/vstroennye-vozmozhnosti-po-rabote-s-kollekciyami)
 
 ### [Тестовые данные для задач](./tests/data/test_data_34.py)
 
@@ -453,7 +453,7 @@ def main():
 <details>
 <summary><h3>3.5 Потоковый ввод/вывод. Работа с текстовыми файлами. JSON</h3></summary>
 
-- [3.5 Потоковый ввод/вывод. Работа с текстовыми файлами. JSON](https://education.yandex.ru/handbook/python/article/potokovyj-vvodvyvod-rabota-s-tekstovymi-fajlami-json)
+- [Теория Потоковый ввод/вывод. Работа с текстовыми файлами. JSON](https://education.yandex.ru/handbook/python/article/potokovyj-vvodvyvod-rabota-s-tekstovymi-fajlami-json)
 
 ### [Тестовые данные для задач](./tests/data/test_data_35.py)
 
@@ -485,7 +485,7 @@ def main():
 <details>
 <summary><h3>4.1 Функции. Области видимости. Передача параметров в функции</h3></summary>
 
-- [4.1 Функции. Области видимости. Передача параметров в функции](https://education.yandex.ru/handbook/python/article/funkcii-oblasti-vidimosti-peredacha-parametrov-v-funkcii)
+- [Теория Функции. Области видимости. Передача параметров в функции](https://education.yandex.ru/handbook/python/article/funkcii-oblasti-vidimosti-peredacha-parametrov-v-funkcii)
 
 ### [Тестовые данные для задач](./tests/data/test_data_41.py)
 
@@ -507,7 +507,7 @@ def main():
 <details>
 <summary><h3>4.2 Позиционные и именованные аргументы. Функции высших порядков. Лямбда-функции</h3></summary>
 
-- [4.2 Позиционные и именованные аргументы. Функции высших порядков. Лямбда-функции](https://education.yandex.ru/handbook/python/article/pozicionnye-i-imenovannye-argumenty-funkcii-vysshih-poryadkov-lyambda-funkcii)
+- [Теория Позиционные и именованные аргументы. Функции высших порядков. Лямбда-функции](https://education.yandex.ru/handbook/python/article/pozicionnye-i-imenovannye-argumenty-funkcii-vysshih-poryadkov-lyambda-funkcii)
 
 ### [Тестовые данные для задач](./tests/data/test_data_42.py)
 
@@ -529,7 +529,7 @@ def main():
 <details>
 <summary><h3>4.3. Рекурсия. Декораторы. Генераторы</h3></summary>
 
-- [4.3. Рекурсия. Декораторы. Генераторы](https://education.yandex.ru/handbook/python/article/rekursiya-dekoratory-generatory)
+- [Теория Рекурсия. Декораторы. Генераторы](https://education.yandex.ru/handbook/python/article/rekursiya-dekoratory-generatory)
 
 ### [Тестовые данные для задач](./tests/data/test_data_43.py)
 
@@ -545,6 +545,28 @@ def main():
 | H. [Генератор Фибоначчи](./solutions/4.3/43_h.py) | [✅](./tests/4.3/test_43_h.py) |
 | I. [Циклический генератор](./solutions/4.3/43_i.py) | [✅](./tests/4.3/test_43_i.py) |
 | J. ["Выпрямление" списка](./solutions/4.3/43_j.py) | [✅](./tests/4.3/test_43_j.py) |
+
+</details>
+
+<details>
+<summary><h3>5.1 Объектная модель Python. Классы, поля и методы</h3></summary>
+
+- [Теория Объектная модель Python. Классы, поля и методы](https://education.yandex.ru/handbook/python/article/obuektnaya-model-python-klassy-polya-i-metody)
+
+### [Тестовые данные для задач](./tests/data/test_data_51.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Классная точка](./solutions/5.1/51_a.py) | [✅](./tests/5.1/test_51_a.py) |
+| B. [Классная точка 2.0](./solutions/5.1/51_b.py) | [✅](./tests/5.1/test_51_b.py) |
+| C. [Не нажимай красную кнопку!](./solutions/5.1/51_c.py) | [✅](./tests/5.1/test_51_c.py) |
+| D. [Работа не волк](./solutions/5.1/51_d.py) | [✅](./tests/5.1/test_51_d.py) |
+| E. [Классный прямоугольник](./solutions/5.1/51_e.py) | [✅](./tests/5.1/test_51_e.py) |
+| F. [Классный прямоугольник 2.0](./solutions/5.1/51_f.py) | [❌](./tests/5.1/test_51_f.py) |
+| G. [Классный прямоугольник 3.0](./solutions/5.1/51_g.py) | [❌](./tests/5.1/test_51_g.py) |
+| H. [Шашки](./solutions/5.1/51_h.py) | [❌](./tests/5.1/test_51_h.py) |
+| I. [Очередь](./solutions/5.1/51_i.py) | [❌](./tests/5.1/test_51_i.py) |
+| J. [Стэк](./solutions/5.1/51_j.py) | [❌](./tests/5.1/test_51_j.py) |
 
 </details>
 
