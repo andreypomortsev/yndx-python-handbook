@@ -1,21 +1,27 @@
-from typing import Callable, Tuple
+from types import ModuleType
+from typing import Callable
 
 import pytest
 
-from tests.data.test_data_51 import a_test_data
+from tests import utils
+from tests.data.test_data_51 import point_init_test_data
 
 
 @pytest.mark.parametrize(
-    "args, expected_output, _",
-    a_test_data,
-    ids=[i[-1] for i in a_test_data],
+    "x, y, _",
+    point_init_test_data,
+    ids=[i[-1] for i in point_init_test_data],
 )
-def test_input_output(
-    decorated_function: Callable,
-    args: Tuple[Tuple[int]],
-    expected_output: Tuple[int],
+def test_point_class(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    x: int | float,
+    y: int | float,
     _: str,
 ) -> None:
-    returned_output = decorated_function(*args)
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+    point = solution_module.Point(x, y)
 
-    assert returned_output == expected_output
+    assert point.x == x
+    assert point.y == y
