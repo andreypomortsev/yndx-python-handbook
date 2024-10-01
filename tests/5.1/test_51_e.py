@@ -4,14 +4,13 @@ from typing import Callable, Tuple
 import pytest
 
 from tests import utils
-from tests.data.test_data_51 import (rectangle_area_test_data,
-                                     rectangle_perimeter_test_data)
+from tests.data.test_data_51 import rectangle_area, rectangle_perimeter
 
 
 @pytest.mark.parametrize(
     "points, expected_perimeter, _",
-    rectangle_perimeter_test_data,
-    ids=[i[-1] for i in rectangle_perimeter_test_data],
+    rectangle_perimeter,
+    ids=[i[-1] for i in rectangle_perimeter],
 )
 def test_rectangle_perimeter_test(
     load_module: Callable[[str], ModuleType],
@@ -32,8 +31,8 @@ def test_rectangle_perimeter_test(
 
 @pytest.mark.parametrize(
     "points, expected_area, _",
-    rectangle_area_test_data,
-    ids=[i[-1] for i in rectangle_area_test_data],
+    rectangle_area,
+    ids=[i[-1] for i in rectangle_area],
 )
 def test_rectangle_area_test(
     load_module: Callable[[str], ModuleType],
