@@ -853,7 +853,7 @@ o_test_data = [
             }
         ],
         "100\n",
-        "very imprtant test passed",
+        "very important test passed",
     ),
     (
         "4\n",
@@ -866,7 +866,7 @@ o_test_data = [
             }
         ],
         "0\n",
-        "very imprtant test failed",
+        "very important test failed",
     ),
 ]
 
