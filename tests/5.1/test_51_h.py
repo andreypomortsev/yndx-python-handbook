@@ -1,21 +1,36 @@
+from types import ModuleType
 from typing import Callable, Tuple
 
 import pytest
 
-from tests.data.test_data_51 import h_test_data
+from tests import utils
+from tests.data.test_data_51 import checkers_move
 
 
 @pytest.mark.parametrize(
-    "args, expected_output, _",
-    h_test_data,
-    ids=[i[-1] for i in h_test_data],
+    "moves, expected_board, _",
+    checkers_move,
+    ids=[i[-1] for i in checkers_move],
 )
-def test_input_output(
-    decorated_function: Callable,
-    args: Tuple[Tuple[int]],
-    expected_output: Tuple[int],
+def test_checkers(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    moves: Tuple[Tuple[str, str] | None],
+    expected_board: float | int,
     _: str,
 ) -> None:
-    returned_output = decorated_function(*args)
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
 
-    assert returned_output == expected_output
+    checkers = solution_module.Checkers()
+
+    for move in moves:
+        checkers.move(*move)
+
+    printed_board = tuple(
+        checkers.get_cell(col + row).status()
+        for row in "87654321"
+        for col in "ABCDEFGH"
+    )
+
+    assert printed_board == expected_board

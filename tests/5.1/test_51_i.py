@@ -1,21 +1,38 @@
-from typing import Callable, Tuple
+from types import ModuleType
+from typing import Callable, Iterable
 
 import pytest
 
-from tests.data.test_data_51 import i_test_data
+from tests import utils
+from tests.data.test_data_51 import queue_test_data
 
 
 @pytest.mark.parametrize(
-    "args, expected_output, _",
-    i_test_data,
-    ids=[i[-1] for i in i_test_data],
+    "iterable, _",
+    queue_test_data,
+    ids=[i[-1] for i in queue_test_data],
 )
-def test_input_output(
-    decorated_function: Callable,
-    args: Tuple[Tuple[int]],
-    expected_output: Tuple[int],
+def test_queue(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    iterable: Iterable,
     _: str,
 ) -> None:
-    returned_output = decorated_function(*args)
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
 
-    assert returned_output == expected_output
+    queue = solution_module.Queue()
+
+    assert hasattr(queue, "push")
+    assert hasattr(queue, "pop")
+    assert hasattr(queue, "is_empty")
+    assert queue.is_empty() is True
+
+    for item in iterable:
+        queue.push(item)
+
+    counter = 0
+
+    while not queue.is_empty():
+        assert queue.pop() == iterable[counter]
+        counter += 1
