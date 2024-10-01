@@ -2,9 +2,9 @@ number_one = int(input())
 number_two = int(input())
 
 digit_one = number_one % 10
-digit_two = number_one % 100 // 10
+digit_two = number_one // 10
 digit_three = number_two % 10
-digit_four = number_two % 100 // 10
+digit_four = number_two // 10
 
 # Ищем максимумы и минимумы
 if digit_one < digit_two:

@@ -4,14 +4,13 @@ from typing import Callable, Tuple
 import pytest
 
 from tests import utils
-from tests.data.test_data_51 import (point_init_test_data, point_length,
-                                     point_move_test_data)
+from tests.data.test_data_51 import point_init, point_length, point_move
 
 
 @pytest.mark.parametrize(
     "x, y, _",
-    point_init_test_data,
-    ids=[i[-1] for i in point_init_test_data],
+    point_init,
+    ids=[i[-1] for i in point_init],
 )
 def test_point_class_init(
     load_module: Callable[[str], ModuleType],
@@ -29,8 +28,8 @@ def test_point_class_init(
 
 @pytest.mark.parametrize(
     "x_y, x_y_move, _",
-    point_move_test_data,
-    ids=[i[-1] for i in point_move_test_data],
+    point_move,
+    ids=[i[-1] for i in point_move],
 )
 def test_point_move(
     load_module: Callable[[str], ModuleType],

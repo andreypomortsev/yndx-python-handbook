@@ -562,11 +562,11 @@ def main():
 | C. [Не нажимай красную кнопку!](./solutions/5.1/51_c.py) | [✅](./tests/5.1/test_51_c.py) |
 | D. [Работа не волк](./solutions/5.1/51_d.py) | [✅](./tests/5.1/test_51_d.py) |
 | E. [Классный прямоугольник](./solutions/5.1/51_e.py) | [✅](./tests/5.1/test_51_e.py) |
-| F. [Классный прямоугольник 2.0](./solutions/5.1/51_f.py) | [❌](./tests/5.1/test_51_f.py) |
-| G. [Классный прямоугольник 3.0](./solutions/5.1/51_g.py) | [❌](./tests/5.1/test_51_g.py) |
-| H. [Шашки](./solutions/5.1/51_h.py) | [❌](./tests/5.1/test_51_h.py) |
-| I. [Очередь](./solutions/5.1/51_i.py) | [❌](./tests/5.1/test_51_i.py) |
-| J. [Стэк](./solutions/5.1/51_j.py) | [❌](./tests/5.1/test_51_j.py) |
+| F. [Классный прямоугольник 2.0](./solutions/5.1/51_f.py) | [✅](./tests/5.1/test_51_f.py) |
+| G. [Классный прямоугольник 3.0](./solutions/5.1/51_g.py) | [✅](./tests/5.1/test_51_g.py) |
+| H. [Шашки](./solutions/5.1/51_h.py) | [✅](./tests/5.1/test_51_h.py) |
+| I. [Очередь](./solutions/5.1/51_i.py) | [✅](./tests/5.1/test_51_i.py) |
+| J. [Стэк](./solutions/5.1/51_j.py) | [✅](./tests/5.1/test_51_j.py) |
 
 </details>
 

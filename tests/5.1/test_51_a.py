@@ -4,13 +4,13 @@ from typing import Callable
 import pytest
 
 from tests import utils
-from tests.data.test_data_51 import point_init_test_data
+from tests.data.test_data_51 import point_init
 
 
 @pytest.mark.parametrize(
     "x, y, _",
-    point_init_test_data,
-    ids=[i[-1] for i in point_init_test_data],
+    point_init,
+    ids=[i[-1] for i in point_init],
 )
 def test_point_class(
     load_module: Callable[[str], ModuleType],
