@@ -1,27 +1,29 @@
 setup:
-	python3 -m venv .venv
-	@echo "\n\033[0;31mНе забудьте активировать виртуальную среду перед установкой библиотек!\033[0m\n"
+	pip3 install poetry -q
+	poetry install
+	poetry shell
 
-install:
-	pip install --upgrade pip && pip install -r requirements.txt
+clean:
+	find . -name '*.pyc' -delete
+	find . -name '__pycache__' -delete
 
 format:
-	black . --line-length=79 && isort .
+	poetry run black . --line-length=79 && poetry run isort .
 
 lint:
-	flake8 .
+	poetry run flake8 .
 
-test: lint 
-	pytest
+test: lint
+	poetry run pytest; $(MAKE) clean
 
 test-dir-%:
-	pytest tests/$*/
+	poetry run pytest tests/$*/; $(MAKE) clean
 
 test-file-%:
-	./fileTest.sh $*
+	poetry run ./fileTest.sh $*; $(MAKE) clean
 
 test-report-%:
-	pytest --cov-report=$*
+	poetry run pytest --cov-report=$*; $(MAKE) clean
 
 debug:
-	pytest -vv
+	poetry run pytest -vv; $(MAKE) clean
