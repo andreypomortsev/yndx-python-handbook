@@ -1,8 +1,8 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
-![Python 3.10.14](https://img.shields.io/badge/Python-3.10.14-orange.svg)
-![Python 3.11.9](https://img.shields.io/badge/Python-3.11.9-yellow.svg)
+![Python 3.10](https://img.shields.io/badge/Python-3.10-orange.svg)
+![Python 3.11](https://img.shields.io/badge/Python-3.11-yellow.svg)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
@@ -19,9 +19,9 @@ _"Хендбук по Python поможет овладеть основным с
 
 ### Все протестированно на следующих версиях
 
-- [**Python 3.10.14**](https://www.python.org/downloads/release/python-31014/)
-- [**Python 3.11.9**](https://www.python.org/downloads/release/python-31014/)
-- [**Python 3.12**](https://www.python.org/downloads/release/python-3124/)
+- [**Python 3.10**](https://www.python.org/downloads/release/python-31015/)
+- [**Python 3.11**](https://www.python.org/downloads/release/python-31110/)
+- [**Python 3.12**](https://www.python.org/downloads/release/python-3126/)
 
 ### Клонируем репозиторий
 
@@ -30,30 +30,10 @@ git clone https://github.com/andreypomortsev/yndx-python-handbook
 cd yndx-python-handbook
 ```
 
-### Создаем виртуальную среду
+### Устанавлваем poetry и создаем виртуальую среду
 
 ```sh
 make setup
-```
-
-### Активируем виртуальную среду
-
-- На macOS и Linux:
-
-  ```sh
-  source .venv/bin/activate
-  ```
-
-- На Windows:
-
-  ```PowerShell
-  .venv\Scripts\activate
-  ```
-
-### Устанавливаемм все необходимое
-
-```sh
-make install
 ```
 
 ### Форматируем код по PEP8
@@ -68,6 +48,12 @@ make format
 
 ```sh
 make test
+```
+
+Все тесты в дебаг моде:
+
+```sh
+make debug
 ```
 
 Все тесты одного парагарафа (вместо `2.1` укажите нужный параграф) приведенный код запустит тесты для всех задач из параграфа [2.1](./solutions/2.1/):
@@ -91,7 +77,7 @@ make test-dir-2.1
 - На Windows:
 
   ```PowerShell
-  pytest tests\2.3\test_23_q.py
+  poetry run pytest tests\2.3\test_23_q.py && make clean
   ```
 
 Тесты с отчетом в `html`:
@@ -107,6 +93,19 @@ make test-report-html
 ```sh
 make test-report-xml
 ```
+
+### Запуск линтера flake8
+
+```sh
+make lint
+```
+
+### Запуск форматтера black и сортировки импортов isort
+
+```sh
+make format
+```
+
 
 Во время теста в папке `tests` временно создаются файлы `wrapped_*.py`.
 
@@ -567,6 +566,28 @@ def main():
 | H. [Шашки](./solutions/5.1/51_h.py) | [✅](./tests/5.1/test_51_h.py) |
 | I. [Очередь](./solutions/5.1/51_i.py) | [✅](./tests/5.1/test_51_i.py) |
 | J. [Стэк](./solutions/5.1/51_j.py) | [✅](./tests/5.1/test_51_j.py) |
+
+</details>
+
+<details>
+<summary><h3>5.2 Волшебные методы, переопределение методов. Наследование</h3></summary>
+
+- [Теория Волшебные методы, переопределение методов. Наследование](https://education.yandex.ru/handbook/python/article/volshebnye-metody-pereopredelenie-metodov-nasledovanie)
+
+### [Тестовые данные для задач](./tests/data/test_data_52.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Классная точка 3.0](./solutions/5.2/51_a.py) | [✅](./tests/5.2/test_51_a.py) |
+| B. [Классная точка 4.0](./solutions/5.2/51_b.py) | [✅](./tests/5.2/test_51_b.py) |
+| C. [Классная точка 5.0](./solutions/5.2/51_c.py) | [✅](./tests/5.2/test_51_c.py) |
+| D. [Дроби v0.1](./solutions/5.2/51_d.py) | [✅](./tests/5.2/test_51_d.py) |
+| E. [Дроби v0.2](./solutions/5.2/51_e.py) | [✅](./tests/5.2/test_51_e.py) |
+| F. [Дроби v0.3](./solutions/5.2/51_f.py) | [✅](./tests/5.2/test_51_f.py) |
+| G. [Дроби v0.4](./solutions/5.2/51_g.py) | [✅](./tests/5.2/test_51_g.py) |
+| H. [Дроби v0.5](./solutions/5.2/51_h.py) | [✅](./tests/5.2/test_51_h.py) |
+| I. [Дроби v0.6](./solutions/5.2/51_i.py) | [✅](./tests/5.2/test_51_i.py) |
+| J. [Дроби v0.7](./solutions/5.2/51_j.py) | [✅](./tests/5.2/test_51_j.py) |
 
 </details>
 
