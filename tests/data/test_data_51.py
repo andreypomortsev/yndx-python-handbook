@@ -1,15 +1,16 @@
 point_init = [
-    (3, 5, "first open test"),
-    (2, -7, "second open test"),
-    (0.2, -0.7, "floats"),
-    (0, 1, "zero one"),
-    (1, 0, "one zero"),
-    (1000000000000, 99999999999999999, "big numbers"),
-    (0.000000000001, 0.0000000000000009, "small numbers"),
+    ((3, 5), "first open test"),
+    ((2, -7), "second open test"),
+    ((0.2, -0.7), "floats"),
+    ((0, 1), "zero one"),
+    ((1, 0), "one zero"),
+    ((1000000000000, 99999999999999999), "big numbers"),
+    ((0.000000000001, 0.0000000000000009), "small numbers"),
 ]
 
 point_move = [
     ((3, 5), (2, -3), "first open test"),
+    ((0, 0), (2, -3), "first open test 52"),
     ((-3, -9), (-12, -5), "negative numbers"),
     ((-3, -9), (0, 0), "negative numbers zero move"),
     ((3, 9), (0, 0), "positive number zero move"),
