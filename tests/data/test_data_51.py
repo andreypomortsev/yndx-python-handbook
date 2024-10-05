@@ -311,7 +311,7 @@ queue_test_data = [
             True,
             {"one": 1, "two": 2},
             ("tuple!", ""),
-            []
+            [],
         ],
         "different data types",
     ),
