@@ -8,22 +8,23 @@ from tests.data.test_data_51 import point_init, point_length, point_move
 
 
 @pytest.mark.parametrize(
-    "x, y, _",
+    "coordinates, _",
     point_init,
     ids=[i[-1] for i in point_init],
 )
-def test_point_class_init(
+def test_point_class(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
-    x: int | float,
-    y: int | float,
+    coordinates: Tuple[int | float, int | float],
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
     solution_module = load_module(file_path)
+    x, y = coordinates
     point = solution_module.Point(x, y)
 
-    assert (point.x, point.y) == (x, y)
+    assert point.x == x
+    assert point.y == y
 
 
 @pytest.mark.parametrize(
