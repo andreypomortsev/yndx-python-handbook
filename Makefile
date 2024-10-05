@@ -13,22 +13,17 @@ format:
 lint:
 	poetry run flake8 .
 
-test: lint 
-	poetry run pytest || true
-	@$(MAKE) clean -q
+test: lint
+	poetry run pytest; $(MAKE) clean
 
 test-dir-%:
-	poetry run pytest tests/$*/ || true
-	@$(MAKE) clean -q
+	poetry run pytest tests/$*/; $(MAKE) clean
 
 test-file-%:
-	poetry run ./fileTest.sh $* || true
-	@$(MAKE) clean -q
+	poetry run ./fileTest.sh $*; $(MAKE) clean
 
 test-report-%:
-	poetry run pytest --cov-report=$* || true
-	@$(MAKE) clean -q
+	poetry run pytest --cov-report=$*; $(MAKE) clean
 
 debug:
-	poetry run pytest -vv || true
-	@$(MAKE) clean -q
+	poetry run pytest -vv; $(MAKE) clean
