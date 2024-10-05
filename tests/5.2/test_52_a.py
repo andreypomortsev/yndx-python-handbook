@@ -1,29 +1,40 @@
 from types import ModuleType
-from typing import Callable, Tuple
+from typing import Callable, Optional, Tuple
 
 import pytest
 
 from tests import utils
 from tests.data.test_data_51 import point_init, point_length, point_move
+from tests.data.test_data_52 import patched_point_init
+
+patched_point_init.extend(point_init)
 
 
 @pytest.mark.parametrize(
-    "x, y, _",
-    point_init,
-    ids=[i[-1] for i in point_init],
+    "coordinates, _",
+    patched_point_init,
+    ids=[i[-1] for i in patched_point_init],
 )
-def test_point_class_init(
+def test_patched_point_class(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
-    x: int | float,
-    y: int | float,
+    coordinates: Optional[Tuple[int | float, int | float]],
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
     solution_module = load_module(file_path)
-    point = solution_module.Point(x, y)
 
-    assert (point.x, point.y) == (x, y)
+    if not coordinates:
+        x, y = 0, 0
+    elif isinstance(coordinates[0], tuple):
+        x, y = coordinates[0]
+    else:
+        x, y = coordinates
+
+    point = solution_module.PatchedPoint(*coordinates)
+
+    assert point.x == x
+    assert point.y == y
 
 
 @pytest.mark.parametrize(
@@ -31,7 +42,7 @@ def test_point_class_init(
     point_move,
     ids=[i[-1] for i in point_move],
 )
-def test_point_move(
+def test_patched_point_move(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
     x_y: Tuple[int | float],
@@ -42,7 +53,7 @@ def test_point_move(
     solution_module = load_module(file_path)
 
     x, y = x_y
-    point = solution_module.Point(x, y)
+    point = solution_module.PatchedPoint(x, y)
 
     assert (point.x, point.y) == (x, y)
 
@@ -60,7 +71,7 @@ def test_point_move(
     point_length,
     ids=[i[-1] for i in point_length],
 )
-def test_point_length(
+def test_patched_point_length(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
     xs_ys: Tuple[int | float],
@@ -71,8 +82,8 @@ def test_point_length(
     solution_module = load_module(file_path)
 
     x_one, y_one, x_two, y_two = xs_ys
-    point_one = solution_module.Point(x_one, y_one)
-    point_two = solution_module.Point(x_two, y_two)
+    point_one = solution_module.PatchedPoint(x_one, y_one)
+    point_two = solution_module.PatchedPoint(x_two, y_two)
 
     assert (point_one.x, point_one.y) == (x_one, y_one)
     assert (point_two.x, point_two.y) == (x_two, y_two)
