@@ -11,8 +11,7 @@ format:
 	poetry run black . --line-length=79 && poetry run isort .
 
 lint:
-	poetry run flake8 . || true
-	@$(MAKE) clean -q
+	poetry run flake8 .
 
 test: lint 
 	poetry run pytest || true
