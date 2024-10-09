@@ -1,9 +1,9 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
-![Python 3.10](https://img.shields.io/badge/Python-3.10-orange.svg)
-![Python 3.11](https://img.shields.io/badge/Python-3.11-yellow.svg)
-![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)
+![Python 3.11](https://img.shields.io/badge/Python-3.11-orange.svg)
+![Python 3.12](https://img.shields.io/badge/Python-3.12-yellow.svg)
+![Python 3.13](https://img.shields.io/badge/Python-3.13-green.svg)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Решения задач из учебника [Основы Python](https://education.yandex.ru/handbook/python) от Яндекс
@@ -19,9 +19,9 @@ _"Хендбук по Python поможет овладеть основным с
 
 ### Все протестированно на следующих версиях
 
-- [**Python 3.10**](https://www.python.org/downloads/release/python-31015/)
 - [**Python 3.11**](https://www.python.org/downloads/release/python-31110/)
-- [**Python 3.12**](https://www.python.org/downloads/release/python-3126/)
+- [**Python 3.12**](https://www.python.org/downloads/release/python-3127/)
+- [**Python 3.13**](https://www.python.org/downloads/release/python-313/)
 
 ### Клонируем репозиторий
 
