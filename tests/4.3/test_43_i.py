@@ -1,6 +1,6 @@
 from io import StringIO
 from types import ModuleType
-from typing import Tuple
+from typing import Tuple, Iterable
 
 import pytest
 from _pytest.monkeypatch import MonkeyPatch
@@ -16,8 +16,8 @@ from tests.data.test_data_43 import i_test_data
 def test_cycle(
     monkeypatch: MonkeyPatch,
     setup_environment: Tuple[ModuleType, str],
-    iterable: int,
-    n: str,
+    iterable: Iterable,
+    n: int,
     expected_output: str,
     _: str,
 ) -> None:
