@@ -20,7 +20,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 @pytest.fixture(scope="module")
-def wrap_answer() -> Callable[[str, str, str | None], str]:
+def wrap_answer() -> Callable[[str, str, Union[str, None]], str]:
     def wrapper(file_path: str, file_name: str, args: Union[str, None]) -> str:
         """
         Считывает решение из файла и оборачивает его в main функцию
