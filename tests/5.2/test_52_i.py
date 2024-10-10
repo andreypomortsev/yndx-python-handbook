@@ -1,90 +1,510 @@
 from types import ModuleType
-from typing import Callable, Tuple
+from typing import Callable, Optional, Tuple
 
 import pytest
 
 from tests import utils
-from tests.data.test_data_51 import point_init, point_length, point_move
+from tests.data.test_data_52 import fraction_test_data
 
 
 @pytest.mark.parametrize(
-    "coordinates, _",
-    patched_point_init,
-    ids=[i[-1] for i in patched_point_init],
+    "digits, str_view, _",
+    fraction_test_data["init"],
+    ids=[i[-1] for i in fraction_test_data["init"]],
 )
-def test_patched_point_class(
+def test_fraction_class_init(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
-    coordinates: Optional[Tuple[int | float, int | float]],
+    digits: Tuple[int | str, Optional[int | str]],
+    str_view: str,
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
     solution_module = load_module(file_path)
 
-    if not coordinates:
-        x, y = 0, 0
-    elif isinstance(coordinates[0], tuple):
-        x, y = coordinates[0]
-    else:
-        x, y = coordinates
+    fraction = solution_module.Fraction(*digits)
 
-    point = solution_module.PatchedPoint(*coordinates)
-
-    assert point.x == x
-    assert point.y == y
+    assert str(fraction) == str_view
 
 
 @pytest.mark.parametrize(
-    "x_y, x_y_move, _",
-    point_move,
-    ids=[i[-1] for i in point_move],
+    "digits, numerator, expected_return, str_view, _",
+    fraction_test_data["numerator"],
+    ids=[i[-1] for i in fraction_test_data["numerator"]],
 )
-def test_point_move(
+def test_fraction_class_numerator(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
-    x_y: Tuple[int | float],
-    x_y_move: Tuple[int | float],
+    digits: Tuple[int | str, Optional[int | str]],
+    numerator: Optional[int],
+    expected_return: Optional[int],
+    str_view: str,
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
     solution_module = load_module(file_path)
 
-    x, y = x_y
-    point = solution_module.Point(x, y)
+    fraction = solution_module.Fraction(*digits)
 
-    assert (point.x, point.y) == (x, y)
-
-    x_move, y_move = x_y_move
-    point.move(x_move, y_move)
-
-    x += x_move
-    y += y_move
-
-    assert (point.x, point.y) == (x, y)
+    assert fraction.numerator(numerator) == expected_return
+    assert str(fraction) == str_view
 
 
 @pytest.mark.parametrize(
-    "xs_ys, expected_output, _",
-    point_length,
-    ids=[i[-1] for i in point_length],
+    "digits, denominator, expected_return, str_view, _",
+    fraction_test_data["denominator"],
+    ids=[i[-1] for i in fraction_test_data["denominator"]],
 )
-def test_point_length(
+def test_fraction_class_denominator(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
-    xs_ys: Tuple[int | float],
-    expected_output: int | float,
+    digits: Tuple[int | str, Optional[int | str]],
+    denominator: Optional[int],
+    expected_return: Optional[int],
+    str_view: str,
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
     solution_module = load_module(file_path)
 
-    x_one, y_one, x_two, y_two = xs_ys
-    point_one = solution_module.Point(x_one, y_one)
-    point_two = solution_module.Point(x_two, y_two)
+    fraction = solution_module.Fraction(*digits)
 
-    assert (point_one.x, point_one.y) == (x_one, y_one)
-    assert (point_two.x, point_two.y) == (x_two, y_two)
+    assert fraction.denominator(denominator) == expected_return
+    assert str(fraction) == str_view
 
-    assert point_one.length(point_two) == expected_output
-    assert point_two.length(point_one) == expected_output
 
+@pytest.mark.parametrize(
+    "digits, str_view, _",
+    fraction_test_data["reverse"],
+    ids=[i[-1] for i in fraction_test_data["reverse"]],
+)
+def test_fraction_class_reverse(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    digits: Tuple[int | str, Optional[int | str]],
+    str_view: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    fraction = solution_module.Fraction(*digits)
+    reversed_fraction = fraction.reverse()
+
+    assert str(reversed_fraction) == str_view
+    assert reversed_fraction is not fraction
+
+
+@pytest.mark.parametrize(
+    "digits, expected_repr, _",
+    fraction_test_data["repr"],
+    ids=[i[-1] for i in fraction_test_data["repr"]],
+)
+def test_fraction_class_repr(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    digits: Tuple[int, Optional[int]],
+    expected_repr: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    fraction = solution_module.Fraction(*digits)
+
+    assert repr(fraction) == expected_repr
+
+
+@pytest.mark.parametrize(
+    "digits, str_view, _",
+    fraction_test_data["neg"],
+    ids=[i[-1] for i in fraction_test_data["neg"]],
+)
+def test_fraction_class_neg(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    digits: Tuple[int | str, Optional[int | str]],
+    str_view: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    fraction = solution_module.Fraction(*digits)
+    neg_fraction = -fraction
+
+    assert str(neg_fraction) == str_view
+    assert neg_fraction is not fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["add"],
+    ids=[i[-1] for i in fraction_test_data["add"]],
+)
+def test_fraction_class_add(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    sum_fraction = frst_fraction + scnd_fraction
+
+    assert sum_fraction + 0 == sum_fraction
+    assert sum_fraction + "0" == sum_fraction
+
+    assert str(sum_fraction) == str_out
+    assert sum_fraction is not frst_fraction
+    assert sum_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["add"],
+    ids=[i[-1] for i in fraction_test_data["add"]],
+)
+def test_fraction_class_iadd(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    old_first_fraction = frst_fraction
+    frst_fraction += scnd_fraction
+
+    assert str(frst_fraction) == str_out
+    assert old_first_fraction is frst_fraction
+    assert frst_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["sub"],
+    ids=[i[-1] for i in fraction_test_data["sub"]],
+)
+def test_fraction_class_sub(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    sum_fraction = frst_fraction - scnd_fraction
+
+    assert str(sum_fraction) == str_out
+    assert sum_fraction is not frst_fraction
+    assert sum_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["sub"],
+    ids=[i[-1] for i in fraction_test_data["sub"]],
+)
+def test_fraction_class_isub(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    old_first_fraction = frst_fraction
+    frst_fraction -= scnd_fraction
+
+    assert str(frst_fraction) == str_out
+    assert old_first_fraction is frst_fraction
+    assert frst_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["mul"],
+    ids=[i[-1] for i in fraction_test_data["mul"]],
+)
+def test_fraction_class_mul(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    sum_fraction = frst_fraction * scnd_fraction
+
+    assert str(sum_fraction) == str_out
+    assert sum_fraction is not frst_fraction
+    assert sum_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["mul"],
+    ids=[i[-1] for i in fraction_test_data["mul"]],
+)
+def test_fraction_class_imul(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    old_first_fraction = frst_fraction
+    frst_fraction *= scnd_fraction
+
+    assert str(frst_fraction) == str_out
+    assert old_first_fraction is frst_fraction
+    assert frst_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["truediv"],
+    ids=[i[-1] for i in fraction_test_data["truediv"]],
+)
+def test_fraction_class_truediv(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    sum_fraction = frst_fraction / scnd_fraction
+
+    assert str(sum_fraction) == str_out
+    assert sum_fraction is not frst_fraction
+    assert sum_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, str_out, _",
+    fraction_test_data["truediv"],
+    ids=[i[-1] for i in fraction_test_data["truediv"]],
+)
+def test_fraction_class_itruediv(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    str_out: str,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    old_first_fraction = frst_fraction
+    frst_fraction /= scnd_fraction
+
+    assert str(frst_fraction) == str_out
+    assert old_first_fraction is frst_fraction
+    assert frst_fraction is not scnd_fraction
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, expected_result, _",
+    fraction_test_data["gt"],
+    ids=[i[-1] for i in fraction_test_data["gt"]],
+)
+def test_fraction_class_gt(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    expected_result: bool,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    result = frst_fraction > scnd_fraction
+
+    assert result == expected_result
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, expected_result, _",
+    fraction_test_data["ge"],
+    ids=[i[-1] for i in fraction_test_data["ge"]],
+)
+def test_fraction_class_ge(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    expected_result: bool,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    result = frst_fraction >= scnd_fraction
+
+    assert result == expected_result
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, expected_result, _",
+    fraction_test_data["lt"],
+    ids=[i[-1] for i in fraction_test_data["lt"]],
+)
+def test_fraction_class_lt(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    expected_result: bool,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    result = frst_fraction < scnd_fraction
+
+    assert result == expected_result
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, expected_result, _",
+    fraction_test_data["le"],
+    ids=[i[-1] for i in fraction_test_data["le"]],
+)
+def test_fraction_class_le(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    expected_result: bool,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    result = frst_fraction <= scnd_fraction
+
+    assert result == expected_result
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, expected_result, _",
+    fraction_test_data["eq"],
+    ids=[i[-1] for i in fraction_test_data["eq"]],
+)
+def test_fraction_class_eq(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    expected_result: bool,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    result = frst_fraction == scnd_fraction
+
+    assert result == expected_result
+
+
+@pytest.mark.parametrize(
+    "first_digits, second_digits, expected_result, _",
+    fraction_test_data["ne"],
+    ids=[i[-1] for i in fraction_test_data["ne"]],
+)
+def test_fraction_class_ne(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+    first_digits: Tuple[int | str, Optional[int | str]],
+    second_digits: Tuple[int | str, Optional[int | str]],
+    expected_result: bool,
+    _: str,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    frst_fraction = solution_module.Fraction(*first_digits)
+    scnd_fraction = solution_module.Fraction(*second_digits)
+
+    result = frst_fraction != scnd_fraction
+
+    assert result == expected_result
+
+
+def test_fraction_class_raises(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    with pytest.raises(TypeError) as info:
+        fraction = solution_module.Fraction(2, 1)
+        fraction += ("error",)
+
+    assert "Неподдерживаемый тип" in str(info.value)
