@@ -1,5 +1,5 @@
 class RedButton:
-    def __init__(self):
+    def __init__(self) -> None:
         self.counter = 0
 
     def click(self) -> None:

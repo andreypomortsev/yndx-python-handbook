@@ -1,5 +1,5 @@
 class Cell:
-    def __init__(self, state: str):
+    def __init__(self, state: str) -> None:
         self.state = state
 
     def status(self) -> str:
@@ -7,7 +7,7 @@ class Cell:
 
 
 class Checkers:
-    def __init__(self):
+    def __init__(self) -> None:
         self.board = {}
         row_pieces_even = {
             "1": "W",

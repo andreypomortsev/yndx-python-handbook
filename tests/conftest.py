@@ -65,7 +65,7 @@ def wrap_answer() -> Callable[[str, str, str | None], str]:
         elif args:
             wrapped_script = (
                 f"{imports}{decorators}def main({args}):\n"
-                f"    return {indented_script}"  # noqa E271
+                f"    return {indented_script}"
             )
         else:
             wrapped_script = (

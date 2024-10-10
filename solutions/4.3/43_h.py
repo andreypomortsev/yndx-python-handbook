@@ -1,4 +1,4 @@
-def fibonacci(num):
+def fibonacci(num: int):
     if not num:
         return
     if num < 2:
