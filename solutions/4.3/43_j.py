@@ -1,4 +1,4 @@
-def make_linear(iterable):
+def make_linear(iterable: list) -> list:
     answer = []
 
     for i in iterable:

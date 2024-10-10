@@ -1,5 +1,5 @@
 class Programmer:
-    def __init__(self, name: str, position: str):
+    def __init__(self, name: str, position: str) -> None:
         self.name = name
         self.position = position
         self.position_salary = {"Junior": 10, "Middle": 15, "Senior": 20}
