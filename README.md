@@ -21,7 +21,7 @@ _"Хендбук по Python поможет овладеть основным с
 
 - [**Python 3.11**](https://www.python.org/downloads/release/python-31110/)
 - [**Python 3.12**](https://www.python.org/downloads/release/python-3127/)
-- [**Python 3.13**](https://www.python.org/downloads/release/python-313/)
+- [**Python 3.13**](https://www.python.org/downloads/release/python-3130/)
 
 ### Клонируем репозиторий
 
@@ -578,16 +578,16 @@ def main():
 
 | Решение              | Тесты                |
 |----------------------|----------------------|
-| А. [Классная точка 3.0](./solutions/5.2/51_a.py) | [✅](./tests/5.2/test_51_a.py) |
-| B. [Классная точка 4.0](./solutions/5.2/51_b.py) | [✅](./tests/5.2/test_51_b.py) |
-| C. [Классная точка 5.0](./solutions/5.2/51_c.py) | [✅](./tests/5.2/test_51_c.py) |
-| D. [Дроби v0.1](./solutions/5.2/51_d.py) | [✅](./tests/5.2/test_51_d.py) |
-| E. [Дроби v0.2](./solutions/5.2/51_e.py) | [✅](./tests/5.2/test_51_e.py) |
-| F. [Дроби v0.3](./solutions/5.2/51_f.py) | [✅](./tests/5.2/test_51_f.py) |
-| G. [Дроби v0.4](./solutions/5.2/51_g.py) | [✅](./tests/5.2/test_51_g.py) |
-| H. [Дроби v0.5](./solutions/5.2/51_h.py) | [✅](./tests/5.2/test_51_h.py) |
-| I. [Дроби v0.6](./solutions/5.2/51_i.py) | [✅](./tests/5.2/test_51_i.py) |
-| J. [Дроби v0.7](./solutions/5.2/51_j.py) | [✅](./tests/5.2/test_51_j.py) |
+| А. [Классная точка 3.0](./solutions/5.2/52_a.py) | [✅](./tests/5.2/test_52_a.py) |
+| B. [Классная точка 4.0](./solutions/5.2/52_b.py) | [✅](./tests/5.2/test_52_b.py) |
+| C. [Классная точка 5.0](./solutions/5.2/52_c.py) | [✅](./tests/5.2/test_52_c.py) |
+| D. [Дроби v0.1](./solutions/5.2/52_d.py) | [✅](./tests/5.2/test_52_d.py) |
+| E. [Дроби v0.2](./solutions/5.2/52_e.py) | [✅](./tests/5.2/test_52_e.py) |
+| F. [Дроби v0.3](./solutions/5.2/52_f.py) | [✅](./tests/5.2/test_52_f.py) |
+| G. [Дроби v0.4](./solutions/5.2/52_g.py) | [✅](./tests/5.2/test_52_g.py) |
+| H. [Дроби v0.5](./solutions/5.2/52_h.py) | [✅](./tests/5.2/test_52_h.py) |
+| I. [Дроби v0.6](./solutions/5.2/52_i.py) | [✅](./tests/5.2/test_52_i.py) |
+| J. [Дроби v0.7](./solutions/5.2/52_j.py) | [✅](./tests/5.2/test_52_j.py) |
 
 </details>
 
