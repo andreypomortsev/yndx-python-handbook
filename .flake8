@@ -4,7 +4,6 @@ exclude =
     .git,
     __pycache__,
     tests/data/*,
-    .venv/*,
     script.py,
 ignore = 
     E231,
