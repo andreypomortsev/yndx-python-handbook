@@ -50,7 +50,7 @@ jobs:
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
-      - name: Run Pytest with Coverage
+      - name: Run Pytest with Coverage report in XML
         run:
           make test-report-xml
         env:
