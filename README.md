@@ -591,6 +591,28 @@ def main():
 
 </details>
 
+<details>
+<summary><h3>5.3 Модель исключений Python. Try, except, else, finally.</h3></summary>
+
+- [Теория Модель исключений Python. Try, except, else, finally.](https://education.yandex.ru/handbook/python/article/model-isklyuchenij-python-try-except-else-finally-moduli)
+
+### [Тестовые данные для задач](./tests/data/test_data_53.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Обработка ошибок](./solutions/5.3/53_a.py) | [✅](./tests/5.3/test_53_a.py) |
+| B. [Ломать — не строить](./solutions/5.3/53_b.py) | [✅](./tests/5.3/test_53_b.py) |
+| C. [Ломать — не строить 2](./solutions/5.3/53_c.py) | [✅](./tests/5.3/test_53_c.py) |
+| D. [Контроль параметров](./solutions/5.3/53_d.py) | [✅](./tests/5.3/test_53_d.py) |
+| E. [Слияние с проверкой](./solutions/5.3/53_e.py) | [✅](./tests/5.3/test_53_e.py) |
+| F. [Корень зла 2](./solutions/5.3/53_f.py) | [❌](./tests/5.3/test_53_f.py) |
+| G. [Валидация имени](./solutions/5.3/53_g.py) | [❌](./tests/5.3/test_53_g.py) |
+| H. [Валидация имени пользователя](./solutions/5.3/53_h.py) | [❌](./tests/5.3/test_53_h.py) |
+| I. [Валидация пользователя](./solutions/5.3/53_i.py) | [❌](./tests/5.3/test_53_i.py) |
+| J. [Валидация пароля](./solutions/5.3/53_j.py) | [❌](./tests/5.3/test_53_j.py) |
+
+</details>
+
 ## Создание Issue
 
 Если вы обнаружили ошибку, очепятку или баг в проекте, пожалуйста, создайте новый issue, следуя этому шаблону:
