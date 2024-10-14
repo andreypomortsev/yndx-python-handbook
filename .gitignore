@@ -165,7 +165,7 @@ cython_debug/
 tests/wrapped_*.py
 .DS_Store
 
-# Helper script to make a few files at once
+# A helper script to make a few files at once
 script.py
 
 # VSCode testing
