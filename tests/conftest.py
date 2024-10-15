@@ -147,8 +147,14 @@ def setup_environment(
 
     # Динамически импортируем wrapped файл после создания
     wrapped_module_name = f"tests.wrapped_{tested_file_name}"
-    wrapped_module = importlib.import_module(wrapped_module_name)
+    try:
+        wrapped_module = importlib.import_module(wrapped_module_name)
+    except SyntaxError:
+        pytest.exit(
+            f"Syntax error in the file {tested_file_name}.py", returncode=1
+        )
 
+    # Добавляем путь к обернутому файлу в список для удаления
     utils.add_file_to_cleanup(request, path_to_the_wrapped_file)
 
     yield wrapped_module, path_to_the_wrapped_file
