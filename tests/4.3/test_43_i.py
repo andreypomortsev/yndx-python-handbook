@@ -1,6 +1,6 @@
 from io import StringIO
 from types import ModuleType
-from typing import Tuple, Iterable
+from typing import Iterable, Tuple
 
 import pytest
 from _pytest.monkeypatch import MonkeyPatch

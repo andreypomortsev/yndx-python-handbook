@@ -39,7 +39,7 @@ fraction_test_data = {
         (("2/-3",), "Fraction(-2, 3)", "negative denominator one str with /"),
         ((-4, -2), "Fraction(2, 1)", "two negative ints"),
         (
-            ("-22/-3333",),
+            ("-220/-33330",),
             "Fraction(2, 303)",
             "one str with two negative and /",
         ),
@@ -398,7 +398,7 @@ fraction_test_data = {
     ),
     "init": (
         ((1,), "1/1", "one int"),
-        (("2",), "2/1", "one str"),
+        (("2132",), "2132/1", "one str"),
         ((1, 2), "1/2", "two ints"),
         (("2/3",), "2/3", "one str with /"),
         ((-1,), "-1/1", "negative one int"),

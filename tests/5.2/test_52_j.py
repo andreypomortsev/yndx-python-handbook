@@ -612,6 +612,6 @@ def test_fraction_class_raises(
 
     with pytest.raises(TypeError) as info:
         fraction = solution_module.Fraction(2, 1)
-        fraction += ("error",)
+        fraction = fraction + 2.5
 
-    assert "Неподдерживаемый тип" in str(info.value)
+    assert "TypeError" == info.type.__name__

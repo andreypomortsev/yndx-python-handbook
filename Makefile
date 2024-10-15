@@ -21,7 +21,7 @@ test-dir-%:
 	poetry run pytest tests/$*/; $(MAKE) clean
 
 test-file-%:
-	poetry run ./fileTest.sh $*; $(MAKE) clean
+	./fileTest.sh $*; $(MAKE) clean
 
 test-report-%:
 	poetry run pytest --cov-report=$*; $(MAKE) clean
