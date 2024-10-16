@@ -190,7 +190,11 @@ e_test_data = {
         (([3, 2, 1], range(10)), ValueError, "second open test"),
         ((range(1), (21, 2311, 0)), ValueError, "range and tuple"),
         (([-3, -2, 1], [2, -11, 100000]), ValueError, "one unsorted"),
-        (([-3.1, -2.22, -1.9], [-2.01, -2.009, -2.011]), ValueError, "negative numbers"),
+        (
+            ([-3.1, -2.22, -1.9], [-2.01, -2.009, -2.011]),
+            ValueError,
+            "negative numbers",
+        ),
     ),
     "Values": merge,  # The same test data as for the problem J 4.1
 }
