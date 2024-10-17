@@ -4,11 +4,12 @@ from typing import Callable, Tuple
 import pytest
 
 from tests import utils
+from tests.conftest import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_53 import d_test_data
 
 
 @pytest.mark.parametrize(
-    "numbers, error, _",
+    "numbers, expected_error, _",
     d_test_data["Errors"],
     ids=[i[-1] for i in d_test_data["Errors"]],
 )
@@ -16,16 +17,16 @@ def test_only_positive_even_sum_error(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
     numbers: Tuple[int | float | str, int | float | str],
-    error: Exception,
+    expected_error: Exception,
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
     solution_module = load_module(file_path)
 
-    with pytest.raises(error) as info:
+    with pytest.raises(expected_error) as info:
         solution_module.only_positive_even_sum(*numbers)
 
-    assert error.__name__ == info.type.__name__
+    assert expected_error.__name__ == info.type.__name__
 
 
 @pytest.mark.parametrize(
@@ -41,8 +42,13 @@ def test_only_positive_even_sum(
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
-    solution_module = load_module(file_path)
+    solution = load_module(file_path)
 
-    returned = solution_module.only_positive_even_sum(*numbers)
+    decorated_func = utils.memory_limit(MEMORY_LIMIT)(
+        solution.only_positive_even_sum
+    )
+    decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
+
+    returned = decorated_func(*numbers)
 
     assert returned == expected

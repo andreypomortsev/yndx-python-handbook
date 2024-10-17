@@ -738,13 +738,13 @@ p_test_data = [
 
 q_test_data = [
     ("1\n-2\n1\n", {"1.00\n", "1.0\n"}, "first open test"),
-    ("3.5\n-2.4\n-7.3", {"-1.14 1.83\n"}, "second open test"),
+    ("3.5\n-2.4\n-7.3\n", {"-1.14 1.83\n"}, "second open test"),
     ("0\n0\n0\n", {"Infinite solutions\n"}, "all zeros"),
-    ("0\n0\n-7.3", {"No solution\n"}, "a == b == 0, c != 0"),
-    ("0\n1\n1", {"-1.0\n", "-1.00\n"}, "a ==, b and c not 0"),
+    ("0\n0\n-7.3\n", {"No solution\n"}, "a == b == 0, c != 0"),
+    ("-500000\n10\n-1\n", {"No solution\n"}, "big negative a"),
+    ("0\n1\n1\n", {"-1.0\n", "-1.00\n"}, "a ==, b and c not 0"),
     ("5\n10\n-1\n", {"-2.1 0.1\n", "-2.10 0.10\n"}, "root2 < root1"),
     ("-5\n10\n-1\n", {"0.11 1.89\n"}, "root1 < root2"),
-    ("-500000\n10\n-1\n", {"No solution\n"}, "big negative a"),
 ]
 
 
