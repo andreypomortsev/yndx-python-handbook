@@ -1,3 +1,4 @@
+import string
 from tests.data.test_data_41 import j_test_data as merge
 
 
@@ -197,4 +198,525 @@ e_test_data = {
         ),
     ),
     "Values": merge,  # The same test data as for the problem J 4.1
+}
+
+f_test_data = {
+    "Errors": (
+        ((0, 0, 1), "NoSolutionsError", "first open test"),
+        ((0, 0, 0), "InfiniteSolutionsError", "inf solutions with zeros"),
+        ((1020, 1, 310), "NoSolutionsError", "no solutions"),
+        ((-0.321, -2.4, -7.3), "NoSolutionsError", "neg floats"),
+        ((23130.9, 2.21344, 7.365744), "NoSolutionsError", "pos floats"),
+        (
+            (-110.009, 3.21344, -6.346544),
+            "NoSolutionsError",
+            "neg/pos/neg floats",
+        ),
+        (("math.sqrt(2)", 0, 310), "TypeError", "a - str"),
+        ((1022, "math.sqrt(2)", 310), "TypeError", "b - str"),
+        ((1022, -12.312, "math.sqrt(2)"), "TypeError", "c - str"),
+        ((None, 0, 310), "TypeError", "a - None"),
+        ((1022, None, 310), "TypeError", "b - None"),
+        ((1022, -12.312, None), "TypeError", "c - None"),
+        ((lambda _: None, 0, 310), "TypeError", "a - lambda"),
+        ((122, lambda _: None, 310), "TypeError", "b - lambda"),
+        ((1023, -12.312, lambda _: None), "TypeError", "c - lambda"),
+    ),
+    "Values": (
+        ((1, 2, 1), (-1.0, -1.0), "second open test"),
+        ((3.5, -2.4, -7.3), (-1.14, 1.83), "mix of floats"),
+        ((0, -2.4, -7.3), (-3.04,), "simple equation neg floats"),
+        ((0, 2.21344, 7.365744), (-3.33,), "simple equation pos floats"),
+        ((0, -32.21344, 7.365744), (0.23,), "simple equation neg/pos floats"),
+        ((0, 3.21344, -6.346544), (1.98,), "simple equation pos/neg floats"),
+        ((0, -24, -73), (-3.04,), "simple equation neg ints"),
+        ((0, 221344, 7365744), (-33.28,), "simple equation pos ints"),
+        ((0, -3221344, 7365744), (2.29,), "simple equation neg/pos ints"),
+        ((0, 321344, -6346544), (19.75,), "simple equation pos/neg ints"),
+        ((-3.0, -32.21344, 7.365744), (0.22, -10.96), "neg/neg/pos floats"),
+        ((-31.03, 179.2184, -7.365744), (5.73, 0.04), "neg/pos/neg floats"),
+        ((31.03, -79.2184, -7.365744), (-0.09, 2.64), "pos/neg/neg floats"),
+        ((-3.0, 179.2184, 7.365744), (59.78, -0.04), "neg/pos/pos floats"),
+        ((0.009, 3.21344, -6.346544), (-359.01, 1.96), "pos/pos/neg floats"),
+    ),
+}
+
+g_test_data = {
+    "Errors": (
+        ("user", "CyrillicError", "first open test"),
+        ("Sub89P13", "CyrillicError", "cyrillic err"),
+        ("12334", "CyrillicError", "cyrillic err num"),
+        ("ИваноВ!", "CyrillicError", "cyrillic err !"),
+        ("Иванов?", "CyrillicError", "cyrillic err ?"),
+        ("иванов", "CapitalError", "second open test"),
+        ("ИвановИванов", "CapitalError", "upper letter in the mid"),
+        ("ИваноВ", "CapitalError", "upper letter at the end"),
+        ("ПЕТРОВ", "CapitalError", "upper"),
+        ("гуглеР", "CapitalError", "only last is upper"),
+        ("КаМеЛкЕйС", "CapitalError", "camelcase"),
+        (1, "TypeError", "int"),
+        (1212.1, "TypeError", "float"),
+        (lambda _: None, "TypeError", "callable"),
+        (Exception, "TypeError", "exception"),
+    ),
+    "Values": (
+        ("Иванов", "Иванов", "Ivanov"),
+        ("Игнат", "Игнат", "Ignat"),
+        ("А", "А", "short name"),
+    ),
+}
+
+h_test_data = {
+    "Errors": (
+        ("$user_45$", "BadCharacterError", "first open test"),
+        ("!@#", "BadCharacterError", "special chars"),
+        ("45_user", "StartsWithDigitError", "second open test"),
+        ("45_user@", "BadCharacterError", "order of errors"),
+        ("05213422", "StartsWithDigitError", "digits"),
+        (("45_user@",), "TypeError", "tuple"),
+        (1, "TypeError", "int"),
+        (1212.1, "TypeError", "float"),
+        (lambda _: None, "TypeError", "callable"),
+        (Exception, "TypeError", "exception"),
+    ),
+    "Values": (
+        ("Ruser_45", "Ruser_45", "capital underscore nums"),
+        ("true99USER_", "true99USER_", "mix of everythin"),
+        ("trueuser", "trueuser", "only lowercase"),
+        ("IMBAGOD", "IMBAGOD", "only uppercase"),
+        ("I690021394", "I690021394", "mainly digits uppercase letter"),
+        ("k690021394", "k690021394", "mainly digits lowercase letter"),
+        ("Sub89P13", "Sub89P13", "myself"),
+        ("_user45", "_user45", "starts with underscore"),
+    ),
+}
+
+i_test_data = {
+    "Errors": (
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Иван",
+                "username": "ivanych45",
+                "password": "1223456",
+            },
+            "KeyError",
+            "second open test",
+        ),
+        (
+            {
+                "first_name": "Иван",
+                "last_name": "Иванов",
+                "username": "ivanych45",
+            },
+            "KeyError",
+            "wrong order of args",
+        ),
+        (
+            {
+                "username": "ivanych45",
+                "first_name": "Иван",
+                "last_name": "Иванов",
+            },
+            "KeyError",
+            "wrong order of args 2",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Иван",
+            },
+            "KeyError",
+            "two args of three",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "username": "ivanych45",
+            },
+            "KeyError",
+            "another two args of three",
+        ),
+        (
+            {
+                "username": "ivanych45",
+                "first_name": "Иван",
+            },
+            "KeyError",
+            "last two args of three",
+        ),
+        (
+            {
+                "username": "ivanych45",
+                "password": "s0me_trickY",
+                "first_name": "Иван",
+                "last_name": "Иванов",
+            },
+            "KeyError",
+            "extra arg",
+        ),
+        (
+            {
+                "last_name": 1,
+                "first_name": "Иван",
+                "username": "ivanych45",
+            },
+            "TypeError",
+            "last name int",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": 3.14,
+                "username": "ivanych45",
+            },
+            "TypeError",
+            "first name float",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Олег",
+                "username": 0.07,
+            },
+            "TypeError",
+            "username float",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Олег",
+                "username": "0.07",
+            },
+            "BadCharacterError",
+            "username with dot",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Олег",
+                "username": "gringo-",
+            },
+            "BadCharacterError",
+            "username with hyphen",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Олег",
+                "username": "",
+            },
+            "BadCharacterError",
+            "empty username",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Олег",
+                "username": "59_gringo",
+            },
+            "StartsWithDigitError",
+            "username starts with a digit",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Олег",
+                "username": "007",
+            },
+            "StartsWithDigitError",
+            "username from digits",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Олег",
+                "username": "google_hero!",
+            },
+            "BadCharacterError",
+            "username with !",
+        ),
+        (
+            {
+                "last_name": "Iванов",
+                "first_name": "Иван",
+                "username": "sergeich69",
+            },
+            "CyrillicError",
+            "non cyrillic symbol in last name",
+        ),
+        (
+            {
+                "last_name": "Ивановs",
+                "first_name": "Иван",
+                "username": "sergeich69",
+            },
+            "CyrillicError",
+            "non cyrillic symbol in last name at the end",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Sergey",
+                "username": "sergeich69",
+            },
+            "CyrillicError",
+            "english first name",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Сeргей",
+                "username": "sergeich69",
+            },
+            "CyrillicError",
+            "english e in first name",
+        ),
+        (
+            {
+                "last_name": "иванов",
+                "first_name": "Сергей",
+                "username": "sergeich69",
+            },
+            "CapitalError",
+            "lowercase last name",
+        ),
+        (
+            {
+                "last_name": "ИВанов",
+                "first_name": "Сергей",
+                "username": "sergeich69",
+            },
+            "CapitalError",
+            "extra uppercase letter in last name",
+        ),
+        (
+            {
+                "last_name": "ИваноВ",
+                "first_name": "Сергей",
+                "username": "sergeich69",
+            },
+            "CapitalError",
+            "another extra uppercase letter in last name",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "СЕргей",
+                "username": "sergeich69",
+            },
+            "CapitalError",
+            "extra uppercase letter in first name",
+        ),
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "СергеЙ",
+                "username": "sergeich69",
+            },
+            "CapitalError",
+            "another extra uppercase letter in first name",
+        ),
+    ),
+    "Values": (
+        (
+            {
+                "last_name": "Иванов",
+                "first_name": "Иван",
+                "username": "ivanych45",
+            },
+            {
+                "last_name": "Иванов",
+                "first_name": "Иван",
+                "username": "ivanych45",
+            },
+            "first open test",
+        ),
+        (
+            {
+                "last_name": "Р",
+                "first_name": "Иван",
+                "username": "ivanych_45",
+            },
+            {
+                "last_name": "Р",
+                "first_name": "Иван",
+                "username": "ivanych_45",
+            },
+            "one letter last name",
+        ),
+        (
+            {
+                "last_name": "Рогоз",
+                "first_name": "Д",
+                "username": "moron_45",
+            },
+            {
+                "last_name": "Рогоз",
+                "first_name": "Д",
+                "username": "moron_45",
+            },
+            "one letter first name",
+        ),
+        (
+            {
+                "last_name": "Рогоз",
+                "first_name": "Д",
+                "username": "Y",
+            },
+            {
+                "last_name": "Рогоз",
+                "first_name": "Д",
+                "username": "Y",
+            },
+            "one letter username",
+        ),
+    ),
+}
+
+j_test_data = {
+    "Errors": (
+        (
+            "$uNri$e_777",
+            {
+                "min_length": 6,
+                "at_least_one": lambda char: char in "!@#$%^&*()_",
+            },
+            "PossibleCharError",
+            "second open test",
+        ),
+        (
+            12345,
+            {
+                "min_length": 6,
+                "at_least_one": lambda char: char in "!@#$%^&*()_",
+            },
+            "TypeError",
+            "wrong password data type - int",
+        ),
+        (
+            ("12345", ),
+            {
+                "min_length": 6,
+                "at_least_one": lambda char: char in "!@#$%^&*()_",
+            },
+            "TypeError",
+            "wrong password data type - tuple",
+        ),
+        (
+            lambda _: "Yawn",
+            {
+                "min_length": 6,
+                "at_least_one": lambda char: char in "!@#$%^&*()_",
+            },
+            "TypeError",
+            "wrong password data type - callable",
+        ),
+        (
+            12.345,
+            {
+                "min_length": 6,
+                "at_least_one": lambda char: char in "!@#$%^&*()_",
+            },
+            "TypeError",
+            "wrong password data type - float",
+        ),
+        (
+            "$uNr1$e_1n_HelL",
+            {
+                "min_length": 16,
+            },
+            "MinLengthError",
+            "min length test more than default",
+        ),
+        (
+            "HelL_n0",
+            {},
+            "MinLengthError",
+            "min length test default",
+        ),
+        (
+            "12345",
+            {
+                "min_length": 6,
+            },
+            "MinLengthError",
+            "min length test less than default",
+        ),
+        (
+            "$uNri$e_777",
+            {
+                "possible_chars": set(string.ascii_letters),
+            },
+            "PossibleCharError",
+            "possible_chars: only English letters",
+        ),
+        (
+            "$uNri$e_777",
+            {
+                "possible_chars": set(string.digits),
+            },
+            "PossibleCharError",
+            "possible_chars: only digits",
+        ),
+        (
+            "uNrie777",
+            {
+                "at_least_one": lambda x: x in string.punctuation,
+                "possible_chars": set(string.ascii_letters + string.punctuation + string.digits),
+            },
+            "NeedCharError",
+            "need char: punctuation",
+        ),
+        (
+            "OLDSCAREDPUSSY",
+            {
+                "at_least_one": lambda x: x.islower(),
+            },
+            "NeedCharError",
+            "need char: lowercase",
+        ),
+        (
+            "UrInatoR",
+            {},
+            "NeedCharError",
+            "need char: by default",
+        ),
+        (
+            "!He11:@1.ye$2345" * 10**5,
+            {
+                "min_length": 10,
+                "possible_chars": set(string.ascii_letters + string.punctuation + string.digits),
+            },
+            "TimeLimitExceeded",
+            "strong password which catches TL",
+        ),
+    ),
+    "Values": (
+        (
+            "Hello12345",
+            {},
+            "67698a29126e52a6921ca061082783ede0e9085c45163c3658a2b0a82c8f95a1",
+            "first open test",
+        ),
+        (
+            "He11:O12345",
+            {
+                "min_length": 11,
+                "at_least_one": lambda x: x in string.punctuation,
+                "possible_chars": list(string.ascii_letters + string.punctuation + string.digits),
+            },
+            "dcac082b965e5961b4f1c77bd923fc115f28883ef17d34e3c072efaf2b8a8954",
+            "changed default kwargs",
+        ),
+        (
+            "!He11:@1.ye$2345",
+            {
+                "min_length": 10,
+                "possible_chars": list(string.ascii_letters + string.punctuation + string.digits),
+            },
+            "c6a59bcdda2f600d5c94ce9e7e9027a25c1f21c811a00118229aad0c1ae1d230",
+            "strong password",
+        ),
+    ),
 }
