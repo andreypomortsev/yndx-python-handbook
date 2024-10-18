@@ -49,4 +49,4 @@ def test_merge(
 
     returned = decorated_func(*numbers)
 
-    assert returned == list(expected)
+    assert tuple(returned) == expected
