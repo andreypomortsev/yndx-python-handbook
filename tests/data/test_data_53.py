@@ -1,4 +1,5 @@
 import string
+
 from tests.data.test_data_41 import j_test_data as merge
 
 
@@ -595,7 +596,7 @@ j_test_data = {
             "wrong password data type - int",
         ),
         (
-            ("12345", ),
+            ("12345",),
             {
                 "min_length": 6,
                 "at_least_one": lambda char: char in "!@#$%^&*()_",
@@ -663,7 +664,9 @@ j_test_data = {
             "uNrie777",
             {
                 "at_least_one": lambda x: x in string.punctuation,
-                "possible_chars": set(string.ascii_letters + string.punctuation + string.digits),
+                "possible_chars": set(
+                    string.ascii_letters + string.punctuation + string.digits
+                ),
             },
             "NeedCharError",
             "need char: punctuation",
@@ -686,7 +689,9 @@ j_test_data = {
             "!He11:@1.ye$2345" * 10**5,
             {
                 "min_length": 10,
-                "possible_chars": set(string.ascii_letters + string.punctuation + string.digits),
+                "possible_chars": set(
+                    string.ascii_letters + string.punctuation + string.digits
+                ),
             },
             "TimeLimitExceeded",
             "strong password which catches TL",
@@ -704,7 +709,9 @@ j_test_data = {
             {
                 "min_length": 11,
                 "at_least_one": lambda x: x in string.punctuation,
-                "possible_chars": list(string.ascii_letters + string.punctuation + string.digits),
+                "possible_chars": list(
+                    string.ascii_letters + string.punctuation + string.digits
+                ),
             },
             "dcac082b965e5961b4f1c77bd923fc115f28883ef17d34e3c072efaf2b8a8954",
             "changed default kwargs",
@@ -713,7 +720,9 @@ j_test_data = {
             "!He11:@1.ye$2345",
             {
                 "min_length": 10,
-                "possible_chars": list(string.ascii_letters + string.punctuation + string.digits),
+                "possible_chars": list(
+                    string.ascii_letters + string.punctuation + string.digits
+                ),
             },
             "c6a59bcdda2f600d5c94ce9e7e9027a25c1f21c811a00118229aad0c1ae1d230",
             "strong password",
