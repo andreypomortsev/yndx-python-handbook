@@ -1,4 +1,4 @@
-from types import ModuleType
+from types import FunctionType, ModuleType
 from typing import Callable, Tuple
 
 import pytest
@@ -7,12 +7,36 @@ from tests import utils
 from tests.data.test_data_51 import checkers_move
 
 
+def test_checkers_init(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution = load_module(file_path)
+
+    init_err = "You should implement the __init__ method"
+    assert isinstance(solution.Checkers.__init__, FunctionType), init_err
+    assert isinstance(solution.Cell.__init__, FunctionType), init_err
+
+    checkers = solution.Checkers()
+    cell = checkers.get_cell("A1")
+
+    for attr in ("move", "get_cell"):
+        checkers_msg = f"Expected class Checkers to have attribute {attr}"
+        assert hasattr(checkers, attr), checkers_msg
+
+    assert hasattr(cell, "status")
+
+    assert isinstance(checkers, solution.Checkers)
+    assert isinstance(cell, solution.Cell)
+
+
 @pytest.mark.parametrize(
     "moves, expected_board, _",
     checkers_move,
     ids=[i[-1] for i in checkers_move],
 )
-def test_checkers(
+def test_checkers_moves(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
     moves: Tuple[Tuple[str, str] | None],
@@ -20,9 +44,9 @@ def test_checkers(
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
-    solution_module = load_module(file_path)
+    solution = load_module(file_path)
 
-    checkers = solution_module.Checkers()
+    checkers = solution.Checkers()
 
     for move in moves:
         checkers.move(*move)

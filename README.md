@@ -627,11 +627,11 @@ def main():
 | C. [Есть варианты?](./solutions/6.1/61_c.py) | [✅](./tests/6.1/test_61_c.py) |
 | D. [Среднее не арифметическое](./solutions/6.1/61_d.py) | [✅](./tests/6.1/test_61_d.py) |
 | E. [Шаг навстречу](./solutions/6.1/61_e.py) | [✅](./tests/6.1/test_61_e.py) |
-| F. [Матрица умножения](./solutions/6.1/61_f.py) | [❌](./tests/6.1/test_61_f.py) |
-| G. [Шахматная подготовка](./solutions/6.1/61_g.py) | [❌](./tests/6.1/test_61_g.py) |
-| H. [Числовая змейка 3.0](./solutions/6.1/61_h.py) | [❌](./tests/6.1/test_61_h.py) |
-| I. [Вращение](./solutions/6.1/61_i.py) | [❌](./tests/6.1/test_61_i.py) |
-| J. [Лесенка](./solutions/6.1/61_j.py) | [❌](./tests/6.1/test_61_j.py) |
+| F. [Матрица умножения](./solutions/6.1/61_f.py) | [✅](./tests/6.1/test_61_f.py) |
+| G. [Шахматная подготовка](./solutions/6.1/61_g.py) | [✅](./tests/6.1/test_61_g.py) |
+| H. [Числовая змейка 3.0](./solutions/6.1/61_h.py) | [✅](./tests/6.1/test_61_h.py) |
+| I. [Вращение](./solutions/6.1/61_i.py) | [✅](./tests/6.1/test_61_i.py) |
+| J. [Лесенка](./solutions/6.1/61_j.py) | [✅](./tests/6.1/test_61_j.py) |
 
 </details>
 
