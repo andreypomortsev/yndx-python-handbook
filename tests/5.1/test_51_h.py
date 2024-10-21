@@ -24,9 +24,9 @@ def test_checkers_init(
     for attr in ("move", "get_cell"):
         checkers_msg = f"Expected class Checkers to have attribute {attr}"
         assert hasattr(checkers, attr), checkers_msg
-    
+
     assert hasattr(cell, "status")
-    
+
     assert isinstance(checkers, solution.Checkers)
     assert isinstance(cell, solution.Cell)
 
