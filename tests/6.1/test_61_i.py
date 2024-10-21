@@ -1,50 +1,39 @@
 from types import ModuleType
-from typing import Callable, Tuple
+from typing import Callable
 
+import numpy as np
 import pytest
 
 from tests import utils
+from tests.constants import MEMORY_LIMIT, TIME_LIMIT
 from tests.data.test_data_61 import i_test_data
 
 
 @pytest.mark.parametrize(
-    "coefficients, expected_error, _",
-    i_test_data["Errors"],
-    ids=[i[-1] for i in i_test_data["Errors"]],
+    "matrix, angle, expected_matrix, _",
+    i_test_data,
+    ids=[i[-1] for i in i_test_data],
 )
-def test_find_roots_error(
+def test_rotate(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
-    coefficients: Tuple[int | float, int | float, int | float],
-    expected_error: str,
+    matrix: np.ndarray,
+    angle: int,
+    expected_matrix: np.ndarray,
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
-    solution_module = load_module(file_path)
+    solution = load_module(file_path)
 
-    with pytest.raises(Exception) as exc_info:
-        solution_module.find_roots(*coefficients)
+    decorated_func = utils.memory_limit(MEMORY_LIMIT)(solution.rotate)
+    decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
 
-    assert expected_error == exc_info.type.__name__
+    returned_board = decorated_func(matrix, angle)
 
+    type_err = "The function should return a numpy array of integer elements"
+    assert np.issubdtype(returned_board.dtype, np.integer), type_err
 
-@pytest.mark.parametrize(
-    "coefficients, expected_return, _",
-    i_test_data["Values"],
-    ids=[i[-1] for i in i_test_data["Values"]],
-)
-def test_find_roots(
-    load_module: Callable[[str], ModuleType],
-    request: pytest.FixtureRequest,
-    coefficients: Tuple[int | float, int | float, int | float],
-    expected_return: Tuple[float, float],
-    _: str,
-) -> None:
-    file_path, _ = utils.get_tested_file_details(request)
-    solution_module = load_module(file_path)
+    type_err = "The function should return a numpy array"
+    assert isinstance(returned_board, np.ndarray), type_err
 
-    returned = solution_module.find_roots(*coefficients)
-
-    for returned_root, expexted_root in zip(returned, expected_return):
-        assert round(returned_root, 2) == expexted_root
-
+    assert np.array_equal(returned_board, expected_matrix)

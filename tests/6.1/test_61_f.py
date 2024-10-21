@@ -18,7 +18,7 @@ def test_multiplication_matrix(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
     size: int,
-    expected_matrix: np.array,
+    expected_matrix: np.ndarray,
     _: str,
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
@@ -30,5 +30,11 @@ def test_multiplication_matrix(
     decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
 
     returned_matrix = decorated_func(size)
+
+    type_err = "The function should return a numpy array of integer elements"
+    assert np.issubdtype(returned_matrix.dtype, np.integer), type_err
+
+    type_err = "The function should return a numpy array"
+    assert isinstance(returned_matrix, np.ndarray), type_err
 
     assert np.array_equal(returned_matrix, expected_matrix)
