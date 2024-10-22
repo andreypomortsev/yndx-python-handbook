@@ -40,5 +40,5 @@ MORSE_DICT = {
 phrase = input().split()
 
 for word in phrase:
-    code = " ".join([MORSE_DICT[char.upper()] for char in word])
-    print(code)
+    code = [MORSE_DICT[char.upper()] for char in word]
+    print(*code)

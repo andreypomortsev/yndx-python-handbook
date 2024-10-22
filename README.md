@@ -636,6 +636,28 @@ def main():
 </details>
 
 <details>
+<summary><h3>6.2 Модуль pandas</h3></summary>
+
+- [Теория Модуль pandas](https://education.yandex.ru/handbook/python/article/modul-pandas)
+
+### [Тестовые данные для задач](./tests/data/test_data_62.py)
+
+| Решение              | Тесты                |
+|----------------------|----------------------|
+| А. [Длины всех слов - 2](./solutions/6.2/62_a.py) | [✅](./tests/6.2/test_62_a.py) |
+| B. [Длины всех слов по чётности](./solutions/6.2/62_b.py) | [✅](./tests/6.2/test_62_b.py) |
+| C. [Чек - 2](./solutions/6.2/62_c.py) | [✅](./tests/6.2/test_62_c.py) |
+| D. [Акция](./solutions/6.2/62_d.py) | [✅](./tests/6.2/test_62_d.py) |
+| E. [Длинные слова](./solutions/6.2/62_e.py) | [✅](./tests/6.2/test_62_e.py) |
+| F. [Отчёт успеваемости](./solutions/6.2/62_f.py) | [❌](./tests/6.2/test_62_f.py) |
+| G. [Отчёт неуспеваемости](./solutions/6.2/62_g.py) | [❌](./tests/6.2/test_62_g.py) |
+| H. [Обновление журнала](./solutions/6.2/62_h.py) | [❌](./tests/6.2/test_62_h.py) |
+| I. [Бесконечный морской бой](./solutions/6.2/62_i.py) | [❌](./tests/6.2/test_62_i.py) |
+| J. [Экстремум функции](./solutions/6.2/62_j.py) | [❌](./tests/6.2/test_62_j.py) |
+
+</details>
+
+<details>
 <summary><h2>Создание Issue</h2></summary>
 
 Если вы обнаружили ошибку, очепятку или баг в проекте, пожалуйста, создайте новый issue, следуя этому шаблону:
