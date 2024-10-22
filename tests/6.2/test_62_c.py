@@ -1,50 +1,35 @@
 from types import ModuleType
-from typing import Callable, Tuple
+from typing import Callable, Dict
 
+import pandas as pd
 import pytest
 
 from tests import utils
-from tests.data.test_data_62 import c_test_data
+from tests.constants import MEMORY_LIMIT, TIME_LIMIT
+from tests.data.test_data_62 import cheque_test_data
 
 
 @pytest.mark.parametrize(
-    "coefficients, expected_error, _",
-    c_test_data["Errors"],
-    ids=[i[-1] for i in c_test_data["Errors"]],
+    "prices, products, expected_df, unused_df, unused_str",
+    cheque_test_data,
+    ids=[i[-1] for i in cheque_test_data],
 )
-def test_find_roots_error(
+def test_cheque(
     load_module: Callable[[str], ModuleType],
     request: pytest.FixtureRequest,
-    coefficients: Tuple[int | float, int | float, int | float],
-    expected_error: str,
-    _: str,
+    prices: pd.Series,
+    products: Dict[str, int],
+    expected_df: pd.DataFrame,
+    unused_df: pd.DataFrame,  # Df for the D problem
+    unused_str: str,  # A name of the test
 ) -> None:
     file_path, _ = utils.get_tested_file_details(request)
-    solution_module = load_module(file_path)
+    solution = load_module(file_path)
 
-    with pytest.raises(Exception) as exc_info:
-        solution_module.find_roots(*coefficients)
+    decorated_func = utils.memory_limit(MEMORY_LIMIT)(solution.cheque)
+    decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
 
-    assert expected_error == exc_info.type.__name__
+    returned_series = decorated_func(prices, **products)
 
-
-@pytest.mark.parametrize(
-    "coefficients, expected_return, _",
-    c_test_data["Values"],
-    ids=[i[-1] for i in c_test_data["Values"]],
-)
-def test_find_roots(
-    load_module: Callable[[str], ModuleType],
-    request: pytest.FixtureRequest,
-    coefficients: Tuple[int | float, int | float, int | float],
-    expected_return: Tuple[float, float],
-    _: str,
-) -> None:
-    file_path, _ = utils.get_tested_file_details(request)
-    solution_module = load_module(file_path)
-
-    returned = solution_module.find_roots(*coefficients)
-
-    for returned_root, expexted_root in zip(returned, expected_return):
-        assert round(returned_root, 2) == expexted_root
-
+    assert isinstance(returned_series, pd.DataFrame)
+    assert returned_series.equals(expected_df)
