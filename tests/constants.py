@@ -40,3 +40,5 @@ TEST_FUNCTION_NAMES = {
         "j": "make_linear",
     },
 }
+
+TEST_DATA_PATHS = {"6.2": {"i": "tests/data/test_data_62_i.csv"}}
