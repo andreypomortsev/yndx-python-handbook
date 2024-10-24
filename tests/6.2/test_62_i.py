@@ -1,40 +1,37 @@
+from io import StringIO
 from types import ModuleType
-from typing import Callable, Dict
+from typing import Tuple
 
 import pandas as pd
 import pytest
 
-from tests import utils
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
-from tests.data.test_data_62 import get_long_test_data
+from tests.constants import TEST_DATA_PATHS
+from tests.data.test_data_62 import i_test_data
 
 
 @pytest.mark.parametrize(
-    "to_filter, lenght, filtered_series, _",
-    get_long_test_data,
-    ids=[i[-1] for i in get_long_test_data],
+    "limits, expected_output, _",
+    i_test_data,
+    ids=[i[-1] for i in i_test_data],
 )
-def test_get_long(
-    load_module: Callable[[str], ModuleType],
-    request: pytest.FixtureRequest,
-    to_filter: pd.Series,
-    lenght: Dict[str, int],
-    filtered_series: pd.Series,
+def test_endless_sea_battle(
+    monkeypatch: pytest.MonkeyPatch,
+    setup_environment: Tuple[ModuleType, str],
+    limits: str,
+    expected_output: str,
     _: str,
 ) -> None:
-    file_path, _ = utils.get_tested_file_details(request)
-    solution = load_module(file_path)
+    wrapped_module, _ = setup_environment
 
-    decorated_func = utils.memory_limit(MEMORY_LIMIT)(solution.get_long)
-    decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
+    mock_input = StringIO(limits)
+    mock_print = StringIO()
+    monkeypatch.setattr("sys.stdin", mock_input)
+    monkeypatch.setattr("sys.stdout", mock_print)
 
-    to_filter_copy = to_filter.copy()  # Deepcopy
-    returned_series = decorated_func(to_filter, **lenght)
+    mock_data = pd.read_csv(TEST_DATA_PATHS["6.2"]["i"])
+    monkeypatch.setattr("pandas.read_csv", lambda *args, **kwargs: mock_data)
 
-    assert isinstance(returned_series, pd.Series)
-    assert returned_series.equals(filtered_series)
+    wrapped_module.main()
 
-    err_msg = "The function should not modify the input series."
-    assert to_filter_copy.equals(to_filter), err_msg
-
-
+    printed_output = mock_print.getvalue()
+    assert printed_output == expected_output
