@@ -649,11 +649,11 @@ def main():
 | C. [Чек - 2](./solutions/6.2/62_c.py) | [✅](./tests/6.2/test_62_c.py) |
 | D. [Акция](./solutions/6.2/62_d.py) | [✅](./tests/6.2/test_62_d.py) |
 | E. [Длинные слова](./solutions/6.2/62_e.py) | [✅](./tests/6.2/test_62_e.py) |
-| F. [Отчёт успеваемости](./solutions/6.2/62_f.py) | [❌](./tests/6.2/test_62_f.py) |
-| G. [Отчёт неуспеваемости](./solutions/6.2/62_g.py) | [❌](./tests/6.2/test_62_g.py) |
-| H. [Обновление журнала](./solutions/6.2/62_h.py) | [❌](./tests/6.2/test_62_h.py) |
-| I. [Бесконечный морской бой](./solutions/6.2/62_i.py) | [❌](./tests/6.2/test_62_i.py) |
-| J. [Экстремум функции](./solutions/6.2/62_j.py) | [❌](./tests/6.2/test_62_j.py) |
+| F. [Отчёт успеваемости](./solutions/6.2/62_f.py) | [✅](./tests/6.2/test_62_f.py) |
+| G. [Отчёт неуспеваемости](./solutions/6.2/62_g.py) | [✅](./tests/6.2/test_62_g.py) |
+| H. [Обновление журнала](./solutions/6.2/62_h.py) | [✅](./tests/6.2/test_62_h.py) |
+| I. [Бесконечный морской бой](./solutions/6.2/62_i.py) | [✅](./tests/6.2/test_62_i.py) |
+| J. [Экстремум функции](./solutions/6.2/62_j.py) | [✅](./tests/6.2/test_62_j.py) |
 
 </details>
 
