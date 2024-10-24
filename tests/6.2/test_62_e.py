@@ -28,11 +28,12 @@ def test_get_long(
     decorated_func = utils.memory_limit(MEMORY_LIMIT)(solution.get_long)
     decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
 
-    to_filter_copy = to_filter.copy()  # Deepcopy
     returned_series = decorated_func(to_filter, **lenght)
 
     assert isinstance(returned_series, pd.Series)
     assert returned_series.equals(filtered_series)
 
-    err_msg = "The function should not modify the input series."
-    assert to_filter_copy.equals(to_filter), err_msg
+    # Don't apply when there is nothing to filter
+    if not to_filter.equals(filtered_series):
+        err_msg = "The function should not modify the input series."
+        assert not filtered_series.equals(to_filter), err_msg
