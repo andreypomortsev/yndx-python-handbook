@@ -42,3 +42,17 @@ TEST_FUNCTION_NAMES = {
 }
 
 TEST_DATA_PATHS = {"6.2": {"i": "tests/data/test_data_62_i.csv"}}
+TEST_URLS = {"6.3": {"a": "http://127.0.0.1:5000"}}
+
+# ANSI escape codes for colored text
+BLUE = "\033[94m"  # Blue text
+RED = "\033[91m"  # Red text
+RESET = "\033[0m"  # Reset to default text color
+
+TIMEOUT_WARNING = (
+    f"\n\n{BLUE}Missing {RESET}'timeout'{BLUE} parameter in requests.\n"
+    f"This may cause requests to hang {RED}indefinitely.{BLUE}\n"
+    f"Please specify a timeout value.{RESET}\n\n"
+)
+
+WRONG_URL_ERROR = "The request was made to the wrong URL or port."
