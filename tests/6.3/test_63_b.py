@@ -1,40 +1,54 @@
+import warnings
+from io import StringIO
+from itertools import cycle
 from types import ModuleType
-from typing import Callable, Dict
+from typing import Generator, Tuple
+from unittest.mock import Mock
 
-import pandas as pd
 import pytest
 
-from tests import utils
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
-from tests.data.test_data_63 import get_long_test_data
+from tests.constants import TIMEOUT_WARNING, WRONG_URL_ERROR
+from tests.data.test_data_63 import b_test_data
 
 
 @pytest.mark.parametrize(
-    "to_filter, lenght, filtered_series, _",
-    get_long_test_data,
-    ids=[i[-1] for i in get_long_test_data],
+    "url, server_responses, expected_output, _",
+    b_test_data,
+    ids=[i[-1] for i in b_test_data],
 )
-def test_get_long(
-    load_module: Callable[[str], ModuleType],
-    request: pytest.FixtureRequest,
-    to_filter: pd.Series,
-    lenght: Dict[str, int],
-    filtered_series: pd.Series,
+def test_get_sum_from_server(
+    monkeypatch: pytest.MonkeyPatch,
+    setup_environment: Tuple[ModuleType, str],
+    url: str,
+    server_responses: Generator[None, None, int],
+    expected_output: str,
     _: str,
 ) -> None:
-    file_path, _ = utils.get_tested_file_details(request)
-    solution = load_module(file_path)
+    wrapped_module, _ = setup_environment
 
-    decorated_func = utils.memory_limit(MEMORY_LIMIT)(solution.get_long)
-    decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
+    mock_input = StringIO(url)
+    mock_print = StringIO()
+    monkeypatch.setattr("sys.stdin", mock_input)
+    monkeypatch.setattr("sys.stdout", mock_print)
 
-    to_filter_copy = to_filter.copy()  # Deepcopy
-    returned_series = decorated_func(to_filter, **lenght)
+    mock_response = Mock()
+    mock_response.status_code = 200
 
-    assert isinstance(returned_series, pd.Series)
-    assert returned_series.equals(filtered_series)
+    # Make an infinte cycle of the server responces
+    responce_cycle = cycle(server_responses)
 
-    err_msg = "The function should not modify the input series."
-    assert to_filter_copy.equals(to_filter), err_msg
+    def mock_get(*args, **kwargs) -> str:
+        assert url in args[0], WRONG_URL_ERROR
 
+        if "timeout" not in kwargs:
+            warnings.warn(TIMEOUT_WARNING, UserWarning)
 
+        mock_response.text = next(responce_cycle)
+        return mock_response
+
+    monkeypatch.setattr("requests.get", mock_get)
+
+    wrapped_module.main()
+
+    printed_output = mock_print.getvalue().strip()
+    assert printed_output == expected_output
