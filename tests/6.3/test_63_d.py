@@ -35,13 +35,14 @@ def test_get_value(
 
     mock_response = Mock()
     mock_response.status_code = 200
+    mock_response.ok = mock_response.status_code < 400
     mock_response.json = Mock(return_value=server_response)
 
-    def mock_get(*args, **kwargs) -> str:
-        assert url in args[0], WRONG_URL_ERROR
-
+    def mock_get(*args, **kwargs) -> Mock:
         if "timeout" not in kwargs:
             warnings.warn(TIMEOUT_WARNING, UserWarning)
+
+        assert url in args[0], WRONG_URL_ERROR
 
         return mock_response
 
