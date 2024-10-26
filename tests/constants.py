@@ -56,3 +56,4 @@ TIMEOUT_WARNING = (
 )
 
 WRONG_URL_ERROR = "The request was made to the wrong URL or port."
+JSON_ERROR = "The parameter was not a valid/right JSON."
