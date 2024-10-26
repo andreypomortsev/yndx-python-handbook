@@ -28,13 +28,14 @@ def test_localhost(
 
     mock_response = Mock()
     mock_response.status_code = 200
+    mock_response.ok = mock_response.status_code < 400
     mock_response.text = expected_output
 
     def mock_get(*args, **kwargs) -> Mock:
-        assert args[0] == TEST_URLS["6.3"]["a"], WRONG_URL_ERROR
-
         if "timeout" not in kwargs:
             warnings.warn(TIMEOUT_WARNING, UserWarning)
+
+        assert args[0] == TEST_URLS["6.3"]["a"], WRONG_URL_ERROR
 
         return mock_response
 

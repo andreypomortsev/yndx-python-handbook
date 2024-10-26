@@ -242,3 +242,571 @@ e_test_data = [
         "all paths with one element",
     ),
 ]
+
+f_test_data = [
+    (
+        "127.0.0.1:5000",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Иванов Василий\nИванов Виктор\nПетрова Елизавета",
+        "first open test",
+    ),
+    (
+        "127.0.0.1:8080",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Иванов Василий\nИванов Виктор\nПетрова Елизавета",
+        "different port",
+    ),
+    (
+        "192.168.0.1:8080",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Иванов Василий\nИванов Виктор\nПетрова Елизавета",
+        "different ip",
+    ),
+    (
+        "127.0.0.1:8080",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+            {
+                "id": 4,
+                "username": "fourth",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Иванов Василий\nИванов Виктор\nИванов Виктор\nПетрова Елизавета",
+        "repeated names",
+    ),
+    (
+        "127.0.0.1:8080",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+        ],
+        "Петрова Елизавета",
+        "one name",
+    ),
+    (
+        "127.0.0.1:8080",
+        [],
+        "",
+        "empty return",
+    ),
+]
+
+g_test_data = [
+    (
+        "127.0.0.1:5000",
+        2,
+        "Письмо для: {email}\n"
+        "Здравствуйте, {last_name} {first_name}\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!\n",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Письмо для: vas.ivanov@server.none\n"
+        "Здравствуйте, Иванов Василий\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!",
+        "first open test",
+    ),
+    (
+        "127.0.0.1:8080",
+        2,
+        "Письмо для: {email}\n"
+        "Здравствуйте, {last_name} {first_name}\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!\n",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Письмо для: vas.ivanov@server.none\n"
+        "Здравствуйте, Иванов Василий\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!",
+        "different port",
+    ),
+    (
+        "8.8.8.8:8080",
+        2,
+        "Письмо для: {email}\n"
+        "Здравствуйте, {last_name} {first_name}\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!\n",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Письмо для: vas.ivanov@server.none\n"
+        "Здравствуйте, Иванов Василий\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!",
+        "different ip",
+    ),
+    (
+        "127.0.0.1:8080",
+        1,
+        "Письмо для: {email}\n"
+        "Здравствуйте, {last_name} {first_name}\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!\n",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Письмо для: e.petrova@server.none\n"
+        "Здравствуйте, Петрова Елизавета\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!",
+        "different user id",
+    ),
+    (
+        "127.0.0.1:8080",
+        4,
+        "Письмо для: {email}\n"
+        "Здравствуйте, {last_name} {first_name}\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!\n",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Пользователь не найден",
+        "No user found",
+    ),
+    (
+        "127.0.0.1:8080",
+        4,
+        "Письмо для: {email}\n"
+        "Здравствуйте, {last_name} {first_name}\n"
+        "Мы рады сообщить вам о предстоящей акции!\n"
+        "Все подробности на нашем сайте\n"
+        "С уважением, команда тестового сервера!\n",
+        [],
+        "Пользователь не найден",
+        "No user found empty response",
+    ),
+    (
+        "127.0.0.1:8080",
+        1,
+        "Письмо для: {email}\n"
+        "Здравствуйте, {username}\n"
+        "Мы обнаружили подозрительную активность на Вашем аккаунте и временно его заморозили.\n"
+        "Все подробности на нашем сайте: https://www.linkedin.com/in/andreypomortsev/\n"
+        "С уважением, команда тестового сервера!\n",
+        [
+            {
+                "id": 1,
+                "username": "first",
+                "last_name": "Петрова",
+                "first_name": "Елизавета",
+                "email": "e.petrova@server.none",
+            },
+            {
+                "id": 2,
+                "username": "second",
+                "last_name": "Иванов",
+                "first_name": "Василий",
+                "email": "vas.ivanov@server.none",
+            },
+            {
+                "id": 3,
+                "username": "third",
+                "last_name": "Иванов",
+                "first_name": "Виктор",
+                "email": "vik.ivanov@server.none",
+            },
+        ],
+        "Письмо для: e.petrova@server.none\n"
+        "Здравствуйте, first\n"
+        "Мы обнаружили подозрительную активность на Вашем аккаунте и временно его заморозили.\n"
+        "Все подробности на нашем сайте: https://www.linkedin.com/in/andreypomortsev/\n"
+        "С уважением, команда тестового сервера!",
+        "different message",
+    ),
+]
+
+h_test_data = [
+    (
+        (
+            "127.0.0.1:5000",
+            "fourth",
+            "Петров",
+            "Кирилл",
+            "k.petrov@server.none",
+        ),
+        {
+            "username": "fourth",
+            "last_name": "Петров",
+            "first_name": "Кирилл",
+            "email": "k.petrov@server.none",
+        },
+        "first open test",
+    ),
+    (
+        (
+            "127.0.0.1:8081",
+            "fourth",
+            "Петров",
+            "Кирилл",
+            "k.petrov@server.none",
+        ),
+        {
+            "username": "fourth",
+            "last_name": "Петров",
+            "first_name": "Кирилл",
+            "email": "k.petrov@server.none",
+        },
+        "different port",
+    ),
+    (
+        (
+            "192.168.0.1:5000",
+            "fourth",
+            "Петров",
+            "Кирилл",
+            "k.petrov@server.none",
+        ),
+        {
+            "username": "fourth",
+            "last_name": "Петров",
+            "first_name": "Кирилл",
+            "email": "k.petrov@server.none",
+        },
+        "different ip",
+    ),
+    (
+        (
+            "127.0.0.1:5000",
+            "fourth",
+            "Петров",
+            "Кирилл",
+            "k.petrov@server.none",
+        ),
+        {
+            "username": "fourth",
+            "last_name": "Петров",
+            "first_name": "Кирилл",
+            "email": "k.petrov@server.none",
+        },
+        "first user",
+    ),
+    (
+        (
+            "192.168.0.1:5000",
+            "first",
+            "Петрова",
+            "Елизавета",
+            "e.petrova@server.none",
+        ),
+        {
+            "username": "first",
+            "last_name": "Петрова",
+            "first_name": "Елизавета",
+            "email": "e.petrova@server.none",
+        },
+        "different user",
+    ),
+]
+
+i_test_data = [
+    (
+        (
+            "127.0.0.1:5000",
+            "2",
+            "username=ivanov_vasily",
+            "email=ivanov_vasily@server.none",
+        ),
+        {
+            "username": "ivanov_vasily",
+            "email": "ivanov_vasily@server.none",
+        },
+        "first open test",
+    ),
+    (
+        (
+            "127.0.0.1:8080",
+            "2",
+            "username=ivanov_vasily",
+            "email=ivanov_vasily@server.none",
+        ),
+        {
+            "username": "ivanov_vasily",
+            "email": "ivanov_vasily@server.none",
+        },
+        "different port",
+    ),
+    (
+        (
+            "192.168.0.1:5000",
+            "2",
+            "username=ivanov_vasily",
+            "email=ivanov_vasily@server.none",
+        ),
+        {
+            "username": "ivanov_vasily",
+            "email": "ivanov_vasily@server.none",
+        },
+        "different ip",
+    ),
+    (
+        (
+            "192.168.0.1:5000",
+            "2",
+            "username=first",
+            "last_name=Петрова",
+            "first_name=Елизавета",
+            "email=e.petrova@server.none",
+        ),
+        {
+            "username": "first",
+            "last_name": "Петрова",
+            "first_name": "Елизавета",
+            "email": "e.petrova@server.none",
+        },
+        "all fields",
+    ),
+    (
+        (
+            "192.168.0.1:5000",
+            "2",
+            "username=new_first",
+        ),
+        {
+            "username": "new_first",
+        },
+        "change username",
+    ),
+    (
+        (
+            "192.168.0.1:5000",
+            "2",
+            "last_name=Петрова",
+        ),
+        {
+            "last_name": "Петрова",
+        },
+        "change last name",
+    ),
+    (
+        (
+            "192.168.0.1:5000",
+            "2",
+            "first_name=Елизавета",
+        ),
+        {
+            "first_name": "Елизавета",
+        },
+        "change first name",
+    ),
+    (
+        ("192.168.0.1:5000", "2", "email=e.petrova@server.none"),
+        {"email": "e.petrova@server.none"},
+        "change email",
+    ),
+]
+
+j_test_data = [
+    (("127.0.0.1:5000", "2"), "first open test"),
+    (("127.0.0.1:8080", "2"), "different port"),
+    (("192.168.0.1:5000", "2"), "different ip"),
+    (("192.168.0.1:5000", "1"), "different user_id"),
+]

@@ -33,15 +33,16 @@ def test_get_sum_from_server(
 
     mock_response = Mock()
     mock_response.status_code = 200
+    mock_response.ok = mock_response.status_code < 400
 
     # Make an infinte cycle of the server responces
     responce_cycle = cycle(server_responses)
 
-    def mock_get(*args, **kwargs) -> str:
-        assert url in args[0], WRONG_URL_ERROR
-
+    def mock_get(*args, **kwargs) -> Mock:
         if "timeout" not in kwargs:
             warnings.warn(TIMEOUT_WARNING, UserWarning)
+
+        assert url in args[0], WRONG_URL_ERROR
 
         mock_response.text = next(responce_cycle)
         return mock_response
