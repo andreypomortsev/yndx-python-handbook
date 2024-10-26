@@ -671,11 +671,11 @@ def main():
 | C. [Суммирование ответов 2](./solutions/6.3/63_c.py) | [✅](./tests/6.3/test_63_c.py) |
 | D. [Конкретное значение](./solutions/6.3/63_d.py) | [✅](./tests/6.3/test_63_d.py) |
 | E. [Суммирование ответов 3](./solutions/6.3/63_e.py) | [✅](./tests/6.3/test_63_e.py) |
-| F. [Список пользователей](./solutions/6.3/63_f.py) | [❌](./tests/6.3/test_63_f.py) |
-| G. [Рассылка сообщений](./solutions/6.3/63_g.py) | [❌](./tests/6.3/test_63_g.py) |
-| H. [Регистрация нового пользователя](./solutions/6.3/63_h.py) | [❌](./tests/6.3/test_63_h.py) |
-| I. [Изменение данных](./solutions/6.3/63_i.py) | [❌](./tests/6.3/test_63_i.py) |
-| J. [Удаление данных](./solutions/6.3/63_j.py) | [❌](./tests/6.3/test_63_j.py) |
+| F. [Список пользователей](./solutions/6.3/63_f.py) | [✅](./tests/6.3/test_63_f.py) |
+| G. [Рассылка сообщений](./solutions/6.3/63_g.py) | [✅](./tests/6.3/test_63_g.py) |
+| H. [Регистрация нового пользователя](./solutions/6.3/63_h.py) | [✅](./tests/6.3/test_63_h.py) |
+| I. [Изменение данных](./solutions/6.3/63_i.py) | [✅](./tests/6.3/test_63_i.py) |
+| J. [Удаление данных](./solutions/6.3/63_j.py) | [✅](./tests/6.3/test_63_j.py) |
 
 </details>
 
