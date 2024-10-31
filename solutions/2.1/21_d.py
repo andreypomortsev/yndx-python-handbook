@@ -1,4 +1,6 @@
-price = 38
-weight = 2.5
+PRICE = 38
+WEIGHT = 2.5
+
 bill = int(input())
-print(bill - int(price * weight))
+
+print(bill - int(PRICE * WEIGHT))

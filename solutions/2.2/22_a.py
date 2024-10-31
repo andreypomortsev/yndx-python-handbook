@@ -1,7 +1,7 @@
 name = input("Как Вас зовут?\n")
 print(f"Здравствуйте, {name}!")
-print("Как дела?")
-whatsapp = input()
+whatsapp = input("Как дела?\n")
+
 match whatsapp:
     case "плохо":
         print("Всё наладится!")

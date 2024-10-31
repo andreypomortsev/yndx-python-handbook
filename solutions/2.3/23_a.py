@@ -1,6 +1,3 @@
-while shouts := input():
-    if "три!" == shouts.lower():
-        print("Ёлочка, гори!")
-        break
-    else:
-        print("Режим ожидания...")
+while (shouts := input()) != "Три!":
+    print("Режим ожидания...")
+print("Ёлочка, гори!")

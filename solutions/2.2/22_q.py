@@ -12,13 +12,13 @@ if not a:
 else:
     discriminant = b**2 - 4 * a * c
     if discriminant >= 0:
-        root1 = round((-b + discriminant**0.5) / (2 * a), 2)
-        root2 = round((-b - discriminant**0.5) / (2 * a), 2)
+        root_one = round((-b + discriminant**0.5) / (2 * a), 2)
+        root_two = round((-b - discriminant**0.5) / (2 * a), 2)
         if not discriminant:
-            print(root2)
-        elif root1 < root2:  # Условие выполняется при a < 0
-            print(root1, root2)
+            print(root_two)
+        elif root_one < root_two:  # Условие выполняется при a < 0
+            print(root_one, root_two)
         else:
-            print(root2, root1)
+            print(root_two, root_one)
     else:  # Дискриминант меньше 0
         print("No solution")
