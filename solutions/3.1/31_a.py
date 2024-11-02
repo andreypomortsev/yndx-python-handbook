@@ -1,9 +1,9 @@
-CHARS = {"а", "б", "в"}
 n = int(input())
 
 for _ in range(n):
     word = input()
-    if word[0].lower() not in CHARS:
+    first_letter = word[0]
+    if first_letter != "а" and first_letter != "б" and first_letter != "в":
         print("NO")
         break
 else:
