@@ -21,7 +21,7 @@ def test_merge_sort(
 
     returned_output = wrapped_module.merge_sort(unsorted_list)
     error_msg = (
-        "Функция `merge_sort` должна быть реализована " "при помощи рекурсии."
+        "Функция `merge_sort` должна быть реализована при помощи рекурсии."
     )
     try:
         assert (
