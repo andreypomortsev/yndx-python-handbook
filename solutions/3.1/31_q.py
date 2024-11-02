@@ -1,13 +1,14 @@
 translator = str.maketrans("", "", " ")
 word = input().translate(translator).lower()
 
-n = len(word)
-mid = n // 2
+left_index = 0
+right_index = len(word) - 1
 
-mid_odd = mid + n % 2
-is_poli = word[:mid] == word[mid_odd:][::-1]
-
-if is_poli:
-    print("YES")
+while left_index < right_index:
+    if word[left_index] != word[right_index]:
+        print("NO")
+        break
+    left_index += 1
+    right_index -= 1
 else:
-    print("NO")
+    print("YES")

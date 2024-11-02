@@ -5,13 +5,15 @@ for char in chars:
     if char.lstrip("-").isdigit():
         stack.append(int(char))
     else:
+        b = stack.pop()
+        a = stack.pop()
         match char:
             case "+":
-                new_number = stack.pop() + stack.pop()
+                result = a + b
             case "-":
-                new_number = stack.pop(-2) - stack.pop()
+                result = a - b
             case "*":
-                new_number = stack.pop() * stack.pop()
-        stack.append(new_number)
+                result = a * b
+        stack.append(result)
 
 print(stack.pop())

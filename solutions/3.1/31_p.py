@@ -2,8 +2,7 @@ max_length = int(input()) - 3  # Поправка на ...
 n = int(input())
 
 headlines = []
-all_lengths = 0
-cum_length = 0
+cum_length = all_lengths = 0
 
 for _ in range(n):
     line = input()
