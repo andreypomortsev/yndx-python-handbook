@@ -1,14 +1,13 @@
-gcd = None
+a = None
 
 for number in input().split():
-    if gcd is None:
-        gcd = int(number)
+    if a is None:
+        a = int(number)
         continue
 
-    a, b = gcd, int(number)
+    b = int(number)
     while b:
         a, b = b, a % b
-    gcd = a
 
-gcd = gcd if gcd > 0 else -gcd
+gcd = a if a > 0 else -a
 print(gcd)
