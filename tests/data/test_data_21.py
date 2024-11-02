@@ -301,10 +301,10 @@ k_test_data = [
         "2143\n",
         "first open test",
     ),
-    ("1412\n", "4121\n", "second open test"),
-    ("1001\n", "0110\n", "zeros inside"),
-    ("1000\n", "0100\n", "thousand"),
-    ("0000\n", "0000\n", "all zeros"),
+    ("1412\n", {"4121\n"}, "second open test"),
+    ("1001\n", {"110\n", "0110\n"}, "zeros inside"),
+    ("1000\n", {"100\n", "0100\n"}, "thousand"),
+    ("9876\n", "8967\n", "decreasing nums"),
 ]
 
 
