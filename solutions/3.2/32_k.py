@@ -8,7 +8,7 @@ for _ in range(n):
     last_names_counter[last_name] += 1
 
 result = 0
-for _, counter in last_names_counter.items():
+for counter in last_names_counter.values():
     result += counter if counter > 1 else 0
 
 print(result)
