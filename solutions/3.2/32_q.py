@@ -1,3 +1,4 @@
+# Теория Графов
 from collections import defaultdict
 
 friends = defaultdict(set)
