@@ -12,4 +12,4 @@ elif unique_children == n == m:
 
 # Вычитаем из уникальных фамилий не уникальные
 else:
-    print(unique_children - (n + m - unique_children))
+    print(2 * unique_children - n - m)

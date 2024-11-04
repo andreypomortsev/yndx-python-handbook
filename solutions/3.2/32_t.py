@@ -1,16 +1,17 @@
-numbers = sorted(set(map(int, input().split("; "))))
+numbers = sorted(set(map(int, input().split(";"))))
 n = len(numbers)
 
 for i in range(n):
     co_primes = []
     for j in range(n):
-        if i != j:
-            a, b = numbers[i], numbers[j]
+        a, b = numbers[i], numbers[j]
+        if a > 1 < b and i != j:
             while b:
                 a, b = b, a % b
             if a == 1:
-                co_primes.append(numbers[j])
+                co_primes.append(str(numbers[j]))
 
     if co_primes:
-        print(f"{numbers[i]} - ", end="")
-        print(*co_primes, sep=", ")
+        co_primes_str = ", ".join(co_primes)
+        answer = f"{numbers[i]} - {co_primes_str}"
+        print(answer)

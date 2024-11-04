@@ -3,6 +3,7 @@ preferences = {}
 
 for _ in range(n):
     line = input().split()
+    # Last name -> porridge (might be plural)
     preferences[line[0]] = set(line[1:])
 
 searching_porrigde = input()

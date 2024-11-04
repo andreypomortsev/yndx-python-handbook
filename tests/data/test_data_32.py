@@ -51,6 +51,14 @@ c_test_data = [
         ["березка\nелочка\nзайка\n"],
         "second open test",
     ),
+    (
+        "1\nзайка березка "
+        "березка зайка "
+        "березка елочка березка "
+        "елочка елочка елочка ",
+        ["березка\nелочка\nзайка\n"],
+        "one line",
+    ),
 ]
 d_test_data = [
     (
@@ -67,6 +75,26 @@ d_test_data = [
         "Васечкин\n",
         "3\n",
         "second open test",
+    ),
+    (
+        "1\n5\nИванов\n"
+        "Петрова\n"
+        "Васечкина\n"
+        "Иванов\n"
+        "Петров\n"
+        "Васечкин\n",
+        "1\n",
+        "one from first group",
+    ),
+    (
+        "5\n1\nИванова\n"
+        "Петрова\n"
+        "Васечкин\n"
+        "Иванов\n"
+        "Петров\n"
+        "Васечкин\n",
+        "1\n",
+        "one from second group",
     ),
 ]
 
@@ -379,31 +407,53 @@ n_test_data = [
 o_test_data = [
     (
         "5 8 12\n",
-        [
-            {"digits": 3, "units": 2, "zeros": 1},
-            {"digits": 4, "units": 1, "zeros": 3},
-            {"digits": 4, "units": 2, "zeros": 2},
-        ],
+        str(
+            [
+                {"digits": 3, "units": 2, "zeros": 1},
+                {"digits": 4, "units": 1, "zeros": 3},
+                {"digits": 4, "units": 2, "zeros": 2},
+            ]
+        ),
         "first open test",
     ),
     (
         "13 2 7\n",
-        [
-            {"digits": 4, "units": 3, "zeros": 1},
-            {"digits": 2, "units": 1, "zeros": 1},
-            {"digits": 3, "units": 3, "zeros": 0},
-        ],
+        str(
+            [
+                {"digits": 4, "units": 3, "zeros": 1},
+                {"digits": 2, "units": 1, "zeros": 1},
+                {"digits": 3, "units": 3, "zeros": 0},
+            ]
+        ),
         "second open test",
     ),
-    ("0\n", [{"digits": 1, "units": 0, "zeros": 1}], "zero test"),
+    ("0\n", str([{"digits": 1, "units": 0, "zeros": 1}]), "zero test"),
     (
         "123456 78 90\n",
-        [
-            {"digits": 17, "units": 6, "zeros": 11},
-            {"digits": 7, "units": 4, "zeros": 3},
-            {"digits": 7, "units": 4, "zeros": 3},
-        ],
+        str(
+            [
+                {"digits": 17, "units": 6, "zeros": 11},
+                {"digits": 7, "units": 4, "zeros": 3},
+                {"digits": 7, "units": 4, "zeros": 3},
+            ]
+        ),
         "digits",
+    ),
+    (
+        "100200230 3120310123120 312321321123 221412388341738 34242349258348392 "
+        "221412388341738221412388341738 22141342423492583483922388341738\n",
+        str(
+            [
+                {"digits": 27, "units": 17, "zeros": 10},
+                {"digits": 42, "units": 22, "zeros": 20},
+                {"digits": 39, "units": 19, "zeros": 20},
+                {"digits": 48, "units": 26, "zeros": 22},
+                {"digits": 55, "units": 31, "zeros": 24},
+                {"digits": 98, "units": 48, "zeros": 50},
+                {"digits": 105, "units": 53, "zeros": 52},
+            ]
+        ),
+        "huge nums",
     ),
 ]
 
@@ -762,13 +812,8 @@ t_test_data = [
         "non-prime numbers",
     ),
     (
-        "1; 2; 4; 8; 16; 32\n",
-        "1 - 2, 4, 8, 16, 32\n"
-        "2 - 1\n"
-        "4 - 1\n"
-        "8 - 1\n"
-        "16 - 1\n"
-        "32 - 1\n",
+        "1; 2; 1; 4; 8; 16; 32\n",
+        "",
         "powers of 2",
     ),
 ]
