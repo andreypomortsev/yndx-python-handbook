@@ -12,5 +12,6 @@ for i in range(n):
                 co_primes.append(str(numbers[j]))
 
     if co_primes:
-        answer = f"{numbers[i]} - {", ".join(co_primes)}"
+        co_primes_str = ", ".join(co_primes)
+        answer = f"{numbers[i]} - {co_primes_str}"
         print(answer)
