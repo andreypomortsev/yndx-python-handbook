@@ -12,99 +12,229 @@ _"Хендбук по Python поможет овладеть основным с
 
 ### Описание Проекта
 
-Решения написаны мной, но некоторые тестовые данные могут быть позаимствованы из [одноименного](https://t.me/handbook_python) телеграм канала. Решение задач подразумевает использование знаний полученных после изучения соответствующего параграфа.
-Так же я решил покрыть тестами все свои решения, тесты не совпадают на 100% с тестами в учебнике, но при замене моего решения на ваш код, можно будет понять на каких данных не работает код или какие строчки не покрыты тестами (эти строки могут быть лишними).
+Решения написаны мной, но некоторые тестовые данные могут быть позаимствованы из [одноименного](https://t.me/handbook_python) телеграм канала. При решении задач я придерживаюсь последовательности, в которой излагается материал в учебнике. Это значит, что, например, до модуля 4 я не использую функции, а до модуля 3 — списки/множества/словари. Такой подход помогает лучше понять материал и принципы работы со структурами данных.
+
+Кроме того, я добавил тесты для всех своих решений. Эти тесты не полностью совпадают с теми, что приведены в учебнике, но вы можете запустить их с вашим кодом, чтобы проверить, на каких данных ваш код не работает или какие строки остались непроверенными.
 
 ## Установка
 
-### Все протестированно на следующих версиях
+### Требования
 
-- [**Python 3.11**](https://www.python.org/downloads/release/python-31110/)
-- [**Python 3.12**](https://www.python.org/downloads/release/python-3127/)
-- [**Python 3.13**](https://www.python.org/downloads/release/python-3130/)
+#### Python 3.11+
 
-### Клонируем репозиторий
+- [Python 3.11](https://www.python.org/downloads/release/python-31110/)
+- [Python 3.12](https://www.python.org/downloads/release/python-3127/)
+- [Python 3.13](https://www.python.org/downloads/release/python-3130/)
+
+#### Git
+
+- [Скачать Git](https://git-scm.com/downloads)
+
+#### Poetry
+
+##### Установка Poetry
+
+- **Windows**:
+
+  ```powershell
+  (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+  ```
+
+- **Unix-like OS (Linux/macOS)**:
+
+  ```sh
+  curl -sSL https://install.python-poetry.org | python3 -
+  ```
+
+##### Проверка успешной установки Poetry
+
+```sh
+poetry --version
+```
+
+### Настройка проекта
+
+#### Клонируем репозиторий
 
 ```sh
 git clone https://github.com/andreypomortsev/yndx-python-handbook
 cd yndx-python-handbook
 ```
 
-### Устанавлваем poetry и создаем виртуальую среду
+#### Установка зависимостей и создание виртуальной среды
 
-```sh
-make setup
-```
+- **Windows**:
 
-### Форматируем код по PEP8
+  ```powershell
+  pip install poetry -q
+  poetry install
+  poetry shell
+  ```
 
-```sh
-make format
-```
+- **Unix-like OS (Linux/macOS)**:
 
-### Запускаем тесты
-
-Все тесты в репозитории:
-
-```sh
-make test
-```
-
-Все тесты в дебаг моде:
-
-```sh
-make debug
-```
-
-Все тесты одного парагарафа (вместо `2.1` укажите нужный параграф) приведенный код запустит тесты для всех задач из параграфа [2.1](./solutions/2.1/):
-
-```sh
-make test-dir-2.1
-```
-
-- На macOS и Linux:
-
-  Тест одной задачи (вместо `2.3` укажите нужный параграф, вместо `Q` или `q` укажите тест для нужной задачи) приведенный код запустит тесты для задачи **Q. Чётная чистота**  из парагарафа [2.3](./solutions/2.3/).
-  
-  **Важно**
-  
-  Команда запускает [скрипт](fileTest.sh), рекомендую проверить его перед запуском команды, если его содержимое вам не понятно - используйте способ тестирования для **Windows**
-  
   ```sh
-  make test-file-2.3-Q
+  make setup
   ```
 
-- На Windows:
+## Команды для разработки
 
-  ```PowerShell
-  poetry run pytest tests\2.3\test_23_q.py && make clean
+### Форматирование кода (PEP8)
+
+- **Windows**:
+
+  ```powershell
+  poetry run black . --line-length=79
+  poetry run isort .
   ```
 
-Тесты с отчетом в `html`:
+- **Unix-like OS (Linux/macOS)**:
 
-```sh
-make test-report-html
-```
+  ```sh
+  make format
+  ```
 
-после прохождения тестов открываем файл: `htmlcov/index.html`
+### Запуск тестов
 
-Тесты с отчетом в `xml`:
+- **Все тесты в репозитории**:
 
-```sh
-make test-report-xml
-```
+  - **Windows**:
 
-### Запуск линтера flake8
+    ```powershell
+    poetry run pytest
+    ```
 
-```sh
-make lint
-```
+  - **Unix-like OS (Linux/macOS)**:
 
-### Запуск форматтера black и сортировки импортов isort
+    ```sh
+    make test
+    ```
 
-```sh
-make format
-```
+- **Тесты в дебаг-режиме**:
+
+  - **Windows**:
+
+    ```powershell
+    poetry run pytest -vv
+    ```
+
+  - **Unix-like OS (Linux/macOS)**:
+
+    ```sh
+    make debug
+    ```
+
+- **Запуск тестов для отдельного параграфа (например, 2.1)**:
+
+  - **Windows**:
+
+    ```powershell
+    poetry run pytest tests\2.1
+    ```
+
+  - **Unix-like OS (Linux/macOS)**:
+
+    ```sh
+    make test-dir-2.1
+    ```
+
+- **Запуск теста для одной задачи (например, тест задачи Q в параграфе 2.3)**:
+
+  - **Windows**:
+
+    ```powershell
+    poetry run pytest tests\2.3\test_23_q.py
+    ```
+
+  - **Unix-like OS (Linux/macOS)**:
+
+    ```sh
+    make test-file-2.3-Q
+    ```
+
+### Генерация отчётов покрытия тестами
+
+- **HTML Отчёт**:
+
+  - **Windows**:
+
+    ```powershell
+    poetry run pytest --cov-report=html
+    ```
+
+  - **Unix-like OS (Linux/macOS)**:
+
+    ```sh
+    make test-report-html
+    ```
+
+  После выполнения откройте файл `htmlcov/index.html` для просмотра отчёта.
+
+- **XML Отчёт**:
+
+  - **Windows**:
+
+    ```powershell
+    poetry run pytest --cov-report=xml
+    ```
+
+  - **Unix-like OS (Linux/macOS)**:
+
+    ```sh
+    make test-report-xml
+    ```
+
+### Линтинг с flake8
+
+- **Windows**:
+
+  ```powershell
+  poetry run flake8 .
+  ```
+
+- **Unix-like OS (Linux/macOS)**:
+
+  ```sh
+  make lint
+  ```
+
+### Форматирование кода с black и isort
+
+- **Windows**:
+
+  ```powershell
+  poetry run black . --line-length=79
+  poetry run isort .
+  ```
+
+- **Unix-like OS (Linux/macOS)**:
+
+  ```sh
+  make format
+  ```
+
+### Удаление лишних файлов
+
+- **Windows**:
+
+  ```powershell
+  find . -name '*.pyc' -delete
+  find . -name '__pycache__' -delete
+  find ../. -name '.coverage' -delete
+  ```
+
+- **Unix-like OS (Linux/macOS)**:
+
+  ```sh
+  make clean
+  ```
+
+---
+
+### Примечания
+
+- Для пользователей **Windows**: все команды выполняются через `poetry run`, чтобы обеспечить совместимость с системой.
+- Для пользователей **Unix-like OS**: можно использовать как `make` для упрощения команд, так и команды для **Windows**.
 
 
 Во время теста в папке `tests` временно создаются файлы `wrapped_*.py`.
@@ -112,7 +242,11 @@ make format
 <details>
 <summary><h4>Почему создаются временные файлы?</h4></summary>
 
-Для определения покрытия кода тестами обычно импортируется тестируемая функция, и инструмент coverage может наблюдать, какие строки исполнялись, а какие нет. Когда в файле решений нет функций, как в первых трех параграфах учебника, когда ещё не задано определение функции, мы можем протестировать код из файла, но не получить покрытия строк тестами. Поэтому я написал функцию `wrap_answer` [см. здесь](./tests/conftest.py). Эта функция запускается при старте тестов с параметрами: путь к тестируемому файлу и имя этого файла. Она считывает содержимое решения задачи из заданного файла, оборачивает его в функцию main и сохраняет в файл с именем `wrapped_(адрес папки)_(буква задачи).py`. Уже этот файл проверяется тестами, и coverage видит, какие строки выполнялись, а какие нет, что позволяет получить информацию о покрытии тестами решения.
+Чтобы отслеживать, насколько тесты покрывают код, обычно импортируют тестируемую функцию, и инструмент `coverage` показывает, какие строки были выполнены, а какие нет. Однако в первых трех параграфах учебника, где еще не введены функции, решения представлены просто как последовательность команд без определения функции. 
+
+В таких случаях мы можем протестировать код напрямую из файла, но не получим данных о покрытии строк. Чтобы обойти это ограничение, я написал функцию `wrap_answer` ([см. здесь](./tests/conftest.py)). Эта функция запускается при старте тестов и принимает параметры: путь к тестируемому файлу и имя файла. Она читает код задачи из файла, оборачивает его в функцию `main`, и сохраняет результат в файл `wrapped_(адрес папки)_(буква задачи).py`. Затем уже этот новый файл тестируется, и `coverage` фиксирует, какие строки были выполнены. Благодаря этому становится возможным отслеживать покрытие строк даже для кода, написанного без функций.
+
+Кроме того, оборачивание кода в функцию `main` нужно для измерения потребляемой памяти и времени выполнения кода. Функция `wrap_answer` добавляет к обертке декораторы `@time_limit` и `@memory_limit`, которые устанавливают ограничения на время исполнения и объем памяти, выделяемой для задачи. Эти ограничения задаются константами `TIME_LIMIT` и `MEMORY_LIMIT` и контролируются в тестах.
 
 **Пример:**
 
@@ -134,17 +268,16 @@ if not a:
 else:
     discriminant = b**2 - 4 * a * c
     if discriminant >= 0:
-        root1 = round((-b + discriminant**0.5) / (2 * a), 2)
-        root2 = round((-b - discriminant**0.5) / (2 * a), 2)
+        root_one = round((-b + discriminant**0.5) / (2 * a), 2)
+        root_two = round((-b - discriminant**0.5) / (2 * a), 2)
         if not discriminant:
-            print(root2)
-        elif root1 < root2:  # Условие выполняется при a < 0
-            print(root1, root2)
+            print(root_two)
+        elif root_one < root_two:  # Условие выполняется при a < 0
+            print(root_one, root_two)
         else:
-            print(root2, root1)
+            print(root_two, root_one)
     else:  # Дискриминант меньше 0
         print("No solution")
-
 ```
 
 Файл `wrapped_22_q.py` после применения `wrap_answer` к `22_q.py`:
@@ -162,25 +295,25 @@ def main():
     c = float(input())
 
     if not a:
-      if not b and not c:  # a == b == c == 0
-          print("Infinite solutions")
-      elif not b and c:  # a == b == 0 and c != 0
-          print("No solution")
-      else:  # a == 0 and b != 0 линейное уравнение
-          print(round(-c / b, 2))
+        if not b and not c:  # a == b == c == 0
+            print("Infinite solutions")
+        elif not b and c:  # a == b == 0 and c != 0
+            print("No solution")
+        else:  # a == 0 and b != 0 линейное уравнение
+            print(round(-c / b, 2))
     else:
-      discriminant = b**2 - 4 * a * c
-      if discriminant >= 0:
-          root1 = round((-b + discriminant**0.5) / (2 * a), 2)
-          root2 = round((-b - discriminant**0.5) / (2 * a), 2)
-          if not discriminant:
-              print(root2)
-          elif root1 < root2:  # Условие выполняется при a < 0
-              print(root1, root2)
-          else:
-              print(root2, root1)
-      else:  # Дискриминант меньше 0
-          print("No solution")
+        discriminant = b**2 - 4 * a * c
+        if discriminant >= 0:
+            root_one = round((-b + discriminant**0.5) / (2 * a), 2)
+            root_two = round((-b - discriminant**0.5) / (2 * a), 2)
+            if not discriminant:
+                print(root_two)
+            elif root_one < root_two:  # Условие выполняется при a < 0
+                print(root_one, root_two)
+            else:
+                print(root_two, root_one)
+        else:  # Дискриминант меньше 0
+            print("No solution")
 ```
 
 После того как отчет по покрытию готов, файлы удаляются.
