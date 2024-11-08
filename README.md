@@ -16,23 +16,105 @@ _"Хендбук по Python поможет овладеть основным с
 
 Кроме того, я добавил тесты для всех своих решений. Эти тесты не полностью совпадают с теми, что приведены в учебнике, но вы можете запустить их с вашим кодом, чтобы проверить, на каких данных ваш код не работает или какие строки остались непроверенными.
 
+### Предварительные требования
+
+- **Python**: Убедитесь, что у вас установлена версия Python 3.11 или выше. Скачать можно по ссылкам:
+  - [**Python 3.11**](https://www.python.org/downloads/release/python-31110/)
+  - [**Python 3.12**](https://www.python.org/downloads/release/python-3127/)
+  - [**Python 3.13**](https://www.python.org/downloads/release/python-3130/)
+
+- **Git**: Потребуется для клонирования репозитория. [Скачать Git](https://git-scm.com/downloads).
+
 ## Установка
 
-### Требования
+<details>
+<summary><h3>Инструкция по установке и запуску команд для начинающих</h3></summary>
 
-#### Python 3.11+
+### Шаги установки (без использования venv)
 
-- [Python 3.11](https://www.python.org/downloads/release/python-31110/)
-- [Python 3.12](https://www.python.org/downloads/release/python-3127/)
-- [Python 3.13](https://www.python.org/downloads/release/python-3130/)
+1. **Клонируйте репозиторий**:
+   ```bash
+   git clone https://github.com/andreypomortsev/yndx-python-handbook
+   cd yndx-python-handbook
+   ```
 
-#### Git
+2. **Установите зависимости**:
+   Установите все необходимые пакеты из файла `requirements.txt`:
 
-- [Скачать Git](https://git-scm.com/downloads)
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-#### Poetry
+#### Форматирование кода по PEP8
 
-##### Установка Poetry
+Для форматирования кода с использованием `black` и сортировка импортов `isort`:
+```bash
+black . --line-length=79
+isort .
+```
+
+#### Запуск всех тестов
+
+Запустите все тесты из директории `tests`:
+```bash
+pytest
+```
+
+#### Запуск всех тестов в режиме отладки
+
+Чтобы увидеть расширенные логи во время тестов:
+```bash
+pytest -vv
+```
+
+#### Запуск тестов для конкретного параграфа
+
+Чтобы запустить тесты только для задач в определенной папке (например, `2.1`), используйте:
+```bash
+pytest tests/2.1
+```
+
+#### Запуск тестов для конкретной задачи
+
+Для тестирования отдельной задачи (например, задачи `Q` из папки `2.3`):
+```bash
+pytest tests/2.3/test_23_q.py
+```
+
+#### Создание отчета о покрытии тестами в формате HTML
+
+Чтобы сгенерировать HTML-отчет по покрытию:
+```bash
+pytest --cov-report html
+```
+
+После выполнения этой команды отчет будет доступен в `htmlcov/index.html`.
+
+#### Создание отчета о покрытии тестами в формате XML
+
+Для генерации отчета в формате XML:
+```bash
+pytest --cov-report xml
+```
+
+#### Запуск линтера flake8
+
+Чтобы проверить код на ошибки стиля и потенциальные проблемы:
+```bash
+flake8 .
+```
+
+---
+
+##### Примечание
+Эти команды позволяют вручную выполнять все основные задачи по тестированию и форматированию кода в проекте.
+
+</details>
+
+<details>
+<summary><h3>Инструкция по установке и запуску команд с Poetry</h3></summary>
+
+### Установка Poetry
 
 - **Windows**:
 
@@ -46,24 +128,22 @@ _"Хендбук по Python поможет овладеть основным с
   curl -sSL https://install.python-poetry.org | python3 -
   ```
 
-##### Проверка успешной установки Poetry
+#### Проверка успешной установки Poetry
 
 ```sh
 poetry --version
 ```
 
-### Настройка проекта
+### Шаги установки c poetry
 
-#### Клонируем репозиторий
+1. **Клонируйте репозиторий**:
+   ```bash
+   git clone https://github.com/andreypomortsev/yndx-python-handbook
+   cd yndx-python-handbook
+   ```
 
-```sh
-git clone https://github.com/andreypomortsev/yndx-python-handbook
-cd yndx-python-handbook
-```
-
-#### Установка зависимостей и создание виртуальной среды
-
-- **Windows**:
+2. **Установите зависимости и создайтк виртуальное окружение**:
+   - **Windows**:
 
   ```powershell
   pip install poetry -q
@@ -71,15 +151,13 @@ cd yndx-python-handbook
   poetry shell
   ```
 
-- **Unix-like OS (Linux/macOS)**:
+  - **Unix-like OS (Linux/macOS)**:
 
-  ```sh
-  make setup
-  ```
+    ```sh
+    make setup
+    ```
 
-## Команды для разработки
-
-### Форматирование кода (PEP8)
+#### Форматирование кода (PEP8)
 
 - **Windows**:
 
@@ -94,7 +172,7 @@ cd yndx-python-handbook
   make format
   ```
 
-### Запуск тестов
+#### Запуск тестов
 
 - **Все тесты в репозитории**:
 
@@ -152,7 +230,7 @@ cd yndx-python-handbook
     make test-file-2.3-Q
     ```
 
-### Генерация отчётов покрытия тестами
+#### Генерация отчётов покрытия тестами
 
 - **HTML Отчёт**:
 
@@ -184,7 +262,7 @@ cd yndx-python-handbook
     make test-report-xml
     ```
 
-### Линтинг с flake8
+#### Линтинг с flake8
 
 - **Windows**:
 
@@ -198,7 +276,7 @@ cd yndx-python-handbook
   make lint
   ```
 
-### Форматирование кода с black и isort
+#### Форматирование кода с black и isort
 
 - **Windows**:
 
@@ -213,7 +291,7 @@ cd yndx-python-handbook
   make format
   ```
 
-### Удаление лишних файлов
+#### Удаление лишних файлов
 
 - **Windows**:
 
@@ -231,11 +309,12 @@ cd yndx-python-handbook
 
 ---
 
-### Примечания
+##### Примечания
 
 - Для пользователей **Windows**: все команды выполняются через `poetry run`, чтобы обеспечить совместимость с системой.
 - Для пользователей **Unix-like OS**: можно использовать как `make` для упрощения команд, так и команды для **Windows**.
 
+</details>
 
 Во время теста в папке `tests` временно создаются файлы `wrapped_*.py`.
 
