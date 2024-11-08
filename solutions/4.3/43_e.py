@@ -8,7 +8,7 @@ def result_accumulator(func: Callable[..., T]) -> Optional[List[T]]:
         *args, method: str = "accumulate", **kwargs
     ) -> Optional[List[T]]:
         if not hasattr(wrapper, "results"):
-            wrapper.results: List[T] = []
+            wrapper.results = []
 
         wrapper.results.append(func(*args, **kwargs))
 
