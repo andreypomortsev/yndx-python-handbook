@@ -10,7 +10,7 @@ class Fraction:
         else:
             self._numerator, self._denominator = numbers
 
-        self._gcd_check()
+        self.__gcd_check()
 
     def numerator(self, number: Optional[int] = None) -> Optional[int]:
         if not number:
@@ -18,25 +18,25 @@ class Fraction:
 
         sign = -1 if self._numerator < 0 else 1
         self._numerator = number * sign
-        self._gcd_check()
+        self.__gcd_check()
 
     def denominator(self, number: Optional[int] = None) -> Optional[int]:
         if not number:
             return self._denominator
 
         self._denominator = number
-        self._gcd_check()
+        self.__gcd_check()
 
     def reverse(self) -> "Fraction":
         return Fraction(self._denominator, self._numerator)
 
-    def _gcd(self, a: int, b: int) -> int:
+    def __gcd(self, a: int, b: int) -> int:
         while b:
             a, b = b, a % b
         return a
 
-    def _gcd_check(self) -> None:
-        gcd = self._gcd(self._numerator, self._denominator)
+    def __gcd_check(self) -> None:
+        gcd = self.__gcd(self._numerator, self._denominator)
 
         if gcd != 0:
             self._numerator //= gcd
@@ -65,7 +65,7 @@ class Fraction:
             + other._numerator * self._denominator
         )
         self._denominator *= other._denominator
-        self._gcd_check()
+        self.__gcd_check()
         return self
 
     def __sub__(self, other: "Fraction") -> "Fraction":
@@ -82,7 +82,7 @@ class Fraction:
             - other._numerator * self._denominator
         )
         self._denominator *= other._denominator
-        self._gcd_check()
+        self.__gcd_check()
         return self
 
     def __mul__(self, other: "Fraction") -> "Fraction":
@@ -96,11 +96,11 @@ class Fraction:
     def __imul__(self, other: "Fraction") -> "Fraction":
         self._numerator *= other._numerator
         self._denominator *= other._denominator
-        self._gcd_check()
+        self.__gcd_check()
         return self
 
     def __itruediv__(self, other: "Fraction") -> "Fraction":
         self._numerator *= other._denominator
         self._denominator *= other._numerator
-        self._gcd_check()
+        self.__gcd_check()
         return self
