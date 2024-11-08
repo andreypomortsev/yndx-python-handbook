@@ -3,6 +3,7 @@ from typing import Tuple
 
 import pytest
 
+from tests.constants import RECURSION_ERROR
 from tests.data.test_data_43 import c_test_data
 
 
@@ -25,10 +26,7 @@ def test_make_equation(
     expected_calls = len(numbers)
 
     try:
-        assert real_calls == expected_calls, (
-            "Функция `make_equation` должна быть реализована "
-            "при помощи рекурсии."
-        )
+        assert real_calls == expected_calls, RECURSION_ERROR
         assert returned_output == expected_output
 
     finally:

@@ -3,6 +3,7 @@ from typing import Tuple
 
 import pytest
 
+from tests.constants import RECURSION_ERROR
 from tests.data.test_data_43 import b_test_data
 
 
@@ -25,10 +26,7 @@ def test_recursive_digit_sum(
     expected_calls = len(str(number))
 
     try:
-        assert real_calls == expected_calls, (
-            "Функция `recursive_digit_sum` должна быть реализована "
-            "при помощи рекурсии."
-        )
+        assert real_calls == expected_calls, RECURSION_ERROR
         assert returned_output == expected_output
 
     finally:

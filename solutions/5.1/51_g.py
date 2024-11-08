@@ -36,7 +36,7 @@ class Rectangle:
         self.height = height
 
     def turn(self) -> None:
-        center_x, center_y = self._get_center()
+        center_x, center_y = self.__get_center()
 
         new_x_one = center_x - (self.y_one - center_y)
         new_y_one = center_y + self.x_one - center_x
@@ -53,7 +53,7 @@ class Rectangle:
         self.width = round(self.width * factor, 2)
         self.height = round(self.height * factor, 2)
 
-        center_x, center_y = self._get_center()
+        center_x, center_y = self.__get_center()
 
         self.x_one = (self.x_one - center_x) * factor + center_x
         self.y_one = (self.y_one - center_y) * factor + center_y
@@ -61,7 +61,7 @@ class Rectangle:
         self.x_two = (self.x_two - center_x) * factor + center_x
         self.y_two = (self.y_two - center_y) * factor + center_y
 
-    def _get_center(self) -> tuple:
+    def __get_center(self) -> tuple:
         center_x = (self.x_one + self.x_two) / 2
         center_y = (self.y_one + self.y_two) / 2
 

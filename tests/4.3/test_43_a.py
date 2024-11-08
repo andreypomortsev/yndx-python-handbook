@@ -3,6 +3,7 @@ from typing import Tuple
 
 import pytest
 
+from tests.constants import RECURSION_ERROR
 from tests.data.test_data_43 import a_test_data
 
 
@@ -22,10 +23,9 @@ def test_recursive_sum(
     returned_output = wrapped_module.recursive_sum(*args)
 
     try:
-        assert wrapped_module.recursive_sum.call_count == len(args), (
-            "Функция `recursive_sum` должна быть реализована "
-            "при помощи рекурсии."
-        )
+        assert wrapped_module.recursive_sum.call_count == len(
+            args
+        ), RECURSION_ERROR
         assert returned_output == expected_output
 
     finally:

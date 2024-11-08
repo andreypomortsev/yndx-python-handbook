@@ -3,6 +3,7 @@ from typing import List, Tuple
 
 import pytest
 
+from tests.constants import RECURSION_ERROR
 from tests.data.test_data_43 import f_test_data
 
 
@@ -20,13 +21,10 @@ def test_merge_sort(
     wrapped_module, _ = setup_environment
 
     returned_output = wrapped_module.merge_sort(unsorted_list)
-    error_msg = (
-        "Функция `merge_sort` должна быть реализована при помощи рекурсии."
-    )
     try:
         assert (
             wrapped_module.merge_sort.call_count >= len(unsorted_list) // 2
-        ), error_msg
+        ), RECURSION_ERROR
         assert returned_output == expected_output
 
     finally:

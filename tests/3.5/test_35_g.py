@@ -20,9 +20,7 @@ def test_input_output(
     _: str,
     make_test_files: Callable[[str, str, Optional[str]], ModuleType],
 ) -> None:
-
     wrapped_module, _ = make_test_files(file_name, mock_input_text)
-
     assert_equal(
         wrapped_module,
         monkeypatch,
