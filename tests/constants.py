@@ -55,5 +55,6 @@ TIMEOUT_WARNING = (
     f"Please specify a timeout value.{RESET}\n\n"
 )
 
+RECURSION_ERROR = "Функция должна быть реализована при помощи рекурсии."
 WRONG_URL_ERROR = "The request was made to the wrong URL or port."
 JSON_ERROR = "The parameter was not a valid/right JSON."
