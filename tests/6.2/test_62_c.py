@@ -1,11 +1,9 @@
-from types import ModuleType
 from typing import Callable, Dict
 
 import pandas as pd
 import pytest
 
-from tests import utils
-from tests.constants import MEMORY_LIMIT, TIME_LIMIT
+from tests.constants import RETURN_TYPE_ERROR
 from tests.data.test_data_62 import cheque_test_data
 
 
@@ -15,21 +13,14 @@ from tests.data.test_data_62 import cheque_test_data
     ids=[i[-1] for i in cheque_test_data],
 )
 def test_cheque(
-    load_module: Callable[[str], ModuleType],
-    request: pytest.FixtureRequest,
+    decorated_function: Callable,
     prices: pd.Series,
     products: Dict[str, int],
     expected_df: pd.DataFrame,
     unused_df: pd.DataFrame,  # Df for the D problem
     unused_str: str,  # A name of the test
 ) -> None:
-    file_path, _ = utils.get_tested_file_details(request)
-    solution = load_module(file_path)
+    returned_series = decorated_function(prices, **products)
 
-    decorated_func = utils.memory_limit(MEMORY_LIMIT)(solution.cheque)
-    decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)
-
-    returned_series = decorated_func(prices, **products)
-
-    assert isinstance(returned_series, pd.DataFrame)
+    assert isinstance(returned_series, pd.DataFrame), RETURN_TYPE_ERROR
     assert returned_series.equals(expected_df)
