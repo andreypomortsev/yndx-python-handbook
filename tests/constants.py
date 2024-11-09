@@ -39,6 +39,23 @@ TEST_FUNCTION_NAMES = {
         "c": "make_equation",
         "j": "make_linear",
     },
+    "6.1": {
+        "f": "multiplication_matrix",
+        "g": "make_board",
+        "h": "snake",
+        "i": "rotate",
+        "j": "stairs",
+    },
+    "6.2": {
+        "a": "length_stats",
+        "b": "length_stats",
+        "c": "cheque",
+        "d": "discount",
+        "e": "get_long",
+        "f": "best",
+        "g": "need_to_work_better",
+        "h": "update",
+    },
 }
 
 TEST_DATA_PATHS = {"6.2": {"i": "tests/data/test_data_62_i.csv"}}
@@ -55,6 +72,15 @@ TIMEOUT_WARNING = (
     f"Please specify a timeout value.{RESET}\n\n"
 )
 
-RECURSION_ERROR = "Функция должна быть реализована при помощи рекурсии."
+RECURSION_ERROR = (
+    "The function must be implemented using recursion.\n"
+    "Функция должна быть реализована при помощи рекурсии."
+)
 WRONG_URL_ERROR = "The request was made to the wrong URL or port."
 JSON_ERROR = "The parameter was not a valid/right JSON."
+
+RETURN_TYPE_ERROR = "The function must return the correct data type."
+ELEMENT_TYPE_ERROR = (
+    "The return must contain elements of the expected data type."
+)
+NO_CHANGE_ERROR = "The function must not alter the input data structure."
