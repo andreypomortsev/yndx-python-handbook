@@ -56,7 +56,7 @@ jobs:
 
       - name: Run Pytest with Coverage report in XML
         run:
-          poetry run pytest tests/2.1/ --cov-report=xml
+          poetry run pytest tests/2.3/ --cov-report=xml
         env:
           CI: true
 
