@@ -1,30 +1,32 @@
 import os
-import signal
 import tracemalloc
 from io import StringIO
-from types import FrameType, ModuleType
-from typing import Any, Callable, List, Set, Tuple, Union
+from types import ModuleType
+from typing import Callable, List, Optional, Set, Tuple, TypeVar, Union
 
 from _pytest.fixtures import SubRequest
-from pytest import FixtureRequest
+from func_timeout import FunctionTimedOut, func_timeout
+from pytest import FixtureRequest, MonkeyPatch
 
 from .errors import MemoryLimitExceeded, TimeLimitExceeded
 
+T = TypeVar("T")
 
-def memory_limit(limit_mb: int):
+
+def memory_limit(
+    limit_mb: int,
+) -> Callable[[Callable[..., T]], Callable[..., T]]:
     """
-    Декоратор для ограничения использования памяти в функции.
+    Decorator to limit the memory usage of a function.
 
-    Аргументы:
-        limit_mb (int): Максимально допустимое использование памяти
-            в мегабайтах.
+    Arguments:
+        limit_mb (int): Maximum allowed memory in megabytes.
 
-    Исключения:
-        MemoryLimitExceeded: Исключение, если использование памяти
-            превышает указанный лимит.
+    Raises:
+        MemoryLimitExceeded: If execution memory exceeds the limit.
     """
 
-    def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
+    def decorator(func: Callable[..., T]) -> Callable[..., T]:
         def wrapper(*args, **kwargs):
             tracemalloc.start()
             snapshot_before = tracemalloc.take_snapshot()
@@ -41,8 +43,8 @@ def memory_limit(limit_mb: int):
             mem_usage = (peak - memory_at_snapshot) // (1024 * 1024)
 
             if mem_usage > limit_mb:
-                msg = f"Использовано: {mem_usage: .2f} MB, лимит {limit_mb} MB"
-                raise MemoryLimitExceeded(msg)
+                ML = f"Использовано: {mem_usage: .2f} MB, лимит {limit_mb} MB"
+                raise MemoryLimitExceeded(ML)
 
             return result
 
@@ -51,30 +53,28 @@ def memory_limit(limit_mb: int):
     return decorator
 
 
-def time_limit(limit_seconds: int):
+def time_limit(
+    limit_seconds: int,
+) -> Callable[[Callable[..., T]], Callable[..., T]]:
     """
-    Декоратор для ограничения времени выполнения функции.
+    Decorator to limit the execution time of a function using multiprocessing.
 
-    Аргументы:
-        limit_seconds (int): Максимально допустимое время выполнения
-            в секундах.
+    Arguments:
+        limit_seconds (int): Maximum allowed time in seconds.
 
-    Исключения:
-        TimeLimitExceeded: Исключение, если время выполнения превышает \
-            указанный лимит.
+    Raises:
+        TimeLimitExceeded: If execution time exceeds the limit.
     """
 
-    def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
-        def handler(signum: Union[int, float], frame: FrameType) -> None:
-            msg = f"Тест занял больше лимита в {limit_seconds} сек."
-            raise TimeLimitExceeded(msg)
-
-        def wrapper(*args, **kwargs):
-            signal.signal(signal.SIGALRM, handler)
-            signal.alarm(limit_seconds)
-            result = func(*args, **kwargs)
-            signal.alarm(0)  # Выключаем alarm
-            return result
+    def decorator(func: Callable[..., T]) -> Callable[..., T]:
+        def wrapper(*args, **kwargs) -> T:
+            try:
+                return func_timeout(
+                    limit_seconds, func, args=args, kwargs=kwargs
+                )
+            except FunctionTimedOut:
+                TL = f"Execution exceeded the limit of {limit_seconds} second."
+                raise TimeLimitExceeded(TL)
 
         return wrapper
 
@@ -141,9 +141,9 @@ def compare_output(
 
 def assert_equal(
     wrapped_module: ModuleType,
-    monkeypatch: Any,
-    mock_input_text: Union[str, None],
-    expected_output: Union[str, set, tuple, list],
+    monkeypatch: MonkeyPatch,
+    mock_input_text: Optional[str],
+    expected_output: Union[str, Set[str], Tuple[str], List[str]],
 ) -> None:
     """
     Запускает тест с заданным вводом и проверяет вывод.
@@ -154,7 +154,8 @@ def assert_equal(
         monkeypatch (Any): Фикстура pytest, используемая для замены
             ввода и вывода
         mock_input_text (str): Входной текст для имитации ввода пользователя.
-        expected_output (Union[str, set, tuple, list]): Ожидаемые данные вывода
+        expected_output (Union[str, Set[str], Tuple[str], List[str]]):
+            Ожидаемые данные вывода
     """
     mock_input = StringIO(mock_input_text)
     mock_print = StringIO()
@@ -216,8 +217,8 @@ def add_file_to_cleanup(
         request.config.temp_file_paths.append(path_to_the_temp_file)
 
 
-def count_function_calls(func: Callable[..., Any]) -> Callable[..., Any]:
-    def wrapper(*args, **kwargs):
+def count_function_calls(func: Callable[..., T]) -> Callable[..., T]:
+    def wrapper(*args, **kwargs) -> T:
         wrapper.call_count += 1
         return func(*args, **kwargs)
 

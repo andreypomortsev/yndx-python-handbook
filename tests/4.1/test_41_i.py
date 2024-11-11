@@ -22,7 +22,6 @@ def test_is_prime(
     assert returned_output == expected_output
 
 
-@pytest.mark.slow
 @pytest.mark.xfail(reason="Слишком большие числа на входе.")
 def test_is_prime_time_overload(
     decorated_function: Callable,

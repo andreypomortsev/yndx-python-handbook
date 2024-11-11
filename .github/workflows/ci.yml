@@ -10,10 +10,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
+        os: [ubuntu-latest] # Add windows-latest
+
+    runs-on: ${{ matrix.os }}  # Can dynamically choose OS based on the matrix
 
     steps:
       - name: Checkout code
@@ -34,7 +36,7 @@ jobs:
 
       - name: Run Flake8 linting
         run: |
-          make lint
+          poetry run flake8 .
   
       - name: Check Flake8 results
         run: |
@@ -43,16 +45,18 @@ jobs:
             echo "Linting failed with exit status $flake8_exit_status."
             exit 1
           fi
+        shell: bash
 
       - name: Final linting status
         run: echo "Linting passed."
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+        shell: bash
 
       - name: Run Pytest with Coverage report in XML
         run:
-          make test-report-xml
+          poetry run pytest --cov-report=xml
         env:
           CI: true
 
