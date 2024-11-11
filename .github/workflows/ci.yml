@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
-        os: [ubuntu-latest] #  windows-latest
+        os: [ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}  # Dynamically choose OS based on the matrix
 
