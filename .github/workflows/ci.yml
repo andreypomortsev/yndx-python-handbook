@@ -36,7 +36,7 @@ jobs:
 
       - name: Run Flake8 linting
         run: |
-          make lint
+          poetry run flake8 .
   
       - name: Check Flake8 results
         run: |
@@ -45,6 +45,7 @@ jobs:
             echo "Linting failed with exit status $flake8_exit_status."
             exit 1
           fi
+        shell: bash
 
       - name: Final linting status
         run: echo "Linting passed."
@@ -54,7 +55,7 @@ jobs:
 
       - name: Run Pytest with Coverage report in XML
         run:
-          make test-report-xml
+          poetry run pytest --cov-report=xml
         env:
           CI: true
 
