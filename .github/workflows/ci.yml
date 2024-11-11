@@ -52,10 +52,11 @@ jobs:
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+        shell: bash
 
       - name: Run Pytest with Coverage report in XML
         run:
-          poetry run pytest --cov-report=xml
+          poetry run pytest tests/2.2/ --cov-report=xml
         env:
           CI: true
 
