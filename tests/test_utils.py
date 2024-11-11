@@ -38,7 +38,7 @@ def test_time_limit_fails(
     with pytest.raises(TimeLimitExceeded) as exc_info:
         wrapped_waste_time(sleep_time)
 
-    assert str(exc_info.value) == "Тест занял больше лимита в 1 сек."
+    assert str(exc_info.value) == "Execution exceeded the limit of 1 second."
 
 
 def test_memory_limit_with_args_passes() -> None:
