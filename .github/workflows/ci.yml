@@ -57,6 +57,10 @@ jobs:
             echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
           fi
         shell: bash
+      
+      - name: Set Python UTF-8 Encoding for Windows
+        if: runner.os == 'Windows'
+        run: echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
 
       - name: Run Pytest with Coverage report in XML
         run: |
