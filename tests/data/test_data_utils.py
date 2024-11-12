@@ -4,7 +4,7 @@ time_limit_data_pas = [
     (None, "passes w/o arg"),
     (0.1, "passes for 10 ms"),
     (0, "passes for 0"),
-    (0.95, "passes for 95 ms"),
+    (0.93, "passes for 93 ms"),
     (0.89, "passes for 89 ms"),
 ]
 
@@ -12,6 +12,7 @@ time_limit_data_fail = [
     (None, "fails w/o arg"),
     (1.3, "fails with 130 ms"),
     (1.07, "fails with 107 ms"),
+    (11.0, "fails with 11 s"),
 ]
 
 generate_error_msg_data = [
@@ -154,4 +155,10 @@ add_file_to_cleanup_data = [
         ["/tests/wrapped_21_a.py", "/tests/file.log", "/tests/file3.txt"],
         "No initial paths, add multiple files",
     ),
+]
+
+function_calls = [
+    (None, 0, None, "zero calls"),
+    (0, 1, 1, "one call"),
+    (5, 6, 120, "six call"),
 ]
