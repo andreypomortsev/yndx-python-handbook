@@ -5,7 +5,7 @@ import sys
 import time
 from pathlib import Path
 from types import ModuleType
-from typing import Callable, Generator, Tuple, Union
+from typing import Callable, Generator, Optional, Tuple, Union
 
 import pytest
 from _pytest.fixtures import SubRequest
@@ -20,8 +20,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 @pytest.fixture(scope="module")
-def wrap_answer() -> Callable[[str, str, Union[str, None]], str]:
-    def wrapper(file_path: str, file_name: str, args: Union[str, None]) -> str:
+def wrap_answer() -> Callable[[str, str, Optional[str]], str]:
+    def wrapper(file_path: str, file_name: str, args: Optional[str]) -> str:
         """
         Считывает решение из файла и оборачивает его в main функцию
         для получения информации о покрытии тестов во время тестирования.
@@ -195,8 +195,8 @@ def make_test_files(
     """
 
     def _create_test_file(
-        file_names: Tuple[str] | str,
-        mock_input_texts: Tuple[str] | str,
+        file_names: Union[Tuple[str], str],
+        mock_input_texts: Union[Tuple[str], str],
         mode: str = "w",
     ) -> ModuleType:
         """
@@ -400,9 +400,9 @@ def time_spender() -> Callable[..., None]:
     Используется для теста декоратора utils.time_limit
     """
 
-    def spend_time(sleep_time: Union[None, float]) -> None:
+    def spend_time(sleep_time: Optional[float]) -> None:
         if sleep_time is None:
-            sleep_time = 0.99
+            sleep_time = 0.90
         time.sleep(sleep_time)
 
     return spend_time
@@ -414,9 +414,9 @@ def time_waster() -> Callable[..., None]:
     Используется для теста декоратора utils.time_limit
     """
 
-    def waste_time(sleep_time: Union[None, float]) -> None:
+    def waste_time(sleep_time: Optional[float]) -> None:
         if sleep_time is None:
-            sleep_time = 1.01
+            sleep_time = 1.05
         time.sleep(sleep_time)
 
     return waste_time
