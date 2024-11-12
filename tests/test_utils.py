@@ -1,4 +1,4 @@
-from typing import Any, List, Set, Tuple, Union
+from typing import Any, List, Optional, Set, Tuple, Union
 from unittest import mock
 
 import pytest
@@ -17,7 +17,7 @@ from .errors import MemoryLimitExceeded, TimeLimitExceeded
 )
 def test_time_limit_passes(
     time_spender: pytest.fixture,
-    sleep_time: Union[None, float],
+    sleep_time: Optional[float],
     _: str,
 ) -> None:
     wrapped_spend_time = utils.time_limit(TIME_LIMIT)(time_spender)
@@ -31,7 +31,7 @@ def test_time_limit_passes(
     ids=[i[-1] for i in test_data.time_limit_data_fail],
 )
 def test_time_limit_fails(
-    time_waster: pytest.fixture, sleep_time: Union[None, float], _: str
+    time_waster: pytest.fixture, sleep_time: Optional[float], _: str
 ) -> None:
     wrapped_waste_time = utils.time_limit(TIME_LIMIT)(time_waster)
 
@@ -166,7 +166,7 @@ def test_get_tested_file_details(
 )
 def test_add_file_to_cleanup(
     monkeypatch: pytest.MonkeyPatch,
-    initial_paths: Union[List[str], None],
+    initial_paths: Optional[List[str]],
     new_paths: List[str],
     expected_paths: List[str],
     _: str,
@@ -183,51 +183,28 @@ def test_add_file_to_cleanup(
     assert result == expected_paths
 
 
-def test_count_function_calls_zero_calls() -> None:
+@pytest.mark.parametrize(
+    "number, expected_calls, expected_return, _",
+    test_data.function_calls,
+    ids=[i[-1] for i in test_data.function_calls],
+)
+def test_count_function_calls(
+    number: Optional[int],
+    expected_calls: int,
+    expected_return: Optional[int],
+    _: str,
+) -> None:
     @utils.count_function_calls
     def factorial(n: int) -> int:
         if n == 0:
             return 1
         return n * factorial(n - 1)
 
-    assert factorial.call_count == 0
+    if isinstance(number, int):
+        assert factorial(number) == expected_return
 
+    assert factorial.call_count == expected_calls
 
-def test_count_function_calls_one_call() -> None:
-    @utils.count_function_calls
-    def factorial(n: int) -> int:
-        if n == 0:
-            return 1
-        return n * factorial(n - 1)
-
-    result = factorial(0)
-
-    assert result == 1
-    assert factorial.call_count == 1
-
-
-def test_count_function_calls_six_call() -> None:
-    @utils.count_function_calls
-    def factorial(n: int) -> int:
-        if n == 0:
-            return 1
-        return n * factorial(n - 1)
-
-    result = factorial(5)
-
-    assert result == 120
-    assert factorial.call_count == 6
-
-
-def test_count_function_calls_reset() -> None:
-    @utils.count_function_calls
-    def factorial(n: int) -> int:
-        if n == 0:
-            return 1
-        return n * factorial(n - 1)
-
-    factorial(3)
-    assert factorial.call_count == 4
-
+    # Checking reset
     factorial.call_count = 0
     assert factorial.call_count == 0

@@ -13,8 +13,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
-        os: [ubuntu-latest] # Add windows-latest
-
+        os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}  # Can dynamically choose OS based on the matrix
 
     steps:
@@ -29,7 +28,7 @@ jobs:
       - name: Install Poetry
         run: |
           pip install poetry
-
+      
       - name: Install dependencies using Poetry
         run: |
           poetry install --no-root
@@ -51,12 +50,22 @@ jobs:
         run: echo "Linting passed."
 
       - name: Set PYTHONPATH
-        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+        run: |
+          if [ "$RUNNER_OS" == "Windows" ]; then
+            echo "PYTHONPATH=${{ github.workspace }}" >> $env:GITHUB_ENV
+          else
+            echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
+          fi
+        shell: bash
+      
+      - name: Set Python Encoding to UTF-8
+        run: |
+          echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
         shell: bash
 
       - name: Run Pytest with Coverage report in XML
-        run:
-          poetry run pytest --cov-report=xml
+        run: |
+          poetry run pytest -n auto --cov-report=xml
         env:
           CI: true
 

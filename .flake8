@@ -2,6 +2,7 @@
 max-line-length = 79
 exclude = 
     .git,
+    .venv,
     __pycache__,
     tests/data/*,
     script.py,

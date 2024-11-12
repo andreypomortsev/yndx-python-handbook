@@ -686,7 +686,7 @@ j_test_data = {
             "need char: by default",
         ),
         (
-            "!He11:@1.ye$2345" * 10**5,
+            "!He11:@1.ye$2345" * 10**6,
             {
                 "min_length": 10,
                 "possible_chars": set(

@@ -1023,7 +1023,7 @@ t_test_data = [
         "cut to 0",
     ),
     (
-        b"\x00\x01" * 131072,
+        b"\x00\x01" * 65536,
         "0\n",
         "long file to zero",
     ),
