@@ -59,8 +59,8 @@ jobs:
         shell: bash
 
       - name: Run Pytest with Coverage report in XML
-        run:
-          poetry run pytest --cov-report=xml
+        run: |
+          PYTHONPATH=${GITHUB_WORKSPACE} poetry run pytest --cov-report=xml
         env:
           CI: true
 
