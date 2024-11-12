@@ -58,9 +58,10 @@ jobs:
           fi
         shell: bash
       
-      - name: Set Python UTF-8 Encoding for Windows
-        if: runner.os == 'Windows'
-        run: echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
+      - name: Set Python Encoding to UTF-8
+        run: |
+          echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
+        shell: bash
 
       - name: Run Pytest with Coverage report in XML
         run: |
