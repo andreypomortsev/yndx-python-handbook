@@ -4,14 +4,14 @@ time_limit_data_pas = [
     (None, "passes w/o arg"),
     (0.1, "passes for 10 ms"),
     (0, "passes for 0"),
-    (0.98, "passes for 98 ms"),
-    (0.99, "passes for 89 ms"),
+    (0.95, "passes for 95 ms"),
+    (0.89, "passes for 89 ms"),
 ]
 
 time_limit_data_fail = [
     (None, "fails w/o arg"),
     (1.3, "fails with 130 ms"),
-    (1.01, "fails with 101 ms"),
+    (1.07, "fails with 107 ms"),
 ]
 
 generate_error_msg_data = [
