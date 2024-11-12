@@ -13,8 +13,8 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
-        os: [ubuntu-latest] # Add windows-latest
-
+        os: [macos-latest, ubuntu-latest, windows-latest]
+      fail-fast: false
     runs-on: ${{ matrix.os }}  # Can dynamically choose OS based on the matrix
 
     steps:
@@ -29,7 +29,18 @@ jobs:
       - name: Install Poetry
         run: |
           pip install poetry
+      
+      - name: Configure Poetry
+        run: |
+          poetry config virtualenvs.create true
+          poetry config virtualenvs.in-project true
 
+      - name: Cache Poetry dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+      
       - name: Install dependencies using Poetry
         run: |
           poetry install --no-root
@@ -39,6 +50,7 @@ jobs:
           poetry run flake8 .
   
       - name: Check Flake8 results
+        if: runner.os != 'Windows'
         run: |
           flake8_exit_status=$?
           if [ $flake8_exit_status -ne 0 ]; then
@@ -46,12 +58,26 @@ jobs:
             exit 1
           fi
         shell: bash
+  
+      - name: Check Flake8 results (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Linting failed with exit status $LASTEXITCODE"
+            exit 1
+          }
+        shell: pwsh
 
       - name: Final linting status
         run: echo "Linting passed."
 
       - name: Set PYTHONPATH
-        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+        run: |
+          if [ "$RUNNER_OS" == "Windows" ]; then
+            echo "PYTHONPATH=${{ github.workspace }}" >> $env:GITHUB_ENV
+          else
+            echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
+          fi
         shell: bash
 
       - name: Run Pytest with Coverage report in XML
