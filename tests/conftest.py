@@ -153,8 +153,6 @@ def setup_environment(
         pytest.exit(
             f"Syntax error in the file {tested_file_name}.py", returncode=1
         )
-    finally:
-        raise TypeError(wrapped_module_name)
 
     # Добавляем путь к обернутому файлу в список для удаления
     utils.add_file_to_cleanup(request, path_to_the_wrapped_file)
