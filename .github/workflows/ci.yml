@@ -30,17 +30,6 @@ jobs:
         run: |
           pip install poetry
       
-      - name: Configure Poetry
-        run: |
-          poetry config virtualenvs.create true
-          poetry config virtualenvs.in-project true
-
-      - name: Cache Poetry dependencies
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
-      
       - name: Install dependencies using Poetry
         run: |
           poetry install --no-root
@@ -50,7 +39,6 @@ jobs:
           poetry run flake8 .
   
       - name: Check Flake8 results
-        if: runner.os != 'Windows'
         run: |
           flake8_exit_status=$?
           if [ $flake8_exit_status -ne 0 ]; then
@@ -58,15 +46,6 @@ jobs:
             exit 1
           fi
         shell: bash
-  
-      - name: Check Flake8 results (Windows)
-        if: runner.os == 'Windows'
-        run: |
-          if ($LASTEXITCODE -ne 0) {
-            Write-Error "Linting failed with exit status $LASTEXITCODE"
-            exit 1
-          }
-        shell: pwsh
 
       - name: Final linting status
         run: echo "Linting passed."
