@@ -3,7 +3,7 @@ price = int(input())
 weight = int(input())
 bill = int(input())
 
-total = int(price * weight)
+total = price * weight
 change = bill - total
 
 answer = f"""Чек
