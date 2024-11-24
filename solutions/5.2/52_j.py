@@ -65,7 +65,7 @@ class Fraction:
         return f"{self._numerator}/{self._denominator}"
 
     def __repr__(self) -> str:
-        return f"Fraction('{self._numerator}/{self._denominator}')"
+        return f"Fraction('{str(self)}')"
 
     def __neg__(self) -> "Fraction":
         return Fraction(-self._numerator, self._denominator)
