@@ -1,28 +1,24 @@
 x = float(input())
 y = float(input())
-is_safe = True
-in_sea = False
 
 # Вычисляем расстояние между заданной точкой и центром окружности (0, 0)
 distance = (x**2 + y**2) ** 0.5
 
 # Проверяем, больше ли расстояние, чем радиус
-if distance > 10:
-    is_safe = False
-    in_sea = True
+in_sea = distance > 10
 
-elif (-7 <= x <= 5) and y <= 0:
+is_safe = True
+
+if (-7 <= x <= 5) and y <= 0:
     # 0.25 коэффициент из f(x) = (1/4)(x + 7)(x - 5)
     # -1 x-координат вертекса
     # -9 y-координат вертекса
     parabola_y = 0.25 * (x - (-1)) ** 2 + (-9)
-    if y >= parabola_y:
-        is_safe = False
+    is_safe = y < parabola_y
 
 elif (0 <= x <= 5) and (0 <= y <= 5):
     # Проверяем, меньше/равно ли расстояние, чем радиус
-    if distance <= 5:
-        is_safe = False
+    is_safe = distance > 5
 
 elif (-7 <= x <= 0) and (0 <= y <= 5):
     # Вычисляем коэффициент наклона гипотенузы
@@ -38,13 +34,11 @@ elif (-7 <= x <= 0) and (0 <= y <= 5):
     y_on_hypotenuse = slope * x + intercept
 
     # Сравниваем заданную y-координату с y-координатой на гипотенузе
-    if (-4 <= x <= 0) or y <= y_on_hypotenuse:
-        is_safe = False
+    is_safe = not ((-4 <= x <= 0) or y <= y_on_hypotenuse)
 
-if not in_sea:
-    if is_safe:
-        print("Зона безопасна. Продолжайте работу.")
-    else:
-        print("Опасность! Покиньте зону как можно скорее!")
-else:
+if in_sea:
     print("Вы вышли в море и рискуете быть съеденным акулой!")
+elif is_safe:
+    print("Зона безопасна. Продолжайте работу.")
+else:
+    print("Опасность! Покиньте зону как можно скорее!")
