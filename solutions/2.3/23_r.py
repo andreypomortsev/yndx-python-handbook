@@ -8,4 +8,10 @@ while number > 1:
         number //= divisor
         if divisor <= number:
             print("*", end=" ")
-    divisor += 1
+
+    if divisor == 2:
+        divisor = 3
+    elif divisor == 3:
+        divisor = 5
+    else:
+        divisor += 2 if divisor % 6 == 5 else 4
