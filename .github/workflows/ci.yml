@@ -18,7 +18,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -36,15 +38,6 @@ jobs:
       - name: Run Flake8 linting
         run: |
           poetry run flake8 .
-  
-      - name: Check Flake8 results
-        run: |
-          flake8_exit_status=$?
-          if [ $flake8_exit_status -ne 0 ]; then
-            echo "Linting failed with exit status $flake8_exit_status."
-            exit 1
-          fi
-        shell: bash
 
       - name: Final linting status
         run: echo "Linting passed."
@@ -70,7 +63,7 @@ jobs:
           CI: true
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@79066c46f8dcdf8d7355f820dbac958c5b4cb9d3
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.xml
