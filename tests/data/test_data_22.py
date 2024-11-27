@@ -765,7 +765,7 @@ r_test_data = [
         "float smaller than 90 degrees",
     ),
     (
-        "0.000000045\n0.000000075\n0.0000006\n",
+        "0.000000045\n0.000000075\n0.00000006\n",
         "100%\n",
         "perpendicular triangle float",
     ),
