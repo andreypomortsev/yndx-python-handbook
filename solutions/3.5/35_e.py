@@ -9,7 +9,13 @@ for word in sorted(words):
     if length == 1:
         print(word)
     else:
-        mid = length // 2
-        index = mid + length % 2
-        if word[:mid].lower() == word[index:][::-1].lower():
+        left_index = 0
+        right_index = length - 1
+
+        while left_index < right_index:
+            if word[left_index].lower() != word[right_index].lower():
+                break
+            left_index += 1
+            right_index -= 1
+        else:
             print(word)
