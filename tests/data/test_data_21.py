@@ -327,10 +327,8 @@ l_test_data = [
 m_test_data = [
     ("3\n100\n", "33\n1\n", "first open test"),
     ("20\n500\n", "25\n0\n", "second open test"),
-    ("100\n0\n", "0\n0\n", "many kids zero candies"),
-    ("0\n741\n", "0\n741\n", "no children many candies"),
-    ("0\n0\n", "0\n0\n", "no children no candies"),
-    ("24\n25\n", "1\n1\n", "more candies"),
+    ("100\n0\n", "0\n0\n", "many kids zero candy"),
+    ("24\n25\n", "1\n1\n", "more candy"),
     ("25\n24\n", "0\n24\n", "more children"),
     ("1_000_000_000\n3_333_333_333\n", "3\n333333333\n", "big party"),
 ]

@@ -18,8 +18,8 @@ def is_prime(n: int) -> bool:
         return False
 
     i = 5
-
-    while i * i <= n:
+    sqrt = int(n**0.5) + 1
+    while i <= sqrt:
         if n % i == 0 or n % (i + 2) == 0:
             return False
         i += 6

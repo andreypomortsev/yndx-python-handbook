@@ -1,9 +1,11 @@
 import json
 from sys import stdin
 
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+
 student_answers = [line.rstrip("\n") for line in stdin]
 
-with open("scoring.json", "r", encoding="UTF-8") as json_file:
+with open("scoring.json", "r", **DEFAULT_ENCODING) as json_file:
     scoring = json.load(json_file)
 
 student_grade = 0

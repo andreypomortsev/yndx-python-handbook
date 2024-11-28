@@ -1,11 +1,13 @@
 import json
 
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+
 users_file = input()
 updates_file = input()
 
 with (
-    open(users_file, "r+", encoding="UTF-8") as file_one,
-    open(updates_file, "r", encoding="UTF-8") as file_two,
+    open(users_file, "r+", **DEFAULT_ENCODING) as file_one,
+    open(updates_file, "r", **DEFAULT_ENCODING) as file_two,
 ):
     users = json.load(file_one)
     updates = json.load(file_two)

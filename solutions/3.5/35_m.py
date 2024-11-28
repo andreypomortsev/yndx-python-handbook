@@ -2,8 +2,10 @@ import ast
 import json
 from sys import stdin
 
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+
 json_file = input()
-with open(json_file, "r+", encoding="UTF-8") as file:
+with open(json_file, "r+", **DEFAULT_ENCODING) as file:
     json_to_update = json.load(file)
 
     for line in stdin:

@@ -1,11 +1,12 @@
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
 LENGTH = 26  # Длина английского алфавита
 ENGLISH_Z = ord("z")  # 122
 
 shift = int(input()) % LENGTH
 
 with (
-    open("public.txt", "r", encoding="UTF-8") as file_in,
-    open("private.txt", "w", encoding="UTF-8") as file_out,
+    open("public.txt", "r", **DEFAULT_ENCODING) as file_in,
+    open("private.txt", "w", **DEFAULT_ENCODING) as file_out,
 ):
     while line := file_in.readline():
         encrypted_line = []

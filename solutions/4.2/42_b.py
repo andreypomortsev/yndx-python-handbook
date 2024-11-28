@@ -1,8 +1,8 @@
-from typing import List, Tuple, Union
+from typing import List, Optional, Tuple, Union
 
 
 def make_matrix(
-    size: Union[Tuple[int], int], value: Union[int, None] = None
+    size: Union[Tuple[int], int], value: Optional[int] = None
 ) -> List[List[int]]:
     if not value:
         value = 0

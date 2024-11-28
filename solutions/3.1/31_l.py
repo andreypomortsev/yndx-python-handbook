@@ -1,8 +1,7 @@
 PORRIDGE = ["Манная", "Гречневая", "Пшённая", "Овсяная", "Рисовая"]
+LENGTH = 5  # len(PORRIDGE)
 
 n = int(input())
 
-number_of_porridge = len(PORRIDGE)
-
 for i in range(n):
-    print(PORRIDGE[i % number_of_porridge])
+    print(PORRIDGE[i % LENGTH])
