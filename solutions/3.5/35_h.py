@@ -1,20 +1,19 @@
-file_one = input()
-file_two = input()
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+sets = []
+
+for index in range(2):
+    file_in = input()
+    set_of_words = set()
+    
+    with open(file_in, "r", **DEFAULT_ENCODING) as file:
+        while line := file.readline():
+            words = line.rstrip("\n").split()
+            set_of_words.update(words)
+    
+    sets.append(set_of_words)
+
+sorted_unique_words = sorted(sets[0] ^ sets[1])
+
 file_out = input()
-
-with open(file_one, "r", encoding="UTF-8") as file:
-    first_set = set()
-    while line := file.readline():
-        words = line.rstrip("\n").split()
-        first_set.update(words)
-
-with open(file_two, "r", encoding="UTF-8") as file:
-    second_set = set()
-    while line := file.readline():
-        words = line.rstrip("\n").split()
-        second_set.update(words)
-
-unique_words = sorted(first_set ^ second_set)
-
-with open(file_out, "w", encoding="UTF-8") as file_out:
-    file_out.write("\n".join(unique_words))
+with open(file_out, "w", **DEFAULT_ENCODING) as file_out:
+    file_out.write("\n".join(sorted_unique_words))
