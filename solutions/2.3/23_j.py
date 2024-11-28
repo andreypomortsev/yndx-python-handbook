@@ -1,4 +1,4 @@
-x, y = 0, 0
+x = y = 0
 is_direction = True
 
 while (word := input()) != "СТОП":
