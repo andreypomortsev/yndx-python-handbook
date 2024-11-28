@@ -1,5 +1,7 @@
 import json
 
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+
 file_name = input()
 file_output = input()
 
@@ -9,7 +11,7 @@ total_sum = 0
 minimum = float("inf")
 maximum = float("-inf")
 
-with open(file_name, "r", encoding="UTF-8") as file:
+with open(file_name, "r", **DEFAULT_ENCODING) as file:
     while line := file.readline():
         for number in line.split():
             number = int(number)
@@ -30,5 +32,5 @@ json_like = {
     "average": average,
 }
 
-with open(file_output, "w", encoding="UTF-8") as json_file:
+with open(file_output, "w", **DEFAULT_ENCODING) as json_file:
     json.dump(json_like, json_file, indent=4)

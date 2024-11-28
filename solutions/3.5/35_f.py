@@ -1,3 +1,4 @@
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
 TRANS_DICT = {
     "А": "A",
     "Б": "B",
@@ -34,10 +35,10 @@ TRANS_DICT = {
     "Ъ": "",
 }
 
-
-with open("cyrillic.txt", "r", encoding="UTF-8") as file_in, open(
-    "transliteration.txt", "w", encoding="UTF-8"
-) as file_out:
+with (
+    open("cyrillic.txt", "r", **DEFAULT_ENCODING) as file_in,
+    open("transliteration.txt", "w", **DEFAULT_ENCODING) as file_out,
+):
     while cyrillic_line := file_in.readline():
         latin_text = []
         for char in cyrillic_line:

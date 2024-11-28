@@ -1,4 +1,6 @@
-with open("secret.txt", "r", encoding="UTF-8") as file:
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+
+with open("secret.txt", "r", **DEFAULT_ENCODING) as file:
     while line := file.readline():
         hidden_word = []
 

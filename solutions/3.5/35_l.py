@@ -1,13 +1,15 @@
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+
 numbers_file = input()
 even_file = input()
 odd_file = input()
 eq_file = input()
 
 with (
-    open(numbers_file, "r", encoding="UTF-8") as file_in,
-    open(even_file, "w", encoding="UTF-8") as even_out,
-    open(odd_file, "w", encoding="UTF-8") as odd_out,
-    open(eq_file, "w", encoding="UTF-8") as equal_out,
+    open(numbers_file, "r", **DEFAULT_ENCODING) as file_in,
+    open(even_file, "w", **DEFAULT_ENCODING) as even_out,
+    open(odd_file, "w", **DEFAULT_ENCODING) as odd_out,
+    open(eq_file, "w", **DEFAULT_ENCODING) as equal_out,
 ):
 
     while line := file_in.readline():

@@ -1,5 +1,7 @@
 from sys import stdin
 
+DEFAULT_ENCODING = {"encoding": "UTF-8"}
+
 searching_phrase = input().lower()
 
 files_with_the_phrase = []
@@ -8,7 +10,7 @@ flag = True
 for file_name in stdin:
     file_name = file_name.rstrip("\n")
 
-    with open(file_name, "r", encoding="UTF-8") as file:
+    with open(file_name, "r", **DEFAULT_ENCODING) as file:
         clean_list = []
 
         while line := file.readline():
