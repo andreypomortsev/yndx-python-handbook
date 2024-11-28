@@ -4,12 +4,12 @@ sets = []
 for index in range(2):
     file_in = input()
     set_of_words = set()
-    
+
     with open(file_in, "r", **DEFAULT_ENCODING) as file:
         while line := file.readline():
             words = line.rstrip("\n").split()
             set_of_words.update(words)
-    
+
     sets.append(set_of_words)
 
 sorted_unique_words = sorted(sets[0] ^ sets[1])
