@@ -1,13 +1,18 @@
 n = int(input())
 
-number_of_polindroms = 0
+number_of_palindroms = 0
 
 for _ in range(n):
-    number = input()
-    length = len(number)
-    mid = length // 2
-    mid_odd = mid + length % 2
-    check = number[:mid] == number[mid_odd:][::-1]
-    number_of_polindroms += check
+    number = int(input())
+    number_copy = number
+    reversed_number = 0
 
-print(number_of_polindroms)
+    while number_copy > 0:
+        digit = number_copy % 10
+        reversed_number = reversed_number * 10 + digit
+        number_copy //= 10
+
+    number_of_palindroms += number == reversed_number
+
+
+print(number_of_palindroms)
