@@ -1,11 +1,7 @@
 children = int(input())
-candies = int(input())
+candy = int(input())
 
-if children:
-    candies_per_child = candies // children
-    candies_left = candies - candies_per_child * children
-else:
-    candies_left = candies
-    candies_per_child = children
+candy_per_child = candy // children
+candy_left = candy % children
 
-print(candies_per_child, candies_left, sep="\n")
+print(candy_per_child, candy_left, sep="\n")
