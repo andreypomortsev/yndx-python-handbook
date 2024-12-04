@@ -10,7 +10,7 @@ n = int((numerator_n + 1) // 2)
 counter = 1
 formatter = 0
 
-# Считаем значение formatter чтобы избежать создание доп строки
+# Считаем значение formatter чтобы избежать создания доп строки
 for i in range(n + 1):
     row_length = 0
     for j in range(i):
