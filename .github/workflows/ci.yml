@@ -33,13 +33,14 @@ jobs:
       - name: Cache Poetry Dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/pip
-            ~/.cache/pypoetry
           key: poetry-dependencies-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
           restore-keys: |
             poetry-dependencies-${{ runner.os }}-
             poetry-dependencies-
+          path: |
+            ${{ runner.os == 'Windows' && 'C:/Users/${{ github.actor }}/AppData/Local/pip/cache' || '~/.cache/pip' }}
+            ${{ runner.os == 'Windows' && 'C:/Users/${{ github.actor }}/AppData/Local/pypoetry/cache' || '~/.cache/pypoetry' }}
+        
 
       - name: Install Poetry
         run: |
