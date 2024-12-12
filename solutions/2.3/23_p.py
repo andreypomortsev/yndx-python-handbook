@@ -1,18 +1,18 @@
-n = n_copy = int(input())
+number = number_copy = int(input())
 
-left = 10
+leftmost = 10
 is_palyndrome = True
 
-while n_copy > 100:
-    n_copy //= 10
-    left *= 10
+while number_copy > 100:
+    number_copy //= 10
+    leftmost *= 10
 
-while left > 0:
-    if n // left != n % 10:
+while leftmost > 0:
+    if number // leftmost != number % 10:
         is_palyndrome = False
         break
 
-    n = (n % left) // 10
-    left //= 100
+    number = (number % leftmost) // 10
+    leftmost //= 100
 
 print("YES" if is_palyndrome else "NO")
