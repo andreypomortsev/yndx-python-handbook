@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     timeout-minutes: 13
+
     strategy:
       fail-fast: false
       matrix:
@@ -38,6 +39,7 @@ jobs:
           key: poetry-dependencies-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
           restore-keys: |
             poetry-dependencies-${{ runner.os }}-
+            poetry-dependencies-
 
       - name: Install Poetry
         run: |
