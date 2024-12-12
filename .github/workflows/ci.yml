@@ -40,10 +40,6 @@ jobs:
           path: |
             ~/.cache/pip
             ~/.cache/pypoetry
-            ~\AppData\Local\pip\Cache
-            ~\AppData\Local\pypoetry\Cache
-            !~/.cache/pip/log
-            !~\AppData\Local\pip\Cache\log      
 
       - name: Install Poetry
         run: |
