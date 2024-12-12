@@ -10,22 +10,40 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        python-version: ["3.11", "3.12", "3.13"]
-        os: [macos-latest, ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}  # Can dynamically choose OS based on the matrix
+    timeout-minutes: 13
 
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+        python-version: ["3.11", "3.12", "3.13"]
+        include:
+          # Add an exception for Windows to only run 3.12
+          - os: windows-latest
+            python-version: 3.12
+    runs-on: ${{ matrix.os }}  # Can dynamically choose OS based on the matrix
+    
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v5.3.0
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+  
+      - name: Cache Poetry Dependencies
+        uses: actions/cache@v4
+        with:
+          key: poetry-dependencies-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            poetry-dependencies-${{ runner.os }}-
+            poetry-dependencies-
+          path: |
+            ~/.cache/pip
+            ~/.cache/pypoetry
 
       - name: Install Poetry
         run: |
@@ -63,7 +81,7 @@ jobs:
           CI: true
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5.0.7
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.xml

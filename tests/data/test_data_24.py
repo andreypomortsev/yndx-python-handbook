@@ -908,7 +908,7 @@ r_test_data = [
     ),
     ("3\n", " 1 \n2 3\n", "smallest tree"),
     ("7\n", "  1  \n 2 3 \n4 5 6\n", "no trunk"),
-    ("12\n", "   1    \n  2 3   \n 4 5 6  \n7 8 9 10\n", "formatting")
+    ("12\n", "   1    \n  2 3   \n 4 5 6  \n7 8 9 10\n", "formatting"),
 ]
 
 
