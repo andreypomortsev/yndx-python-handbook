@@ -1,16 +1,18 @@
-number = int(input())
+n = n_copy = int(input())
 
-number_copy = number
-reversed_number = 0
+left = 10
+is_palyndrome = True
 
-while number_copy > 0:
-    digit = number_copy % 10
-    reversed_number = reversed_number * 10 + digit
-    number_copy //= 10
+while n_copy > 100:
+    n_copy //= 10
+    left *= 10
 
-is_palindrome = number == reversed_number
+while left > 0:
+    if n // left != n % 10:
+        is_palyndrome = False
+        break
 
-if is_palindrome:
-    print("YES")
-else:
-    print("NO")
+    n = (n % left) // 10
+    left //= 100
+
+print("YES" if is_palyndrome else "NO")
