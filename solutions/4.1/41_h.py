@@ -1,4 +1,26 @@
-def is_palindrome(input_value) -> bool:
+def check_for_palindrome(symbols: str) -> bool:
+    """
+    Проверяет, является ли строка палиндромом.
+
+    Аргументы:
+        symbols (str): Строка для проверки на палиндром.
+
+    Возвращает:
+        bool: True, если строка является палиндромом, иначе False.
+    """
+    left_index = 0
+    right_index = len(symbols) - 1
+
+    while left_index < right_index:
+        if symbols[left_index] != symbols[right_index]:
+            return False
+        left_index += 1
+        right_index -= 1
+
+    return True
+
+
+def is_palindrome(input_value: str | int | tuple | list) -> bool:
     """
     Проверяет, является ли входное значение палиндромом.
 
@@ -7,16 +29,15 @@ def is_palindrome(input_value) -> bool:
             на палиндром.
 
     Возвращает:
-        bool: True, если входное значение является палиндромом,
-            False в противном случае.
+        bool: True, если входное значение является палиндромом, иначе False.
     """
     if isinstance(input_value, (tuple, list)):
         input_value = list(map(lambda x: str(x).lower(), input_value))
 
     elif isinstance(input_value, str):
-        input_value = "".join(map(lambda x: x.lower(), input_value.split()))
+        input_value = input_value.lower()
 
     else:
         input_value = str(input_value)
 
-    return input_value == input_value[::-1]
+    return check_for_palindrome(input_value)
