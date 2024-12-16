@@ -76,22 +76,20 @@ def test_memory_limit_no_args_passes() -> None:
 
 
 def test_memory_limit_no_args_fails() -> None:
-    memory_limit = 4
+    MEMORY_LIMIT_2_MB = 32
 
-    @utils.memory_limit(memory_limit)
-    def high_ram() -> List[int]:
+    @utils.memory_limit(MEMORY_LIMIT_2_MB)
+    def high_ram() -> None:
         long_string = ""
-        n = 1000
-        for i in range(n):
-            for j in range(n):
-                long_string += f"{i}" + f"{j}"
-        return long_string
+        multyplier = 10**6
+        for _ in range(50):
+            long_string += "a" * multyplier
 
     with pytest.raises(MemoryLimitExceeded) as exc_info:
         high_ram()
 
     assert "Использовано:" in str(exc_info.value)
-    assert f"лимит {memory_limit} MB" in str(exc_info.value)
+    assert f"лимит {MEMORY_LIMIT_2_MB} MB" in str(exc_info.value)
 
 
 @pytest.mark.parametrize(
