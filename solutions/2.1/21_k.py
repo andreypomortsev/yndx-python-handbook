@@ -7,4 +7,4 @@ thousands = num // 1000
 
 result = hundreds * 1000 + thousands * 100 + ones * 10 + tens
 
-print(result)
+print(f"{result:04}")

@@ -40,10 +40,10 @@ def get_no_errors() -> None:
 
 
 a_test_data = [
-    (get_value_error, "ValueError\n", "first open test"),
-    (get_type_error, "TypeError\n", "second open test"),
-    (get_system_error, "SystemError\n", "system error"),
-    (get_no_errors, "No Exceptions\n", "no errors"),
+    (get_value_error, "ValueError", "first open test"),
+    (get_type_error, "TypeError", "second open test"),
+    (get_system_error, "SystemError", "system error"),
+    (get_no_errors, "No Exceptions", "no errors"),
 ]
 
 

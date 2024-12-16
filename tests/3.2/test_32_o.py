@@ -24,5 +24,5 @@ def test_input_output(
         wrapped_module,
         monkeypatch,
         mock_input_text,
-        expected_output + "\n",
+        expected_output,
     )

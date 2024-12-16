@@ -24,9 +24,11 @@ THIRD_NAME_LENGHT = len(name_three)  # Имена постоянные и дли
 # Считаем отступы для форматирования третьего места по правому краю
 formatter = WIDTH * 3 - (WIDTH - THIRD_NAME_LENGHT) // 2
 
-podium = f"""{name_one: ^24}
-{name_two: ^{WIDTH}}
-{name_three: >{formatter}}
-{'II': ^{WIDTH}}{'I': ^{WIDTH}}{'III': ^{WIDTH}}"""
+podium = (
+    f"{name_one: ^24}\n"
+    f"{name_two: ^{WIDTH}}\n"
+    f"{name_three: >{formatter}}\n"
+    f"{'II': ^{WIDTH}}{'I': ^{WIDTH}}{'III': ^{WIDTH}}"
+)
 
 print(podium)

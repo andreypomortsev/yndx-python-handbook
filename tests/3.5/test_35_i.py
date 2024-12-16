@@ -40,6 +40,6 @@ def test_input_output(
     temp_files(answer_path)
 
     with open(answer_path, "r", encoding="UTF-8") as file:
-        actual_output = file.read()
+        actual_output = file.read().rstrip()
 
     assert actual_output in expected_output
