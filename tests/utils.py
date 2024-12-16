@@ -104,24 +104,19 @@ def generate_error_msg(
 
 def compare_output(
     printed_output: str,
-    expected_output: Union[Set[str], Tuple[str], List[str], str],
+    expected_output: Union[Tuple[str], List[str], str],
 ) -> None:
     """
     Сравнивает напечатанный вывод с ожидаемым выводом.
 
     Аргументы:
         printed_output (str): Ответ выданные модулем.
-        expected_output (Union[Set[str], Tuple[str], List[str]], str):
-            Ожидаемые данные вывода, могут быть: строкой, списком, set
+        expected_output (Union[Tuple[str], List[str]], str):
+            Ожидаемые данные вывода, могут быть: строкой, списком,
             или кортежем.
     Исключения:
         AssertionError: Если фактический вывод не совпадает с ожидаемым.
     """
-    if isinstance(expected_output, set):
-        error_msg = generate_error_msg(printed_output, expected_output)
-        assert printed_output in expected_output, error_msg
-        return
-
     # Передаются тесты в которых нужно оценить результат печати set
     # Так как множества неупорядочные приходится преобразовывать в set
     # Для сравнения двух множеств
@@ -164,7 +159,7 @@ def assert_equal(
 
     wrapped_module.main()
 
-    printed_output = mock_print.getvalue()
+    printed_output = mock_print.getvalue().rstrip()
     compare_output(printed_output, expected_output)
 
 
