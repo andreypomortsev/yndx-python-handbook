@@ -15,16 +15,16 @@ lint:
 	poetry run flake8 .
 
 test: lint
-	poetry run pytest; $(MAKE) clean
+	poetry run pytest -n auto; $(MAKE) clean
 
 test-dir-%:
-	poetry run pytest tests/$*/; $(MAKE) clean
+	poetry run pytest -n auto tests/$*/; $(MAKE) clean
 
 test-file-%:
 	./fileTest.sh $*; $(MAKE) clean
 
 test-report-%:
-	poetry run pytest --cov-report=$*; $(MAKE) clean
+	poetry run pytest -n auto --cov-report=$*; $(MAKE) clean
 
 debug:
-	poetry run pytest -vv; $(MAKE) clean
+	poetry run pytest -n auto -vv; $(MAKE) clean
