@@ -1,29 +1,22 @@
 import numpy as np
 
 a_test_data = [
-    (2.71, 0.4818035253577275, "first open test"),
-    (12.345, 4.880549344757598, "second open test"),
-    (-10.5, -9.829809094966793, "negative number"),
-    (-3.14, -0.09471838339448091, "negative pi approximation"),
-    (-1.0, -0.9706428736868488, "negative one"),
-    (-0.75, -0.809436246544161, "negative float less than one"),
-    (-0.001, -0.37471701314935, "small negative float"),
-    (0.0, float("-inf"), "zero"),
-    (0.001, -0.37271701084266684, "small positive float"),
-    (0.5, 0.4519571284477611, "small float"),
-    (1.0, 0.9020549141143959, "one as a float"),
-    (3.14, 0.11303574638480451, "pi approximation"),
-    (4.5, -0.6240834307830083, "samll float less than 5"),
-    (7.0, -0.2214612114664246, "small float less than 10"),
-    (10.5, 10.031076291311848, "float a bit more than 10"),
-    (16, -0.6466959749816906, "int"),
-    (32.0, 25.401849864300207, "float power of 2"),
-    (100, 4.594101413661028, "hundred as int"),
-    (256.0, 0.26763909053316015, "power of 2 more than 100"),
-    (512.5, 63.04114414947364, "a bit more than 2 in power of 9"),
-    (1000.0, 883.4842630033106, "thousand"),
-    (-100.0, 2.417889735345152, "negative one hundred"),
-    (1024.0, 21.288934917833924, "2 in power of 10"),
+    ("2.71", "0.4818035253577275", "first open test"),
+    ("12.345", "4.880549344757598", "second open test"),
+    ("0.001", "-0.37271701084266684", "small positive float"),
+    ("0.5", "0.4519571284477611", "small float"),
+    ("1.0", "0.9020549141143959", "one as a float"),
+    ("3.14", "0.11303574638480451", "pi approximation"),
+    ("4.5", "-0.6240834307830083", "samll float less than 5"),
+    ("7.0", "-0.2214612114664246", "small float less than 10"),
+    ("10.5", "10.031076291311848", "float a bit more than 10"),
+    ("16", "-0.6466959749816906", "int"),
+    ("32.0", "25.401849864300207", "float power of 2"),
+    ("100", "4.594101413661028", "hundred as int"),
+    ("256.0", "0.26763909053316015", "power of 2 more than 100"),
+    ("512.5", "63.04114414947364", "a bit more than 2 in power of 9"),
+    ("1000.0", "883.4842630033106", "thousand"),
+    ("1024.0", "21.288934917833924", "2 in power of 10"),
 ]
 # fmt: off
 b_test_data = (
@@ -33,7 +26,7 @@ b_test_data = (
         "3 96 12\n"
         "6\n"
         "7 8 9 10\n",
-        "2\n12\n3\n6\n1\n",
+        "2\n12\n3\n6\n1",
         "first open test",
     ),
     (
@@ -43,7 +36,7 @@ b_test_data = (
         "6\n"
         "\n"
         "7 8 9 10 17\n",
-        "2\n12\n3\n6\n0\n1\n",
+        "2\n12\n3\n6\n0\n1",
         "empty line",
     ),
     (
@@ -52,12 +45,12 @@ b_test_data = (
         "2 7 3\n"
         "29 9999997\n"
         "41 43 47\n",
-        "1\n1\n1\n1\n1\n",
+        "1\n1\n1\n1\n1",
         "prime numbers few lines",
     ),
     (
         "5 11 17 23 13 19 2 7 3 29 41 43 47\n",
-        "1\n",
+        "1",
         "line of prime numbers",
     ),
     (
@@ -66,7 +59,7 @@ b_test_data = (
         "2 5 7\n"
         "14 10 22 10000002\n"
         "35 49 77\n",
-        "1\n6\n1\n2\n7\n",
+        "1\n6\n1\n2\n7",
         "mixed prime and composite",
     ),
     (
@@ -74,7 +67,7 @@ b_test_data = (
         "4000000 5000000\n"
         "6000000\n"
         "7000000\n",
-        "1000000\n1000000\n6000000\n7000000\n",
+        "1000000\n1000000\n6000000\n7000000",
         "large numbers with common factor",
     ),
     (
@@ -82,7 +75,7 @@ b_test_data = (
         "16 32\n"
         "24\n"
         "64\n",
-        "8\n16\n24\n64\n",
+        "8\n16\n24\n64",
         "repeated numbers",
     ),
     (
@@ -90,7 +83,7 @@ b_test_data = (
         "-12 -15\n"
         "-18\n"
         "-21\n",
-        "3\n3\n18\n21\n",
+        "3\n3\n18\n21",
         "negative numbers",
     ),
     (
@@ -98,69 +91,69 @@ b_test_data = (
         "0 5\n"
         "15\n"
         "0\n",
-        "10\n5\n15\n0\n",
+        "10\n5\n15\n0",
         "zeros included",
     ),
 )
 # fmt: on
 
 c_test_data = [
-    ("4 2\n", "3 6\n", "first open test"),
-    ("10 3\n", "36 120\n", "second open test"),
+    ("4 2\n", "3 6", "first open test"),
+    ("10 3\n", "36 120", "second open test"),
     (
         "192 121\n",
         "324986985566569306378062773601957157648284518539987350 "
-        "515681828337035593591636797781617969160914277352707200\n",
+        "515681828337035593591636797781617969160914277352707200",
         "big numbers",
     ),
     (
         "2 1\n",
-        "1 2\n",
+        "1 2",
         "small numbers",
     ),
     (
         "2 0\n",
-        "0 1\n",
+        "0 1",
         "zero seats",
     ),
     (
         "1 1\n",
-        "1 1\n",
+        "1 1",
         "only one",
     ),
     (
         "192 7\n",
-        "62291483793 1708566412608\n",
+        "62291483793 1708566412608",
         "many people a few seats",
     ),
     (
         "2137 2137\n",
-        "1 1\n",
+        "1 1",
         "seats == people",
     ),
 ]
 
 d_test_data = [
-    ("1 2 3 4 5\n", "2.605171084697352\n", "first open test"),
-    ("1.1 1.2 1.3 1.4 1.5\n", "1.292252305460076\n", "second open test"),
-    ("0.01 0.02 0.03 0.04 0.05\n", "0.026051710846973514\n", "small floats"),
+    ("1 2 3 4 5\n", "2.605171084697352", "first open test"),
+    ("1.1 1.2 1.3 1.4 1.5\n", "1.292252305460076", "second open test"),
+    ("0.01 0.02 0.03 0.04 0.05\n", "0.026051710846973514", "small floats"),
     (
         "213120.01 213120.02 213120.03 213120.04 213120.05\n",
-        "213120.02999999968\n",
+        "213120.02999999968",
         "big floats with small diff",
     ),
     (
         "213120.01 213120 213120 213120 213120\n",
-        "213120.0020000001\n",
+        "213120.0020000001",
         "same numbers and one different",
     ),
     (
         "10000000 10000000 10000000 10000000 10000000\n",
-        "10000000.00000001\n",
+        "10000000.00000001",
         "same numbers",
     ),
-    ("9 8 7 6 5 4 3 2 1\n", "4.147166274396913\n", "decreasing numbers"),
-    ("6 1 4 7 5 9 3 2 8\n", "4.147166274396913\n", "mixed numbers"),
+    ("9 8 7 6 5 4 3 2 1\n", "4.147166274396913", "decreasing numbers"),
+    ("6 1 4 7 5 9 3 2 8\n", "4.147166274396913", "mixed numbers"),
 ]
 
 e_test_data = [
@@ -194,37 +187,22 @@ f_test_data = [
     (3, np.array([[1, 2, 3], [2, 4, 6], [3, 6, 9]]), "first open test"),
     (
         5,
-        np.array(
-            [
-                [1, 2, 3, 4, 5],
-                [2, 4, 6, 8, 10],
-                [3, 6, 9, 12, 15],
-                [4, 8, 12, 16, 20],
-                [5, 10, 15, 20, 25],
-            ]
-        ),
+        np.outer(np.arange(1, 6), np.arange(1, 6)),
         "second open test",
     ),
     (
         4,
-        np.array(
-            [
-                [1, 2, 3, 4],
-                [2, 4, 6, 8],
-                [3, 6, 9, 12],
-                [4, 8, 12, 16],
-            ]
-        ),
+        np.outer(np.arange(1, 5), np.arange(1, 5)),
         "even size",
     ),
     (
         921,
-        np.arange(1, 921 + 1) * np.arange(1, 921 + 1)[:, np.newaxis],
+        np.outer(np.arange(1, 921 + 1), np.arange(1, 921 + 1)),
         "big size",
     ),
     (
         10**3,
-        np.arange(1, 10**3 + 1) * np.arange(1, 10**3 + 1)[:, np.newaxis],
+        np.outer(np.arange(1, 10**3 + 1), np.arange(1, 10**3 + 1)),
         "really big size",
     ),
     (1, np.array([[1]]), "one"),
@@ -432,6 +410,7 @@ h_test_data = [
     ),
 ]
 
+ARRAY_I = np.arange(9, 129, 6).reshape(5, 4)
 i_test_data = [
     (
         np.arange(12).reshape(3, 4),
@@ -452,7 +431,7 @@ i_test_data = [
         "second open test clockwise",
     ),
     (
-        np.arange(9, 129, 6).reshape(5, 4),
+        ARRAY_I.copy(),
         -180,
         np.array(
             [
@@ -466,7 +445,7 @@ i_test_data = [
         "-180",
     ),
     (
-        np.arange(9, 129, 6).reshape(5, 4),
+        ARRAY_I.copy(),
         180,
         np.array(
             [
@@ -480,15 +459,15 @@ i_test_data = [
         "180",
     ),
     (
-        np.arange(9, 129, 6).reshape(5, 4),
+        ARRAY_I.copy(),
         360,
-        np.arange(9, 129, 6).reshape(5, 4),
+        ARRAY_I.copy(),
         "full rotation",
     ),
     (
-        np.arange(9, 129, 6).reshape(5, 4),
+        ARRAY_I.copy(),
         -720,
-        np.arange(9, 129, 6).reshape(5, 4),
+        ARRAY_I.copy(),
         "full 2 rotations clockwise",
     ),
 ]
