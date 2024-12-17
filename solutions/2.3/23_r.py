@@ -4,10 +4,8 @@ divisor = 2
 
 while number > 1:
     while number % divisor == 0:
-        print(divisor, end="")
+        print(divisor, end=" ")
         number //= divisor
-        if number > 1:
-            print(" ", end="")
         if divisor <= number:
             print("*", end=" ")
 
