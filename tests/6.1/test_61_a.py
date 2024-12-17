@@ -23,6 +23,6 @@ def test_calculate_expression(
     assert_equal(
         wrapped_module,
         monkeypatch,
-        real_number,
-        expected_output,
+        str(real_number),
+        str(expected_output) + "\n",
     )

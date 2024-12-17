@@ -50,9 +50,9 @@ def test_memory_limit_with_args_passes() -> None:
 
 
 def test_memory_limit_with_args_fails() -> None:
-    quarter_ram_limit = MEMORY_LIMIT // 4
+    memory_limit = 1
 
-    @utils.memory_limit(quarter_ram_limit)
+    @utils.memory_limit(memory_limit)
     def high_ram(n: int) -> List[int]:
         long_string = ""
         multiplier = n**2
@@ -63,7 +63,7 @@ def test_memory_limit_with_args_fails() -> None:
         high_ram(1000)
 
     assert "Использовано:" in str(exc_info.value)
-    assert f"лимит {quarter_ram_limit} MB" in str(exc_info.value)
+    assert f"лимит {memory_limit} MB" in str(exc_info.value)
 
 
 def test_memory_limit_no_args_passes() -> None:

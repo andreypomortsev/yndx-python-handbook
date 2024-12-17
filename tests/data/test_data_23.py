@@ -1,7 +1,7 @@
 a_test_data = [
     (
         "Раз!\nДва!\nТри!\n",
-        "Режим ожидания...\nРежим ожидания...\nЁлочка, гори!",
+        "Режим ожидания...\nРежим ожидания...\nЁлочка, гори!\n",
         "first open test",
     ),
     (
@@ -9,22 +9,22 @@ a_test_data = [
         "Режим ожидания...\n"
         "Режим ожидания...\n"
         "Режим ожидания...\n"
-        "Ёлочка, гори!",
+        "Ёлочка, гори!\n",
         "second open test",
     ),
     (
         "Три!\nДва!\nРаз!\nРаз!\n",
-        "Ёлочка, гори!",
+        "Ёлочка, гори!\n",
         "first word",
     ),
     (
         "Тринадцать!\nТридцать!\nТри!\n",
-        "Режим ожидания...\nРежим ожидания...\nЁлочка, гори!",
+        "Режим ожидания...\nРежим ожидания...\nЁлочка, гори!\n",
         "subset test",
     ),
     (
         "Тридцать три!\nТри!\n",
-        "Режим ожидания...\nЁлочка, гори!",
+        "Режим ожидания...\nЁлочка, гори!\n",
         "33 test",
     ),
 ]
@@ -36,7 +36,7 @@ b_test_data = [
         "сосна сосна сосна елочка грибочки медведь\n"
         "сосна сосна сосна белочка сосна белочка\n"
         "Приехали!\n",
-        "1",
+        "1\n",
         "first open test",
     ),
     (
@@ -44,7 +44,7 @@ b_test_data = [
         "березка зайка\n"
         "березка елочка березка\n"
         "Приехали!\n",
-        "2",
+        "2\n",
         "second open test",
     ),
     (
@@ -52,7 +52,7 @@ b_test_data = [
         "сосна сосна сосна елочка грибочки медведь\n"
         "сосна сосна сосна белочка сосна белочка\n"
         "Приехали!\n",
-        "0",
+        "0\n",
         "no bunnies",
     ),
     (
@@ -60,7 +60,7 @@ b_test_data = [
         "сосна зайка сосна елочка грибочки медведь\n"
         "зайка сосна сосна зайка сосна зайка\n"
         "Приехали!\n",
-        "3",
+        "3\n",
         "many bunnies",
     ),
     (
@@ -68,7 +68,7 @@ b_test_data = [
         "\n"
         "зайка сосна сосна зайка сосна зайка\n"
         "Приехали!\n",
-        "1",
+        "1\n",
         "empty string",
     ),
     (
@@ -76,7 +76,7 @@ b_test_data = [
         "елочка волк елочка волк елочка волк березка\n"
         "зайка сосна сосна зайка сосна зайка\n"
         "Приехали!\n",
-        "1",
+        "1\n",
         "first empty string",
     ),
     (
@@ -90,82 +90,82 @@ b_test_data = [
         "елочка волк елочка волк елочка волк березка зайка\n"
         "зайка сосна сосна зайка сосна зайка\n"
         "Приехали!\n",
-        "9",
-        "bunnies in every row",
+        "9\n",
+        "bunnie in every row",
     ),
 ]
 
 
 c_test_data = [
-    ("1\n10\n", "1 2 3 4 5 6 7 8 9 10", "first open test"),
-    ("-3\n3\n", "-3 -2 -1 0 1 2 3", "second open test"),
-    ("1\n2\n", "1 2", "small distance"),
-    ("-2\n-1\n", "-2 -1", "small distance negative"),
-    ("99\n102\n", "99 100 101 102", "around a hundred"),
-    ("-10\n0\n", "-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0", "negative to zero"),
-    ("0\n9\n", "0 1 2 3 4 5 6 7 8 9", "zero to nine"),
-    ("10\n19\n", "10 11 12 13 14 15 16 17 18 19", "ten to nineteen"),
+    ("1\n10\n", "1 2 3 4 5 6 7 8 9 10\n", "first open test"),
+    ("-3\n3\n", "-3 -2 -1 0 1 2 3\n", "second open test"),
+    ("1\n2\n", "1 2\n", "small distance"),
+    ("-2\n-1\n", "-2 -1\n", "small distance negative"),
+    ("99\n102\n", "99 100 101 102\n", "around a hundred"),
+    ("-10\n0\n", "-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0\n", "negative to zero"),
+    ("0\n9\n", "0 1 2 3 4 5 6 7 8 9\n", "zero to nine"),
+    ("10\n19\n", "10 11 12 13 14 15 16 17 18 19\n", "ten to nineteen"),
 ]
 
 
 d_test_data = [
-    ("1\n10\n", "1 2 3 4 5 6 7 8 9 10", "first open test"),
-    ("3\n-3\n", "3 2 1 0 -1 -2 -3", "second open test"),
-    ("1\n2\n", "1 2", "small distance"),
-    ("-2\n-1\n", "-2 -1", "small distance negative"),
-    ("99\n102\n", "99 100 101 102", "around a hundred"),
-    ("-10\n0\n", "-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0", "negative to zero"),
-    ("0\n9\n", "0 1 2 3 4 5 6 7 8 9", "zero to nine"),
-    ("10\n19\n", "10 11 12 13 14 15 16 17 18 19", "ten to nineteen"),
+    ("1\n10\n", "1 2 3 4 5 6 7 8 9 10\n", "first open test"),
+    ("3\n-3\n", "3 2 1 0 -1 -2 -3\n", "second open test"),
+    ("1\n2\n", "1 2\n", "small distance"),
+    ("-2\n-1\n", "-2 -1\n", "small distance negative"),
+    ("99\n102\n", "99 100 101 102\n", "around a hundred"),
+    ("-10\n0\n", "-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0\n", "negative to zero"),
+    ("0\n9\n", "0 1 2 3 4 5 6 7 8 9\n", "zero to nine"),
+    ("10\n19\n", "10 11 12 13 14 15 16 17 18 19\n", "ten to nineteen"),
     (
         "-10\n-19\n",
-        "-10 -11 -12 -13 -14 -15 -16 -17 -18 -19",
+        "-10 -11 -12 -13 -14 -15 -16 -17 -18 -19\n",
         "negative ten to neg nineteen",
     ),
-    ("-3\n3\n", "-3 -2 -1 0 1 2 3", "neg to pos through zero"),
+    ("-3\n3\n", "-3 -2 -1 0 1 2 3\n", "neg to pos through zero"),
 ]
 
 
 e_test_data = [
-    ("100\n500\n333\n0\n", "883.0", "first open test"),
-    ("512\n499\n342.50\n0\n", "1302.3", "second open test"),
-    ("100\n499\n1\n0\n", "600.0", "no discount"),
-    ("499.99\n0.03\n342.99\n0\n", "843.01", "floats no discount"),
-    ("599.99\n500.02\n542.99\n0\n", "1478.7", "floats with discount"),
+    ("100\n500\n333\n0\n", "883.0\n", "first open test"),
+    ("512\n499\n342.50\n0\n", "1302.3\n", "second open test"),
+    ("100\n499\n1\n0\n", "600.0\n", "no discount"),
+    ("499.99\n0.03\n342.99\n0\n", "843.01\n", "floats no discount"),
+    ("599.99\n500.02\n542.99\n0\n", "1478.7\n", "floats with discount"),
     (
         "1_000_000_000_000\n499_000_000_000_000\n342_000_000_000_000.50\n0\n",
-        "757800000000000.5",
+        "757800000000000.5\n",
         "huge numbers",
     ),
 ]
 
 
 f_test_data = [
-    ("12\n42\n", "6", "first open test"),
-    ("512\n625\n", "1", "second open test"),
-    ("0\n99\n", "99", "first is zero"),
-    ("88\n0\n", "88", "second is zero"),
+    ("12\n42\n", "6\n", "first open test"),
+    ("512\n625\n", "1\n", "second open test"),
+    ("0\n99\n", "99\n", "first is zero"),
+    ("88\n0\n", "88\n", "second is zero"),
 ]
 
 
 g_test_data = [
-    ("12\n42\n", "84", "first open test"),
-    ("512\n625\n", "320000", "second open test"),
-    ("0\n99\n", "0", "first is zero"),
-    ("88\n0\n", "0", "second is zero"),
-    ("1\n99\n", "99", "first is one"),
-    ("88\n1\n", "88", "second is one"),
+    ("12\n42\n", "84\n", "first open test"),
+    ("512\n625\n", "320000\n", "second open test"),
+    ("0\n99\n", "0\n", "first is zero"),
+    ("88\n0\n", "0\n", "second is zero"),
+    ("1\n99\n", "99\n", "first is one"),
+    ("88\n1\n", "88\n", "second is one"),
 ]
 
 
 h_test_data = [
-    ("2 + 2 = 4\n3\n", "2 + 2 = 4\n2 + 2 = 4\n2 + 2 = 4", "first open test"),
+    ("2 + 2 = 4\n3\n", "2 + 2 = 4\n2 + 2 = 4\n2 + 2 = 4\n", "first open test"),
     (
         "Нельзя нажимать неизвестные кнопки!\n4\n",
         "Нельзя нажимать неизвестные кнопки!\n"
         "Нельзя нажимать неизвестные кнопки!\n"
         "Нельзя нажимать неизвестные кнопки!\n"
-        "Нельзя нажимать неизвестные кнопки!",
+        "Нельзя нажимать неизвестные кнопки!\n",
         "second open test",
     ),
     ("Яндекс не покрывает тестами свои задачи\n0\n", "", "zero repeat"),
@@ -173,75 +173,74 @@ h_test_data = [
 
 
 i_test_data = [
-    ("3\n", "6", "first open test"),
-    ("5\n", "120", "second open test"),
-    ("0\n", "1", "zero factorial"),
-    ("1\n", "1", "one factorial"),
-    ("2\n", "2", "two factorial"),
-    ("19\n", "121645100408832000", "big factorial"),
+    ("3\n", "6\n", "first open test"),
+    ("5\n", "120\n", "second open test"),
+    ("0\n", "1\n", "zero factorial"),
+    ("1\n", "1\n", "one factorial"),
+    ("2\n", "2\n", "two factorial"),
+    ("19\n", "121645100408832000\n", "big factorial"),
 ]
 
 
 j_test_data = [
-    ("СЕВЕР\n2\nВОСТОК\n2\nСТОП\n", "2\n2", "first open test"),
-    ("СЕВЕР\n2\nЮГ\n3\nЗАПАД\n4\nСТОП\n", "-1\n-4", "second open test"),
+    ("СЕВЕР\n2\nВОСТОК\n2\nСТОП\n", "2\n2\n", "first open test"),
+    ("СЕВЕР\n2\nЮГ\n3\nЗАПАД\n4\nСТОП\n", "-1\n-4\n", "second open test"),
     (
         "СЕВЕР\n99\nВОСТОК\n99\nЮГ\n99\nЗАПАД\n99\nСТОП\n",
-        "0\n0",
+        "0\n0\n",
         "counter clockwise circle",
     ),
     (
         "ЮГ\n1\nЗАПАД\n1\nСЕВЕР\n1\nВОСТОК\n1\nСТОП\n",
-        "0\n0",
+        "0\n0\n",
         "clockwise circle",
     ),
 ]
 
 
 k_test_data = [
-    ("12345\n", "15", "first open test"),
-    ("100500\n", "6", "second open test"),
-    ("000000\n", "0", "zero"),
+    ("12345\n", "15\n", "first open test"),
+    ("100500\n", "6\n", "second open test"),
+    ("000000\n", "0\n", "zero"),
     (
         "19219391293124791237218461928312371941289128371928472813273563652\n",
-        "281",
-        "huge num",
+        "281\n",
+        "zero",
     ),
-    ("1000000\n", "1", "one"),
-    ("1000001\n", "2", "two"),
+    ("1000000\n", "1\n", "one"),
+    ("1000001\n", "2\n", "two"),
 ]
 
 
 l_test_data = [
-    ("12345\n", "5", "first open test"),
-    ("100500\n", "5", "second open test"),
-    ("1234543219\n", "9", "last is max"),
-    ("88888888888888888888\n", "8", "all equal"),
-    ("000000000\n", "0", "zero"),
-    ("987654321\n", "9", "first is max"),
-    ("12345678987654321\n", "9", "max is in the middle"),
+    ("12345\n", "5\n", "first open test"),
+    ("100500\n", "5\n", "second open test"),
+    ("1234543219\n", "9\n", "last is max"),
+    ("88888888888888888888\n", "8\n", "all equal"),
+    ("000000000\n", "0\n", "zero"),
+    ("987654321\n", "9\n", "first is max"),
 ]
 
 
 m_test_data = [
-    ("3\nВова\nАня\nБоря\n", "Аня", "first open test"),
-    ("4\nТоля\nКоля\nВася\nЮля\n", "Вася", "second open test"),
-    ("4\nВасилий\nКоля\nВася\nЮля\n", "Василий", "longest wins"),
-    ("4\nВасилий\nКоля\nВасил\nЮля\n", "Васил", "substring"),
-    ("2\nAnna\nAmy\n", "Amy", "english names"),
-    ("1\nAnna\n", "Anna", "one english name"),
-    ("1\nИгнат\n", "Игнат", "one russian name"),
+    ("3\nВова\nАня\nБоря\n", "Аня\n", "first open test"),
+    ("4\nТоля\nКоля\nВася\nЮля\n", "Вася\n", "second open test"),
+    ("4\nВасилий\nКоля\nВася\nЮля\n", "Василий\n", "longest wins"),
+    ("4\nВасилий\nКоля\nВасил\nЮля\n", "Васил\n", "substring"),
+    ("2\nAnna\nAmy\n", "Amy\n", "english names"),
+    ("1\nAnna\n", "Anna\n", "one english name"),
+    ("1\nИгнат\n", "Игнат\n", "one russian name"),
 ]
 
 
 n_test_data = [
-    ("1\n", "NO", "first open test"),
-    ("67\n", "YES", "second open test"),
-    ("6\n", "NO", "six is not prime"),
-    ("3\n", "YES", "three is prime"),
-    ("103\n", "YES", "103 is prime"),
-    ("102\n", "NO", "102 is not prime"),
-    ("125\n", "NO", "125 is not prime"),
+    ("1\n", "NO\n", "first open test"),
+    ("67\n", "YES\n", "second open test"),
+    ("6\n", "NO\n", "six is not prime"),
+    ("3\n", "YES\n", "three is prime"),
+    ("103\n", "YES\n", "103 is prime"),
+    ("102\n", "NO\n", "102 is not prime"),
+    ("125\n", "NO\n", "125 is not prime"),
 ]
 
 
@@ -250,7 +249,7 @@ o_test_data = [
         "3\nберезка елочка зайка волк березка\n"
         "сосна сосна сосна елочка грибочки медведь\n"
         "сосна сосна сосна белочка сосна белочка\n",
-        "1",
+        "1\n",
         "first open test",
     ),
     (
@@ -258,7 +257,7 @@ o_test_data = [
         "березка зайка\n"
         "березка елочка березка\n"
         "елочка елочка елочка\n",
-        "2",
+        "2\n",
         "second open test",
     ),
     (
@@ -268,44 +267,44 @@ o_test_data = [
         "сосна сосна зайка сосна белочка сосна белочка зайка\n"
         "сосна зайка сосна белочка сосна белочка зайка\n"
         "сосна сосна зайка сосна сосна белочка зайка\n",
-        "5",
+        "5\n",
         "bunnies everywhere",
     ),
 ]
 
 
 p_test_data = [
-    ("1234\n", "NO", "first open test"),
-    ("123454321\n", "YES", "second open test"),
-    ("12344321\n", "YES", "even length"),
-    ("9876543210123456789\n", "YES", "all nums 9-0-9"),
-    ("987654321023456789\n", "NO", "9-0-9 1 missing"),
-    ("98765432101234567890\n", "NO", "all nums 9-0-9 plus 0"),
+    ("1234\n", "NO\n", "first open test"),
+    ("123454321\n", "YES\n", "second open test"),
+    ("12344321\n", "YES\n", "even length"),
+    ("9876543210123456789\n", "YES\n", "all nums 9-0-9"),
+    ("987654321023456789\n", "NO\n", "9-0-9 1 missing"),
+    ("98765432101234567890\n", "NO\n", "all nums 9-0-9 plus 0"),
 ]
 
 
 q_test_data = [
-    ("1234\n", "13", "first open test"),
-    ("123454321\n", "13531", "second open test"),
-    ("135797535973\n", "135797535973", "all odd"),
-    ("2032134\n", "313", "checking for zero"),
-    ("1032134\n", "1313", "with zero"),
+    ("1234\n", {"13\n", "13"}, "first open test"),
+    ("123454321\n", {"13531\n", "13531"}, "second open test"),
+    ("135797535973\n", {"135797535973\n", "135797535973"}, "all odd"),
+    ("2032134\n", {"313\n", "313"}, "checking for zero"),
+    ("1032134\n", {"1313\n", "1313"}, "with zero"),
 ]
 
 
 r_test_data = [
     (
         "120\n",
-        "2 * 2 * 2 * 3 * 5",
+        {"2 * 2 * 2 * 3 * 5 ", "2 * 2 * 2 * 3 * 5\n"},
         "first open test",
     ),
-    ("98\n", "2 * 7 * 7", "second open test"),
-    ("2\n", "2", "small prime"),
-    ("3\n", "3", "next small prime"),
-    ("5\n", "5", "5 prime"),
-    ("291\n", "3 * 97", "prod of primes"),
-    ("7159203823\n", "397 * 4079 * 4421", "big num"),
-    ("121\n", "11 * 11", "11 in pow of 2"),
+    ("98\n", {"2 * 7 * 7 ", "2 * 7 * 7\n"}, "second open test"),
+    ("2\n", {"2 ", "2\n"}, "small prime"),
+    ("3\n", {"3 ", "3\n"}, "next small prime"),
+    ("5\n", {"5 ", "5\n"}, "5 prime"),
+    ("291\n", {"3 * 97 ", "3 * 97\n"}, "prod of primes"),
+    ("7159203823\n", {"397 * 4079 * 4421 ", "397 * 4079 * 4421\n"}, "big num"),
+    ("121\n", {"11 * 11 ", "11 * 11\n"}, "11 in pow of 2"),
 ]
 
 
@@ -320,7 +319,7 @@ s_test_data = [
         "Больше\n"
         "Больше\n"
         "Угадал!\n",
-        "500\n250\n125\n63\n94\n109\n117\n121\n123",
+        "500\n250\n125\n63\n94\n109\n117\n121\n123\n",
         "first open test",
     ),
     (
@@ -334,7 +333,7 @@ s_test_data = [
         "Больше\n"
         "Больше\n"
         "Угадал!\n",
-        "500\n750\n875\n937\n968\n984\n992\n996\n998\n999",
+        "500\n750\n875\n937\n968\n984\n992\n996\n998\n999\n",
         "max number",
     ),
     (
@@ -348,7 +347,7 @@ s_test_data = [
         "Меньше\n"
         "Меньше\n"
         "Угадал!\n",
-        "500\n250\n125\n63\n32\n16\n8\n4\n2\n1",
+        "500\n250\n125\n63\n32\n16\n8\n4\n2\n1\n",
         "min number",
     ),
 ]
@@ -357,12 +356,12 @@ s_test_data = [
 t_test_data = [
     (
         "5\n" "6122802\n" "14406496\n" "15230209\n" "2541121\n" "1758741\n",
-        "-1",
+        "-1\n",
         "first open test",
     ),
     (
         "5\n" "1865535\n" "13479687\n" "16689153\n" "1839958\n" "5214020\n",
-        "3",
+        "3\n",
         "second open test",
     ),
 ]

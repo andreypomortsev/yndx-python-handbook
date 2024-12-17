@@ -6,16 +6,13 @@ bill = int(input())
 total = weight * price
 change = bill - total
 price_line = f"{weight}кг * {price}руб/кг"
-receipt_header = f"{'Чек':=^35}"
-receipt_footer = f"{'':=^35}"
 
-receipt = (
-    f"{receipt_header}\n"
-    f"Товар:{name: >29}\n"
-    f"Цена:{price_line: >30}\n"
-    f"Итого:{total: >26}руб\n"
-    f"Внесено:{bill: >24}руб\n"
-    f"Сдача:{change: >26}руб\n"
-    f"{receipt_footer}"
-)
+receipt = f"""{"Чек":=^35}
+Товар:{name: >29}
+Цена:{price_line: >30}
+Итого:{total: >26}руб
+Внесено:{bill: >24}руб
+Сдача:{change: >26}руб
+{"":=^35}"""
+
 print(receipt)
