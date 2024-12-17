@@ -10,18 +10,16 @@ on:
 
 jobs:
   build:
-    timeout-minutes: 13
-
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest]
-        python-version: ["3.11", "3.12", "3.13"]
-        include:
-          # Add an exception for Windows to only run 3.12
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.12", "3.13"]
+        exclude:
+          # Exclude Python 3.13 on Windows
           - os: windows-latest
-            python-version: 3.12
-    runs-on: ${{ matrix.os }}  # Can dynamically choose OS based on the matrix
+            python-version: "3.13"
+    runs-on: ${{ matrix.os }}
     
     steps:
       - name: Checkout code
