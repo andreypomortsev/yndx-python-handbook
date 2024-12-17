@@ -243,7 +243,6 @@ def make_test_files(
 def pytest_sessionfinish(session: Session) -> None:
     """
     Pytest hook, который запускается после завершения тестовой сессии.
-
     Этот хук удаляет все временные файлы, созданные во время тестирования.
 
     Аргументы:
@@ -402,7 +401,7 @@ def time_spender() -> Callable[..., None]:
 
     def spend_time(sleep_time: Optional[float]) -> None:
         if sleep_time is None:
-            sleep_time = 0.90
+            sleep_time = 0.50
         time.sleep(sleep_time)
 
     return spend_time

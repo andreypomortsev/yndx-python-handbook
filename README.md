@@ -18,8 +18,7 @@ _"Хендбук по Python поможет овладеть основным с
 
 ### Предварительные требования
 
-- **Python**: Убедитесь, что у вас установлена версия Python 3.11 или выше. Скачать можно по ссылкам:
-  - [**Python 3.11**](https://www.python.org/downloads/release/python-31110/)
+- **Python**: Убедитесь, что у вас установлена версия Python 3.12 или выше. Скачать можно по ссылкам:
   - [**Python 3.12**](https://www.python.org/downloads/release/python-3127/)
   - [**Python 3.13**](https://www.python.org/downloads/release/python-3130/)
 

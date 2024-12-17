@@ -55,10 +55,9 @@ def test_memory_limit_with_args_fails() -> None:
     @utils.memory_limit(memory_limit)
     def high_ram(n: int) -> List[int]:
         long_string = ""
-        for i in range(n):
-            for j in range(n):
-                long_string += f"{i}" + f"{j}"
-        return long_string
+        multiplier = n**2
+        for _ in range(20):
+            long_string += "a" * multiplier
 
     with pytest.raises(MemoryLimitExceeded) as exc_info:
         high_ram(1000)
@@ -76,22 +75,20 @@ def test_memory_limit_no_args_passes() -> None:
 
 
 def test_memory_limit_no_args_fails() -> None:
-    memory_limit = 4
+    quarter_ram_limit = MEMORY_LIMIT // 4
 
-    @utils.memory_limit(memory_limit)
-    def high_ram() -> List[int]:
+    @utils.memory_limit(quarter_ram_limit)
+    def high_ram() -> None:
         long_string = ""
-        n = 1000
-        for i in range(n):
-            for j in range(n):
-                long_string += f"{i}" + f"{j}"
-        return long_string
+        multiplier = 10**6
+        for _ in range(20):
+            long_string += "a" * multiplier
 
     with pytest.raises(MemoryLimitExceeded) as exc_info:
         high_ram()
 
     assert "Использовано:" in str(exc_info.value)
-    assert f"лимит {memory_limit} MB" in str(exc_info.value)
+    assert f"лимит {quarter_ram_limit} MB" in str(exc_info.value)
 
 
 @pytest.mark.parametrize(
