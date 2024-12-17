@@ -50,11 +50,17 @@ compare_output_data_pas = [
         ],
         "list test",
     ),
+    ("item1", {"item1", "item\n"}, "set test"),
+    (
+        "item1\nitem2\n",
+        {"item1\nitem2", "item1\nitem2\n", "item1\nitem2\n\n"},
+        "set test multiline",
+    ),
 ]
 
 assert_equal_data = [
-    ("World\n", "Hello, World!", "Hello, World!"),
-    ("\n", "Hello, !", "empty input"),
+    ("World\n", "Hello, World!\n", "Hello, World!"),
+    ("\n", "Hello, !\n", "empty input"),
 ]
 
 get_tested_file_details_data = [
