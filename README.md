@@ -1,7 +1,6 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
-![Python 3.11](https://img.shields.io/badge/Python-3.11-orange.svg)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-yellow.svg)
 ![Python 3.13](https://img.shields.io/badge/Python-3.13-green.svg)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
@@ -421,28 +420,28 @@ def main():
   
 ### [Тестовые данные для задач](./tests/data/test_data_21.py)
   
-| Решение              | Тесты                |
-|----------------------|----------------------|
-| А. [Привет, Яндекс!](./solutions/2.1/21_a.py) | [✅](./tests/2.1/test_21_a.py) |
-| B. [Привет, всем!](./solutions/2.1/21_b.py) | [✅](./tests/2.1/test_21_b.py) |
-| C. [Излишняя автоматизация](./solutions/2.1/21_c.py) | [✅](./tests/2.1/test_21_c.py) |
-| D. [Сдача](./solutions/2.1/21_d.py) | [✅](./tests/2.1/test_21_d.py) |
-| E. [Магазин](./solutions/2.1/21_e.py) | [✅](./tests/2.1/test_21_e.py) |
-| F. [Чек](./solutions/2.1/21_f.py) | [✅](./tests/2.1/test_21_f.py) |
-| G. [Делу — время, потехе — час](./solutions/2.1/21_g.py) | [✅](./tests/2.1/test_21_g.py) |
-| H. [Наказание](./solutions/2.1/21_h.py) | [✅](./tests/2.1/test_21_h.py) |
-| I. [Деловая колбаса](./solutions/2.1/21_i.py) | [✅](./tests/2.1/test_21_i.py) |
-| J. [Детский сад — штаны на лямках](./solutions/2.1/21_j.py) | [✅](./tests/2.1/test_21_j.py) |
-| K. [Автоматизация игры](./solutions/2.1/21_k.py) | [✅](./tests/2.1/test_21_k.py) |
-| L. [Интересное сложение](./solutions/2.1/21_l.py) | [✅](./tests/2.1/test_21_l.py) |
-| M. [Дед Мороз и конфеты](./solutions/2.1/21_m.py) | [✅](./tests/2.1/test_21_m.py) |
-| N. [Шарики и ручки](./solutions/2.1/21_n.py) | [✅](./tests/2.1/test_21_n.py) |
-| O. [В ожидании доставки](./solutions/2.1/21_o.py) | [✅](./tests/2.1/test_21_o.py) |
-| P. [Доставка](./solutions/2.1/21_p.py) | [✅](./tests/2.1/test_21_p.py) |
-| Q. [Ошибка кассового аппарата](./solutions/2.1/21_q.py) | [✅](./tests/2.1/test_21_q.py) |
-| R. [Сдача 10](./solutions/2.1/21_r.py) | [✅](./tests/2.1/test_21_r.py) |
-| S. [Украшение чека](./solutions/2.1/21_s.py) | [✅](./tests/2.1/test_21_s.py) |
-| T. [Мухи отдельно, котлеты отдельно](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
+| Задача               | Решение              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Привет, Яндекс!](./problems/russian/2.1/problem_21_a_ru.md) | [✅](./solutions/2.1/21_a.py) | [✅](./tests/2.1/test_21_a.py) |
+| B. [Привет, всем!](./problems/russian/2.1/problem_21_b_ru.md) | [✅](./solutions/2.1/21_b.py) | [✅](./tests/2.1/test_21_b.py) |
+| C. [Излишняя автоматизация](./problems/russian/2.1/problem_21_c_ru.md) | [✅](./solutions/2.1/21_c.py) | [✅](./tests/2.1/test_21_c.py) |
+| D. [Сдача](./problems/russian/2.1/problem_21_d_ru.md) | [✅](./solutions/2.1/21_d.py) | [✅](./tests/2.1/test_21_d.py) |
+| E. [Магазин](./problems/russian/2.1/problem_21_e_ru.md) | [✅](./solutions/2.1/21_e.py) | [✅](./tests/2.1/test_21_e.py) |
+| F. [Чек](./problems/russian/2.1/problem_21_f_ru.md) | [✅](./solutions/2.1/21_f.py) | [✅](./tests/2.1/test_21_f.py) |
+| G. [Делу — время, потехе — час](./problems/russian/2.1/problem_21_g_ru.md) | [✅](./solutions/2.1/21_g.py) | [✅](./tests/2.1/test_21_g.py) |
+| H. [Наказание](./problems/russian/2.1/problem_21_h_ru.md) | [✅](./solutions/2.1/21_h.py) | [✅](./tests/2.1/test_21_h.py) |
+| I. [Деловая колбаса](./problems/russian/2.1/problem_21_i_ru.md) | [✅](./solutions/2.1/21_i.py) | [✅](./tests/2.1/test_21_i.py) |
+| J. [Детский сад — штаны на лямках](./problems/russian/2.1/problem_21_j_ru.md) | [✅](./solutions/2.1/21_j.py) | [✅](./tests/2.1/test_21_j.py) |
+| K. [Автоматизация игры](./problems/russian/2.1/problem_21_k_ru.md) | [✅](./solutions/2.1/21_k.py) | [✅](./tests/2.1/test_21_k.py) |
+| L. [Интересное сложение](./problems/russian/2.1/problem_21_l_ru.md) | [✅](./solutions/2.1/21_l.py) | [✅](./tests/2.1/test_21_l.py) |
+| M. [Дед Мороз и конфеты](./problems/russian/2.1/problem_21_m_ru.md) | [✅](./solutions/2.1/21_m.py) | [✅](./tests/2.1/test_21_m.py) |
+| N. [Шарики и ручки](./problems/russian/2.1/problem_21_n_ru.md) | [✅](./solutions/2.1/21_n.py) | [✅](./tests/2.1/test_21_n.py) |
+| O. [В ожидании доставки](./problems/russian/2.1/problem_21_o_ru.md) | [✅](./solutions/2.1/21_o.py) | [✅](./tests/2.1/test_21_o.py) |
+| P. [Доставка](./problems/russian/2.1/problem_21_p_ru.md) | [✅](./solutions/2.1/21_p.py) | [✅](./tests/2.1/test_21_p.py) |
+| Q. [Ошибка кассового аппарата](./problems/russian/2.1/problem_21_q_ru.md) | [✅](./solutions/2.1/21_q.py) | [✅](./tests/2.1/test_21_q.py) |
+| R. [Сдача 10](./problems/russian/2.1/problem_21_r_ru.md) | [✅](./solutions/2.1/21_r.py) | [✅](./tests/2.1/test_21_r.py) |
+| S. [Украшение чека](./problems/russian/2.1/problem_21_s_ru.md) | [✅](./solutions/2.1/21_s.py) | [✅](./tests/2.1/test_21_s.py) |
+| T. [Мухи отдельно, котлеты отдельно](./problems/russian/2.1/problem_21_t_ru.md) | [✅](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
 
 </details>
 
