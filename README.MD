@@ -50,10 +50,10 @@ pip install -r requirements.txt
 
 #### Clone and setup project
 
-    ```bash
-    git clone https://github.com/andreypomortsev/yndx-python-handbook
-    cd yndx-python-handbook
-    ```
+  ```bash
+  git clone https://github.com/andreypomortsev/yndx-python-handbook
+  cd yndx-python-handbook
+  ```
 
 - #### Windows
     
