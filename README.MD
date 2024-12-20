@@ -212,30 +212,29 @@ Solutions are organized by handbook sections. Each solution:
 
 [📖 Theory](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye) | [🧪 Test Data](./tests/data/test_data_21.py)
 
-### [Тестовые данные для задач](./tests/data/test_data_21.py)
   
-| Задача               | Решение              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
-| А. [Hello, Yandex!](./problems/russian/2.1/problem_21_a_ru.md) | [✅](./solutions/2.1/21_a.py) | [✅](./tests/2.1/test_21_a.py) |
-| B. [Hello, everyone!](./problems/russian/2.1/problem_21_b_ru.md) | [✅](./solutions/2.1/21_b.py) | [✅](./tests/2.1/test_21_b.py) |
-| C. [Excessive Automation](./problems/russian/2.1/problem_21_c_ru.md) | [✅](./solutions/2.1/21_c.py) | [✅](./tests/2.1/test_21_c.py) |
-| D. [Change Calculation](./problems/russian/2.1/problem_21_d_ru.md) | [✅](./solutions/2.1/21_d.py) | [✅](./tests/2.1/test_21_d.py) |
-| E. [Store](./problems/russian/2.1/problem_21_e_ru.md) | [✅](./solutions/2.1/21_e.py) | [✅](./tests/2.1/test_21_e.py) |
-| F. [Receipt](./problems/russian/2.1/problem_21_f_ru.md) | [✅](./solutions/2.1/21_f.py) | [✅](./tests/2.1/test_21_f.py) |
-| G. [Work Hard, Play Hard](./problems/russian/2.1/problem_21_g_ru.md) | [✅](./solutions/2.1/21_g.py) | [✅](./tests/2.1/test_21_g.py) |
-| H. [Punishment](./problems/russian/2.1/problem_21_h_ru.md) | [✅](./solutions/2.1/21_h.py) | [✅](./tests/2.1/test_21_h.py) |
-| I. [Businesslike Sausage](./problems/russian/2.1/problem_21_i_ru.md) | [✅](./solutions/2.1/21_i.py) | [✅](./tests/2.1/test_21_i.py) |
-| J. [Kindergarten — Overalls](./problems/russian/2.1/problem_21_j_ru.md) | [✅](./solutions/2.1/21_j.py) | [✅](./tests/2.1/test_21_j.py) |
-| K. [Game Automation](./problems/russian/2.1/problem_21_k_ru.md) | [✅](./solutions/2.1/21_k.py) | [✅](./tests/2.1/test_21_k.py) |
-| L. [Interesting Addition](./problems/russian/2.1/problem_21_l_ru.md) | [✅](./solutions/2.1/21_l.py) | [✅](./tests/2.1/test_21_l.py) |
-| M. [Santa Claus and Candy](./problems/russian/2.1/problem_21_m_ru.md) | [✅](./solutions/2.1/21_m.py) | [✅](./tests/2.1/test_21_m.py) |
-| N. [Balls and Pens](./problems/russian/2.1/problem_21_n_ru.md) | [✅](./solutions/2.1/21_n.py) | [✅](./tests/2.1/test_21_n.py) |
-| O. [Waiting for Delivery](./problems/russian/2.1/problem_21_o_ru.md) | [✅](./solutions/2.1/21_o.py) | [✅](./tests/2.1/test_21_o.py) |
-| P. [Delivery](./problems/russian/2.1/problem_21_p_ru.md) | [✅](./solutions/2.1/21_p.py) | [✅](./tests/2.1/test_21_p.py) |
-| Q. [Cash Register Error](./problems/russian/2.1/problem_21_q_ru.md) | [✅](./solutions/2.1/21_q.py) | [✅](./tests/2.1/test_21_q.py) |
-| R. [Change 10](./problems/russian/2.1/problem_21_r_ru.md) | [✅](./solutions/2.1/21_r.py) | [✅](./tests/2.1/test_21_r.py) |
-| S. [Receipt Decoration](./problems/russian/2.1/problem_21_s_ru.md) | [✅](./solutions/2.1/21_s.py) | [✅](./tests/2.1/test_21_s.py) |
-| T. [Flies and Cutlets Separately](./problems/russian/2.1/problem_21_t_ru.md) | [✅](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
+| А. [Hello, Yandex!](./problems/english/2.1/problem_21_a_en.md) | [✅](./solutions/2.1/21_a.py) | [✅](./tests/2.1/test_21_a.py) |
+| B. [Hello, everyone!](./problems/english/2.1/problem_21_b_en.md) | [✅](./solutions/2.1/21_b.py) | [✅](./tests/2.1/test_21_b.py) |
+| C. [Excessive Automation](./problems/english/2.1/problem_21_c_en.md) | [✅](./solutions/2.1/21_c.py) | [✅](./tests/2.1/test_21_c.py) |
+| D. [Change Calculation](./problems/english/2.1/problem_21_d_en.md) | [✅](./solutions/2.1/21_d.py) | [✅](./tests/2.1/test_21_d.py) |
+| E. [Store](./problems/english/2.1/problem_21_e_en.md) | [✅](./solutions/2.1/21_e.py) | [✅](./tests/2.1/test_21_e.py) |
+| F. [Receipt](./problems/english/2.1/problem_21_f_en.md) | [✅](./solutions/2.1/21_f.py) | [✅](./tests/2.1/test_21_f.py) |
+| G. [Work Hard, Play Hard](./problems/english/2.1/problem_21_g_en.md) | [✅](./solutions/2.1/21_g.py) | [✅](./tests/2.1/test_21_g.py) |
+| H. [Punishment](./problems/english/2.1/problem_21_h_en.md) | [✅](./solutions/2.1/21_h.py) | [✅](./tests/2.1/test_21_h.py) |
+| I. [Businesslike Sausage](./problems/english/2.1/problem_21_i_en.md) | [✅](./solutions/2.1/21_i.py) | [✅](./tests/2.1/test_21_i.py) |
+| J. [Kindergarten — Overalls](./problems/english/2.1/problem_21_j_en.md) | [✅](./solutions/2.1/21_j.py) | [✅](./tests/2.1/test_21_j.py) |
+| K. [Game Automation](./problems/english/2.1/problem_21_k_en.md) | [✅](./solutions/2.1/21_k.py) | [✅](./tests/2.1/test_21_k.py) |
+| L. [Interesting Addition](./problems/english/2.1/problem_21_l_en.md) | [✅](./solutions/2.1/21_l.py) | [✅](./tests/2.1/test_21_l.py) |
+| M. [Santa Claus and Candy](./problems/english/2.1/problem_21_m_en.md) | [✅](./solutions/2.1/21_m.py) | [✅](./tests/2.1/test_21_m.py) |
+| N. [Balls and Pens](./problems/english/2.1/problem_21_n_en.md) | [✅](./solutions/2.1/21_n.py) | [✅](./tests/2.1/test_21_n.py) |
+| O. [Waiting for Delivery](./problems/english/2.1/problem_21_o_en.md) | [✅](./solutions/2.1/21_o.py) | [✅](./tests/2.1/test_21_o.py) |
+| P. [Delivery](./problems/english/2.1/problem_21_p_en.md) | [✅](./solutions/2.1/21_p.py) | [✅](./tests/2.1/test_21_p.py) |
+| Q. [Cash Register Error](./problems/english/2.1/problem_21_q_en.md) | [✅](./solutions/2.1/21_q.py) | [✅](./tests/2.1/test_21_q.py) |
+| R. [Change 10](./problems/english/2.1/problem_21_r_en.md) | [✅](./solutions/2.1/21_r.py) | [✅](./tests/2.1/test_21_r.py) |
+| S. [Receipt Decoration](./problems/english/2.1/problem_21_s_en.md) | [✅](./solutions/2.1/21_s.py) | [✅](./tests/2.1/test_21_s.py) |
+| T. [Flies and Cutlets Separately](./problems/english/2.1/problem_21_t_en.md) | [✅](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
 
 </details>
 
