@@ -1,4 +1,4 @@
-## [Santa Claus and Candies](../../../solutions/2.1/21_m.py)
+## [Santa Claus and Candy](../../../solutions/2.1/21_m.py)
 
 The most important event in the kindergarten has arrived — the New Year’s party.  
 The well-disguised nanny-robot, acting as Santa Claus, decided to distribute candies to the children so that each one gets an equal amount. Write an algorithm for the nanny-robot to help distribute the candies.
