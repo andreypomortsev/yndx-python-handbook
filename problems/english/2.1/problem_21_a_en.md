@@ -20,3 +20,7 @@ One line: "Hello, Yandex!" in Russian - «Привет, Яндекс!»
 ```
 Привет, Яндекс!
 ```
+
+## Solution
+
+We call the `print` function with the string `Привет, Яндекс!` as an argument.
