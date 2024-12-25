@@ -245,26 +245,26 @@ Solutions are organized by handbook sections. Each solution:
 
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
-| А. [Just hello, just how are you?](./problems/russian/2.2/problem_22_a_en.md) | [✅](./solutions/2.2/22_a.py) | [✅](./tests/2.2/test_22_a.py) |
-| B. [Who is faster?](./problems/russian/2.2/problem_22_b_en.md) | [✅](./solutions/2.2/22_b.py) | [✅](./tests/2.2/test_22_b.py) |
-| C. [Who is faster this time?](./problems/russian/2.2/problem_22_c_en.md) | [✅](./solutions/2.2/22_c.py) | [✅](./tests/2.2/test_22_c.py) |
-| D. [List of Winners](./problems/russian/2.2/problem_22_d_en.md) | [✅](./solutions/2.2/22_d.py) | [✅](./tests/2.2/test_22_d.py) |
-| E. [Apples](./problems/russian/2.2/problem_22_e_en.md) | [✅](./solutions/2.2/22_e.py) | [✅](./tests/2.2/test_22_e.py) |
-| F. [Power of procrastination](./problems/russian/2.2/problem_22_f_en.md) | [✅](./solutions/2.2/22_f.py) | [✅](./tests/2.2/test_22_f.py) |
-| G. [Race car](./problems/russian/2.2/problem_22_g_en.md) | [✅](./solutions/2.2/22_g.py) | [✅](./tests/2.2/test_22_g.py) |
-| H. [Bunny — 1](./problems/russian/2.2/problem_22_h_en.md) | [✅](./solutions/2.2/22_h.py) | [✅](./tests/2.2/test_22_h.py) |
-| I. [First player, get ready](./problems/russian/2.2/problem_22_i_en.md) | [✅](./solutions/2.2/22_i.py) | [✅](./tests/2.2/test_22_i.py) |
-| J. [Best defense is encryption](./problems/russian/2.2/problem_22_j_en.md) | [✅](./solutions/2.2/22_j.py) | [✅](./tests/2.2/test_22_j.py) |
-| K. [Beauty will save the world](./problems/russian/2.2/problem_22_k_en.md) | [✅](./solutions/2.2/22_k.py) | [✅](./tests/2.2/test_22_k.py) |
-| L. [Musical Instrument](./problems/russian/2.2/problem_22_l_en.md) | [✅](./solutions/2.2/22_l.py) | [✅](./tests/2.2/test_22_l.py) |
-| M. [Lord of Numbers: The Fellowship of the Common Digit](./problems/russian/2.2/problem_22_m_en.md) | [✅](./solutions/2.2/22_m.py) | [✅](./tests/2.2/test_22_m.py) |
-| N. [Lord of Numbers: The Two Towers](./problems/russian/2.2/problem_22_n_en.md) | [✅](./solutions/2.2/22_n.py) | [✅](./tests/2.2/test_22_n.py) |
-| O. [Lord of Numbers: The Return of Caesar](./problems/russian/2.2/problem_22_o_en.md) | [✅](./solutions/2.2/22_o.py) | [✅](./tests/2.2/test_22_o.py) |
-| P. [Legends of the Cycling Race Return: Who is Faster?](./problems/russian/2.2/problem_22_p_en.md) | [✅](./solutions/2.2/22_p.py) | [✅](./tests/2.2/test_22_p.py) |
-| Q. [Root of Evil](./problems/russian/2.2/problem_22_q_en.md) | [✅](./solutions/2.2/22_q.py) | [✅](./tests/2.2/test_22_q.py) |
-| R. [Territory of Evil](./problems/russian/2.2/problem_22_r_en.md) | [✅](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
-| S. [Automation of Safety](./problems/russian/2.2/problem_22_s_en.md) | [✅](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
-| T. [Bunnie — 2](./problems/russian/2.2/problem_22_t_en.md) | [✅](./solutions/2.2/22_t.py) | [✅](./tests/2.2/test_22_t.py) |
+| А. [Just hello, just how are you?](./problems/english/2.2/problem_22_a_en.md) | [✅](./solutions/2.2/22_a.py) | [✅](./tests/2.2/test_22_a.py) |
+| B. [Who is faster?](./problems/english/2.2/problem_22_b_en.md) | [✅](./solutions/2.2/22_b.py) | [✅](./tests/2.2/test_22_b.py) |
+| C. [Who is faster this time?](./problems/english/2.2/problem_22_c_en.md) | [✅](./solutions/2.2/22_c.py) | [✅](./tests/2.2/test_22_c.py) |
+| D. [List of Winners](./problems/english/2.2/problem_22_d_en.md) | [✅](./solutions/2.2/22_d.py) | [✅](./tests/2.2/test_22_d.py) |
+| E. [Apples](./problems/english/2.2/problem_22_e_en.md) | [✅](./solutions/2.2/22_e.py) | [✅](./tests/2.2/test_22_e.py) |
+| F. [Power of procrastination](./problems/english/2.2/problem_22_f_en.md) | [✅](./solutions/2.2/22_f.py) | [✅](./tests/2.2/test_22_f.py) |
+| G. [Race car](./problems/english/2.2/problem_22_g_en.md) | [✅](./solutions/2.2/22_g.py) | [✅](./tests/2.2/test_22_g.py) |
+| H. [Bunny — 1](./problems/english/2.2/problem_22_h_en.md) | [✅](./solutions/2.2/22_h.py) | [✅](./tests/2.2/test_22_h.py) |
+| I. [First player, get ready](./problems/english/2.2/problem_22_i_en.md) | [✅](./solutions/2.2/22_i.py) | [✅](./tests/2.2/test_22_i.py) |
+| J. [Best defense is encryption](./problems/english/2.2/problem_22_j_en.md) | [✅](./solutions/2.2/22_j.py) | [✅](./tests/2.2/test_22_j.py) |
+| K. [Beauty will save the world](./problems/english/2.2/problem_22_k_en.md) | [✅](./solutions/2.2/22_k.py) | [✅](./tests/2.2/test_22_k.py) |
+| L. [Musical Instrument](./problems/english/2.2/problem_22_l_en.md) | [✅](./solutions/2.2/22_l.py) | [✅](./tests/2.2/test_22_l.py) |
+| M. [Lord of Numbers: The Fellowship of the Common Digit](./problems/english/2.2/problem_22_m_en.md) | [✅](./solutions/2.2/22_m.py) | [✅](./tests/2.2/test_22_m.py) |
+| N. [Lord of Numbers: The Two Towers](./problems/english/2.2/problem_22_n_en.md) | [✅](./solutions/2.2/22_n.py) | [✅](./tests/2.2/test_22_n.py) |
+| O. [Lord of Numbers: The Return of Caesar](./problems/english/2.2/problem_22_o_en.md) | [✅](./solutions/2.2/22_o.py) | [✅](./tests/2.2/test_22_o.py) |
+| P. [Legends of the Cycling Race Return: Who is Faster?](./problems/english/2.2/problem_22_p_en.md) | [✅](./solutions/2.2/22_p.py) | [✅](./tests/2.2/test_22_p.py) |
+| Q. [Root of Evil](./problems/english/2.2/problem_22_q_en.md) | [✅](./solutions/2.2/22_q.py) | [✅](./tests/2.2/test_22_q.py) |
+| R. [Territory of Evil](./problems/english/2.2/problem_22_r_en.md) | [✅](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
+| S. [Automation of Safety](./problems/english/2.2/problem_22_s_en.md) | [✅](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
+| T. [Bunnie — 2](./problems/english/2.2/problem_22_t_en.md) | [✅](./solutions/2.2/22_t.py) | [✅](./tests/2.2/test_22_t.py) |
 
 </details>
 
