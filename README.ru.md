@@ -333,7 +333,7 @@ poetry --version
   
 ### [Тестовые данные для задач](./tests/data/test_data_21.py)
   
-| Задача               | Решение              | Тесты                |
+| Задачи               | Решения              | Тесты                |
 |----------------------|----------------------|----------------------|
 | А. [Привет, Яндекс!](./problems/russian/2.1/problem_21_a_ru.md) | [✅](./solutions/2.1/21_a.py) | [✅](./tests/2.1/test_21_a.py) |
 | B. [Привет, всем!](./problems/russian/2.1/problem_21_b_ru.md) | [✅](./solutions/2.1/21_b.py) | [✅](./tests/2.1/test_21_b.py) |
@@ -365,28 +365,28 @@ poetry --version
 
 ### [Тестовые данные для задач](./tests/data/test_data_22.py)
 
-| Решение              | Тесты                |
-|----------------------|----------------------|
-| А. [Просто здравствуй, просто как дела](./solutions/2.2/22_a.py) | [✅](./tests/2.2/test_22_a.py) |
-| B. [Кто быстрее?](./solutions/2.2/22_b.py) | [✅](./tests/2.2/test_22_b.py) |
-| C. [Кто быстрее на этот раз?](./solutions/2.2/22_c.py) | [✅](./tests/2.2/test_22_c.py) |
-| D. [Список победителей](./solutions/2.2/22_d.py) | [✅](./tests/2.2/test_22_d.py) |
-| E. [Яблоки](./solutions/2.2/22_e.py) | [✅](./tests/2.2/test_22_e.py) |
-| F. [Сила прокрастинации](./solutions/2.2/22_f.py) | [✅](./tests/2.2/test_22_f.py) |
-| G. [А роза упала на лапу Азора](./solutions/2.2/22_g.py) | [✅](./tests/2.2/test_22_g.py) |
-| H. [Зайка — 1](./solutions/2.2/22_h.py) | [✅](./tests/2.2/test_22_h.py) |
-| I. [Первому игроку приготовиться](./solutions/2.2/22_i.py) | [✅](./tests/2.2/test_22_i.py) |
-| J. [Лучшая защита — шифрование](./solutions/2.2/22_j.py) | [✅](./tests/2.2/test_22_j.py) |
-| K. [Красота спасёт мир](./solutions/2.2/22_k.py) | [✅](./tests/2.2/test_22_k.py) |
-| L. [Музыкальный инструмент](./solutions/2.2/22_l.py) | [✅](./tests/2.2/test_22_l.py) |
-| M. [Властелин Чисел: Братство общей цифры](./solutions/2.2/22_m.py) | [✅](./tests/2.2/test_22_m.py) |
-| N. [Властелин Чисел: Две Башни](./solutions/2.2/22_n.py) | [✅](./tests/2.2/test_22_n.py) |
-| O. [Властелин Чисел: Возвращение Цезаря](./solutions/2.2/22_o.py) | [✅](./tests/2.2/test_22_o.py) |
-| P. [Легенды велогонок возвращаются: кто быстрее?](./solutions/2.2/22_p.py) | [✅](./tests/2.2/test_22_p.py) |
-| Q. [Корень зла](./solutions/2.2/22_q.py) | [✅](./tests/2.2/test_22_q.py) |
-| R. [Территория зла](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
-| S. [Автоматизация безопасности](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
-| T. [Зайка — 2](./solutions/2.2/22_t.py) | [✅](./tests/2.2/test_22_t.py) |
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Просто здравствуй, просто как дела](./problems/russian/2.2/problem_22_a_ru.md) | [✅](./solutions/2.2/22_a.py) | [✅](./tests/2.2/test_22_a.py) |
+| B. [Кто быстрее?](./problems/russian/2.2/problem_22_b_ru.md) | [✅](./solutions/2.2/22_b.py) | [✅](./tests/2.2/test_22_b.py) |
+| C. [Кто быстрее на этот раз?](./problems/russian/2.2/problem_22_c_ru.md) | [✅](./solutions/2.2/22_c.py) | [✅](./tests/2.2/test_22_c.py) |
+| D. [Список победителей](./problems/russian/2.2/problem_22_d_ru.md) | [✅](./solutions/2.2/22_d.py) | [✅](./tests/2.2/test_22_d.py) |
+| E. [Яблоки](./problems/russian/2.2/problem_22_e_ru.md) | [✅](./solutions/2.2/22_e.py) | [✅](./tests/2.2/test_22_e.py) |
+| F. [Сила прокрастинации](./problems/russian/2.2/problem_22_f_ru.md) | [✅](./solutions/2.2/22_f.py) | [✅](./tests/2.2/test_22_f.py) |
+| G. [А роза упала на лапу Азора](./problems/russian/2.2/problem_22_g_ru.md) | [✅](./solutions/2.2/22_g.py) | [✅](./tests/2.2/test_22_g.py) |
+| H. [Зайка — 1](./problems/russian/2.2/problem_22_h_ru.md) | [✅](./solutions/2.2/22_h.py) | [✅](./tests/2.2/test_22_h.py) |
+| I. [Первому игроку приготовиться](./problems/russian/2.2/problem_22_i_ru.md) | [✅](./solutions/2.2/22_i.py) | [✅](./tests/2.2/test_22_i.py) |
+| J. [Лучшая защита — шифрование](./problems/russian/2.2/problem_22_j_ru.md) | [✅](./solutions/2.2/22_j.py) | [✅](./tests/2.2/test_22_j.py) |
+| K. [Красота спасёт мир](./problems/russian/2.2/problem_22_k_ru.md) | [✅](./solutions/2.2/22_k.py) | [✅](./tests/2.2/test_22_k.py) |
+| L. [Музыкальный инструмент](./problems/russian/2.2/problem_22_l_ru.md) | [✅](./solutions/2.2/22_l.py) | [✅](./tests/2.2/test_22_l.py) |
+| M. [Властелин Чисел: Братство общей цифры](./problems/russian/2.2/problem_22_m_ru.md) | [✅](./solutions/2.2/22_m.py) | [✅](./tests/2.2/test_22_m.py) |
+| N. [Властелин Чисел: Две Башни](./problems/russian/2.2/problem_22_n_ru.md) | [✅](./solutions/2.2/22_n.py) | [✅](./tests/2.2/test_22_n.py) |
+| O. [Властелин Чисел: Возвращение Цезаря](./problems/russian/2.2/problem_22_o_ru.md) | [✅](./solutions/2.2/22_o.py) | [✅](./tests/2.2/test_22_o.py) |
+| P. [Легенды велогонок возвращаются: кто быстрее?](./problems/russian/2.2/problem_22_p_ru.md) | [✅](./solutions/2.2/22_p.py) | [✅](./tests/2.2/test_22_p.py) |
+| Q. [Корень зла](./problems/russian/2.2/problem_22_q_ru.md) | [✅](./solutions/2.2/22_q.py) | [✅](./tests/2.2/test_22_q.py) |
+| R. [Территория зла](./problems/russian/2.2/problem_22_r_ru.md) | [✅](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
+| S. [Автоматизация безопасности](./problems/russian/2.2/problem_22_s_ru.md) | [✅](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
+| T. [Зайка — 2](./problems/russian/2.2/problem_22_t_ru.md) | [✅](./solutions/2.2/22_t.py) | [✅](./tests/2.2/test_22_t.py) |
 
 </details>
 
