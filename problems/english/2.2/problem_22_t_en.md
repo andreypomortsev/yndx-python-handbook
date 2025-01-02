@@ -42,5 +42,3 @@ If there are multiple such strings, choose the one that is lexicographically sma
 ## Solution
 
 There are several approaches to solving this task, but they are the same in terms of [asymptotic complexity](https://en.wikipedia.org/wiki/Asymptotic_analysis). I like the approach of sorting the strings using permutation and then searching for the key word from the smaller string to the larger one. In the worst case, there will be sorting and two searches through the strings.
-
-### [Go to README](../../../README.MD#available-solutions)
