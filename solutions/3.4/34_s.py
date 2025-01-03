@@ -6,7 +6,6 @@ expression = input()
 
 postfix_expression = []
 operators = []
-
 tokens = expression.split()
 
 for token in tokens:
@@ -27,9 +26,9 @@ unique_vars = sorted({var for var in expression.split() if var.isupper()})
 repeats = len(unique_vars)
 
 print(*unique_vars, "F")
+
 for vars in product(range(2), repeat=repeats):
     variable_to_value = dict(zip(unique_vars, vars))
-
     stack = []
 
     for token in postfix_expression:
@@ -46,6 +45,6 @@ for vars in product(range(2), repeat=repeats):
                 case "or":
                     stack.append(operand_one or operand_two)
 
-    f = stack[0]
+    f = stack.pop()
 
     print(*vars, int(f))
