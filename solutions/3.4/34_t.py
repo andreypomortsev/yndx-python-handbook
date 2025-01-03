@@ -19,7 +19,7 @@ for old_value, new_value in REPLACEMENTS.items():
 
 expression = expression.split()
 
-PRECENDENCE = {
+PRECEDENCE = {
     "not": 5,
     "and": 4,
     "or": 3,
@@ -43,15 +43,15 @@ operator_stack = []
 for token in expression:
     if token.isupper():
         postfix_expression.append(token)
-    elif token in PRECENDENCE:
+    elif token in PRECEDENCE:
         while (
             operator_stack
             and operator_stack[-1] != "("
             and (
                 ASSOCIATIVITY[token] == "left"
-                and PRECENDENCE[token] <= PRECENDENCE[operator_stack[-1]]
+                and PRECEDENCE[token] <= PRECEDENCE[operator_stack[-1]]
                 or ASSOCIATIVITY[token] == "right"
-                and PRECENDENCE[token] < PRECENDENCE[operator_stack[-1]]
+                and PRECEDENCE[token] < PRECEDENCE[operator_stack[-1]]
             )
         ):
             postfix_expression.append(operator_stack.pop())
