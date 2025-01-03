@@ -1,20 +1,17 @@
-def merge(*iterables) -> list:
-    for iterable in iterables:
+def validate_input(*args) -> None:
+    for arg in args:
         try:
-            _ = iter(iterable)
+            _ = iter(arg)
         except Exception:
             raise StopIteration
 
-    d_type = type(iterables[0][0])
+    d_type = type(args[0][0])
+    type_error = value_error = False
 
-    type_error = False
-    value_error = False
-
-    for iterable in iterables:
-        if not all(map(lambda x: isinstance(x, d_type), iterable)):
+    for arg in args:
+        if not all(map(lambda x: isinstance(x, d_type), arg)):
             type_error = True
-            break
-        if list(iterable) != sorted(iterable):
+        if list(arg) != sorted(arg):
             value_error = True
 
     if type_error:
@@ -22,8 +19,11 @@ def merge(*iterables) -> list:
     if value_error:
         raise ValueError
 
+
+def merge(left, right) -> list:
+    validate_input(left, right)
+
     sorted_list = []
-    left, right = iterables
     l_index = r_index = 0
 
     while l_index < len(left) and r_index < len(right):
