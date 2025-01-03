@@ -975,10 +975,10 @@ r_test_data = [
         "second open test",
     ),
     (
-        "not a not b and c or a\n",
+        "not a and not b and c or a\n",
         "a b c f\n"
         "0 0 0 0\n"
-        "0 0 1 0\n"
+        "0 0 1 1\n"
         "0 1 0 0\n"
         "0 1 1 0\n"
         "1 0 0 1\n"
