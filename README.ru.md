@@ -482,7 +482,7 @@ poetry --version
 | Q. [А роза упала на лапу Азора 5.0](./solutions/3.1/31_q.py) | [✅](./tests/3.1/test_31_q.py) |
 | R. [RLE](./solutions/3.1/31_r.py) | [✅](./tests/3.1/test_31_r.py) |
 | S. [Польский калькулятор](./solutions/3.1/31_s.py) | [✅](./tests/3.1/test_31_s.py) |
-| T. [Польский калькулятор — 3](./solutions/3.1/31_t.py) | [✅](./tests/3.1/test_31_t.py) |
+| T. [Польский калькулятор — 2](./solutions/3.1/31_t.py) | [✅](./tests/3.1/test_31_t.py) |
 
 </details>
 
