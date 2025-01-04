@@ -42,6 +42,6 @@ for vars in product(range(2), repeat=REPEATS):
                     stack.append(operand_one and operand_two)
                 case "or":
                     stack.append(operand_one or operand_two)
-    
+
     f = stack.pop()
     print(*vars, int(f))
