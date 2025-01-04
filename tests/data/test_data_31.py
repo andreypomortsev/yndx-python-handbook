@@ -840,4 +840,5 @@ t_test_data = [
         "1200000010000000000\n",
         "complex operation with rotation and multiplication",
     ),
+    ("7 4 7 - /\n", "-3\n", "rounding problem")
 ]
