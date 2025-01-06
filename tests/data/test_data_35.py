@@ -917,9 +917,7 @@ p_test_data = [
     ),
     (
         "Where am I\ntab_lines.log\n",
-        (
-            "Where\tam\tI\t",
-        ),
+        ("Where\tam\tI\t",),
         "tab_lines.log\n",
         "tab delimiter test",
     ),
@@ -935,9 +933,7 @@ p_test_data = [
     ),
     (
         "Where am I\ntab_lines.log\n",
-        (
-            "WherE\naM\n\ni\n",
-        ),
+        ("WherE\naM\n\ni\n",),
         "tab_lines.log\n",
         "CaMeLcAsE test",
     ),
