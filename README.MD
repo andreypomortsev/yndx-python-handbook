@@ -303,7 +303,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 2.4](https://education.yandex.ru/handbook/python/article/vlozhennye-cikly) | [🧪 Test Data](./tests/data/test_data_24.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Мultiplication table](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_a.py) | [✅](./tests/2.4/test_24_a.py) |
 | B. [Not multiplication table](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_b.py) | [✅](./tests/2.4/test_24_b.py) |
@@ -333,7 +333,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 3.1](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski) | [🧪 Test Data](./tests/data/test_data_31.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Alphabet](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_a.py) | [✅](./tests/3.1/test_31_a.py) |
 | B. [I spin and twist](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_b.py) | [✅](./tests/3.1/test_31_b.py) |
@@ -363,7 +363,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 3.2](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari) | [🧪 Test Data](./tests/data/test_data_32.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Symbolic summary](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_a.py) | [✅](./tests/3.2/test_32_a.py) |
 | B. [Symbolic difference](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_b.py) | [✅](./tests/3.2/test_32_b.py) |
@@ -393,7 +393,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 3.3](https://education.yandex.ru/handbook/python/article/spisochnye-vyrazheniya-model-pamyati-dlya-tipov-yazyka-python) | [🧪 Test Data](./tests/data/test_data_33.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [List of squares](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_a.py) | [✅](./tests/3.3/test_33_a.py) |
 | B. [Multiplication table 2.0](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_b.py) | [✅](./tests/3.3/test_33_b.py) |
@@ -413,7 +413,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 3.4](https://education.yandex.ru/handbook/python/article/vstroennye-vozmozhnosti-po-rabote-s-kollekciyami) | [🧪 Test Data](./tests/data/test_data_34.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [List automation](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_a.py) | [✅](./tests/3.4/test_34_a.py) |
 | B. [Gathering for a walk](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_b.py) | [✅](./tests/3.4/test_34_b.py) |
@@ -443,7 +443,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 3.5](https://education.yandex.ru/handbook/python/article/potokovyj-vvodvyvod-rabota-s-tekstovymi-fajlami-json) | [🧪 Test Data](./tests/data/test_data_35.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [A+B+...](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_a.py) | [✅](./tests/3.5/test_35_a.py) |
 | B. [Average height](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_b.py) | [✅](./tests/3.5/test_35_b.py) |
@@ -473,7 +473,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 4.1](https://education.yandex.ru/handbook/python/article/funkcii-oblasti-vidimosti-peredacha-parametrov-v-funkcii) | [🧪 Test Data](./tests/data/test_data_41.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Functional greeting](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_a.py) | [✅](./tests/4.1/test_41_a.py) |
 | B. [Functional GCD](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_b.py) | [✅](./tests/4.1/test_41_b.py) |
@@ -493,7 +493,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 4.2](https://education.yandex.ru/handbook/python/article/pozicionnye-i-imenovannye-argumenty-funkcii-vysshih-poryadkov-lyambda-funkcii) | [🧪 Test Data](./tests/data/test_data_42.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [List generator](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_a.py) | [✅](./tests/4.2/test_42_a.py) |
 | B. [Matrix generator](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_b.py) | [✅](./tests/4.2/test_42_b.py) |
@@ -513,7 +513,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 4.3](https://education.yandex.ru/handbook/python/article/rekursiya-dekoratory-generatory) | [🧪 Test Data](./tests/data/test_data_43.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Recursive summator](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_a.py) | [✅](./tests/4.3/test_43_a.py) |
 | B. [Recursive digit adder](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_b.py) | [✅](./tests/4.3/test_43_b.py) |
@@ -533,7 +533,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 5.1](https://education.yandex.ru/handbook/python/article/obuektnaya-model-python-klassy-polya-i-metody) | [🧪 Test Data](./tests/data/test_data_51.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Cool point](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_a.py) | [✅](./tests/5.1/test_51_a.py) |
 | B. [Cool point 2.0](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_b.py) | [✅](./tests/5.1/test_51_b.py) |
@@ -553,7 +553,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 5.2](https://education.yandex.ru/handbook/python/article/volshebnye-metody-pereopredelenie-metodov-nasledovanie) | [🧪 Test Data](./tests/data/test_data_52.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Cool point 3.0](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_a.py) | [✅](./tests/5.2/test_52_a.py) |
 | B. [Cool point 4.0](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_b.py) | [✅](./tests/5.2/test_52_b.py) |
@@ -573,7 +573,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 5.3](https://education.yandex.ru/handbook/python/article/model-isklyuchenij-python-try-except-else-finally-moduli) | [🧪 Test Data](./tests/data/test_data_53.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Error handling](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_a.py) | [✅](./tests/5.3/test_53_a.py) |
 | B. [Breaking is not building](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_b.py) | [✅](./tests/5.3/test_53_b.py) |
@@ -593,7 +593,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 6.1](https://education.yandex.ru/handbook/python/article/moduli-math-i-numpy) | [🧪 Test Data](./tests/data/test_data_61.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Mathematics is cool, but that's not certain.](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_a.py) | [✅](./tests/6.1/test_61_a.py) |
 | B. [Stream GCD](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_b.py) | [✅](./tests/6.1/test_61_b.py) |
@@ -613,7 +613,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 6.2](https://education.yandex.ru/handbook/python/article/modul-pandas) | [🧪 Test Data](./tests/data/test_data_62.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Lengths of all words - 2](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_a.py) | [✅](./tests/6.2/test_62_a.py) |
 | B. [Lengths of all words by parity](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_b.py) | [✅](./tests/6.2/test_62_b.py) |
@@ -633,7 +633,7 @@ Solutions are organized by handbook sections. Each solution:
 
 - [📖 Theory 6.3](https://education.yandex.ru/handbook/python/article/modul-requests) | [🧪 Test Data](./tests/data/test_data_63.py)
 
-| Задачи               | Решения              | Тесты                |
+| Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [System check](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_a.py) | [✅](./tests/6.3/test_63_a.py) |
 | B. [Summing answers](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_b.py) | [✅](./tests/6.3/test_63_b.py) |
