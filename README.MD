@@ -210,7 +210,7 @@ Solutions are organized by handbook sections. Each solution:
 <details>
 <summary><h3>2.1 Data Input/Output, Number Operations, String Formatting</h3></summary>
 
-[📖 Theory](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye) | [🧪 Test Data](./tests/data/test_data_21.py)
+[📖 Theory 2.1 ru](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye) | [🧪 Test Data](./tests/data/test_data_21.py)
 
   
 | Problems             | Solutions            | Tests                |
@@ -241,7 +241,7 @@ Solutions are organized by handbook sections. Each solution:
 <details>
 <summary><h3>2.2 The conditional operator</h3></summary>
 
-[📖 Theory 2.2](https://education.yandex.ru/handbook/python/article/uslovnyy-operator) | [🧪 Test Data](./tests/data/test_data_22.py)
+[📖 Theory 2.2 ru](https://education.yandex.ru/handbook/python/article/uslovnyy-operator) | [🧪 Test Data](./tests/data/test_data_22.py)
 
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
@@ -265,6 +265,36 @@ Solutions are organized by handbook sections. Each solution:
 | R. [Territory of Evil](./problems/english/2.2/problem_22_r_en.md) | [✅](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
 | S. [Automation of Safety](./problems/english/2.2/problem_22_s_en.md) | [✅](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
 | T. [Bunnie — 2](./problems/english/2.2/problem_22_t_en.md) | [✅](./solutions/2.2/22_t.py) | [✅](./tests/2.2/test_22_t.py) |
+
+</details>
+
+<details>
+<summary><h3>2.3 The loops</h3></summary>
+
+[📖 Theory 2.3 ru](https://education.yandex.ru/handbook/python/article/cikly) | [🧪 Test Data](./tests/data/test_data_23.py)
+
+| Problems             | Solutions            | Tests                |
+|----------------------|----------------------|----------------------|
+| А. [One, Two, Three, Tree, Light Up! ](./problems/english/2.3/problem_23_a_en.md) | [✅](./solutions/2.3/23_a.py) | [✅](./tests/2.3/test_23_a.py) |
+| B. [Bunny — 3](./problems/english/2.3/problem_23_b_en.md) | [✅](./solutions/2.3/23_b.py) | [✅](./tests/2.3/test_23_b.py) |
+| C. [Counting Game](./problems/english/2.3/problem_23_c_en.md) | [✅](./solutions/2.3/23_c.py) | [✅](./tests/2.3/test_23_c.py) |
+| D. [Counting Game 2.0](./problems/english/2.3/problem_23_d_en.md) | [✅](./solutions/2.3/23_d.py) | [✅](./tests/2.3/test_23_d.py) |
+| E. [Attention! Promotion!](./problems/english/2.3/problem_23_e_en.md) | [✅](./solutions/2.3/23_e.py) | [✅](./tests/2.3/test_23_e.py) |
+| F. [GCD](./problems/english/2.3/problem_23_f_en.md) | [✅](./solutions/2.3/23_f.py) | [✅](./tests/2.3/test_23_f.py) |
+| G. [LCM](./problems/english/2.3/problem_23_g_en.md) | [✅](./solutions/2.3/23_g.py) | [✅](./tests/2.3/test_23_g.py) |
+| H. [Excessive Automation 2.0](./problems/english/2.3/problem_23_h_en.md) | [✅](./solutions/2.3/23_h.py) | [✅](./tests/2.3/test_23_h.py) |
+| I. [Factorial](./problems/english/2.3/problem_23_i_en.md) | [✅](./solutions/2.3/23_i.py) | [✅](./tests/2.3/test_23_i.py) |
+| J. [Route Built](./problems/english/2.3/problem_23_j_en.md) | [✅](./solutions/2.3/23_j.py) | [✅](./tests/2.3/test_23_j.py) |
+| K. [Digital Sum](./problems/english/2.3/problem_23_k_en.md) | [✅](./solutions/2.3/23_k.py) | [✅](./tests/2.3/test_23_k.py) |
+| L. [Strong Digit](./problems/english/2.3/problem_23_l_en.md) | [✅](./solutions/2.3/23_l.py) | [✅](./tests/2.3/test_23_l.py) |
+| M. [Player One, Prepare 2.0](./problems/english/2.3/problem_23_m_en.md) | [✅](./solutions/2.3/23_m.py) | [✅](./tests/2.3/test_23_m.py) |
+| N. [Simple Task](./problems/english/2.3/problem_23_n_en.md) | [✅](./solutions/2.3/23_n.py) | [✅](./tests/2.3/test_23_n.py) |
+| O. [Bunny - 4](./problems/english/2.3/problem_23_o_en.md) | [✅](./solutions/2.3/23_o.py) | [✅](./tests/2.3/test_23_o.py) |
+| P. [Race car 2.0](./problems/english/2.3/problem_23_p_en.md) | [✅](./solutions/2.3/23_p.py) | [✅](./tests/2.3/test_23_p.py) |
+| Q. [Even Cleanliness](./problems/english/2.3/problem_23_q_en.md) | [✅](./solutions/2.3/23_q.py) | [✅](./tests/2.3/test_23_q.py) |
+| R. [Simple Task 2.0](./problems/english/2.3/problem_23_r_en.md) | [✅](./solutions/2.3/23_r.py) | [✅](./tests/2.3/test_23_r.py) |
+| S. [Guessing Game](./problems/english/2.3/problem_23_s_en.md) | [✅](./solutions/2.3/23_s.py) | [✅](./tests/2.3/test_23_s.py) |
+| T. [Let's Hype a Little!](./problems/english/2.3/problem_23_t_en.md) | [✅](./solutions/2.3/23_t.py) | [✅](./tests/2.3/test_23_t.py) |
 
 </details>
 
