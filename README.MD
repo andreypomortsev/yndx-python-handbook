@@ -210,7 +210,7 @@ Solutions are organized by handbook sections. Each solution:
 <details>
 <summary><h3>2.1 Data Input/Output, Number Operations, String Formatting</h3></summary>
 
-[📖 Theory 2.1 ru](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye) | [🧪 Test Data](./tests/data/test_data_21.py)
+[📖 Theory 2.1](https://education.yandex.ru/handbook/python/article/vvod-i-vyvod-dannykh-operatsii-s-chislami-strokami-formatirovaniye) | [🧪 Test Data](./tests/data/test_data_21.py)
 
   
 | Problems             | Solutions            | Tests                |
@@ -241,7 +241,7 @@ Solutions are organized by handbook sections. Each solution:
 <details>
 <summary><h3>2.2 The conditional operator</h3></summary>
 
-[📖 Theory 2.2 ru](https://education.yandex.ru/handbook/python/article/uslovnyy-operator) | [🧪 Test Data](./tests/data/test_data_22.py)
+[📖 Theory 2.2](https://education.yandex.ru/handbook/python/article/uslovnyy-operator) | [🧪 Test Data](./tests/data/test_data_22.py)
 
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
@@ -269,9 +269,9 @@ Solutions are organized by handbook sections. Each solution:
 </details>
 
 <details>
-<summary><h3>2.3 The loops</h3></summary>
+<summary><h3>2.3 Loops</h3></summary>
 
-[📖 Theory 2.3 ru](https://education.yandex.ru/handbook/python/article/cikly) | [🧪 Test Data](./tests/data/test_data_23.py)
+[📖 Theory 2.3](https://education.yandex.ru/handbook/python/article/cikly) | [🧪 Test Data](./tests/data/test_data_23.py)
 
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
@@ -295,6 +295,356 @@ Solutions are organized by handbook sections. Each solution:
 | R. [Simple Task 2.0](./problems/english/2.3/problem_23_r_en.md) | [✅](./solutions/2.3/23_r.py) | [✅](./tests/2.3/test_23_r.py) |
 | S. [Guessing Game](./problems/english/2.3/problem_23_s_en.md) | [✅](./solutions/2.3/23_s.py) | [✅](./tests/2.3/test_23_s.py) |
 | T. [Let's Hype a Little!](./problems/english/2.3/problem_23_t_en.md) | [✅](./solutions/2.3/23_t.py) | [✅](./tests/2.3/test_23_t.py) |
+
+</details>
+
+<details>
+<summary><h3>2.4 Nested loops</h3></summary>
+
+- [📖 Theory 2.4](https://education.yandex.ru/handbook/python/article/vlozhennye-cikly) | [🧪 Test Data](./tests/data/test_data_24.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Мultiplication table](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_a.py) | [✅](./tests/2.4/test_24_a.py) |
+| B. [Not multiplication table](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_b.py) | [✅](./tests/2.4/test_24_b.py) |
+| C. [New Year mood](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_c.py) | [✅](./tests/2.4/test_24_c.py) |
+| D. [Total amount](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_d.py) | [✅](./tests/2.4/test_24_d.py) |
+| E. [Bunny — 5](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_e.py) | [✅](./tests/2.4/test_24_e.py) |
+| F. [GCD 2.0](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_f.py) | [✅](./tests/2.4/test_24_f.py) |
+| G. [Ready! Steady! Go!](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_g.py) | [✅](./tests/2.4/test_24_g.py) |
+| H. [Maximum amount](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_h.py) | [✅](./tests/2.4/test_24_h.py) |
+| I. [Big number](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_i.py) | [✅](./tests/2.4/test_24_i.py) |
+| J. [We divided the orange](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_j.py) | [✅](./tests/2.4/test_24_j.py) |
+| K. [Simple task 3.0](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_k.py) | [✅](./tests/2.4/test_24_k.py) |
+| L. [Numerical rectangle](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_l.py) | [✅](./tests/2.4/test_24_l.py) |
+| M. [Numerical rectangle 2.0](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_m.py) | [✅](./tests/2.4/test_24_m.py) |
+| N. [Numerical snake](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_n.py) | [✅](./tests/2.4/test_24_n.py) |
+| O. [Numerical snake 2.0](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_o.py) | [✅](./tests/2.4/test_24_o.py) |
+| P. [Multiplication table redesign](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_p.py) | [✅](./tests/2.4/test_24_p.py) |
+| Q. [Racecar 3.0](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_q.py) | [✅](./tests/2.4/test_24_q.py) |
+| R. [New Year mood 2.0](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_r.py) | [✅](./tests/2.4/test_24_r.py) |
+| S. [Numerical square](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_s.py) | [✅](./tests/2.4/test_24_s.py) |
+| T. [Mathematical benefit](./problems/russian/2.4/problem_24_a_ru.md) | [✅](./solutions/2.4/24_t.py) | [✅](./tests/2.4/test_24_t.py) |
+
+</details>
+
+<details>
+<summary><h3>3.1 String, tuple, list</h3></summary>
+
+- [📖 Theory 3.1](https://education.yandex.ru/handbook/python/article/stroki-kortezhi-spiski) | [🧪 Test Data](./tests/data/test_data_31.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Alphabet](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_a.py) | [✅](./tests/3.1/test_31_a.py) |
+| B. [I spin and twist](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_b.py) | [✅](./tests/3.1/test_31_b.py) |
+| C. [News announcement](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_c.py) | [✅](./tests/3.1/test_31_c.py) |
+| D. [Data cleaning](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_d.py) | [✅](./tests/3.1/test_31_d.py) |
+| E. [Racecar 4.0](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_e.py) | [✅](./tests/3.1/test_31_e.py) |
+| F. [Bunny — 6](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_f.py) | [✅](./tests/3.1/test_31_f.py) |
+| G. [A and B sat on the pipe](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_g.py) | [✅](./tests/3.1/test_31_g.py) |
+| H. [Bunny — 7](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_h.py) | [✅](./tests/3.1/test_31_h.py) |
+| I. [No comments](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_i.py) | [✅](./tests/3.1/test_31_i.py) |
+| J. [Basic frequency analysis](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_j.py) | [✅](./tests/3.1/test_31_j.py) |
+| K. [Everything will be found](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_k.py) | [✅](./tests/3.1/test_31_k.py) |
+| L. [Menu](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_l.py) | [✅](./tests/3.1/test_31_l.py) |
+| M. [Mass exponentiation](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_m.py) | [✅](./tests/3.1/test_31_m.py) |
+| N. [Mass exponentiation 3.0](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_n.py) | [✅](./tests/3.1/test_31_n.py) |
+| O. [GCD 3.0](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_o.py) | [✅](./tests/3.1/test_31_o.py) |
+| P. [News announcement 3.0](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_p.py) | [✅](./tests/3.1/test_31_p.py) |
+| Q. [Racecar 5.0](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_q.py) | [✅](./tests/3.1/test_31_q.py) |
+| R. [RLE](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_r.py) | [✅](./tests/3.1/test_31_r.py) |
+| S. [Polish calculator](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_s.py) | [✅](./tests/3.1/test_31_s.py) |
+| T. [Polish calculator — 2](./problems/russian/3.1/problem_31_a_ru.md) | [✅](./solutions/3.1/31_t.py) | [✅](./tests/3.1/test_31_t.py) |
+
+</details>
+
+<details>
+<summary><h3>3.2 Set, dictionary</h3></summary>
+
+- [📖 Theory 3.2](https://education.yandex.ru/handbook/python/article/mnozhestva-slovari) | [🧪 Test Data](./tests/data/test_data_32.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Symbolic summary](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_a.py) | [✅](./tests/3.2/test_32_a.py) |
+| B. [Symbolic difference](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_b.py) | [✅](./tests/3.2/test_32_b.py) |
+| C. [Bunny — 8](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_c.py) | [✅](./tests/3.2/test_32_c.py) |
+| D. [Porridge eaters](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_d.py) | [✅](./tests/3.2/test_32_d.py) |
+| E. [Porridge eaters — 2](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_e.py) | [✅](./tests/3.2/test_32_e.py) |
+| F. [Porridge eaters — 3](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_f.py) | [✅](./tests/3.2/test_32_f.py) |
+| G. [Morse code](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_g.py) | [✅](./tests/3.2/test_32_g.py) |
+| H. [Porridge eaters — 4](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_h.py) | [✅](./tests/3.2/test_32_h.py) |
+| I. [Bunny — 9](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_i.py) | [✅](./tests/3.2/test_32_i.py) |
+| J. [Transliteration](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_j.py) | [✅](./tests/3.2/test_32_j.py) |
+| K. [Namesakes](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_k.py) | [✅](./tests/3.2/test_32_k.py) |
+| L. [Namesakes — 2](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_l.py) | [✅](./tests/3.2/test_32_l.py) |
+| M. [Give me something new!](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_m.py) | [✅](./tests/3.2/test_32_m.py) |
+| N. [This will be a masterpiece!](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_n.py) | [✅](./tests/3.2/test_32_n.py) |
+| O. [Binary statistics!](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_o.py) | [✅](./tests/3.2/test_32_o.py) |
+| P. [Bunny — 10](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_p.py) | [✅](./tests/3.2/test_32_p.py) |
+| Q. [Friends of friends](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_q.py) | [✅](./tests/3.2/test_32_q.py) |
+| R. [Treasure map](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_r.py) | [✅](./tests/3.2/test_32_r.py) |
+| S. [Private property](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_s.py) | [✅](./tests/3.2/test_32_s.py) |
+| T. [Simple task 4.0](./problems/russian/3.2/problem_32_a_ru.md) | [✅](./solutions/3.2/32_t.py) | [✅](./tests/3.2/test_32_t.py) |
+
+</details>
+
+<details>
+<summary><h3>3.3 List comprehensions. Memory model for Python data types.</h3></summary>
+
+- [📖 Theory 3.3](https://education.yandex.ru/handbook/python/article/spisochnye-vyrazheniya-model-pamyati-dlya-tipov-yazyka-python) | [🧪 Test Data](./tests/data/test_data_33.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [List of squares](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_a.py) | [✅](./tests/3.3/test_33_a.py) |
+| B. [Multiplication table 2.0](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_b.py) | [✅](./tests/3.3/test_33_b.py) |
+| C. [Lengths of all words](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_c.py) | [✅](./tests/3.3/test_33_c.py) |
+| D. [Set of odd numbers](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_d.py) | [✅](./tests/3.3/test_33_d.py) |
+| E. [Set of all perfect squares](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_e.py) | [✅](./tests/3.3/test_33_e.py) |
+| F. [Letter statistics](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_f.py) | [✅](./tests/3.3/test_33_f.py) |
+| G. [Divisors](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
+| H. [Abbreviation](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_h.py) | [✅](./tests/3.3/test_33_h.py) |
+| I. [Conversion to string](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_i.py) | [✅](./tests/3.3/test_33_i.py) |
+| J. [RLE reversed](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_j.py) | [✅](./tests/3.3/test_33_j.py) |
+
+</details>
+
+<details>
+<summary><h3>3.4 Built-in capabilities for working with collections</h3></summary>
+
+- [📖 Theory 3.4](https://education.yandex.ru/handbook/python/article/vstroennye-vozmozhnosti-po-rabote-s-kollekciyami) | [🧪 Test Data](./tests/data/test_data_34.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [List automation](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_a.py) | [✅](./tests/3.4/test_34_a.py) |
+| B. [Gathering for a walk](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_b.py) | [✅](./tests/3.4/test_34_b.py) |
+| C. [Rational counting](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_c.py) | [✅](./tests/3.4/test_34_c.py) |
+| D. [Dictionary tree](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_d.py) | [✅](./tests/3.4/test_34_d.py) |
+| E. [Shopping list](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_e.py) | [✅](./tests/3.4/test_34_e.py) |
+| F. [Deck of cards](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_f.py) | [✅](./tests/3.4/test_34_f.py) |
+| G. [Game grid](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_g.py) | [✅](./tests/3.4/test_34_g.py) |
+| H. [Menu 2.0](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_h.py) | [✅](./tests/3.4/test_34_h.py) |
+| I. [Multiplication table 3.0](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_i.py) | [✅](./tests/3.4/test_34_i.py) |
+| J. [We divided the orange 2.0](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_j.py) | [✅](./tests/3.4/test_34_j.py) |
+| K. [Numerical rectangle 3.0](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_k.py) | [✅](./tests/3.4/test_34_k.py) |
+| L. [Shopping list 2.0](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_l.py) | [✅](./tests/3.4/test_34_l.py) |
+| M. [Athletes arrangement](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_m.py) | [✅](./tests/3.4/test_34_m.py) |
+| N. [Sports divination](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_n.py) | [✅](./tests/3.4/test_34_n.py) |
+| O. [Shopping list 3.0](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_o.py) | [✅](./tests/3.4/test_34_o.py) |
+| P. [The layout is as follows...](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_p.py) | [✅](./tests/3.4/test_34_p.py) |
+| Q. [Are there any other options?](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_q.py) | [✅](./tests/3.4/test_34_q.py) |
+| R. [Truth table](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_r.py) | [✅](./tests/3.4/test_34_r.py) |
+| S. [Truth table 2](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_s.py) | [✅](./tests/3.4/test_34_s.py) |
+| T. [Truth table 3](./problems/russian/3.4/problem_34_a_ru.md) | [✅](./solutions/3.4/34_t.py) | [✅](./tests/3.4/test_34_t.py) |
+
+</details>
+
+<details>
+<summary><h3>3.5 Stream input/output. Working with text files. JSON</h3></summary>
+
+- [📖 Theory 3.5](https://education.yandex.ru/handbook/python/article/potokovyj-vvodvyvod-rabota-s-tekstovymi-fajlami-json) | [🧪 Test Data](./tests/data/test_data_35.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [A+B+...](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_a.py) | [✅](./tests/3.5/test_35_a.py) |
+| B. [Average height](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_b.py) | [✅](./tests/3.5/test_35_b.py) |
+| C. [No comments 2.0](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_c.py) | [✅](./tests/3.5/test_35_c.py) |
+| D. [Everything will be found 2.0](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_d.py) | [✅](./tests/3.5/test_35_d.py) |
+| E. [Racecar 6.0](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_e.py) | [✅](./tests/3.5/test_35_e.py) |
+| F. [Transliteration 2.0](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_f.py) | [✅](./tests/3.5/test_35_f.py) |
+| G. [File statistics](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_g.py) | [✅](./tests/3.5/test_35_g.py) |
+| H. [File difference](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_h.py) | [✅](./tests/3.5/test_35_h.py) |
+| I. [File cleaning](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_i.py) | [✅](./tests/3.5/test_35_i.py) |
+| J. [Tail](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_j.py) | [✅](./tests/3.5/test_35_j.py) |
+| K. [File statistics 2.0](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_k.py) | [✅](./tests/3.5/test_35_k.py) |
+| L. [Divide and conquer](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_l.py) | [✅](./tests/3.5/test_35_l.py) |
+| M. [Data update](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_m.py) | [✅](./tests/3.5/test_35_m.py) |
+| N. [Data merging](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_n.py) | [✅](./tests/3.5/test_35_n.py) |
+| O. [Put yourself in my shoes](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_o.py) | [✅](./tests/3.5/test_35_o.py) |
+| P. [Everything will be found 3.0](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_p.py) | [✅](./tests/3.5/test_35_p.py) |
+| Q. [Hide and seek](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_q.py) | [✅](./tests/3.5/test_35_q.py) |
+| R. [How much does it weigh in bytes?](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_r.py) | [✅](./tests/3.5/test_35_r.py) |
+| S. [This will be our secret](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_s.py) | [✅](./tests/3.5/test_35_s.py) |
+| T. [File sum](./problems/russian/3.5/problem_35_a_ru.md) | [✅](./solutions/3.5/35_t.py) | [✅](./tests/3.5/test_35_t.py) |
+
+</details>
+
+<details>
+<summary><h3>4.1 Functions. Scopes. Passing parameters to functions.</h3></summary>
+
+- [📖 Theory 4.1](https://education.yandex.ru/handbook/python/article/funkcii-oblasti-vidimosti-peredacha-parametrov-v-funkcii) | [🧪 Test Data](./tests/data/test_data_41.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Functional greeting](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_a.py) | [✅](./tests/4.1/test_41_a.py) |
+| B. [Functional GCD](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_b.py) | [✅](./tests/4.1/test_41_b.py) |
+| C. [Length of number](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_c.py) | [✅](./tests/4.1/test_41_c.py) |
+| D. [Name of the month](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_d.py) | [✅](./tests/4.1/test_41_d.py) |
+| E. [Numerical string](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_e.py) | [✅](./tests/4.1/test_41_e.py) |
+| F. [Output system modernization](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
+| G. [Chess 'lunch'](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_g.py) | [✅](./tests/4.1/test_41_g.py) |
+| H. [Racecar 7.0](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_h.py) | [✅](./tests/4.1/test_41_h.py) |
+| I. [Simple task 5.0](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_i.py) | [✅](./tests/4.1/test_41_i.py) |
+| J. [Merge](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_j.py) | [✅](./tests/4.1/test_41_j.py) |
+
+</details>
+
+<details>
+<summary><h3>4.2 Positional and keyword arguments. Higher-order functions...</h3></summary>
+
+- [📖 Theory 4.2](https://education.yandex.ru/handbook/python/article/pozicionnye-i-imenovannye-argumenty-funkcii-vysshih-poryadkov-lyambda-funkcii) | [🧪 Test Data](./tests/data/test_data_42.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [List generator](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_a.py) | [✅](./tests/4.2/test_42_a.py) |
+| B. [Matrix generator](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_b.py) | [✅](./tests/4.2/test_42_b.py) |
+| C. [Functional GCD 2.0](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_c.py) | [✅](./tests/4.2/test_42_c.py) |
+| D. [Name of the month 2.0](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_d.py) | [✅](./tests/4.2/test_42_d.py) |
+| E. [Data preparation](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_e.py) | [✅](./tests/4.2/test_42_e.py) |
+| F. [Coffee shop](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_f.py) | [✅](./tests/4.2/test_42_f.py) |
+| G. [On air — 'Experiments' section](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_g.py) | [✅](./tests/4.2/test_42_g.py) |
+| H. [Long sorting](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_h.py) | [✅](./tests/4.2/test_42_h.py) |
+| I. [Even filtering](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_i.py) | [✅](./tests/4.2/test_42_i.py) |
+| J. [Key secret](./problems/russian/4.2/problem_42_a_ru.md) | [✅](./solutions/4.2/42_j.py) | [✅](./tests/4.2/test_42_j.py) |
+
+</details>
+
+<details>
+<summary><h3>4.3. Recursion. Decorators. Generators.</h3></summary>
+
+- [📖 Theory 4.3](https://education.yandex.ru/handbook/python/article/rekursiya-dekoratory-generatory) | [🧪 Test Data](./tests/data/test_data_43.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Recursive summator](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_a.py) | [✅](./tests/4.3/test_43_a.py) |
+| B. [Recursive digit adder](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_b.py) | [✅](./tests/4.3/test_43_b.py) |
+| C. [Polynomial of N degree](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_c.py) | [✅](./tests/4.3/test_43_c.py) |
+| D. [Result decoration](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_d.py) | [✅](./tests/4.3/test_43_d.py) |
+| E. [Result accumulation](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_e.py) | [✅](./tests/4.3/test_43_e.py) |
+| F. [Merge sort](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_f.py) | [✅](./tests/4.3/test_43_f.py) |
+| G. [Uniformity is not a flaw](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_g.py) | [✅](./tests/4.3/test_43_g.py) |
+| H. [Fibonacci generator](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_h.py) | [✅](./tests/4.3/test_43_h.py) |
+| I. [Cyclic generator](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_i.py) | [✅](./tests/4.3/test_43_i.py) |
+| J. ["Straightening" the list](./problems/russian/4.3/problem_43_a_ru.md) | [✅](./solutions/4.3/43_j.py) | [✅](./tests/4.3/test_43_j.py) |
+
+</details>
+
+<details>
+<summary><h3>5.1 Python object model. Classes, fields, and methods.</h3></summary>
+
+- [📖 Theory 5.1](https://education.yandex.ru/handbook/python/article/obuektnaya-model-python-klassy-polya-i-metody) | [🧪 Test Data](./tests/data/test_data_51.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Cool point](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_a.py) | [✅](./tests/5.1/test_51_a.py) |
+| B. [Cool point 2.0](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_b.py) | [✅](./tests/5.1/test_51_b.py) |
+| C. [Don't press the red button!](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_c.py) | [✅](./tests/5.1/test_51_c.py) |
+| D. [Work is not a wolf](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_d.py) | [✅](./tests/5.1/test_51_d.py) |
+| E. [Cool rectangle](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_e.py) | [✅](./tests/5.1/test_51_e.py) |
+| F. [Cool rectangle 2.0](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_f.py) | [✅](./tests/5.1/test_51_f.py) |
+| G. [Cool rectangle 3.0](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_g.py) | [✅](./tests/5.1/test_51_g.py) |
+| H. [Checkers](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_h.py) | [✅](./tests/5.1/test_51_h.py) |
+| I. [Queue](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_i.py) | [✅](./tests/5.1/test_51_i.py) |
+| J. [Stack](./problems/russian/5.1/problem_51_a_ru.md) | [✅](./solutions/5.1/51_j.py) | [✅](./tests/5.1/test_51_j.py) |
+
+</details>
+
+<details>
+<summary><h3>5.2 Magic methods, method overriding. Inheritance.</h3></summary>
+
+- [📖 Theory 5.2](https://education.yandex.ru/handbook/python/article/volshebnye-metody-pereopredelenie-metodov-nasledovanie) | [🧪 Test Data](./tests/data/test_data_52.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Cool point 3.0](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_a.py) | [✅](./tests/5.2/test_52_a.py) |
+| B. [Cool point 4.0](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_b.py) | [✅](./tests/5.2/test_52_b.py) |
+| C. [Cool point 5.0](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_c.py) | [✅](./tests/5.2/test_52_c.py) |
+| D. [Fractions v0.1](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_d.py) | [✅](./tests/5.2/test_52_d.py) |
+| E. [Fractions v0.2](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_e.py) | [✅](./tests/5.2/test_52_e.py) |
+| F. [Fractions v0.3](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_f.py) | [✅](./tests/5.2/test_52_f.py) |
+| G. [Fractions v0.4](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_g.py) | [✅](./tests/5.2/test_52_g.py) |
+| H. [Fractions v0.5](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_h.py) | [✅](./tests/5.2/test_52_h.py) |
+| I. [Fractions v0.6](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_i.py) | [✅](./tests/5.2/test_52_i.py) |
+| J. [Fractions v0.7](./problems/russian/5.2/problem_52_a_ru.md) | [✅](./solutions/5.2/52_j.py) | [✅](./tests/5.2/test_52_j.py) |
+
+</details>
+
+<details>
+<summary><h3>5.3 Python exception model. Try, except, else, finally.</h3></summary>
+
+- [📖 Theory 5.3](https://education.yandex.ru/handbook/python/article/model-isklyuchenij-python-try-except-else-finally-moduli) | [🧪 Test Data](./tests/data/test_data_53.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Error handling](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_a.py) | [✅](./tests/5.3/test_53_a.py) |
+| B. [Breaking is not building](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_b.py) | [✅](./tests/5.3/test_53_b.py) |
+| C. [Breaking is not building 2](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_c.py) | [✅](./tests/5.3/test_53_c.py) |
+| D. [Parameter control](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_d.py) | [✅](./tests/5.3/test_53_d.py) |
+| E. [Merge with check](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_e.py) | [✅](./tests/5.3/test_53_e.py) |
+| F. [Root of evil 2](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_f.py) | [✅](./tests/5.3/test_53_f.py) |
+| G. [Name validation](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_g.py) | [✅](./tests/5.3/test_53_g.py) |
+| H. [Username validation](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_h.py) | [✅](./tests/5.3/test_53_h.py) |
+| I. [User validation](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_i.py) | [✅](./tests/5.3/test_53_i.py) |
+| J. [Password validation](./problems/russian/5.3/problem_53_a_ru.md) | [✅](./solutions/5.3/53_j.py) | [✅](./tests/5.3/test_53_j.py) |
+
+</details>
+
+<details>
+<summary><h3>6.1 The <b>math</b> and <b>numpy</b> modules.</h3></summary>
+
+- [📖 Theory 6.1](https://education.yandex.ru/handbook/python/article/moduli-math-i-numpy) | [🧪 Test Data](./tests/data/test_data_61.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Mathematics is cool, but that's not certain.](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_a.py) | [✅](./tests/6.1/test_61_a.py) |
+| B. [Stream GCD](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_b.py) | [✅](./tests/6.1/test_61_b.py) |
+| C. [Any other options?](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_c.py) | [✅](./tests/6.1/test_61_c.py) |
+| D. [Non-arithmetic mean](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_d.py) | [✅](./tests/6.1/test_61_d.py) |
+| E. [Step towards](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_e.py) | [✅](./tests/6.1/test_61_e.py) |
+| F. [Multiplication matrix](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_f.py) | [✅](./tests/6.1/test_61_f.py) |
+| G. [Chess preparation](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_g.py) | [✅](./tests/6.1/test_61_g.py) |
+| H. [Numerical snake 3.0](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_h.py) | [✅](./tests/6.1/test_61_h.py) |
+| I. [Rotation](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_i.py) | [✅](./tests/6.1/test_61_i.py) |
+| J. [Ladder](./problems/russian/6.1/problem_61_a_ru.md) | [✅](./solutions/6.1/61_j.py) | [✅](./tests/6.1/test_61_j.py) |
+
+</details>
+
+<details>
+<summary><h3>6.2 The <b>pandas</b> module.</h3></summary>
+
+- [📖 Theory 6.2](https://education.yandex.ru/handbook/python/article/modul-pandas) | [🧪 Test Data](./tests/data/test_data_62.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [Длины всех слов - 2](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_a.py) | [✅](./tests/6.2/test_62_a.py) |
+| B. [Lengths of all words by parity](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_b.py) | [✅](./tests/6.2/test_62_b.py) |
+| C. [Check - 2](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_c.py) | [✅](./tests/6.2/test_62_c.py) |
+| D. [Sale](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_d.py) | [✅](./tests/6.2/test_62_d.py) |
+| E. [Long words](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_e.py) | [✅](./tests/6.2/test_62_e.py) |
+| F. [Progress report](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_f.py) | [✅](./tests/6.2/test_62_f.py) |
+| G. [Failure report](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_g.py) | [✅](./tests/6.2/test_62_g.py) |
+| H. [Journal update](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_h.py) | [✅](./tests/6.2/test_62_h.py) |
+| I. [Endless battleship](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_i.py) | [✅](./tests/6.2/test_62_i.py) |
+| J. [Function extremum](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_j.py) | [✅](./tests/6.2/test_62_j.py) |
+
+</details>
+
+<details>
+<summary><h3>6.3 The <b>requests</b> module.</h3></summary>
+
+- [📖 Theory 6.3](https://education.yandex.ru/handbook/python/article/modul-requests) | [🧪 Test Data](./tests/data/test_data_63.py)
+
+| Задачи               | Решения              | Тесты                |
+|----------------------|----------------------|----------------------|
+| А. [System check](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_a.py) | [✅](./tests/6.3/test_63_a.py) |
+| B. [Summing answers](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_b.py) | [✅](./tests/6.3/test_63_b.py) |
+| C. [Summing answers 2](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_c.py) | [✅](./tests/6.3/test_63_c.py) |
+| D. [Specific value](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_d.py) | [✅](./tests/6.3/test_63_d.py) |
+| E. [Summing answers 3](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_e.py) | [✅](./tests/6.3/test_63_e.py) |
+| F. [User list](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_f.py) | [✅](./tests/6.3/test_63_f.py) |
+| G. [Message mailing](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_g.py) | [✅](./tests/6.3/test_63_g.py) |
+| H. [New user registration](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_h.py) | [✅](./tests/6.3/test_63_h.py) |
+| I. [Data modification](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_i.py) | [✅](./tests/6.3/test_63_i.py) |
+| J. [Data deletion](./problems/russian/6.3/problem_63_a_ru.md) | [✅](./solutions/6.3/63_j.py) | [✅](./tests/6.3/test_63_j.py) |
 
 </details>
 
