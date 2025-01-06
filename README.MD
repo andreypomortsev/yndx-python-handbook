@@ -615,7 +615,7 @@ Solutions are organized by handbook sections. Each solution:
 
 | Задачи               | Решения              | Тесты                |
 |----------------------|----------------------|----------------------|
-| А. [Длины всех слов - 2](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_a.py) | [✅](./tests/6.2/test_62_a.py) |
+| А. [Lengths of all words - 2](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_a.py) | [✅](./tests/6.2/test_62_a.py) |
 | B. [Lengths of all words by parity](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_b.py) | [✅](./tests/6.2/test_62_b.py) |
 | C. [Check - 2](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_c.py) | [✅](./tests/6.2/test_62_c.py) |
 | D. [Sale](./problems/russian/6.2/problem_62_a_ru.md) | [✅](./solutions/6.2/62_d.py) | [✅](./tests/6.2/test_62_d.py) |
