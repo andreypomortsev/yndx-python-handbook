@@ -1,35 +1,41 @@
-## [Title](../../../solutions/2.4/24_i.py)
+## [Big Number](../../../solutions/2.4/24_i.py)
 
+The children can't calm down and continue "tormenting" numbers. Now, they want to collectively create a very large number.  
+Each child calls out a number consisting of digits they know. Write a program that creates a number made of the maximum digits from each child.
 
+### Input Format
 
-### Input format:
+The first line contains a number $N$ — the number of children in the group. Then, each of the next $N$ lines contains a number.
 
+### Output Format
 
-
-### Output format:
-
-
+A single large number.
 
 ### Example 1
 
 **Input**
 ```plaintext
-
+2
+123
+234
 ```
 
 **Output**
 ```plaintext
-
+34
 ```
 
 ### Example 2
 
 **Input**
 ```plaintext
-
+3
+1234
+7234
+2323
 ```
 
 **Output**
 ```plaintext
-
+473
 ```
