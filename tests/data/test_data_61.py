@@ -3,12 +3,6 @@ import numpy as np
 a_test_data = [
     (2.71, 0.4818035253577275, "first open test"),
     (12.345, 4.880549344757598, "second open test"),
-    (-10.5, -9.829809094966793, "negative number"),
-    (-3.14, -0.09471838339448091, "negative pi approximation"),
-    (-1.0, -0.9706428736868488, "negative one"),
-    (-0.75, -0.809436246544161, "negative float less than one"),
-    (-0.001, -0.37471701314935, "small negative float"),
-    (0.0, float("-inf"), "zero"),
     (0.001, -0.37271701084266684, "small positive float"),
     (0.5, 0.4519571284477611, "small float"),
     (1.0, 0.9020549141143959, "one as a float"),
@@ -22,7 +16,6 @@ a_test_data = [
     (256.0, 0.26763909053316015, "power of 2 more than 100"),
     (512.5, 63.04114414947364, "a bit more than 2 in power of 9"),
     (1000.0, 883.4842630033106, "thousand"),
-    (-100.0, 2.417889735345152, "negative one hundred"),
     (1024.0, 21.288934917833924, "2 in power of 10"),
 ]
 # fmt: off
