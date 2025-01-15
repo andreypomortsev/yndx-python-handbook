@@ -11,8 +11,6 @@ while sp := input():
     friends[two].add(one)
 
 for name, direct_friends in friends.items():
-    friends_2[name] = set()
-
     for friend in direct_friends:
         friends_2[name].update(friends[friend])
 
