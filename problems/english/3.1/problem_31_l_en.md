@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_l.py)
+## [Menu](../../../solutions/3.1/31_l.py)
 
 
 

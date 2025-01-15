@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_n.py)
+## [Mass exponentiation 3.0](../../../solutions/3.1/31_n.py)
 
 
 

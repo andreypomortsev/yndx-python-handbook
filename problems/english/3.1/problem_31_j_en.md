@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_j.py)
+## [Basic frequency analysis](../../../solutions/3.1/31_j.py)
 
 
 

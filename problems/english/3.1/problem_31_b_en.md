@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_b.py)
+## [I spin and twist](../../../solutions/3.1/31_b.py)
 
 
 

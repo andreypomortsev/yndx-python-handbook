@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_k.py)
+## [Everything will be found](../../../solutions/3.1/31_k.py)
 
 
 

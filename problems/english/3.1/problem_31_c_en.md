@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_c.py)
+## [News announcement](../../../solutions/3.1/31_c.py)
 
 
 

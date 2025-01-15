@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_t.py)
+## [Polish calculator — 2](../../../solutions/3.1/31_t.py)
 
 
 

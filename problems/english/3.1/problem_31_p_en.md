@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_p.py)
+## [News announcement 3.0](../../../solutions/3.1/31_p.py)
 
 
 

@@ -1,4 +1,4 @@
-## [Title](../../../solutions/3.1/31_f.py)
+## [Bunny — 6](../../../solutions/3.1/31_f.py)
 
 
 
