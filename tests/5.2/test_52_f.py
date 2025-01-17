@@ -7,6 +7,57 @@ from tests import utils
 from tests.data.test_data_52 import fraction_test_data
 
 
+def test_first_open_test_fraction_class(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    Fraction = solution_module.Fraction
+
+    a = Fraction(1, 3)
+    b = Fraction(1, 2)
+    c = a + b
+
+    test_cases = (
+        (a, "1/3"),
+        (b, "1/2"),
+        (c, "5/6"),
+    )
+
+    for fraction, str_view in test_cases:
+        assert str(fraction) == str_view
+
+    assert not (a is c)
+    assert not (b is c)
+
+
+def test_second_open_test_fraction_class(
+    load_module: Callable[[str], ModuleType],
+    request: pytest.FixtureRequest,
+) -> None:
+    file_path, _ = utils.get_tested_file_details(request)
+    solution_module = load_module(file_path)
+
+    Fraction = solution_module.Fraction
+
+    a = Fraction(1, 8)
+    c = b = Fraction(3, 8)
+    b -= a
+
+    test_cases = (
+        (a, "1/8"),
+        (b, "1/4"),
+        (c, "1/4"),
+    )
+
+    for fraction, str_view in test_cases:
+        assert str(fraction) == str_view
+
+    assert b is c
+
+
 @pytest.mark.parametrize(
     "digits, str_view, _",
     fraction_test_data["init_h"],
