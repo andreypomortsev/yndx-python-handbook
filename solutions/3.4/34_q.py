@@ -29,7 +29,7 @@ PIPS_AND_FACES = [
 ]
 PIPS_AND_FACES.remove(pip_to_drop)
 
-all_possible_cards = list(product(PIPS_AND_FACES, card_suits.values()))
+all_possible_cards = product(PIPS_AND_FACES, card_suits.values())
 combinations_of_cards = combinations(all_possible_cards, 3)
 
 flag = False
