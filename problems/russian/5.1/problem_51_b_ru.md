@@ -1,6 +1,11 @@
 ## [Классная точка 2.0](../../../solutions/5.1/51_b.py)
 
+Давайте расширим функционал класса, написанного в прошлой задаче.
 
+Реализуйте методы:
+
+- `move`, который перемещает точку на заданное расстояние по осям $x$ и $y$;
+- `length`, который определяет до переданной точки расстояние, округлённое до сотых.
 
 ### Примечание
 
@@ -10,23 +15,31 @@
 ### Пример 1
 
 **Ввод**
-```plaintext
-
+```python
+point = Point(3, 5)
+print(point.x, point.y)
+point.move(2, -3)
+print(point.x, point.y)
 ```
 
 **Вывод**
 ```plaintext
-
+3 5
+5 2
 ```
 
 ### Пример 2
 
 **Ввод**
-```plaintext
-
+```python
+first_point = Point(2, -7)
+second_point = Point(7, 9)
+print(first_point.length(second_point))
+print(second_point.length(first_point))
 ```
 
 **Вывод**
 ```plaintext
-
+16.76
+16.76
 ```
