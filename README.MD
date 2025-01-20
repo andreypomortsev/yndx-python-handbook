@@ -1,13 +1,10 @@
-# Yandex Python Handbook Solutions
-
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
-![Python 3.12](https://img.shields.io/badge/Python-3.12-yellow.svg)
-![Python 3.13](https://img.shields.io/badge/Python-3.13-green.svg)
+![Static Badge](https://img.shields.io/badge/Python-3.12%2B-blue)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Solutions for [Yandex Python Fundamentals Handbook](https://education.yandex.ru/handbook/python) problems with comprehensive test coverage.
+# Solutions for [Python Fundamentals Handbook](https://education.yandex.ru/handbook/python) problems with comprehensive test coverage.
 
 ## 📖 About
 

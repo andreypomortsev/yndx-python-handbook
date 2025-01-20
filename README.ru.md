@@ -1,8 +1,7 @@
 ![Codacy grade (branch)](https://img.shields.io/codacy/grade/63f71a9c86ce4a0492af52c23628b78a/main)
 ![Build Status](https://github.com/andreypomortsev/yndx-python-handbook/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/andreypomortsev/yndx-python-handbook/branch/main/graph/badge.svg?token=WPUYVICKGT)](https://codecov.io/gh/andreypomortsev/yndx-python-handbook)
-![Python 3.12](https://img.shields.io/badge/Python-3.12-yellow.svg)
-![Python 3.13](https://img.shields.io/badge/Python-3.13-green.svg)
+![Static Badge](https://img.shields.io/badge/Python-3.12%2B-blue)
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Решения задач из учебника [Основы Python](https://education.yandex.ru/handbook/python) от Яндекс
@@ -11,11 +10,10 @@ _"Хендбук по Python поможет овладеть основным с
 
 ### Предварительные требования
 
-- **Python**: Убедитесь, что у вас установлена версия Python 3.12 или выше. Скачать можно по ссылкам:
-  - [**Python 3.12**](https://www.python.org/downloads/release/python-3128/)
-  - [**Python 3.13**](https://www.python.org/downloads/release/python-3131/)
-
-- **Git**: Потребуется для клонирования репозитория. [Скачать Git](https://git-scm.com/downloads).
+- **Python**: Убедитесь, что у вас установлена версия Python 3.12 или выше.\
+[Скачать Python](https://www.python.org/downloads/)
+- **Git**: Потребуется для клонирования репозитория.\
+[Скачать Git](https://git-scm.com/downloads).
 
 ## Установка
 
@@ -323,7 +321,7 @@ poetry --version
 
 Кроме правильного ответа Яндекс проверяет еще и на соответствие кода [PEP8](https://github.com/Searge/mipt_oop/blob/master/week_1/readme.md), поэтому научитесь пользоваться линтерами: [flake8](https://flake8.pycqa.org/en/latest/) или [pylint](https://pypi.org/project/pylint/) и форматером кода, я использую [black](https://black.readthedocs.io/en/stable/index.html).
 
-## Решения | Тесты
+## Задачи | Решения | Тесты
 
 <details>
 
