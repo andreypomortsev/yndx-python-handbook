@@ -25,8 +25,12 @@ def find_roots(a: int | float, b: int | float, c: int | float) -> tuple:
     discriminant = b**2 - 4 * a * c
 
     if discriminant >= 0:
-        bigger_root = (-b + discriminant**0.5) / (2 * a)
-        smaller_root = (-b - discriminant**0.5) / (2 * a)
-        return smaller_root, bigger_root
+        first_root = (-b + discriminant**0.5) / (2 * a)
+        second_root = (-b - discriminant**0.5) / (2 * a)
+        
+        if first_root < second_root:
+            return first_root, second_root
+        
+        return second_root, first_root
 
     raise NoSolutionsError
