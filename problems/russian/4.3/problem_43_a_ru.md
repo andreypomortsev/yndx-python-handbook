@@ -1,6 +1,10 @@
 ## [Рекурсивный сумматор](../../../solutions/4.3/43_a.py)
 
+Большинство задач этой главы ориентировано на отработку навыков по разработке рекурсивных функций.
 
+Ваше решение будет использоваться как библиотека.
+
+Напишите функцию `recursive_sum`, которая находит сумму всех позиционных аргументов.
 
 ### Примечание
 
@@ -11,23 +15,33 @@
 ### Пример 1
 
 **Ввод**
-```plaintext
-
+```python
+result = recursive_sum(1, 2, 3)
 ```
 
 **Вывод**
 ```plaintext
-
+# Вызов recursive_sum(1, 2, 3)
+# Вызов recursive_sum(1, 2)
+# Вызов recursive_sum(1)
+# Вызов recursive_sum()
+result = 6
 ```
 
 ### Пример 2
 
 **Ввод**
-```plaintext
-
+```python
+result = recursive_sum(7, 1, 3, 2, 10)
 ```
 
 **Вывод**
 ```plaintext
-
+# Вызов recursive_sum(7, 1, 3, 2, 10)
+# Вызов recursive_sum(7, 1, 3, 2)
+# Вызов recursive_sum(7, 1, 3)
+# Вызов recursive_sum(7, 1)
+# Вызов recursive_sum(7)
+# Вызов recursive_sum()
+result = 23
 ```
