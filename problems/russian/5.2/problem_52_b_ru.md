@@ -1,6 +1,9 @@
 ## [Классная точка 4.0](../../../solutions/5.2/52_b.py)
 
+А теперь модернизируем уже новый класс `PatchedPoint`. Реализуйте магические методы `__str__` и `__repr__`.
 
+При преобразовании в строку точка представляется в формате $(x, y)$.\
+Репрезентация же должна возвращать строку для инициализации точки двумя параметрами.
 
 ### Примечание
 
@@ -11,22 +14,30 @@
 
 **Ввод**
 ```python
-
+point = PatchedPoint()
+print(point)
+point.move(2, -3)
+print(repr(point))
 ```
 
 **Вывод**
 ```plaintext
-
+(0, 0)
+PatchedPoint(2, -3)
 ```
 
 ### Пример 2
 
 **Ввод**
 ```python
-
+first_point = PatchedPoint((2, -7))
+second_point = PatchedPoint(7, 9)
+print(*map(str, (first_point, second_point)))
+print(*map(repr, (first_point, second_point)))
 ```
 
 **Вывод**
 ```plaintext
-
+(2, -7) (7, 9)
+PatchedPoint(2, -7) PatchedPoint(7, 9)
 ```
