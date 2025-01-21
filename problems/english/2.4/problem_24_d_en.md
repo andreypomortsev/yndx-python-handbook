@@ -14,7 +14,7 @@ Output the total sum of the digits of all the entered numbers (excluding $N$).
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 5
 1
@@ -24,14 +24,14 @@ Output the total sum of the digits of all the entered numbers (excluding $N$).
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 15
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 3
 123
@@ -39,7 +39,7 @@ Output the total sum of the digits of all the entered numbers (excluding $N$).
 789
 ```
 
-**Output**
+__Output__
 ```plaintext
 45
 ```

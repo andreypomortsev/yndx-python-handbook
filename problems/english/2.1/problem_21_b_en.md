@@ -16,12 +16,12 @@ In the second line, a greeting for the user: "Hello, %username%." in Russian - "
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 Ann
 ```
 
-**Output**
+__Output__
 ```plaintext
 Как Вас зовут?
 Привет, Ann
@@ -29,12 +29,12 @@ Ann
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 Bob
 ```
 
-**Output**
+__Output__
 ```plaintext
 Как Вас зовут?
 Привет, Bob

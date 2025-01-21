@@ -14,7 +14,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 point = PatchedPoint()
 print(point)
@@ -22,7 +22,7 @@ new_point = point + (2, -3)
 print(point, new_point, point is new_point)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (0, 0)
 (0, 0) (2, -3) False
@@ -30,14 +30,14 @@ print(point, new_point, point is new_point)
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 first_point = second_point = PatchedPoint((2, -7))
 first_point += (7, 3)
 print(first_point, second_point, first_point is second_point)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (9, -4) (9, -4) True
 ```

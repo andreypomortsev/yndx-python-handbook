@@ -9,24 +9,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = is_prime(1001459)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = True
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = is_prime(79701)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = False
 ```

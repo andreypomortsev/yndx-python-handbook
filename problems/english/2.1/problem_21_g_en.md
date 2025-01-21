@@ -12,24 +12,24 @@ $N$ lines with the phrase: "Купи слона!"
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 1
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Купи слона!
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 3
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Купи слона!  
 Купи слона!  

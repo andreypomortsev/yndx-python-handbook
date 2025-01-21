@@ -15,7 +15,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 queue = Queue()
 for item in range(10):
@@ -24,14 +24,14 @@ while not queue.is_empty():
     print(queue.pop(), end=" ")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 0 1 2 3 4 5 6 7 8 9 
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 queue = Queue()
 for item in ("Hello,", "world!"):
@@ -40,7 +40,7 @@ while not queue.is_empty():
     print(queue.pop())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Hello,
 world!

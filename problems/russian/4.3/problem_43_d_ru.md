@@ -9,7 +9,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 @answer
 def a_plus_b(a, b):
@@ -20,7 +20,7 @@ print(a_plus_b(3, 5))
 print(a_plus_b(7, 9))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Результат функции: 8
 Результат функции: 16
@@ -28,7 +28,7 @@ print(a_plus_b(7, 9))
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 @answer
 def get_letters(text: str) -> str:
@@ -39,7 +39,7 @@ print(get_letters('Hello, world!'))
 print(get_letters('Декораторы это круто =)'))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Результат функции: dehlorw
 Результат функции: адекортуыэ

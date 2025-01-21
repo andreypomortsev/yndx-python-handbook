@@ -12,12 +12,12 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 result = recursive_digit_sum(123)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Вызов recursive_digit_sum(123)
 # Вызов recursive_digit_sum(12)
@@ -28,12 +28,12 @@ result = 6
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 result = recursive_digit_sum(7321346)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Вызов recursive_digit_sum(7321346)
 # Вызов recursive_digit_sum(732134)

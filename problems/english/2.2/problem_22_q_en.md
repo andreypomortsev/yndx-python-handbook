@@ -16,28 +16,28 @@ $ax^2+bx+c=0$
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 1
 -2
 1
 ```
 
-**Output**
+__Output__
 ```plaintext
 1.00
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 3.5
 -2.4
 -7.3
 ```
 
-**Output**
+__Output__
 ```plaintext
 -1.14 1.83
 ```

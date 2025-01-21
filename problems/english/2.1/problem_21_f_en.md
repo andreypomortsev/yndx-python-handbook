@@ -21,7 +21,7 @@ Calculating change is easy, but printing a nice receipt is not so simple.
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 черешня
 2
@@ -29,7 +29,7 @@ Calculating change is easy, but printing a nice receipt is not so simple.
 10
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Чек
 черешня - 3кг - 2руб/кг
@@ -40,7 +40,7 @@ Calculating change is easy, but printing a nice receipt is not so simple.
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 манго
 187
@@ -48,7 +48,7 @@ Calculating change is easy, but printing a nice receipt is not so simple.
 8041
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Чек
 манго - 43кг - 187руб/кг

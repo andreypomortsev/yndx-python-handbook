@@ -18,7 +18,7 @@
 
 ### Пример
 
-**Ввод**
+__Ввод__
 ```python
 columns = ['name', 'maths', 'physics', 'computer science']
 data = {
@@ -33,7 +33,7 @@ print(journal)
 print(filtered)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
        name  maths  physics  computer science
 0    Иванов      5        4                 5

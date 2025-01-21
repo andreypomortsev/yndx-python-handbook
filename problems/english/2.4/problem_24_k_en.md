@@ -13,7 +13,7 @@ You need to output the total number of prime numbers among the entered numbers (
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 5
 1
@@ -23,14 +23,14 @@ You need to output the total number of prime numbers among the entered numbers (
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 3
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 6
 11
@@ -41,7 +41,7 @@ You need to output the total number of prime numbers among the entered numbers (
 51
 ```
 
-**Output**
+__Output__
 ```plaintext
 3
 ```

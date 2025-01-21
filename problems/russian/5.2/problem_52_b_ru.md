@@ -12,7 +12,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 point = PatchedPoint()
 print(point)
@@ -20,7 +20,7 @@ point.move(2, -3)
 print(repr(point))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (0, 0)
 PatchedPoint(2, -3)
@@ -28,7 +28,7 @@ PatchedPoint(2, -3)
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 first_point = PatchedPoint((2, -7))
 second_point = PatchedPoint(7, 9)
@@ -36,7 +36,7 @@ print(*map(str, (first_point, second_point)))
 print(*map(repr, (first_point, second_point)))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (2, -7) (7, 9)
 PatchedPoint(2, -7) PatchedPoint(7, 9)

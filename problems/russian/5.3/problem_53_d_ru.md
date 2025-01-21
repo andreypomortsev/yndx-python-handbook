@@ -12,24 +12,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(only_positive_even_sum("3", 2.5))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение TypeError
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(only_positive_even_sum(-5, 4))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение ValueError
 ```

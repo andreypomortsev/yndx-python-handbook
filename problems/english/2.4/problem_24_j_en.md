@@ -19,12 +19,12 @@ A table showing the different ways to divide the orange.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 А Б В
 1 1 1
@@ -32,12 +32,12 @@ A table showing the different ways to divide the orange.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 А Б В
 1 1 3

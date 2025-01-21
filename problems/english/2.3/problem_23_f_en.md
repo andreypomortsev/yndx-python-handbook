@@ -17,26 +17,26 @@ The most common method for finding the GCD is the [Euclidean algorithm](https://
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 12
 42
 ```
 
-**Output**
+__Output__
 ```plaintext
 6
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 512
 625
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 ```

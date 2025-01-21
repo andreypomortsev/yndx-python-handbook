@@ -11,12 +11,12 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(rotate(np.arange(12).reshape(3, 4), 90))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 [[ 8  4  0]
  [ 9  5  1]
@@ -26,12 +26,12 @@ print(rotate(np.arange(12).reshape(3, 4), 90))
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(rotate(np.arange(12).reshape(3, 4), 270))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 [[ 3  7 11]
  [ 2  6 10]

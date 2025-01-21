@@ -17,28 +17,28 @@ A single integer — the change to be returned to the customer.
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 2
 3
 10
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 4
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 187
 43
 8041
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 0
 ```

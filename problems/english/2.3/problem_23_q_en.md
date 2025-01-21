@@ -12,24 +12,24 @@ A natural number — the result of cleaning the number by removing all even digi
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 1234
 ```
 
-**Output**
+__Output__
 ```plaintext
 13
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 123454321
 ```
 
-**Output**
+__Output__
 ```plaintext
 13531
 ```

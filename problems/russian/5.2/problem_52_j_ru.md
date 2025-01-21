@@ -14,7 +14,7 @@ _"Остался последний штрих!"_ Правда звучит ка
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1)
 b = Fraction('2')
@@ -24,7 +24,7 @@ print(a > b, c > d)
 print(a >= 1, b >= 1, c >= 1, d >= 1)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/1 2/1 1/3 1/1
 False False
@@ -33,7 +33,7 @@ True True False True
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 2)
 b = Fraction('2/3')
@@ -43,7 +43,7 @@ print(a > b, c > d)
 print(a >= 1, b >= 1, c >= 1, d >= 1)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/2 2/3 2/5 1/3
 False True

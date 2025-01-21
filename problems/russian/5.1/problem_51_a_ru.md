@@ -11,26 +11,26 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 point = Point(3, 5)
 print(point.x, point.y)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 3 5
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 point = Point(2, -7)
 print(point.x, point.y)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 2 -7
 ```

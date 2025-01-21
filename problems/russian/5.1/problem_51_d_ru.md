@@ -19,7 +19,7 @@
 
 ### Пример
 
-**Ввод**
+__Ввод__
 ```python
 programmer = Programmer('Васильев Иван', 'Junior')
 programmer.work(750)
@@ -35,7 +35,7 @@ programmer.work(250)
 print(programmer.info())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Васильев Иван 750ч. 7500тгр.
 Васильев Иван 1250ч. 15000тгр.

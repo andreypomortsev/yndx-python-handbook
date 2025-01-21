@@ -12,7 +12,7 @@ You need to output the total number of palindromes among the entered numbers (ex
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 5
 1
@@ -22,14 +22,14 @@ You need to output the total number of palindromes among the entered numbers (ex
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 5
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 3
 123
@@ -37,7 +37,7 @@ You need to output the total number of palindromes among the entered numbers (ex
 321
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 ```

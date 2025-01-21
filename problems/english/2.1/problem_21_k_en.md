@@ -14,24 +14,24 @@ A single four-digit number — the result of the rearrangement.
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 1234
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 2143
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 1412
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 4121
 ```

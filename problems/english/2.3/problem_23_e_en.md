@@ -13,7 +13,7 @@ The total cost of all items, accounting for the announced promotion.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 100
 500
@@ -21,14 +21,14 @@ The total cost of all items, accounting for the announced promotion.
 0
 ```
 
-**Output**
+__Output__
 ```plaintext
 883.0
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 512
 499
@@ -36,7 +36,7 @@ The total cost of all items, accounting for the announced promotion.
 0
 ```
 
-**Output**
+__Output__
 ```plaintext
 1302.3
 ```

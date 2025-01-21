@@ -12,24 +12,24 @@ You are required to construct a mathematical expression — a product of non-dec
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 120
 ```
 
-**Output**
+__Output__
 ```plaintext
 2 * 2 * 2 * 3 * 5
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 98
 ```
 
-**Output**
+__Output__
 ```plaintext
 2 * 7 * 7
 ```

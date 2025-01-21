@@ -18,26 +18,26 @@ It is guaranteed that the result will always be a [natural number](https://en.wi
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 2
 2
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 2
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 10
 10
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 50
 ```

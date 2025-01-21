@@ -19,7 +19,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 3)
 b = Fraction(1, 2)
@@ -27,14 +27,14 @@ c = a + b
 print(a, b, c, a is c, b is c)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/3 1/2 5/6 False False
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 8)
 c = b = Fraction(3, 8)
@@ -42,7 +42,7 @@ b -= a
 print(a, b, c, b is c)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/8 1/4 1/4 True
 ```

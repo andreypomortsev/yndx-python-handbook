@@ -12,26 +12,26 @@ A single natural number — the LCM of the two given numbers.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 12
 42
 ```
 
-**Output**
+__Output__
 ```plaintext
 84
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 512
 625
 ```
 
-**Output**
+__Output__
 ```plaintext
 320000
 ```

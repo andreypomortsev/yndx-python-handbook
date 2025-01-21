@@ -16,7 +16,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 3)
 b = Fraction(-2, -6)
@@ -26,7 +26,7 @@ print(a, b, c, d)
 print(*map(repr, (a, b, c, d)))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/3 1/3 -1/3 -1/3
 Fraction('1/3') Fraction('1/3') Fraction('-1/3') Fraction('-1/3')
@@ -34,7 +34,7 @@ Fraction('1/3') Fraction('1/3') Fraction('-1/3') Fraction('-1/3')
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction('-1/2')
 b = -a
@@ -46,7 +46,7 @@ print(a.numerator(), a.denominator())
 print(b.numerator(), b.denominator())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 -1/2 1/2 False
 1/3 -1/2

@@ -15,26 +15,26 @@ The name of the winner of the race.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 10
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 Petya
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 7
 ```
 
-**Output**
+__Output__
 ```plaintext
 Vasya
 ```

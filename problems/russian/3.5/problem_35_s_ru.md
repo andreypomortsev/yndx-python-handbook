@@ -16,7 +16,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 # Пользовательский ввод
 3
@@ -25,7 +25,7 @@
 Hello, world!
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Содержимое файла private.txt
 Khoor, zruog!
@@ -33,7 +33,7 @@ Khoor, zruog!
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 # Пользовательский ввод
 -10
@@ -42,7 +42,7 @@ Khoor, zruog!
 English alphabet: ABCDEFG...XYZ
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Содержимое файла private.txt
 Udwbyix qbfxqruj: QRSTUVW...NOP

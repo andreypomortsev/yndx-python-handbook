@@ -16,7 +16,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 rect = Rectangle((3.2, -4.3), (7.52, 3.14))
 print(rect.get_pos(), rect.get_size())
@@ -24,7 +24,7 @@ rect.move(1.32, -5)
 print(rect.get_pos(), rect.get_size())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (3.2, 3.14) (4.32, 7.44)
 (4.52, -1.86) (4.32, 7.44)
@@ -32,7 +32,7 @@ print(rect.get_pos(), rect.get_size())
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 rect = Rectangle((7.52, -4.3), (3.2, 3.14))
 print(rect.get_pos(), rect.get_size())
@@ -40,7 +40,7 @@ rect.resize(23.5, 11.3)
 print(rect.get_pos(), rect.get_size())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (3.2, 3.14) (4.32, 7.44)
 (3.2, 3.14) (23.5, 11.3)

@@ -12,7 +12,7 @@ The number of lines that contain the word "зайка".
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 березка елочка зайка волк березка
@@ -20,14 +20,14 @@ The number of lines that contain the word "зайка".
 сосна сосна сосна белочка сосна белочка
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 4
 зайка березка
@@ -36,7 +36,7 @@ The number of lines that contain the word "зайка".
 елочка елочка елочка
 ```
 
-**Output**
+__Output__
 ```plaintext
 2
 ```

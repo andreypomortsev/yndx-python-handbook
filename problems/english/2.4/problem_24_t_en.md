@@ -17,24 +17,24 @@ You can read more about numeral systems [here](https://ru.wikipedia.org/wiki/%D0
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 12
 ```
 
-**Output**
+__Output__
 ```plaintext
 7
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 52
 ```
 
-**Output**
+__Output__
 ```plaintext
 9
 ```

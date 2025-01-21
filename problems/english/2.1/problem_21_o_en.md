@@ -15,28 +15,28 @@ One line, representing the time on the digital clock.
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 8
 0
 65
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 09:05
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 10
 15
 2752
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 08:07
 ```

@@ -12,12 +12,12 @@ The desired New Year's tree.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 14
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 2 3
@@ -28,12 +28,12 @@ The desired New Year's tree.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 6
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 2 3

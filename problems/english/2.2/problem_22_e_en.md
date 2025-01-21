@@ -21,26 +21,26 @@ The name of the child who has more apples.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 Вася
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 10
 2
 ```
 
-**Output**
+__Output__
 ```plaintext
 Петя
 ```

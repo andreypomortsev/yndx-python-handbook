@@ -14,13 +14,13 @@ First, print the number of candies each child gets, followed by the number of ca
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 3
 100
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 33
 1
@@ -28,13 +28,13 @@ First, print the number of candies each child gets, followed by the number of ca
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 20
 500
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 25
 0

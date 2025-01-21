@@ -16,24 +16,24 @@ The factorial of zero is accepted as 1.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 6
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 120
 ```

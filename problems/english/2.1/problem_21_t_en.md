@@ -21,7 +21,7 @@ Two natural numbers, separated by a space — the weight of each batch of cutlet
 
 ### Example
 
-**Input**
+__Input__
 ```plaintext
 32
 285
@@ -29,7 +29,7 @@ Two natural numbers, separated by a space — the weight of each batch of cutlet
 240
 ```
 
-**Output**
+__Output__
 ```plaintext
 24 8
 ```

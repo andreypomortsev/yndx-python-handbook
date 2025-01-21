@@ -13,26 +13,26 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 name = "world"
 print_hello(name)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Hello, world!
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 string = "Yandex"
 print_hello(string)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Hello, Yandex!
 ```

@@ -32,7 +32,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 checkers = Checkers()
 for row in '87654321':
@@ -41,7 +41,7 @@ for row in '87654321':
     print()
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 XBXBXBXB
 BXBXBXBX
@@ -55,7 +55,7 @@ WXWXWXWX
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 checkers = Checkers()
 checkers.move('C3', 'D4')
@@ -66,7 +66,7 @@ for row in '87654321':
     print()
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 XBXBXBXB
 BXBXBXBX

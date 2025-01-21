@@ -13,12 +13,12 @@ To make the square neat, each column should have the same width.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 1 1
 1 2 1
@@ -27,12 +27,12 @@ To make the square neat, each column should have the same width.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 1 1 1 1
 1 2 2 2 1

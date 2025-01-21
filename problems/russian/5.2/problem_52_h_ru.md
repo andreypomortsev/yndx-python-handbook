@@ -12,28 +12,28 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 3)
 b = Fraction(1, 2)
 print(a > b, a < b, a >= b, a <= b, a == b, a >= b)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 False True False True False False
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 3)
 b = Fraction(6, 2).reverse()
 print(a > b, a < b, a >= b, a <= b, a == b, a >= b)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 False False True True True True
 ```

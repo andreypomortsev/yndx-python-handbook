@@ -50,24 +50,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 Привет, мир!
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Privet, mir!
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 Я помню чудное мгновенье: Передо мной явилась ты, Как мимолетное виденье, Как гений чистой красоты.
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Ia pomniu chudnoe mgnovene: Peredo mnoi iavilas ty, Kak mimoletnoe videne, Kak genii chistoi krasoty.
 ```

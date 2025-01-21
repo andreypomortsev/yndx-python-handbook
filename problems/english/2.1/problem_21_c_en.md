@@ -13,12 +13,12 @@ The very useful information repeated three times.
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 2 + 2 = 4
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 2 + 2 = 4
 2 + 2 = 4
@@ -27,12 +27,12 @@ The very useful information repeated three times.
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 2 * 2 = 4
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 2 * 2 = 4
 2 * 2 = 4

@@ -16,24 +16,24 @@ Two protective numbers for each squad, written with a space in between.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 103
 ```
 
-**Output**
+__Output__
 ```plaintext
 10 31
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 787
 ```
 
-**Output**
+__Output__
 ```plaintext
 77 87
 ```

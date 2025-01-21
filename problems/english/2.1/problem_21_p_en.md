@@ -14,28 +14,28 @@ One rational number rounded to two decimal places.
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 10
 32
 5
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 4.40
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 1
 100
 30
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 3.30
 ```

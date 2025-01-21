@@ -16,14 +16,14 @@ A beautiful podium (step width of 8 characters).
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 10
 5
 7
 ```
 
-**Output**
+__Output__
 ```plaintext
           Петя          
   Толя  
@@ -33,14 +33,14 @@ A beautiful podium (step width of 8 characters).
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 7
 10
 ```
 
-**Output**
+__Output__
 ```plaintext
           Толя          
   Вася  

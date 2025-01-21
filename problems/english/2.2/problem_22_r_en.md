@@ -24,28 +24,28 @@ The probability of encountering evil according to the legend:
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 5
 4
 ```
 
-**Output**
+__Output__
 ```plaintext
 100%
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 6
 3
 4
 ```
 
-**Output**
+__Output__
 ```plaintext
 велика
 ```

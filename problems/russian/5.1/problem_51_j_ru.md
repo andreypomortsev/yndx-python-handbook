@@ -15,7 +15,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 stack = Stack()
 for item in range(10):
@@ -24,14 +24,14 @@ while not stack.is_empty():
     print(stack.pop(), end=" ")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 9 8 7 6 5 4 3 2 1 0 
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 stack = Stack()
 for item in ("Hello,", "world!"):
@@ -40,7 +40,7 @@ while not stack.is_empty():
     print(stack.pop())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 world!
 Hello,

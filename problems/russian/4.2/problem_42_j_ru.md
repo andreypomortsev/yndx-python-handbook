@@ -25,19 +25,19 @@ func(1, **{'a': 2})
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = secret_replace("Hello, world!", l=("hi", "y"), o=("123", "z"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = 'Hehiy123, wzrhid!'
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = secret_replace(
     "ABRA-KADABRA",
@@ -49,7 +49,7 @@ result = secret_replace(
 )
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = 'Z3X1-G!0Z371'
 ```

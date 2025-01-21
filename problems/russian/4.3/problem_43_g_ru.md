@@ -11,7 +11,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 @same_type
 def a_plus_b(a, b):
@@ -23,7 +23,7 @@ print(a_plus_b(7, '9') or 'Fail')
 print(a_plus_b(-3, 5) or 'Fail')
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Обнаружены различные типы данных
 Fail
@@ -34,7 +34,7 @@ Fail
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 @same_type
 def combine_text(*words):
@@ -46,7 +46,7 @@ print(combine_text(2, '+', 2, '=', 4) or 'Fail')
 print(combine_text('Список из 30', 0, 'можно получить так', [0] * 30) or 'Fail')
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Hello, world!
 Обнаружены различные типы данных

@@ -13,26 +13,26 @@ One decimal number — the change to be given to the user.
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 1001001
 100
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 27
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 101111100
 500
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 120
 ```

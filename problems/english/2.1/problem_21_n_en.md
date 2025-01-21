@@ -20,14 +20,14 @@ One number — the maximum number of moves required to determine the winner.
 
 ### Example
 
-**Input**  
+__Input__  
 ```plaintext
 1
 2
 3
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 5
 ```

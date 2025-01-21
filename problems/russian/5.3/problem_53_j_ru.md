@@ -25,19 +25,19 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(password_validation("Hello12345"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 67698a29126e52a6921ca061082783ede0e9085c45163c3658a2b0a82c8f95a1
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(password_validation(
     "$uNri$e_777",
@@ -46,7 +46,7 @@ print(password_validation(
 ))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение PossibleCharError
 ```

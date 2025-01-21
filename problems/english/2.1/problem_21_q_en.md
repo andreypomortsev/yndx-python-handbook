@@ -14,26 +14,26 @@ One decimal number — the total revenue for the day, including the last purchas
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 123
 1101
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 136
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 783
 10110111
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 966
 ```

@@ -18,24 +18,24 @@ The result of encryption.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 123
 ```
 
-**Output**
+__Output__
 ```plaintext
 53
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 741
 ```
 
-**Output**
+__Output__
 ```plaintext
 115
 ```

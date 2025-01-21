@@ -21,13 +21,13 @@ The fourth line should be the response to the user's answer:
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 Аня
 хорошо
 ```
 
-**Output**
+__Output__
 ```plaintext
 Как Вас зовут?
 Здравствуйте, Аня!
@@ -37,13 +37,13 @@ The fourth line should be the response to the user's answer:
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 Боря
 плохо
 ```
 
-**Output**
+__Output__
 ```plaintext
 Как Вас зовут?
 Здравствуйте, Боря!

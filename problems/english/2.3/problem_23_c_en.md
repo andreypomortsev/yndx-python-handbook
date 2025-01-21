@@ -14,26 +14,26 @@ All numbers from start to end (inclusive), written separated by spaces.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 1
 10
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 2 3 4 5 6 7 8 9 10
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 -3
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 -3 -2 -1 0 1 2 3
 ```

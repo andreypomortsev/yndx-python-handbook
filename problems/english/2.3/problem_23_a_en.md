@@ -15,14 +15,14 @@ At the end, output "Ёлочка, гори!"
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 Раз!
 Два!
 Три!
 ```
 
-**Output**
+__Output__
 ```plaintext
 Режим ожидания...
 Режим ожидания...
@@ -31,7 +31,7 @@ At the end, output "Ёлочка, гори!"
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 Десять!
 Девять!
@@ -39,7 +39,7 @@ At the end, output "Ёлочка, гори!"
 Три!
 ```
 
-**Output**
+__Output__
 ```plaintext
 Режим ожидания...
 Режим ожидания...

@@ -12,11 +12,11 @@ One line: "Hello, Yandex!" in Russian - «Привет, Яндекс!»
 
 ### Example
 
-**Input**
+__Input__
 ```plaintext
 ```
 
-**Output**
+__Output__
 ```
 Привет, Яндекс!
 ```

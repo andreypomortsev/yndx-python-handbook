@@ -9,12 +9,12 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(multiplication_matrix(3))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 [[1 2 3]
  [2 4 6]
@@ -23,12 +23,12 @@ print(multiplication_matrix(3))
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(multiplication_matrix(5))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 [[ 1  2  3  4  5]
  [ 2  4  6  8 10]

@@ -14,28 +14,28 @@ YES — if Vasya can create a musical triangle, otherwise — NO.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 3
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 YES
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 1
 2
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 NO
 ```

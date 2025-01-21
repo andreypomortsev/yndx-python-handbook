@@ -23,7 +23,7 @@ Let's tidy up the receipt that was printed earlier. All lines should be 35 chara
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 черешня
 2
@@ -31,7 +31,7 @@ Let's tidy up the receipt that was printed earlier. All lines should be 35 chara
 10
 ```
 
-**Output**
+__Output__
 ```plaintext
 ================Чек================
 Товар:                      черешня
@@ -44,7 +44,7 @@ Let's tidy up the receipt that was printed earlier. All lines should be 35 chara
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 манго
 187
@@ -52,7 +52,7 @@ Let's tidy up the receipt that was printed earlier. All lines should be 35 chara
 8041
 ```
 
-**Output**
+__Output__
 ```plaintext
 ================Чек================
 Товар:                        манго

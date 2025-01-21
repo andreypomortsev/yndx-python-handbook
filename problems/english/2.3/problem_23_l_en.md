@@ -12,24 +12,24 @@ You need to output one natural number — the maximum digit of the given number.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 12345
 ```
 
-**Output**
+__Output__
 ```plaintext
 5
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 100500
 ```
 
-**Output**
+__Output__
 ```plaintext
 5
 ```

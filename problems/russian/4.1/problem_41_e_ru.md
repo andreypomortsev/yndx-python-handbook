@@ -11,24 +11,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = split_numbers("1 2 3 4 5")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = (1, 2, 3, 4, 5)
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = split_numbers("1 -2 3 -4 5")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = (1, -2, 3, -4, 5)
 ```

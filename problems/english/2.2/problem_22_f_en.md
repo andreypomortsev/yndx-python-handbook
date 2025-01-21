@@ -12,24 +12,24 @@ One word "YES" (he will) or "NO" (he won't).
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 2022
 ```
 
-**Output**
+__Output__
 ```plaintext
 NO
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 2020
 ```
 
-**Output**
+__Output__
 ```plaintext
 YES
 ```

@@ -27,13 +27,13 @@ A card in the following format:
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 Ванечка
 832
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Группа №8.
 2. Ванечка.
@@ -43,13 +43,13 @@ A card in the following format:
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 Машенька
 141
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Группа №1.
 1. Машенька.

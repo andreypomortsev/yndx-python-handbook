@@ -21,24 +21,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(name_validation("user"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение CyrillicError
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(name_validation("иванов"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение CapitalError
 ```

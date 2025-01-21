@@ -6,26 +6,26 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 def func():
     x = int('Hello, world!')
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 ValueError
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 def func():
     x = '2' + 2
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 TypeError
 ```

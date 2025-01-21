@@ -15,7 +15,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 @result_accumulator
 def a_plus_b(a, b):
@@ -29,7 +29,7 @@ print(a_plus_b(1, -7))
 print(a_plus_b(10, 35, method="drop"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 None
 None
@@ -40,7 +40,7 @@ None
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 @result_accumulator
 def get_letters(text: str) -> str:
@@ -52,7 +52,7 @@ print(get_letters('Декораторы это круто =)'))
 print(get_letters('Ехали медведи на велосипеде', method='drop'))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 None
 None

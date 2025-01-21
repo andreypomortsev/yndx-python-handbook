@@ -11,26 +11,26 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 def func(a, b, c):
     return ''.join(map(str, (a, b, c)))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Ура! Ошибка!
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 def func(a, b):
     return set(a) ^ set(b)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Ура! Ошибка!
 ```

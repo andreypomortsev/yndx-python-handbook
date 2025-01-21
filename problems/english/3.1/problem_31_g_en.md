@@ -12,24 +12,24 @@
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 
 ```
 
-**Output**
+__Output__
 ```plaintext
 
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 
 ```
 
-**Output**
+__Output__
 ```plaintext
 
 ```

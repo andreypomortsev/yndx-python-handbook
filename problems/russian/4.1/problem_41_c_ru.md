@@ -9,24 +9,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = number_length(12345)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = 5
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = number_length(-100500)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = 6
 ```

@@ -13,12 +13,12 @@ The multiplication table of the specified size.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 2 3
 2 4 6
@@ -27,12 +27,12 @@ The multiplication table of the specified size.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 2 3 4 5
 2 4 6 8 10

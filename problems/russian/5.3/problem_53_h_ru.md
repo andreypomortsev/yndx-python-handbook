@@ -21,24 +21,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(username_validation("$user_45$"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение BadCharacterError
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(username_validation("45_user"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение StartsWithDigitError
 ```

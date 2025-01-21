@@ -16,7 +16,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 enter_results(1, 2, 3, 4, 5, 6)
 print(get_sum(), get_average())
@@ -24,7 +24,7 @@ enter_results(1, 2)
 print(get_sum(), get_average())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (9, 12) (3.0, 4.0)
 (10, 14) (2.5, 3.5)
@@ -32,7 +32,7 @@ print(get_sum(), get_average())
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 enter_results(3.5, 2.14, 45.2, 37.99)
 print(get_sum(), get_average())
@@ -42,7 +42,7 @@ enter_results(1.23, 4.56, 3.14, 2.71, 0, 0)
 print(get_sum(), get_average())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 (48.7, 40.13) (24.35, 20.07)
 (53.9, 47.43) (17.97, 15.81)

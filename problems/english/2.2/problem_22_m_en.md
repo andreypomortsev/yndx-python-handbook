@@ -20,28 +20,28 @@ One digit — the common one in all three numbers in the same position.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 12
 13
 14
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 23
 13
 63
 ```
 
-**Output**
+__Output__
 ```plaintext
 3
 ```

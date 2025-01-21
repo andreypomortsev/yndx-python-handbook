@@ -27,7 +27,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 fraction = Fraction(3, 9)
 print(fraction, repr(fraction))
@@ -35,7 +35,7 @@ fraction = Fraction('7/14')
 print(fraction, repr(fraction))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/3 Fraction(1, 3)
 1/2 Fraction(1, 2)
@@ -43,7 +43,7 @@ print(fraction, repr(fraction))
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 fraction = Fraction(3, 210)
 print(fraction, repr(fraction))
@@ -53,7 +53,7 @@ fraction.denominator(2)
 print(fraction.numerator(), fraction.denominator())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/70 Fraction(1, 70)
 1 7

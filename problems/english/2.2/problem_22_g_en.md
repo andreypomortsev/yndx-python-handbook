@@ -14,24 +14,24 @@ YES if the number is a palindrome, otherwise — NO.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 1234
 ```
 
-**Output**
+__Output__
 ```plaintext
 NO
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 2332
 ```
 
-**Output**
+__Output__
 ```plaintext
 YES
 ```

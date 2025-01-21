@@ -13,7 +13,7 @@ The name of the player who will go first.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 Вова
@@ -21,14 +21,14 @@ The name of the player who will go first.
 Боря
 ```
 
-**Output**
+__Output__
 ```plaintext
 Аня
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 4
 Толя
@@ -37,7 +37,7 @@ The name of the player who will go first.
 Юля
 ```
 
-**Output**
+__Output__
 ```plaintext
 Вася
 ```

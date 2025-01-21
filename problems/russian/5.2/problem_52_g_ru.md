@@ -21,7 +21,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 3)
 b = Fraction(1, 2)
@@ -29,14 +29,14 @@ c = a * b
 print(a, b, c, a is c, b is c)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/3 1/2 1/6 False False
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 a = Fraction(1, 3)
 c = b = Fraction(2, 1).reverse()
@@ -44,7 +44,7 @@ b /= a
 print(a, b, c, b is c)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 1/3 3/2 3/2 True
 ```

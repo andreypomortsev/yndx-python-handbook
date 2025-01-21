@@ -22,26 +22,26 @@ A single three-digit number that will lead to victory.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 31
 11
 ```
 
-**Output**
+__Output__
 ```plaintext
 321
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 49
 17
 ```
 
-**Output**
+__Output__
 ```plaintext
 911
 ```

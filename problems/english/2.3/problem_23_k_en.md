@@ -13,24 +13,24 @@ You need to output one natural number — the sum of the digits of the given num
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 12345
 ```
 
-**Output**
+__Output__
 ```plaintext
 15
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 100500
 ```
 
-**Output**
+__Output__
 ```plaintext
 6
 ```

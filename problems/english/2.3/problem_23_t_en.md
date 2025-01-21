@@ -28,7 +28,7 @@ Output the number of the first block with an incorrect hash (either not less tha
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 5
 6122802
@@ -38,14 +38,14 @@ Output the number of the first block with an incorrect hash (either not less tha
 1758741
 ```
 
-**Output**
+__Output__
 ```plaintext
 -1
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 1865535
@@ -55,7 +55,7 @@ Output the number of the first block with an incorrect hash (either not less tha
 5214020
 ```
 
-**Output**
+__Output__
 ```plaintext
 3
 ```

@@ -14,26 +14,26 @@ A single number — the result of adding the entered numbers without taking carr
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 123
 99
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 112
 ```
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 405
 839
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 234
 ```

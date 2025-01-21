@@ -26,7 +26,7 @@ Two integers — the coordinates of the final point of the route.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 СЕВЕР
 2
@@ -35,7 +35,7 @@ Two integers — the coordinates of the final point of the route.
 СТОП
 ```
 
-**Output**
+__Output__
 ```plaintext
 2
 2
@@ -43,7 +43,7 @@ Two integers — the coordinates of the final point of the route.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 СЕВЕР
 2
@@ -54,7 +54,7 @@ Two integers — the coordinates of the final point of the route.
 СТОП
 ```
 
-**Output**
+__Output__
 ```plaintext
 -1
 -4

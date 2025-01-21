@@ -16,24 +16,24 @@ A prime number is defined as a number that has exactly two divisors.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 1
 ```
 
-**Output**
+__Output__
 ```plaintext
 NO
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 67
 ```
 
-**Output**
+__Output__
 ```plaintext
 YES
 ```

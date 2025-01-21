@@ -14,7 +14,7 @@ You need to output the name of the winner. If two children called out numbers wi
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 2
 Аня
@@ -23,14 +23,14 @@ You need to output the name of the winner. If two children called out numbers wi
 234
 ```
 
-**Output**
+__Output__
 ```plaintext
 Боря
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 3
 Аня
@@ -41,7 +41,7 @@ You need to output the name of the winner. If two children called out numbers wi
 2323
 ```
 
-**Output**
+__Output__
 ```plaintext
 Ваня
 ```

@@ -16,7 +16,7 @@
 
 ### Пример
 
-**Ввод**
+__Ввод__
 ```python
 first_button = RedButton()
 second_button = RedButton()
@@ -28,7 +28,7 @@ for time in range(5):
 print(first_button.count(), second_button.count())
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Тревога!
 Тревога!

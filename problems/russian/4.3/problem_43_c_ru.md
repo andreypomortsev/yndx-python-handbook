@@ -14,12 +14,12 @@ $((a)∗x+b)∗x+c$
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 result = make_equation(3, 2, 1)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Вызов make_equation(3, 2, 1)
 # Вызов make_equation(3, 2)
@@ -29,12 +29,12 @@ result = '((3) * x + 2) * x + 1'
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 result = make_equation(3, 1, 5, 3)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Вызов make_equation(3, 1, 5, 3)
 # Вызов make_equation(3, 1, 5)

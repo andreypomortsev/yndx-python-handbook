@@ -14,7 +14,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 # Моя первая супер-пупер программа
 print("What is your name?") #  Как тебя зовут?
@@ -22,7 +22,7 @@ name = input() #  Сохраняем имя
 print(f"Hello, {name}!") #  Здороваемся# Конец моей супер-пупер программы
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 print("What is your name?")
 name = input()
@@ -31,14 +31,14 @@ print(f"Hello, {name}!")
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 # Мой первый цикл
 for i in range(10): # Считаем до 10
     print(i) # выводим число
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 for i in range(10):
     print(i)

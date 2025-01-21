@@ -15,13 +15,13 @@ To make the rectangle look nice, each column should have the same width.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 2
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 2 3
 4 5 6
@@ -29,13 +29,13 @@ To make the rectangle look nice, each column should have the same width.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 4
 6
 ```
 
-**Output**
+__Output__
 ```plaintext
  1  2  3  4  5  6
  7  8  9 10 11 12

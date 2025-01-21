@@ -20,24 +20,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(user_validation(last_name="Иванов", first_name="Иван", username="ivanych45"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 {'last_name': 'Иванов', 'first_name': 'Иван', 'username': 'ivanych45'}
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(user_validation(last_name="Иванов", first_name="Иван", username="ivanych45", password="123456"))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Вызвано исключение KeyError
 ```

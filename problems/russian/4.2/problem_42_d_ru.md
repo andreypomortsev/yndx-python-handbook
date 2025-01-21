@@ -9,24 +9,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = month(1, "en")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = 'January'
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = month(7)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = 'Июль'
 ```

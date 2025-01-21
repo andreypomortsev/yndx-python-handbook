@@ -9,24 +9,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = can_eat((2, 1), (4, 2))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = True
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = can_eat((5, 5), (6, 6))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = False
 ```

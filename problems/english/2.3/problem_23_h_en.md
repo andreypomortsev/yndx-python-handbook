@@ -12,13 +12,13 @@ The very useful information repeated $N$ times.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 2 + 2 = 4
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 2 + 2 = 4
 2 + 2 = 4
@@ -27,13 +27,13 @@ The very useful information repeated $N$ times.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 Нельзя нажимать неизвестные кнопки!
 4
 ```
 
-**Output**
+__Output__
 ```plaintext
 Нельзя нажимать неизвестные кнопки!
 Нельзя нажимать неизвестные кнопки!

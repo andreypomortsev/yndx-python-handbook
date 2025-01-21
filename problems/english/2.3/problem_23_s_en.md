@@ -49,13 +49,13 @@ Let's say the number 123 was chosen. The dialog between your program and the use
 
 ### Example
 
-**Input**
+__Input__
 ```plaintext
 The number is: 
 123
 ```
 
-**Output**
+__Output__
 ```plaintext
 Угадал!
 ```

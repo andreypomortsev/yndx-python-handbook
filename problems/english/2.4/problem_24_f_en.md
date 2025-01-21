@@ -17,21 +17,21 @@ The most common method for finding the GCD is the Euclidean Algorithm.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 2
 12
 42
 ```
 
-**Output**
+__Output__
 ```plaintext
 6
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 3
 102
@@ -39,7 +39,7 @@ The most common method for finding the GCD is the Euclidean Algorithm.
 768
 ```
 
-**Output**
+__Output__
 ```plaintext
 3
 ```

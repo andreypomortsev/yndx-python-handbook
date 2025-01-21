@@ -13,21 +13,21 @@ A single large number.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 2
 123
 234
 ```
 
-**Output**
+__Output__
 ```plaintext
 34
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 3
 1234
@@ -35,7 +35,7 @@ A single large number.
 2323
 ```
 
-**Output**
+__Output__
 ```plaintext
 473
 ```

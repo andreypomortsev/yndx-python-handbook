@@ -11,24 +11,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = is_palindrome(123)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = False
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = is_palindrome([1, 2, 1, 2, 1])
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = True
 ```

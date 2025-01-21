@@ -8,7 +8,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 modern_print("Hello!")
 modern_print("Hello!")
@@ -16,7 +16,7 @@ modern_print("How do you do?")
 modern_print("Hello!")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Hello!
 How do you do?
@@ -24,7 +24,7 @@ How do you do?
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 modern_print("Ало!")
 modern_print("Ало!")
@@ -36,7 +36,7 @@ modern_print("Позвони когда сможешь")
 modern_print("Я тебя не слышу")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Ало!
 Я тебя не слышу

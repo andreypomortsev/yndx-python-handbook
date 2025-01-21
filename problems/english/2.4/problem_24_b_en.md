@@ -12,12 +12,12 @@ Not a multiplication table of the specified size.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 * 1 = 1
 2 * 1 = 2
@@ -32,12 +32,12 @@ Not a multiplication table of the specified size.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 ```
 
-**Output**
+__Output__
 ```plaintext
 1 * 1 = 1
 2 * 1 = 2

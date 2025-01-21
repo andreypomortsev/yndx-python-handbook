@@ -22,26 +22,26 @@ One of the following messages:
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3.5
 -3.2
 ```
 
-**Output**
+__Output__
 ```plaintext
 Опасность! Покиньте зону как можно скорее!
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 -5.2
 3.4
 ```
 
-**Output**
+__Output__
 ```plaintext
 Зона безопасна. Продолжайте работу.
 ```

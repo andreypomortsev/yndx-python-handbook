@@ -17,7 +17,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 Hello, world
 Hello, @@@
@@ -25,7 +25,7 @@ Hello, @@@
 
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 Hello, world
 Goodbye
@@ -33,7 +33,7 @@ Goodbye
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 First Message
 ##Second Message
@@ -42,7 +42,7 @@ First Message
 
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 First Message
 Second Message

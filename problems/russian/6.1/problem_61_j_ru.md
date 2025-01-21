@@ -9,12 +9,12 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 print(stairs(np.arange(3)))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 [[0 1 2]
  [2 0 1]
@@ -23,12 +23,12 @@ print(stairs(np.arange(3)))
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 print(stairs(np.arange(5)))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 [[0 1 2 3 4]
  [4 0 1 2 3]

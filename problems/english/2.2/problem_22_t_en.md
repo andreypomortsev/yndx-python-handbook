@@ -13,28 +13,28 @@ If there are multiple such strings, choose the one that is lexicographically sma
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 березка елочка зайка волк березка
 сосна сосна сосна елочка грибочки медведь
 сосна сосна сосна белочка сосна белочка
 ```
 
-**Output**
+__Output__
 ```plaintext
 березка елочка зайка волк березка 33
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 зайка березка
 березка зайка
 березка елочка березка
 ```
 
-**Output**
+__Output__
 ```plaintext
 березка зайка 13
 ```

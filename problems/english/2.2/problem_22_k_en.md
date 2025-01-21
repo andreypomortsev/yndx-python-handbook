@@ -14,24 +14,24 @@ YES — if the number is beautiful, otherwise — NO.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 123
 ```
 
-**Output**
+__Output__
 ```plaintext
 YES
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 748
 ```
 
-**Output**
+__Output__
 ```plaintext
 NO
 ```

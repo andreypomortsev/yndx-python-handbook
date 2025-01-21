@@ -13,12 +13,12 @@ The countdown is required.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 ```
 
-**Output**
+__Output__
 ```plaintext
 До старта 3 секунд(ы)
 До старта 2 секунд(ы)
@@ -39,12 +39,12 @@ The countdown is required.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 4
 ```
 
-**Output**
+__Output__
 ```plaintext
 До старта 3 секунд(ы)
 До старта 2 секунд(ы)

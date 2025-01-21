@@ -18,13 +18,13 @@ $N$ lines in the following format:
 
 ### Example 1
 
-**Input**  
+__Input__  
 ```plaintext
 2
 Купи слона!
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Я больше никогда не буду писать "Купи слона!"!
 Я больше никогда не буду писать "Купи слона!"!
@@ -32,13 +32,13 @@ $N$ lines in the following format:
 
 ### Example 2
 
-**Input**  
+__Input__  
 ```plaintext
 3
 Попка дурак!
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 Я больше никогда не буду писать "Попка дурак!"!
 Я больше никогда не буду писать "Попка дурак!"!

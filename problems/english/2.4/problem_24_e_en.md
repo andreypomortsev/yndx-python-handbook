@@ -15,7 +15,7 @@ The number of areas where a bunny is present.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 3
 березка
@@ -40,14 +40,14 @@ The number of areas where a bunny is present.
 ВСЁ
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 4
 зайка
@@ -66,7 +66,7 @@ The number of areas where a bunny is present.
 ВСЁ
 ```
 
-**Output**
+__Output__
 ```plaintext
 2
 ```

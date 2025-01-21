@@ -18,24 +18,24 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = make_list(3)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = [0, 0, 0]
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = make_list(5, 1)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = [1, 1, 1, 1, 1]
 ```

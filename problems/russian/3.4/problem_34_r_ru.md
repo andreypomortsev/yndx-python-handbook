@@ -35,12 +35,12 @@ not a or b and c
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 not a or b and c
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 a b c f
 0 0 0 1
@@ -55,12 +55,12 @@ a b c f
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 a and not b and c
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 a b c f
 0 0 0 0

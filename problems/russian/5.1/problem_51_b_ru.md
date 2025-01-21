@@ -14,7 +14,7 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 point = Point(3, 5)
 print(point.x, point.y)
@@ -22,7 +22,7 @@ point.move(2, -3)
 print(point.x, point.y)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 3 5
 5 2
@@ -30,7 +30,7 @@ print(point.x, point.y)
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 first_point = Point(2, -7)
 second_point = Point(7, 9)
@@ -38,7 +38,7 @@ print(first_point.length(second_point))
 print(second_point.length(first_point))
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 16.76
 16.76

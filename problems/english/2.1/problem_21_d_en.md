@@ -14,12 +14,12 @@ A single natural number — the amount of change.
 
 ### Example
 
-**Input**  
+__Input__  
 ```plaintext
 100
 ```
 
-**Output**  
+__Output__  
 ```plaintext
 5
 ```

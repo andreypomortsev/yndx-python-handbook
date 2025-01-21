@@ -14,24 +14,24 @@ YES — if there is a bunny in the vegetation, otherwise — NO.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 березка елочка зайка волк березка
 ```
 
-**Output**
+__Output__
 ```plaintext
 YES
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 сосна сосна сосна елочка грибочки медведь
 ```
 
-**Output**
+__Output__
 ```plaintext
 NO
 ```

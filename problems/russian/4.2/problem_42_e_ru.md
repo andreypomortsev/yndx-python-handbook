@@ -14,25 +14,25 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 result = to_string(1, 2, 3)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = '1 2 3\n'
 ```
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 data = [7, 3, 1, "hello", (1, 2, 3)]
 result = to_string(*data, sep=", ", end="!")
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = '7, 3, 1, hello, (1, 2, 3)!'
 ```

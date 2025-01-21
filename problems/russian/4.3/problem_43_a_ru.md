@@ -14,12 +14,12 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```python
 result = recursive_sum(1, 2, 3)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Вызов recursive_sum(1, 2, 3)
 # Вызов recursive_sum(1, 2)
@@ -30,12 +30,12 @@ result = 6
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```python
 result = recursive_sum(7, 1, 3, 2, 10)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 # Вызов recursive_sum(7, 1, 3, 2, 10)
 # Вызов recursive_sum(7, 1, 3, 2)

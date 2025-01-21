@@ -12,24 +12,24 @@ One natural number.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 1234
 ```
 
-**Output**
+__Output__
 ```plaintext
 NO
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 123454321
 ```
 
-**Output**
+__Output__
 ```plaintext
 YES
 ```

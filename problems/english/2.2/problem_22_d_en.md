@@ -16,14 +16,14 @@ The names of the winners in the order of their finishing positions.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 10
 5
 7
 ```
 
-**Output**
+__Output__
 ```plaintext
 1. Петя
 2. Толя
@@ -32,14 +32,14 @@ The names of the winners in the order of their finishing positions.
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 5
 7
 10
 ```
 
-**Output**
+__Output__
 ```plaintext
 1. Толя
 2. Вася

@@ -14,12 +14,12 @@
 
 ### Пример 1
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = make_matrix(3)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = [
     [0, 0, 0],
@@ -30,12 +30,12 @@ result = [
 
 ### Пример 2
 
-**Ввод**
+__Ввод__
 ```plaintext
 result = make_matrix((4, 2), 1)
 ```
 
-**Вывод**
+__Вывод__
 ```plaintext
 result = [
     [1, 1, 1, 1],

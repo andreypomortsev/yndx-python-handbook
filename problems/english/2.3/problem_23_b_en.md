@@ -14,7 +14,7 @@ The number of lines containing a bunny.
 
 ### Example 1
 
-**Input**
+__Input__
 ```plaintext
 березка елочка зайка волк березка
 сосна сосна сосна елочка грибочки медведь
@@ -22,14 +22,14 @@ The number of lines containing a bunny.
 Приехали!
 ```
 
-**Output**
+__Output__
 ```plaintext
 1
 ```
 
 ### Example 2
 
-**Input**
+__Input__
 ```plaintext
 зайка березка
 березка зайка
@@ -37,7 +37,7 @@ The number of lines containing a bunny.
 Приехали!
 ```
 
-**Output**
+__Output__
 ```plaintext
 2
 ```
