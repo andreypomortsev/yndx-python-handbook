@@ -66,6 +66,8 @@ print(stairs(np.arange(5)))
 - `numpy`
 - `memory_profiler`
 
+#### Продвинутые Индексы
+
 ```python
 import numpy as np
 from memory_profiler import profile
@@ -79,6 +81,20 @@ def stairs_advanced(row: np.array) -> np.ndarray:
     return result
 
 
+if __name__ == "__main__":
+    row = np.arange(10000)
+    print("RAM usage for the advanced indexing solution:")
+    stairs_advanced(row)
+
+```
+
+#### Решение с np.roll
+
+```python
+import numpy as np
+from memory_profiler import profile
+
+
 # Solution using np.roll
 @profile
 def stairs_roll(row: np.array) -> np.ndarray:
@@ -87,33 +103,25 @@ def stairs_roll(row: np.array) -> np.ndarray:
     return result
 
 
-def test_peak_memory_usage(n: int):
-    row = np.arange(n)
-    print("RAM usage for the advanced indexing solution:")
-    stairs_advanced(row)
-
+if __name__ == "__main__":
+    row = np.arange(10000)
     print("RAM usage for the np.roll solution:")
     stairs_roll(row)
 
-
-if __name__ == "__main__":
-    n = 10000
-    test_peak_memory_usage(n)
-
 ```
 
-### Результат должен выглядеть примерно так:
+### Результаты
 
 #### Продвинутые Индексы
 
 ```plaintext
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
-     5     30.9 MiB     30.9 MiB           1   @profile
-     6                                         def stairs_advanced(row: np.array) -> np.ndarray:
-     7     30.9 MiB      0.0 MiB           1       n = row.shape[0]
-     8   1363.1 MiB   1332.2 MiB       20001       result = np.array(list(map(lambda i: row[(np.arange(n) - i) % n], range(n))))
-     9   1363.1 MiB      0.0 MiB           1       return result
+     6     31.0 MiB     31.0 MiB           1   @profile
+     7                                         def stairs_advanced(row: np.array) -> np.ndarray:
+     8     31.0 MiB      0.0 MiB           1       n = row.shape[0]
+     9   1256.9 MiB   1225.9 MiB       10001       result = np.array([row[(np.arange(n) - i)] for i in range(n)])
+    10   1256.9 MiB      0.0 MiB           1       return result
 ```
 
 #### np.roll
@@ -121,11 +129,11 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 ```plaintext
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
-    13    600.1 MiB    600.1 MiB           1   @profile
-    14                                         def stairs_roll(row: np.array) -> np.ndarray:
-    15    600.1 MiB      0.0 MiB           1       n = row.shape[0]
-    16   1521.4 MiB    921.3 MiB       20001       result = np.array(list(map(lambda i: np.roll(row, shift=i), range(n))))
-    17   1521.4 MiB      0.0 MiB           1       return result
+     6     30.9 MiB     30.9 MiB           1   @profile
+     7                                         def stairs_roll(row: np.array) -> np.ndarray:
+     8     30.9 MiB      0.0 MiB           1       n = row.shape[0]
+     9   1364.0 MiB   1333.1 MiB       20001       result = np.array(list(map(lambda i: np.roll(row, shift=i), range(n))))
+    10   1364.0 MiB      0.0 MiB           1       return result
 ```
 
 Измерения производились на Apple MacBook Pro M1 Pro 16 Gb
