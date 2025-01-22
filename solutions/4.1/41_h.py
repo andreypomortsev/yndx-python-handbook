@@ -1,23 +1,24 @@
-def check_for_palindrome(symbols: str) -> bool:
+def normilize_input(input_value: str) -> str | list:
     """
-    Проверяет, является ли строка палиндромом.
+    Нормализует данные.
 
     Аргументы:
-        symbols (str): Строка для проверки на палиндром.
+        input_value (str | int | tuple | list): Входящие данные
+            для нормализации.
 
     Возвращает:
-        bool: True, если строка является палиндромом, иначе False.
+        str: Нормализованные данные.
     """
-    left_index = 0
-    right_index = len(symbols) - 1
+    if isinstance(input_value, (tuple, list)):
+        input_value = list(map(lambda x: str(x).lower(), input_value))
 
-    while left_index < right_index:
-        if symbols[left_index] != symbols[right_index]:
-            return False
-        left_index += 1
-        right_index -= 1
+    elif isinstance(input_value, str):
+        input_value = input_value.lower()
 
-    return True
+    else:
+        input_value = str(input_value)
+
+    return input_value
 
 
 def is_palindrome(input_value: str | int | tuple | list) -> bool:
@@ -31,13 +32,16 @@ def is_palindrome(input_value: str | int | tuple | list) -> bool:
     Возвращает:
         bool: True, если входное значение является палиндромом, иначе False.
     """
-    if isinstance(input_value, (tuple, list)):
-        input_value = list(map(lambda x: str(x).lower(), input_value))
+    symbols = normilize_input(input_value)
 
-    elif isinstance(input_value, str):
-        input_value = input_value.lower()
+    left_index = 0
+    right_index = len(symbols) - 1
 
-    else:
-        input_value = str(input_value)
+    while left_index < right_index:
+        if symbols[left_index] != symbols[right_index]:
+            return False
 
-    return check_for_palindrome(input_value)
+        left_index += 1
+        right_index -= 1
+
+    return True

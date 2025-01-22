@@ -461,16 +461,19 @@ i_test_data = [
 j_test_data = [
     ("123\n", "53\n", "first open test"),
     ("741\n", "115\n", "second open test"),
-    ("111\n", "22\n", "all ones test"),
-    ("999\n", "1818\n", "max digits test"),
-    ("321\n", "53\n", "decreasing digits test"),
-    ("256\n", "117\n", "middle digit test"),
-    ("804\n", "84\n", "zero in middle test"),
-    ("500\n", "50\n", "leading zeros in sums test"),
-    ("111\n", "22\n", "all digits the same test"),
-    ("970\n", "167\n", "last digit zero test"),
-    ("000\n", "00\n", "all zeros test"),
-    ("001\n", "10\n", "leading zeros test"),
+    ("111\n", "22\n", "all ones"),
+    ("999\n", "1818\n", "max digits"),
+    ("321\n", "53\n", "decreasing digits"),
+    ("256\n", "117\n", "middle digit"),
+    ("804\n", "84\n", "zero in middle"),
+    ("500\n", "50\n", "leading zeros in sums"),
+    ("111\n", "22\n", "all digits the same"),
+    ("970\n", "167\n", "last digit zero"),
+    ("001\n", "10\n", "leading zeros"),
+    ("789\n", "1715\n", "second sum is bigger"),
+    ("189\n", "179\n", "first sum is bigger"),
+    ("636\n", "99\n", "palindrome"),
+    ("531\n", "84\n", "second sum is bigger and less 9"),
 ]
 
 
@@ -745,6 +748,7 @@ q_test_data = [
     ("0\n1\n1\n", {"-1.0\n", "-1.00\n"}, "a ==, b and c not 0"),
     ("5\n10\n-1\n", {"-2.1 0.1\n", "-2.10 0.10\n"}, "root2 < root1"),
     ("-5\n10\n-1\n", {"0.11 1.89\n"}, "root1 < root2"),
+    ("1\n2\n1\n", {"-1.0\n", "-1.00\n"}, "b^2 - 4ac == 0"),
 ]
 
 

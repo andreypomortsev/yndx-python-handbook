@@ -1,34 +1,34 @@
 from itertools import product
 
-PRECEDENCE = {"or": 1, "and": 2, "not": 3}
+PRECEDENCE = {"not": 3, "and": 2, "or": 1}
 
 expression = input()
 
-unique_vars = sorted({var for var in expression.split() if var.isupper()})
-repeats = len(unique_vars)
 postfix_expression = []
 operators = []
-
 tokens = expression.split()
 
 for token in tokens:
-    if token in {"and", "or"}:
+    if token.isupper():
+        postfix_expression.append(token)
+    elif token == "not":
+        operators.append(token)
+    elif token in PRECEDENCE:
         while operators and PRECEDENCE[operators[-1]] >= PRECEDENCE[token]:
             postfix_expression.append(operators.pop())
         operators.append(token)
-    elif token == "not":
-        operators.append(token)
-    elif token.isupper():
-        postfix_expression.append(token)
 
 
 while operators:
     postfix_expression.append(operators.pop())
 
+unique_vars = sorted({var for var in expression.split() if var.isupper()})
+repeats = len(unique_vars)
+
 print(*unique_vars, "F")
+
 for vars in product(range(2), repeat=repeats):
     variable_to_value = dict(zip(unique_vars, vars))
-
     stack = []
 
     for token in postfix_expression:
@@ -45,6 +45,6 @@ for vars in product(range(2), repeat=repeats):
                 case "or":
                     stack.append(operand_one or operand_two)
 
-    f = stack[0]
+    f = stack.pop()
 
     print(*vars, int(f))

@@ -14,7 +14,7 @@ else:
     if discriminant >= 0:
         root_one = round((-b + discriminant**0.5) / (2 * a), 2)
         root_two = round((-b - discriminant**0.5) / (2 * a), 2)
-        if not discriminant:
+        if not discriminant:  # Дискриминант равен 0
             print(root_two)
         elif root_one < root_two:  # Условие выполняется при a < 0
             print(root_one, root_two)

@@ -11,12 +11,11 @@ while sp := input():
     friends[two].add(one)
 
 for name, direct_friends in friends.items():
-    friends_2[name] = set()
-
     for friend in direct_friends:
         friends_2[name].update(friends[friend])
 
     friends_2[name] -= direct_friends | {name}
 
 for name, second_level_friends in sorted(friends_2.items()):
-    print(f"{name}:", ", ".join(sorted(second_level_friends)))
+    str_of_friends = ", ".join(sorted(second_level_friends))
+    print(f"{name}: {str_of_friends}")

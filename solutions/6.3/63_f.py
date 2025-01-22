@@ -9,7 +9,7 @@ def get_users(url: str) -> list:
     sorted_users = sorted(users, **params)
 
     return [
-        user["last_name"] + " " + user["first_name"] for user in sorted_users
+        f"{user["last_name"]} {user["first_name"]}" for user in sorted_users
     ]
 
 

@@ -902,6 +902,41 @@ p_test_data = [
         "another.log\n",
         "&nbsp; test",
     ),
+    (
+        "Where am I\nsecond.txt\nfirst.txt\none more\nfew_lines.log\none_more.csv\nemptyfile.txt\n",
+        (
+            "В этом файле говорится    о том что МАМА   \nмылА\nРаму\n",
+            "А в этом не говорится",
+            "where can I&nbsp;find\na cup of coffee\n\n\n\n at 10 AM\n",
+            "Where\nam\n\n\n\n\n\n\nI\n",
+            "&nbsp;&nbsp;&nbsp;&nbsp;",
+            "\n\n\n\n\n\n\n\n\n\n",
+        ),
+        "few_lines.log\n",
+        "a few lines phrase test",
+    ),
+    (
+        "Where am I\ntab_lines.log\n",
+        ("Where\tam\tI\t",),
+        "tab_lines.log\n",
+        "tab delimiter test",
+    ),
+    (
+        "Where am I\ntab_lines.log\nanother.log\nthird\n",
+        (
+            "Where\tam\tI\t",
+            "Where\tam\tI\t",
+            "Where\tam\tI\t",
+        ),
+        "tab_lines.log\nanother.log\nthird\n",
+        "the phrase in every sentence",
+    ),
+    (
+        "Where am I\ntab_lines.log\n",
+        ("WherE\naM\n\ni\n",),
+        "tab_lines.log\n",
+        "CaMeLcAsE test",
+    ),
 ]
 
 q_test_data = [

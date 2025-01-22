@@ -21,12 +21,12 @@ Print:
 """
 
 n = int(input())
-b_chain = (int(input()) for _ in range(n))
 
 h_n = 0
 SQUARE = 256**2
 
-for i, block in enumerate(b_chain):
+for i in range(n):
+    block = int(input())
     # Вычисляем r_n и m_n из данного блока
     r_n = (block // 256) % 256
     m_n = block // SQUARE

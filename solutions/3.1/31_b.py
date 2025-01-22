@@ -1,2 +1,4 @@
 word = input()
-print(*word, sep="\n")
+
+for letter in word:
+    print(letter)

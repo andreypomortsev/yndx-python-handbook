@@ -404,6 +404,8 @@ def time_spender() -> Callable[..., None]:
             sleep_time = 0.50
         time.sleep(sleep_time)
 
+        return None
+
     return spend_time
 
 
@@ -417,5 +419,7 @@ def time_waster() -> Callable[..., None]:
         if sleep_time is None:
             sleep_time = 1.05
         time.sleep(sleep_time)
+
+        return None
 
     return waste_time

@@ -1,7 +1,7 @@
 from typing import Tuple
 
 
-def enter_results(*pairs) -> Tuple[float]:
+def enter_results(*pairs) -> None:
     global results
 
     if "results" in globals():
