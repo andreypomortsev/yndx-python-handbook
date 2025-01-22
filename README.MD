@@ -576,7 +576,7 @@ Solutions are organized by handbook sections. Each solution:
 | B. [Breaking is not building](./problems/english/5.3/problem_53_b_en.md) | [✅](./solutions/5.3/53_b.py) | [✅](./tests/5.3/test_53_b.py) |
 | C. [Breaking is not building 2](./problems/english/5.3/problem_53_c_en.md) | [✅](./solutions/5.3/53_c.py) | [✅](./tests/5.3/test_53_c.py) |
 | D. [Parameter control](./problems/english/5.3/problem_53_d_en.md) | [✅](./solutions/5.3/53_d.py) | [✅](./tests/5.3/test_53_d.py) |
-| E. [Merge with check](./problems/english/5.3/problem_53_e_en.md) | [✅](./solutions/5.3/53_e.py) | [✅](./tests/5.3/test_53_e.py) |
+| E. [Merge with validation](./problems/english/5.3/problem_53_e_en.md) | [✅](./solutions/5.3/53_e.py) | [✅](./tests/5.3/test_53_e.py) |
 | F. [Root of evil 2](./problems/english/5.3/problem_53_f_en.md) | [✅](./solutions/5.3/53_f.py) | [✅](./tests/5.3/test_53_f.py) |
 | G. [Name validation](./problems/english/5.3/problem_53_g_en.md) | [✅](./solutions/5.3/53_g.py) | [✅](./tests/5.3/test_53_g.py) |
 | H. [Username validation](./problems/english/5.3/problem_53_h_en.md) | [✅](./solutions/5.3/53_h.py) | [✅](./tests/5.3/test_53_h.py) |
