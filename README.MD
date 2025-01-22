@@ -532,10 +532,10 @@ Solutions are organized by handbook sections. Each solution:
 
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
-| А. [Cool point](./problems/english/5.1/problem_51_a_en.md) | [✅](./solutions/5.1/51_a.py) | [✅](./tests/5.1/test_51_a.py) |
-| B. [Cool point 2.0](./problems/english/5.1/problem_51_b_en.md) | [✅](./solutions/5.1/51_b.py) | [✅](./tests/5.1/test_51_b.py) |
+| А. [Class point](./problems/english/5.1/problem_51_a_en.md) | [✅](./solutions/5.1/51_a.py) | [✅](./tests/5.1/test_51_a.py) |
+| B. [Class point 2.0](./problems/english/5.1/problem_51_b_en.md) | [✅](./solutions/5.1/51_b.py) | [✅](./tests/5.1/test_51_b.py) |
 | C. [Don't press the red button!](./problems/english/5.1/problem_51_c_en.md) | [✅](./solutions/5.1/51_c.py) | [✅](./tests/5.1/test_51_c.py) |
-| D. [Work is not a wolf](./problems/english/5.1/problem_51_d_en.md) | [✅](./solutions/5.1/51_d.py) | [✅](./tests/5.1/test_51_d.py) |
+| D. [Work is not going anywhere](./problems/english/5.1/problem_51_d_en.md) | [✅](./solutions/5.1/51_d.py) | [✅](./tests/5.1/test_51_d.py) |
 | E. [Cool rectangle](./problems/english/5.1/problem_51_e_en.md) | [✅](./solutions/5.1/51_e.py) | [✅](./tests/5.1/test_51_e.py) |
 | F. [Cool rectangle 2.0](./problems/english/5.1/problem_51_f_en.md) | [✅](./solutions/5.1/51_f.py) | [✅](./tests/5.1/test_51_f.py) |
 | G. [Cool rectangle 3.0](./problems/english/5.1/problem_51_g_en.md) | [✅](./solutions/5.1/51_g.py) | [✅](./tests/5.1/test_51_g.py) |
@@ -552,9 +552,9 @@ Solutions are organized by handbook sections. Each solution:
 
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
-| А. [Cool point 3.0](./problems/english/5.2/problem_52_a_en.md) | [✅](./solutions/5.2/52_a.py) | [✅](./tests/5.2/test_52_a.py) |
-| B. [Cool point 4.0](./problems/english/5.2/problem_52_b_en.md) | [✅](./solutions/5.2/52_b.py) | [✅](./tests/5.2/test_52_b.py) |
-| C. [Cool point 5.0](./problems/english/5.2/problem_52_c_en.md) | [✅](./solutions/5.2/52_c.py) | [✅](./tests/5.2/test_52_c.py) |
+| А. [Class point 3.0](./problems/english/5.2/problem_52_a_en.md) | [✅](./solutions/5.2/52_a.py) | [✅](./tests/5.2/test_52_a.py) |
+| B. [Class point 4.0](./problems/english/5.2/problem_52_b_en.md) | [✅](./solutions/5.2/52_b.py) | [✅](./tests/5.2/test_52_b.py) |
+| C. [Class point 5.0](./problems/english/5.2/problem_52_c_en.md) | [✅](./solutions/5.2/52_c.py) | [✅](./tests/5.2/test_52_c.py) |
 | D. [Fractions v0.1](./problems/english/5.2/problem_52_d_en.md) | [✅](./solutions/5.2/52_d.py) | [✅](./tests/5.2/test_52_d.py) |
 | E. [Fractions v0.2](./problems/english/5.2/problem_52_e_en.md) | [✅](./solutions/5.2/52_e.py) | [✅](./tests/5.2/test_52_e.py) |
 | F. [Fractions v0.3](./problems/english/5.2/problem_52_f_en.md) | [✅](./solutions/5.2/52_f.py) | [✅](./tests/5.2/test_52_f.py) |
