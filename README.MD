@@ -615,11 +615,11 @@ Solutions are organized by handbook sections. Each solution:
 | А. [Lengths of all words - 2](./problems/english/6.2/problem_62_a_en.md) | [✅](./solutions/6.2/62_a.py) | [✅](./tests/6.2/test_62_a.py) |
 | B. [Lengths of all words by parity](./problems/english/6.2/problem_62_b_en.md) | [✅](./solutions/6.2/62_b.py) | [✅](./tests/6.2/test_62_b.py) |
 | C. [Check - 2](./problems/english/6.2/problem_62_c_en.md) | [✅](./solutions/6.2/62_c.py) | [✅](./tests/6.2/test_62_c.py) |
-| D. [Sale](./problems/english/6.2/problem_62_d_en.md) | [✅](./solutions/6.2/62_d.py) | [✅](./tests/6.2/test_62_d.py) |
+| D. [Promotion](./problems/english/6.2/problem_62_d_en.md) | [✅](./solutions/6.2/62_d.py) | [✅](./tests/6.2/test_62_d.py) |
 | E. [Long words](./problems/english/6.2/problem_62_e_en.md) | [✅](./solutions/6.2/62_e.py) | [✅](./tests/6.2/test_62_e.py) |
 | F. [Progress report](./problems/english/6.2/problem_62_f_en.md) | [✅](./solutions/6.2/62_f.py) | [✅](./tests/6.2/test_62_f.py) |
 | G. [Failure report](./problems/english/6.2/problem_62_g_en.md) | [✅](./solutions/6.2/62_g.py) | [✅](./tests/6.2/test_62_g.py) |
-| H. [Journal update](./problems/english/6.2/problem_62_h_en.md) | [✅](./solutions/6.2/62_h.py) | [✅](./tests/6.2/test_62_h.py) |
+| H. [Gradebook update](./problems/english/6.2/problem_62_h_en.md) | [✅](./solutions/6.2/62_h.py) | [✅](./tests/6.2/test_62_h.py) |
 | I. [Endless battleship](./problems/english/6.2/problem_62_i_en.md) | [✅](./solutions/6.2/62_i.py) | [✅](./tests/6.2/test_62_i.py) |
 | J. [Function extremum](./problems/english/6.2/problem_62_j_en.md) | [✅](./solutions/6.2/62_j.py) | [✅](./tests/6.2/test_62_j.py) |
 
