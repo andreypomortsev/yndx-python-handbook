@@ -16,10 +16,10 @@ with open(file_name, "rb") as file:
         chunk_size = min(pointer_location, SIZE)
         file.seek(pointer_location - chunk_size)
         pointer_location -= chunk_size
-        
+
         chunk = file.read(chunk_size)
         chunk = chunk.replace(b"\r\n", b"\n")  # Windows to Unix
-        
+
         buffer = chunk + buffer
         lines = buffer.split(b"\n")
         read_lines = len(lines)
