@@ -12,7 +12,7 @@
 
 ### Примечание
 
-`accumulate` «складывает» не только числа.
+[accumulate](https://docs.python.org/3/library/itertools.html#itertools.accumulate) «складывает» не только числа.
 
 ### Пример 1
 
