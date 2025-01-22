@@ -513,8 +513,8 @@ Solutions are organized by handbook sections. Each solution:
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Recursive summator](./problems/english/4.3/problem_43_a_en.md) | [✅](./solutions/4.3/43_a.py) | [✅](./tests/4.3/test_43_a.py) |
-| B. [Recursive digit adder](./problems/english/4.3/problem_43_b_en.md) | [✅](./solutions/4.3/43_b.py) | [✅](./tests/4.3/test_43_b.py) |
-| C. [Polynomial of N degree](./problems/english/4.3/problem_43_c_en.md) | [✅](./solutions/4.3/43_c.py) | [✅](./tests/4.3/test_43_c.py) |
+| B. [Recursive digit summator](./problems/english/4.3/problem_43_b_en.md) | [✅](./solutions/4.3/43_b.py) | [✅](./tests/4.3/test_43_b.py) |
+| C. [Polynomial of N-th degree](./problems/english/4.3/problem_43_c_en.md) | [✅](./solutions/4.3/43_c.py) | [✅](./tests/4.3/test_43_c.py) |
 | D. [Result decoration](./problems/english/4.3/problem_43_d_en.md) | [✅](./solutions/4.3/43_d.py) | [✅](./tests/4.3/test_43_d.py) |
 | E. [Result accumulation](./problems/english/4.3/problem_43_e_en.md) | [✅](./solutions/4.3/43_e.py) | [✅](./tests/4.3/test_43_e.py) |
 | F. [Merge sort](./problems/english/4.3/problem_43_f_en.md) | [✅](./solutions/4.3/43_f.py) | [✅](./tests/4.3/test_43_f.py) |
