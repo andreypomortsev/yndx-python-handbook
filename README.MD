@@ -477,7 +477,7 @@ Solutions are organized by handbook sections. Each solution:
 | C. [Length of number](./problems/english/4.1/problem_41_c_en.md) | [✅](./solutions/4.1/41_c.py) | [✅](./tests/4.1/test_41_c.py) |
 | D. [Name of the month](./problems/english/4.1/problem_41_d_en.md) | [✅](./solutions/4.1/41_d.py) | [✅](./tests/4.1/test_41_d.py) |
 | E. [Numerical string](./problems/english/4.1/problem_41_e_en.md) | [✅](./solutions/4.1/41_e.py) | [✅](./tests/4.1/test_41_e.py) |
-| F. [Output system modernization](./problems/english/4.1/problem_41_f_en.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
+| F. [Modernizing output system](./problems/english/4.1/problem_41_f_en.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
 | G. [Chess 'lunch'](./problems/english/4.1/problem_41_g_en.md) | [✅](./solutions/4.1/41_g.py) | [✅](./tests/4.1/test_41_g.py) |
 | H. [Racecar 7.0](./problems/english/4.1/problem_41_h_en.md) | [✅](./solutions/4.1/41_h.py) | [✅](./tests/4.1/test_41_h.py) |
 | I. [Simple task 5.0](./problems/english/4.1/problem_41_i_en.md) | [✅](./solutions/4.1/41_i.py) | [✅](./tests/4.1/test_41_i.py) |
