@@ -424,8 +424,8 @@ Solutions are organized by handbook sections. Each solution:
 | J. [We divided the orange 2.0](./problems/english/3.4/problem_34_j_en.md) | [✅](./solutions/3.4/34_j.py) | [✅](./tests/3.4/test_34_j.py) |
 | K. [Numerical rectangle 3.0](./problems/english/3.4/problem_34_k_en.md) | [✅](./solutions/3.4/34_k.py) | [✅](./tests/3.4/test_34_k.py) |
 | L. [Shopping list 2.0](./problems/english/3.4/problem_34_l_en.md) | [✅](./solutions/3.4/34_l.py) | [✅](./tests/3.4/test_34_l.py) |
-| M. [Athletes arrangement](./problems/english/3.4/problem_34_m_en.md) | [✅](./solutions/3.4/34_m.py) | [✅](./tests/3.4/test_34_m.py) |
-| N. [Sports divination](./problems/english/3.4/problem_34_n_en.md) | [✅](./solutions/3.4/34_n.py) | [✅](./tests/3.4/test_34_n.py) |
+| M. [Athletes lineup](./problems/english/3.4/problem_34_m_en.md) | [✅](./solutions/3.4/34_m.py) | [✅](./tests/3.4/test_34_m.py) |
+| N. [Sports predictions](./problems/english/3.4/problem_34_n_en.md) | [✅](./solutions/3.4/34_n.py) | [✅](./tests/3.4/test_34_n.py) |
 | O. [Shopping list 3.0](./problems/english/3.4/problem_34_o_en.md) | [✅](./solutions/3.4/34_o.py) | [✅](./tests/3.4/test_34_o.py) |
 | P. [The layout is as follows...](./problems/english/3.4/problem_34_p_en.md) | [✅](./solutions/3.4/34_p.py) | [✅](./tests/3.4/test_34_p.py) |
 | Q. [Are there any other options?](./problems/english/3.4/problem_34_q_en.md) | [✅](./solutions/3.4/34_q.py) | [✅](./tests/3.4/test_34_q.py) |
