@@ -15,7 +15,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = make_matrix(3)
 ```
 
@@ -31,7 +31,7 @@ result = [
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = make_matrix((4, 2), 1)
 ```
 

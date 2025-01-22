@@ -19,7 +19,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = make_list(3)
 ```
 
@@ -31,7 +31,7 @@ result = [0, 0, 0]
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = make_list(5, 1)
 ```
 

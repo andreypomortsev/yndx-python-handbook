@@ -9,7 +9,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 string = 'мама мыла раму'
 print(sorted(string.split(), key=<ваше выражение>))
 ```
@@ -22,7 +22,7 @@ __Вывод__
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 string = 'Яндекс использует Python во многих проектах'
 print(sorted(string.split(), key=<ваше выражение>))
 ```

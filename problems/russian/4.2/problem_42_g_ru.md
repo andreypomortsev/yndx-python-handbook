@@ -17,7 +17,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 enter_results(1, 2, 3, 4, 5, 6)
 print(get_sum(), get_average())
 enter_results(1, 2)
@@ -33,7 +33,7 @@ __Вывод__
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 enter_results(3.5, 2.14, 45.2, 37.99)
 print(get_sum(), get_average())
 enter_results(5.2, 7.3)
