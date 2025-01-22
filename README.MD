@@ -594,7 +594,7 @@ Solutions are organized by handbook sections. Each solution:
 |----------------------|----------------------|----------------------|
 | А. [Mathematics is cool, but that's not certain.](./problems/english/6.1/problem_61_a_en.md) | [✅](./solutions/6.1/61_a.py) | [✅](./tests/6.1/test_61_a.py) |
 | B. [Stream GCD](./problems/english/6.1/problem_61_b_en.md) | [✅](./solutions/6.1/61_b.py) | [✅](./tests/6.1/test_61_b.py) |
-| C. [Any other options?](./problems/english/6.1/problem_61_c_en.md) | [✅](./solutions/6.1/61_c.py) | [✅](./tests/6.1/test_61_c.py) |
+| C. [Any options?](./problems/english/6.1/problem_61_c_en.md) | [✅](./solutions/6.1/61_c.py) | [✅](./tests/6.1/test_61_c.py) |
 | D. [Non-arithmetic mean](./problems/english/6.1/problem_61_d_en.md) | [✅](./solutions/6.1/61_d.py) | [✅](./tests/6.1/test_61_d.py) |
 | E. [Step towards](./problems/english/6.1/problem_61_e_en.md) | [✅](./solutions/6.1/61_e.py) | [✅](./tests/6.1/test_61_e.py) |
 | F. [Multiplication matrix](./problems/english/6.1/problem_61_f_en.md) | [✅](./solutions/6.1/61_f.py) | [✅](./tests/6.1/test_61_f.py) |
