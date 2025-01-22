@@ -13,7 +13,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 numbers = [1, 2, 3, 4, 5]
 ```
 
@@ -25,7 +25,7 @@ __Вывод__
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 numbers = [number for number in range(16, 100, 4)]
 ```
 
