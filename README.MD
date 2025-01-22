@@ -640,7 +640,7 @@ Solutions are organized by handbook sections. Each solution:
 | F. [User list](./problems/english/6.3/problem_63_f_en.md) | [✅](./solutions/6.3/63_f.py) | [✅](./tests/6.3/test_63_f.py) |
 | G. [Message mailing](./problems/english/6.3/problem_63_g_en.md) | [✅](./solutions/6.3/63_g.py) | [✅](./tests/6.3/test_63_g.py) |
 | H. [New user registration](./problems/english/6.3/problem_63_h_en.md) | [✅](./solutions/6.3/63_h.py) | [✅](./tests/6.3/test_63_h.py) |
-| I. [Data modification](./problems/english/6.3/problem_63_i_en.md) | [✅](./solutions/6.3/63_i.py) | [✅](./tests/6.3/test_63_i.py) |
+| I. [Changing User Data](./problems/english/6.3/problem_63_i_en.md) | [✅](./solutions/6.3/63_i.py) | [✅](./tests/6.3/test_63_i.py) |
 | J. [Data deletion](./problems/english/6.3/problem_63_j_en.md) | [✅](./solutions/6.3/63_j.py) | [✅](./tests/6.3/test_63_j.py) |
 
 </details>
