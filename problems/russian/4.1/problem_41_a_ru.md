@@ -14,7 +14,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 name = "world"
 print_hello(name)
 ```
@@ -27,7 +27,7 @@ Hello, world!
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 string = "Yandex"
 print_hello(string)
 ```

@@ -10,7 +10,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = gcd(12, 45)
 ```
 
@@ -22,7 +22,7 @@ result = 3
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = gcd(144, 96)
 ```
 

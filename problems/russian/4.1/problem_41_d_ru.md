@@ -10,7 +10,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = month(1, "en")
 ```
 
@@ -22,7 +22,7 @@ result = 'January'
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = month(7, "ru")
 ```
 

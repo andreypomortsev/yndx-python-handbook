@@ -9,7 +9,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 modern_print("Hello!")
 modern_print("Hello!")
 modern_print("How do you do?")
@@ -25,7 +25,7 @@ How do you do?
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 modern_print("Ало!")
 modern_print("Ало!")
 modern_print("Я тебя не слышу")

@@ -10,7 +10,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = can_eat((2, 1), (4, 2))
 ```
 
@@ -22,7 +22,7 @@ result = True
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = can_eat((5, 5), (6, 6))
 ```
 

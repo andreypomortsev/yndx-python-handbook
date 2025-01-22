@@ -12,7 +12,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = is_palindrome(123)
 ```
 
@@ -24,7 +24,7 @@ result = False
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = is_palindrome([1, 2, 1, 2, 1])
 ```
 

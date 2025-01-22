@@ -10,7 +10,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = number_length(12345)
 ```
 
@@ -22,7 +22,7 @@ result = 5
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = number_length(-100500)
 ```
 

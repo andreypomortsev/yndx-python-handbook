@@ -12,7 +12,7 @@
 ### Пример 1
 
 __Ввод__
-```plaintext
+```python
 result = split_numbers("1 2 3 4 5")
 ```
 
@@ -24,7 +24,7 @@ result = (1, 2, 3, 4, 5)
 ### Пример 2
 
 __Ввод__
-```plaintext
+```python
 result = split_numbers("1 -2 3 -4 5")
 ```
 
