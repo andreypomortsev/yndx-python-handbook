@@ -20,6 +20,7 @@ with open(file_name, "rb") as file:
         pointer_location -= chunk_size
 
         buffer = chunk + buffer
+        buffer = buffer.replace(b"\r\n", b"\n")  # Windows to Unix
         lines = buffer.split(b"\n")
 
         read_lines = len(lines)
