@@ -15,7 +15,7 @@ class Point:
 class PatchedPoint(Point):
     def __init__(self, *coordinates) -> None:
         if not coordinates:
-            x, y = 0, 0
+            x = y = 0
         elif isinstance(coordinates[0], tuple):
             x, y = coordinates[0]
         else:

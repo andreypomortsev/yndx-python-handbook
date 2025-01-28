@@ -1,4 +1,4 @@
-## [Put yourself in my shoes](../../../solutions/3.5/35_o.py)
+## [Put Yourself in My Shoes](../../../solutions/3.5/35_o.py)
 
 You have been solving problems in Yandex.Contest for a long time.\
 Today, it's time to feel what it's like to be in its place.

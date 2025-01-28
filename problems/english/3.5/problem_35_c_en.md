@@ -1,4 +1,4 @@
-## [No comments 2.0](../../../solutions/3.5/35_c.py)
+## [No Comments 2.0](../../../solutions/3.5/35_c.py)
 
 As you remember, when you comment your code, the interpreter removes the comments before execution.\
 Write a program that performs this function for the interpreter.

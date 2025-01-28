@@ -1,4 +1,4 @@
-## [Everything will be found 2.0](../../../solutions/3.5/35_d.py)
+## [Everything Will Be Found 2.0](../../../solutions/3.5/35_d.py)
 
 Information search is an important part of modern life. Create a program that implements a small component of a search engine.
 

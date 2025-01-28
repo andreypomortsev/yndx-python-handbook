@@ -5,7 +5,7 @@ prod_nm = n * m
 array = range(1, prod_nm + 1)
 formatter = 0
 
-while prod_nm > 0:
+while prod_nm:
     formatter += 1
     prod_nm //= 10
 

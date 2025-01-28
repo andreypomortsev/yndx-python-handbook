@@ -1,4 +1,4 @@
-## [Result accumulation](../../../solutions/4.3/43_e.py)
+## [Result Accumulation](../../../solutions/4.3/43_e.py)
 
 In some cases, it's useful to accumulate the result and then retrieve it as a single list.
 

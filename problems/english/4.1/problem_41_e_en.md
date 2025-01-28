@@ -1,4 +1,4 @@
-## [Numerical string](../../../solutions/4.1/41_e.py)
+## [Numerical String](../../../solutions/4.1/41_e.py)
 
 Develop a function `split_numbers` that takes a string of integers separated by spaces and returns a tuple of these numbers.
 

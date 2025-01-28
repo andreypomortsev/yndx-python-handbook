@@ -1,4 +1,4 @@
-## [List automation](../../../solutions/3.4/34_a.py)
+## [List Automation](../../../solutions/3.4/34_a.py)
 
 Many people often have to keep lists of groceries, tasks, and so on.
 

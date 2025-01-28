@@ -1,4 +1,4 @@
-## [Uniformity is not a flaw](../../../solutions/4.3/43_g.py)
+## [Uniformity is not a Flaw](../../../solutions/4.3/43_g.py)
 
 In many tasks, input data needs to be controlled, particularly their types, despite dynamic typing.
 

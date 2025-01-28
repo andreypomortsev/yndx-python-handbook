@@ -1,4 +1,4 @@
-## [Porridge eaters — 3](../../../solutions/3.2/32_f.py)
+## [Porridge Eaters — 3](../../../solutions/3.2/32_f.py)
 
 Let's return to the condition where each child in kindergarten likes either semolina, oatmeal, or both types of porridge.  
 Write a program that will allow the teacher to find out which children like only one type of porridge.

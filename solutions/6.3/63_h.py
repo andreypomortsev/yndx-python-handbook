@@ -1,8 +1,10 @@
 import requests
 
 FIELDS = ("username", "last_name", "first_name", "email")
+TIMEOUTS = (3, 5)  # connect, read
 
-url = input()
+host_port = input()
 user = dict(zip(FIELDS, [input() for _ in range(4)]))
+url_path = f"http://{host_port}/users"
 
-requests.post(f"http://{url}/users", json=user, timeout=(3, 5))
+requests.post(url_path, json=user, timeout=TIMEOUTS)

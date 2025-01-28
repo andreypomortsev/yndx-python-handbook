@@ -1,4 +1,5 @@
 string = input()
+
 if "зайка" in string:
     print("YES")
 else:

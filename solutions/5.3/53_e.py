@@ -20,7 +20,7 @@ def validate_input(*args) -> None:
         raise ValueError
 
 
-def merge(left, right) -> list:
+def merge(left: tuple, right: tuple) -> list:
     validate_input(left, right)
 
     sorted_list = []

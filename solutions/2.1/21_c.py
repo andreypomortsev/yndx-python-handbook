@@ -1,3 +1,5 @@
 expression = input()
 
-print(f"{expression}\n" * 3, sep="", end="")
+triple_expression = f"{expression}\n" * 3
+
+print(triple_expression, end="")

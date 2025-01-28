@@ -1,8 +1,10 @@
 DEFAULT_ENCODING = {"encoding": "UTF-8"}
-LENGTH = 26  # Длина английского алфавита
+LENGTH = 26  # Длина английского алфавита The English alphabet length
 ENGLISH_Z = ord("z")  # 122
 
-shift = int(input()) % LENGTH
+shift = int(input())
+# Make sure that the shift is in the range of the English alphabet
+shift %= LENGTH
 
 with (
     open("public.txt", "r", **DEFAULT_ENCODING) as file_in,

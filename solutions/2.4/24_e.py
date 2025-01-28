@@ -3,8 +3,8 @@ total = 0
 
 for _ in range(n):
     bunnies = 0
-    while (word := input()) != "ВСЁ":
-        bunnies += word == "зайка"
+    while (words := input()) != "ВСЁ":
+        bunnies += words == "зайка"
     total += bool(bunnies)
 
 print(total)

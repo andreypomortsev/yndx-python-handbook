@@ -1,4 +1,4 @@
-## [Shopping list](../../../solutions/3.4/34_e.py)
+## [Shopping List](../../../solutions/3.4/34_e.py)
 
 Going to the store often causes problems. If you don't prepare a list, you might go to the store for bread and come back with a dozen bags. Write a program that collects the wishes of the family (mom, dad, and daughter) into a single list.
 

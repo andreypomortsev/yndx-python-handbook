@@ -1,4 +1,4 @@
-## [Redesign of Multiplication Table](../../../solutions/2.4/24_p.py)
+## [Multiplication Table Redesign](../../../solutions/2.4/24_p.py)
 
 Agree that the previous multiplication tables don't look very nice. Let's set the same width for all columns and center the values within the cells.  
 And yes, the client also asked to add borders between the cells.

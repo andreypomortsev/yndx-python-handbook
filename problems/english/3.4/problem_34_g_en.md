@@ -1,4 +1,4 @@
-## [Game grid](../../../solutions/3.4/34_g.py)
+## [Game Grid](../../../solutions/3.4/34_g.py)
 
 The kids in the class decided to organize a checkers tournament. Unfortunately, the number of students is not a power of two, so it is difficult to create a classic tournament bracket. To identify the favorites, the kids agreed to play a "round-robin" format. Think of a program that generates a list of the necessary games.
 

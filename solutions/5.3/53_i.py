@@ -26,11 +26,13 @@ def all_cyrillic(word: str) -> bool:
 def all_chars_good(word: str) -> bool:
     if not word:
         return False
+
+    # We can regex with pattren r"^[a-zA-Z0-9_]+$"
+    # But let's do it manually
     for char in word:
-        char_index = ord(char)
+        char_index = ord(char.lower())
         if not (
             48 <= char_index <= 57      # 0-9
-            or 65 <= char_index <= 90   # A-Z
             or 97 <= char_index <= 122  # a-z
             or char_index == 95         # _
         ):

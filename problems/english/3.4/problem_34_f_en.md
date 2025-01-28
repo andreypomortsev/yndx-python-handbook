@@ -1,4 +1,4 @@
-## [Deck of cards](../../../solutions/3.4/34_f.py)
+## [Deck of Cards](../../../solutions/3.4/34_f.py)
 
 Generate and display a deck of playing cards without one of the suits: three suits from two to ace. The suit that should be removed is entered by the user. Use the `product` iterator to combine suits and ranks.
 

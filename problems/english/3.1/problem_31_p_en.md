@@ -1,4 +1,4 @@
-## [News Headline 2.0](../../../solutions/3.1/31_p.py)
+## [News Announcement 2.0](../../../solutions/3.1/31_p.py)
 
 Let's try again to shorten the headlines for articles in the news feed of a news website. Let's create a program that shortens a long headline to the required length and adds an ellipsis "..." if necessary.
 

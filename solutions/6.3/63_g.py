@@ -4,7 +4,8 @@ import requests
 
 
 def get_user(server: str, text: str) -> str:
-    response = requests.get(server, timeout=1)
+    TIMEOUT = 1
+    response = requests.get(server, timeout=TIMEOUT)
 
     if not response.ok:
         return "Пользователь не найден"
@@ -13,10 +14,11 @@ def get_user(server: str, text: str) -> str:
     return text.format(**user)
 
 
-url = sys.stdin.readline().strip()
+host_port = sys.stdin.readline().strip()
 user_id = sys.stdin.readline().strip()
 message = sys.stdin.read()
 
-clean_message = get_user(f"http://{url}/users/{user_id}", message)
+url_path = f"http://{host_port}/users/{user_id}"
+clean_message = get_user(url_path, message)
 
 print(clean_message)

@@ -1,4 +1,4 @@
-## [Average height](../../../solutions/3.5/35_b.py)
+## [Average Height](../../../solutions/3.5/35_b.py)
 
 The physical education teacher is wondering how much, on average, his students have grown over the past month.
 

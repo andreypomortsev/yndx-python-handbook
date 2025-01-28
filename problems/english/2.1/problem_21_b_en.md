@@ -1,4 +1,4 @@
-## [Hello, everyone!](../../../solutions/2.1/21_b.py)
+## [Hello, Everyone!](../../../solutions/2.1/21_b.py)
 
 But in general, it would be better to learn the name of the interlocutor before greeting them.
 

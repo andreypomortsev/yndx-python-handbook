@@ -6,6 +6,7 @@ for _ in range(n):
     str_of_toys = input().split(": ")[1]  # Удаляем имя
     # {'машинка', 'кукла', 'домик'}
     # Оставляем уникальные игрушки
+    # Leave only unique toys
     set_of_toys = set(str_of_toys.split(", "))
     toys += set_of_toys
 

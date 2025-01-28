@@ -1,4 +1,4 @@
-## [Non-arithmetic mean](../../../solutions/6.1/61_d.py)
+## [Non-Arithmetic Mean](../../../solutions/6.1/61_d.py)
 
 The geometric mean of several positive real numbers is the number that can replace each of these numbers such that their product remains unchanged.
 

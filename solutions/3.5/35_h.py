@@ -1,5 +1,5 @@
 DEFAULT_ENCODING = {"encoding": "UTF-8"}
-sets = []
+list_of_sets = []
 
 for index in range(2):
     file_in = input()
@@ -10,10 +10,11 @@ for index in range(2):
             words = line.rstrip("\n").split()
             set_of_words.update(words)
 
-    sets.append(set_of_words)
+    list_of_sets.append(set_of_words)
 
-sorted_unique_words = sorted(sets[0] ^ sets[1])
+sorted_unique_words = sorted(list_of_sets[0] ^ list_of_sets[1])
 
 file_out = input()
+
 with open(file_out, "w", **DEFAULT_ENCODING) as file_out:
     file_out.write("\n".join(sorted_unique_words))

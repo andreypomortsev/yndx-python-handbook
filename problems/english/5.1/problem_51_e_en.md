@@ -1,4 +1,4 @@
-## [Cool Rectangle](../../../solutions/5.1/51_e.py)
+## [Class Rectangle](../../../solutions/5.1/51_e.py)
 
 Let's move on to more complex geometric shapes.
 

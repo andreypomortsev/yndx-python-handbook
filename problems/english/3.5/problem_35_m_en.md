@@ -1,4 +1,4 @@
-## [Data update](../../../solutions/3.5/35_m.py)
+## [Data Update](../../../solutions/3.5/35_m.py)
 
 Often, data needs to be updated.
 

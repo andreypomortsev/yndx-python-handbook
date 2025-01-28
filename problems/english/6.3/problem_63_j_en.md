@@ -1,4 +1,4 @@
-## [Data deletion](../../../solutions/6.3/63_j.py)
+## [Data Deletion](../../../solutions/6.3/63_j.py)
 
 Let's conclude the work with the server from previous tasks. A _DELETE_ request to the path _/users/\<id\>_ will delete the user with the specified identifier.
 

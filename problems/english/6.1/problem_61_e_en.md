@@ -1,4 +1,4 @@
-## [Step towards](../../../solutions/6.1/61_e.py)
+## [Step Towards](../../../solutions/6.1/61_e.py)
 
 Two imaginary characters, Deka and Polya, each use their own coordinate system. Deka likes to represent herself in Cartesian coordinates, while Polya prefers polar coordinates.
 

@@ -3,10 +3,11 @@ import sys
 
 import requests
 
-url = input()
+TIMEOUT = 5
+host_port = input()
 id = input()
 
-link = f"http://{url}/users/{id}"
+url_path = f"http://{host_port}/users/{id}"
 new_fields = dict(field.strip().split("=") for field in sys.stdin)
 
-requests.put(link, data=json.dumps(new_fields), timeout=5)
+requests.put(url_path, data=json.dumps(new_fields), timeout=TIMEOUT)

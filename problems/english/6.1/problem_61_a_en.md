@@ -1,4 +1,4 @@
-## [Mathematics is cool, but that's not certain](../../../solutions/6.1/61_a.py)
+## [Mathematics is Cool, But that's not Certain](../../../solutions/6.1/61_a.py)
 
 Let's recall the beginning of our task book when everything was simple: we didn't use loops, collections, or object-oriented programming. We only had input data, and the task was to provide the result.
 

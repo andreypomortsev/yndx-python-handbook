@@ -1,4 +1,4 @@
-## [Are there any other options?](../../../solutions/3.4/34_q.py)
+## [Are There Any Other Options?](../../../solutions/3.4/34_q.py)
 
 Let's help Vitaly once again figure out which variations of drawing certain triples of cards from the deck are possible. Write a program that outputs a list of variations according to the requirements.
 

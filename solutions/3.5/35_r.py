@@ -11,6 +11,6 @@ while file_size >= 1024 and unit_index < 3:
     unit_index += 1
 
 if file_size > int(file_size):
-    file_size = int((file_size + 1) // 1)
+    file_size = (file_size + 1) // 1
 
 print(f"{file_size:.0f}{UNITS[unit_index]}")

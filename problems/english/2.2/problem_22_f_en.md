@@ -1,4 +1,4 @@
-## [Power of procrastination](../../../solutions/2.2/22_f.py)
+## [Power of Procrastination](../../../solutions/2.2/22_f.py)
 
 Vasya loves to be lazy. He especially enjoys when there is an extra day in the year that doesn't usually occur. Write a program that helps Vasya determine whether he will be able to laze around in a specific year or not.
 

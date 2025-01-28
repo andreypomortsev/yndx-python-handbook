@@ -1,4 +1,4 @@
-## [Message mailing](../../../solutions/6.3/63_g.py)
+## [Message Mailing](../../../solutions/6.3/63_g.py)
 
 Let's continue working with the server from the previous task. At the path _/users/\<id\>_, a _JSON_ object of the user with the specified _id_ is available.
 

@@ -6,7 +6,7 @@ class InfiniteSolutionsError(Exception):
     pass
 
 
-def find_roots(a: int | float, b: int | float, c: int | float) -> tuple:
+def find_roots(a: float | int, b: float | int, c: float | int) -> tuple:
     """Принимает три рациональных числа как параметры:
     коэффициенты уравнения и возвращающую его корни
     в виде кортежа из двух значений.

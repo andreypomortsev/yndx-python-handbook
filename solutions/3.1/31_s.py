@@ -2,6 +2,7 @@ chars = input().split()
 stack = []
 
 for char in chars:
+    # "-1".isdigit() returns False
     if char.lstrip("-").isdigit():
         stack.append(int(char))
     else:

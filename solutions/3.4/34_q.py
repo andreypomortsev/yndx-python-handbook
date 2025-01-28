@@ -4,13 +4,13 @@ given_suit = input()
 pip_to_drop = input()
 blueprint = input()
 
-card_suits = {
+CARD_SUITS = {
     "буби": "бубен",
     "пики": "пик",
     "трефы": "треф",
     "черви": "червей",
 }
-suit = card_suits[given_suit]
+suit = CARD_SUITS[given_suit]
 
 PIPS_AND_FACES = [
     "10",
@@ -29,7 +29,7 @@ PIPS_AND_FACES = [
 ]
 PIPS_AND_FACES.remove(pip_to_drop)
 
-all_possible_cards = product(PIPS_AND_FACES, card_suits.values())
+all_possible_cards = product(PIPS_AND_FACES, CARD_SUITS.values())
 combinations_of_cards = combinations(all_possible_cards, 3)
 
 flag = False

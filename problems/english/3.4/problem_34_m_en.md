@@ -1,4 +1,4 @@
-## [Athlete lineup](../../../solutions/3.4/34_m.py)
+## [Athletes Lineup](../../../solutions/3.4/34_m.py)
 
 Positioning athletes at the starting line is a tricky task. However, using iterators, it can be done in just a couple of lines. Write a program that outputs a list of possible athlete lineups.
 

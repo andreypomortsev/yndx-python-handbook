@@ -1,4 +1,4 @@
-## [Number Snake 2.0](../../../solutions/2.4/24_o.py)
+## [Numerical Snake 2.0](../../../solutions/2.4/24_o.py)
 
 The teacher needs another program to generate a number snake. Write a program that builds a number snake of the required size.
 

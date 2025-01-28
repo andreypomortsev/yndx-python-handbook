@@ -1,6 +1,6 @@
 def gcd(*numbers) -> int:
     if len(numbers) < 2:
-        return numbers[0] if numbers else None
+        return numbers[0]
 
     a = numbers[0]
 

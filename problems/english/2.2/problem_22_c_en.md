@@ -1,4 +1,4 @@
-## [Who is faster this time?](../../../solutions/2.2/22_c.py)
+## [Who is Faster This Time?](../../../solutions/2.2/22_c.py)
 
 The cyclists have gathered again to find out who is the fastest. They will cover a distance of *43872 meters*, and we need to determine the winner once again.
 

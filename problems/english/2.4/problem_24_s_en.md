@@ -1,4 +1,4 @@
-## [Numeric Square](../../../solutions/2.4/24_s.py)
+## [Numerical Square](../../../solutions/2.4/24_s.py)
 
 Unfortunately, the snakes have also become boring to the children, so now the teacher needs a new program. Write a program that constructs a numeric square of the required size.
 
@@ -48,7 +48,7 @@ __Output__
    - The numbers in the square form concentric layers where the outermost layer is filled with 1's, the next layer is filled with 2's, and so on, with the center being filled with the largest number.
 
 2. **Constructing the square:**
-   - As I've already written [here](https://t.me/handbook_python/11/32431) (you can use built-in translator), for each position in the square, calculate the number based on its distance from the nearest edge. This can be done by finding the minimum of the distances from the current position to the four edges (top, bottom, left, right).
+   - For each position in the square, calculate the number based on its distance from the nearest edge. This can be done by finding the minimum of the distances from the current position to the four edges (top, bottom, left, right).
    - The number at each position will be `min(distance from edge)`.
 
 3. **Printing the square:**

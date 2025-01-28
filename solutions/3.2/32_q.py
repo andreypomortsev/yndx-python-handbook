@@ -1,4 +1,5 @@
 # Теория Графов
+# Graph Theory
 from collections import defaultdict
 
 friends = defaultdict(set)

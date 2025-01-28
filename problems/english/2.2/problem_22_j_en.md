@@ -1,4 +1,4 @@
-## [Best defense is encryption](../../../solutions/2.2/22_j.py)
+## [Encryption is The Best Security](../../../solutions/2.2/22_j.py)
 
 Kolya was afraid that Anya would peek at all his passwords in the notebook, so he decided to encrypt them. For this, he takes the original password — a three-digit number — and creates a new number according to the following rules:
 

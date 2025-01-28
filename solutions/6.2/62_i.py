@@ -1,6 +1,7 @@
 import pandas as pd
 
-df = pd.read_csv("data.csv")
+FILE_NAME = "data.csv"
+df = pd.read_csv(FILE_NAME)
 
 x_min, y_min = map(int, input().split())
 x_max, y_max = map(int, input().split())

@@ -1,3 +1,6 @@
 check = int(input(), 2)
 bill = int(input())
-print(bill - check)
+
+change = bill - check
+
+print(change)

@@ -18,13 +18,11 @@ pips_and_faces.remove(pip_to_drop)
 products = sorted(
     map(lambda x: " ".join(x), product(pips_and_faces, CARD_SUITS.values()))
 )
+counter = 0
 
-answers = []
 for line in permutations(products, 3):
-    if len(answers) == 10:
+    if counter == 10:
         break
     elif any(suit in item for item in line):
-        answers.append(sorted(line))
-
-for line in answers:
-    print(", ".join(sorted(line)))
+        print(", ".join(sorted(line)))
+        counter += 1

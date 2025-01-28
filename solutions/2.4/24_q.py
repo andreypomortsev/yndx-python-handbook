@@ -14,5 +14,4 @@ for _ in range(n):
 
     number_of_palindroms += number == reversed_number
 
-
 print(number_of_palindroms)

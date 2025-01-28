@@ -1,4 +1,4 @@
-## [Endless battleship](../../../solutions/6.2/62_i.py)
+## [Endless Battleship](../../../solutions/6.2/62_i.py)
 
 Imagine a battleship field with no boundaries. For simplicity, the coordinates of shots will be denoted as integer coordinates on the plane.
 

@@ -1,4 +1,6 @@
-n, m = int(input()), int(input())
+n = int(input())
+m = int(input())
+
 result = n * m // 2
 
 print(result)

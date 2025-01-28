@@ -1,4 +1,4 @@
-## [Any options?](../../../solutions/6.1/61_c.py)
+## [Any Options?](../../../solutions/6.1/61_c.py)
 
 Vasya came to an educational seminar and discovered that there are $N$ attendees and $M$ seats.\
 Help Vasya determine the probability that he will get a seat at the seminar.

@@ -1,4 +1,4 @@
-## [Multiplication table 3.0](../../../solutions/3.4/34_i.py)
+## [Multiplication Table 3.0](../../../solutions/3.4/34_i.py)
 
 The local stationery factory ordered a program that generates multiplication tables.\
 Let's help the manufacturer.

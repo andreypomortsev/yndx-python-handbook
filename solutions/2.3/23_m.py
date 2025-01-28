@@ -1,11 +1,9 @@
 n = int(input())
-first_turn = None
+first_turn = input()
 
-for _ in range(n):
+for _ in range(n - 1):
     name = input()
-    if not first_turn:
-        first_turn = name
-    elif name < first_turn:
+    if name < first_turn:
         first_turn = name
 
 print(first_turn)

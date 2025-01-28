@@ -1,4 +1,4 @@
-## [Mass exponentiation 3.0](../../../solutions/3.1/31_n.py)
+## [Mass Exponentiation 2.0](../../../solutions/3.1/31_n.py)
 
 Let's continue simplifying our work by skipping many identical operations.\
 We will create a new program that raises all the numbers provided by the user to a given power.

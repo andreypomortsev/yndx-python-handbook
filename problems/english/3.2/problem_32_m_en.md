@@ -1,4 +1,4 @@
-## [Give me something new!](../../../solutions/3.2/32_m.py)
+## [Give Me Something New!](../../../solutions/3.2/32_m.py)
 
 The head cook of the kindergarten wants to prepare dishes on a holiday that he has never cooked this week.\
 He has a list of dishes:

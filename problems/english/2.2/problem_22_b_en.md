@@ -1,4 +1,4 @@
-## [Who is faster?](../../../solutions/2.2/22_b.py)
+## [Who is Faster?](../../../solutions/2.2/22_b.py)
 
 In the main cycling race of the year, over a thousand cyclists are participating. They will cover a distance of *43872 meters*. The most challenging and crucial task is determining the winner.
 

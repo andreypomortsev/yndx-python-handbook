@@ -1,6 +1,7 @@
 a = None
+numbers = input().split()
 
-for number in input().split():
+for number in numbers:
     if a is None:
         a = int(number)
         continue

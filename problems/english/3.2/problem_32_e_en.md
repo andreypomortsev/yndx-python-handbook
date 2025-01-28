@@ -1,4 +1,4 @@
-## [Porridge eaters — 2](../../../solutions/3.2/32_e.py)
+## [Porridge Eaters — 2](../../../solutions/3.2/32_e.py)
 
 Let's modify the task and write a program that will help quickly find out how many children like only one type of porridge.
 

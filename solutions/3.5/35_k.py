@@ -5,9 +5,7 @@ DEFAULT_ENCODING = {"encoding": "UTF-8"}
 file_name = input()
 file_output = input()
 
-counter = 0
-positive_count = 0
-total_sum = 0
+counter = positive_count = total_sum = 0
 minimum = float("inf")
 maximum = float("-inf")
 

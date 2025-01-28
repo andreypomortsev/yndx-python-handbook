@@ -1,6 +1,9 @@
 import requests
 
-url, user_id = input(), input()
-link = f"http://{url}/users/{user_id}"
+TIMEOUT = 5
+host_port = input()
+user_id = input()
 
-requests.delete(link, timeout=5)
+url_path = f"http://{host_port}/users/{user_id}"
+
+requests.delete(url_path, timeout=TIMEOUT)

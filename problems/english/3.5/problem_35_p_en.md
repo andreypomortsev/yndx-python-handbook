@@ -1,4 +1,4 @@
-## [Everything can be found 3.0](../../../solutions/3.5/35_p.py)
+## [Everything Will Be Found 3.0](../../../solutions/3.5/35_p.py)
 
 Let's write a small search system component again.
 

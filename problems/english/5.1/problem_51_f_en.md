@@ -1,4 +1,4 @@
-## [Cool Rectangle 2.0](../../../solutions/5.1/51_f.py)
+## [Class Rectangle 2.0](../../../solutions/5.1/51_f.py)
 
 Let's expand the functionality of the class you wrote in the previous task.
 
