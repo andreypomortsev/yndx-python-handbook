@@ -1,4 +1,4 @@
-## [Shopping list 2.0](../../../solutions/3.4/34_l.py)
+## [Shopping List 2.0](../../../solutions/3.4/34_l.py)
 
 Let's help the person with shopping again. Write a program that combines the family's wishes into one list.
 

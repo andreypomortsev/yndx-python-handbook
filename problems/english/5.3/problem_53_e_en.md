@@ -1,4 +1,4 @@
-## [Merging with Validation](../../../solutions/5.3/53_e.py)
+## [Merge with Validation](../../../solutions/5.3/53_e.py)
 
 Once, you wrote a function `merge` that merges two sorted tuples.
 

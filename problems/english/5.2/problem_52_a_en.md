@@ -1,4 +1,4 @@
-## [Class point 3.0](../../../solutions/5.2/52_a.py)
+## [Class Point 3.0](../../../solutions/5.2/52_a.py)
 
 Let's extend the functionality of the class you wrote in the task "[Class Point 2.0](../5.1/problem_51_b_en.md)."
 

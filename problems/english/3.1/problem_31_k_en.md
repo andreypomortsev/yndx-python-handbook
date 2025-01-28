@@ -1,4 +1,4 @@
-## [Everything will be found](../../../solutions/3.1/31_k.py)
+## [Everything Will Be Found](../../../solutions/3.1/31_k.py)
 
 Search functionality is one of the essential needs in the modern world. Let's build a small component for a search engine that checks if a search query appears in the page titles.
 

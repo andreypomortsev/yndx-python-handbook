@@ -1,4 +1,4 @@
-## [Mass exponentiation](../../../solutions/3.1/31_m.py)
+## [Mass Exponentiation](../../../solutions/3.1/31_m.py)
 
 There are often difficulties when you need to perform a large number of repetitive operations. In such cases, people want to simplify their work. Write a program that raises all the numbers provided by the users to a given power.
 

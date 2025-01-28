@@ -1,4 +1,4 @@
-## [Basic frequency analysis](../../../solutions/3.1/31_j.py)
+## [Basic Frequency Analysis](../../../solutions/3.1/31_j.py)
 
 Frequency analysis is the process of counting how often characters appear in a text. It is a crucial tool for breaking many classic ciphers — from the Caesar cipher to the Enigma machine cipher. Let's perform a simple frequency analysis to determine the most frequent character in a given text.
 

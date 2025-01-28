@@ -1,4 +1,4 @@
-## [Dictionary tree](../../../solutions/3.4/34_d.py)
+## [Dictionary Tree](../../../solutions/3.4/34_d.py)
 
 Write a program that transforms a string of words into a tree shape as shown in the example.
 

@@ -1,4 +1,4 @@
-## [Symbolic summary](../../../solutions/3.2/32_a.py)
+## [Symbolic Summary](../../../solutions/3.2/32_a.py)
 
 In many industrial tasks, it's necessary to understand which characters make up the data. Write a program that determines which characters a given string consists of.
 

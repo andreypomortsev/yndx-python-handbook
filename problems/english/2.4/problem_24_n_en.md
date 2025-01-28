@@ -1,4 +1,4 @@
-## [Number Snake](../../../solutions/2.4/24_n.py)
+## [Numerical Snake](../../../solutions/2.4/24_n.py)
 
 Unfortunately, the ordinary rectangles quickly bored the children. Now the teacher needs a new program. Write a program that builds a number snake of the required size.
 

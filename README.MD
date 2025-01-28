@@ -214,24 +214,24 @@ Solutions are organized by handbook sections. Each solution:
 |----------------------|----------------------|----------------------|
 | А. [Hello, Yandex!](./problems/english/2.1/problem_21_a_en.md) | [✅](./solutions/2.1/21_a.py) | [✅](./tests/2.1/test_21_a.py) |
 | B. [Hello, everyone!](./problems/english/2.1/problem_21_b_en.md) | [✅](./solutions/2.1/21_b.py) | [✅](./tests/2.1/test_21_b.py) |
-| C. [Excessive Automation](./problems/english/2.1/problem_21_c_en.md) | [✅](./solutions/2.1/21_c.py) | [✅](./tests/2.1/test_21_c.py) |
-| D. [Change Calculation](./problems/english/2.1/problem_21_d_en.md) | [✅](./solutions/2.1/21_d.py) | [✅](./tests/2.1/test_21_d.py) |
+| C. [Excessive automation](./problems/english/2.1/problem_21_c_en.md) | [✅](./solutions/2.1/21_c.py) | [✅](./tests/2.1/test_21_c.py) |
+| D. [Change calculation](./problems/english/2.1/problem_21_d_en.md) | [✅](./solutions/2.1/21_d.py) | [✅](./tests/2.1/test_21_d.py) |
 | E. [Store](./problems/english/2.1/problem_21_e_en.md) | [✅](./solutions/2.1/21_e.py) | [✅](./tests/2.1/test_21_e.py) |
 | F. [Receipt](./problems/english/2.1/problem_21_f_en.md) | [✅](./solutions/2.1/21_f.py) | [✅](./tests/2.1/test_21_f.py) |
-| G. [Work Hard, Play Hard](./problems/english/2.1/problem_21_g_en.md) | [✅](./solutions/2.1/21_g.py) | [✅](./tests/2.1/test_21_g.py) |
+| G. [Work hard, play hard](./problems/english/2.1/problem_21_g_en.md) | [✅](./solutions/2.1/21_g.py) | [✅](./tests/2.1/test_21_g.py) |
 | H. [Punishment](./problems/english/2.1/problem_21_h_en.md) | [✅](./solutions/2.1/21_h.py) | [✅](./tests/2.1/test_21_h.py) |
-| I. [Businesslike Sausage](./problems/english/2.1/problem_21_i_en.md) | [✅](./solutions/2.1/21_i.py) | [✅](./tests/2.1/test_21_i.py) |
-| J. [Kindergarten — Overalls](./problems/english/2.1/problem_21_j_en.md) | [✅](./solutions/2.1/21_j.py) | [✅](./tests/2.1/test_21_j.py) |
-| K. [Game Automation](./problems/english/2.1/problem_21_k_en.md) | [✅](./solutions/2.1/21_k.py) | [✅](./tests/2.1/test_21_k.py) |
-| L. [Interesting Addition](./problems/english/2.1/problem_21_l_en.md) | [✅](./solutions/2.1/21_l.py) | [✅](./tests/2.1/test_21_l.py) |
-| M. [Santa Claus and Candy](./problems/english/2.1/problem_21_m_en.md) | [✅](./solutions/2.1/21_m.py) | [✅](./tests/2.1/test_21_m.py) |
-| N. [Balls and Pens](./problems/english/2.1/problem_21_n_en.md) | [✅](./solutions/2.1/21_n.py) | [✅](./tests/2.1/test_21_n.py) |
-| O. [Waiting for Delivery](./problems/english/2.1/problem_21_o_en.md) | [✅](./solutions/2.1/21_o.py) | [✅](./tests/2.1/test_21_o.py) |
+| I. [Businesslike sausage](./problems/english/2.1/problem_21_i_en.md) | [✅](./solutions/2.1/21_i.py) | [✅](./tests/2.1/test_21_i.py) |
+| J. [Kindergarten — overalls](./problems/english/2.1/problem_21_j_en.md) | [✅](./solutions/2.1/21_j.py) | [✅](./tests/2.1/test_21_j.py) |
+| K. [Game automation](./problems/english/2.1/problem_21_k_en.md) | [✅](./solutions/2.1/21_k.py) | [✅](./tests/2.1/test_21_k.py) |
+| L. [Interesting addition](./problems/english/2.1/problem_21_l_en.md) | [✅](./solutions/2.1/21_l.py) | [✅](./tests/2.1/test_21_l.py) |
+| M. [Santa claus and candy](./problems/english/2.1/problem_21_m_en.md) | [✅](./solutions/2.1/21_m.py) | [✅](./tests/2.1/test_21_m.py) |
+| N. [Balls and pens](./problems/english/2.1/problem_21_n_en.md) | [✅](./solutions/2.1/21_n.py) | [✅](./tests/2.1/test_21_n.py) |
+| O. [Waiting for delivery](./problems/english/2.1/problem_21_o_en.md) | [✅](./solutions/2.1/21_o.py) | [✅](./tests/2.1/test_21_o.py) |
 | P. [Delivery](./problems/english/2.1/problem_21_p_en.md) | [✅](./solutions/2.1/21_p.py) | [✅](./tests/2.1/test_21_p.py) |
-| Q. [Cash Register Error](./problems/english/2.1/problem_21_q_en.md) | [✅](./solutions/2.1/21_q.py) | [✅](./tests/2.1/test_21_q.py) |
+| Q. [Cash register error](./problems/english/2.1/problem_21_q_en.md) | [✅](./solutions/2.1/21_q.py) | [✅](./tests/2.1/test_21_q.py) |
 | R. [Change 10](./problems/english/2.1/problem_21_r_en.md) | [✅](./solutions/2.1/21_r.py) | [✅](./tests/2.1/test_21_r.py) |
-| S. [Receipt Decoration](./problems/english/2.1/problem_21_s_en.md) | [✅](./solutions/2.1/21_s.py) | [✅](./tests/2.1/test_21_s.py) |
-| T. [Flies and Cutlets Separately](./problems/english/2.1/problem_21_t_en.md) | [✅](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
+| S. [Receipt decoration](./problems/english/2.1/problem_21_s_en.md) | [✅](./solutions/2.1/21_s.py) | [✅](./tests/2.1/test_21_s.py) |
+| T. [Flies and cutlets separately](./problems/english/2.1/problem_21_t_en.md) | [✅](./solutions/2.1/21_t.py) | [✅](./tests/2.1/test_21_t.py) |
 
 </details>
 
@@ -245,22 +245,22 @@ Solutions are organized by handbook sections. Each solution:
 | А. [Just hello, just how are you?](./problems/english/2.2/problem_22_a_en.md) | [✅](./solutions/2.2/22_a.py) | [✅](./tests/2.2/test_22_a.py) |
 | B. [Who is faster?](./problems/english/2.2/problem_22_b_en.md) | [✅](./solutions/2.2/22_b.py) | [✅](./tests/2.2/test_22_b.py) |
 | C. [Who is faster this time?](./problems/english/2.2/problem_22_c_en.md) | [✅](./solutions/2.2/22_c.py) | [✅](./tests/2.2/test_22_c.py) |
-| D. [List of Winners](./problems/english/2.2/problem_22_d_en.md) | [✅](./solutions/2.2/22_d.py) | [✅](./tests/2.2/test_22_d.py) |
+| D. [List of winners](./problems/english/2.2/problem_22_d_en.md) | [✅](./solutions/2.2/22_d.py) | [✅](./tests/2.2/test_22_d.py) |
 | E. [Apples](./problems/english/2.2/problem_22_e_en.md) | [✅](./solutions/2.2/22_e.py) | [✅](./tests/2.2/test_22_e.py) |
 | F. [Power of procrastination](./problems/english/2.2/problem_22_f_en.md) | [✅](./solutions/2.2/22_f.py) | [✅](./tests/2.2/test_22_f.py) |
 | G. [Race car](./problems/english/2.2/problem_22_g_en.md) | [✅](./solutions/2.2/22_g.py) | [✅](./tests/2.2/test_22_g.py) |
 | H. [Bunny — 1](./problems/english/2.2/problem_22_h_en.md) | [✅](./solutions/2.2/22_h.py) | [✅](./tests/2.2/test_22_h.py) |
 | I. [First player, get ready](./problems/english/2.2/problem_22_i_en.md) | [✅](./solutions/2.2/22_i.py) | [✅](./tests/2.2/test_22_i.py) |
-| J. [Best defense is encryption](./problems/english/2.2/problem_22_j_en.md) | [✅](./solutions/2.2/22_j.py) | [✅](./tests/2.2/test_22_j.py) |
+| J. [Encryption is the best security](./problems/english/2.2/problem_22_j_en.md) | [✅](./solutions/2.2/22_j.py) | [✅](./tests/2.2/test_22_j.py) |
 | K. [Beauty will save the world](./problems/english/2.2/problem_22_k_en.md) | [✅](./solutions/2.2/22_k.py) | [✅](./tests/2.2/test_22_k.py) |
 | L. [Musical Instrument](./problems/english/2.2/problem_22_l_en.md) | [✅](./solutions/2.2/22_l.py) | [✅](./tests/2.2/test_22_l.py) |
 | M. [Lord of Numbers: The Fellowship of the Common Digit](./problems/english/2.2/problem_22_m_en.md) | [✅](./solutions/2.2/22_m.py) | [✅](./tests/2.2/test_22_m.py) |
 | N. [Lord of Numbers: The Two Towers](./problems/english/2.2/problem_22_n_en.md) | [✅](./solutions/2.2/22_n.py) | [✅](./tests/2.2/test_22_n.py) |
 | O. [Lord of Numbers: The Return of Caesar](./problems/english/2.2/problem_22_o_en.md) | [✅](./solutions/2.2/22_o.py) | [✅](./tests/2.2/test_22_o.py) |
-| P. [Legends of the Cycling Race Return: Who is Faster?](./problems/english/2.2/problem_22_p_en.md) | [✅](./solutions/2.2/22_p.py) | [✅](./tests/2.2/test_22_p.py) |
-| Q. [Root of Evil](./problems/english/2.2/problem_22_q_en.md) | [✅](./solutions/2.2/22_q.py) | [✅](./tests/2.2/test_22_q.py) |
-| R. [Territory of Evil](./problems/english/2.2/problem_22_r_en.md) | [✅](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
-| S. [Automation of Safety](./problems/english/2.2/problem_22_s_en.md) | [✅](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
+| P. [Legends of the cycling race return: Who is faster?](./problems/english/2.2/problem_22_p_en.md) | [✅](./solutions/2.2/22_p.py) | [✅](./tests/2.2/test_22_p.py) |
+| Q. [Root of evil](./problems/english/2.2/problem_22_q_en.md) | [✅](./solutions/2.2/22_q.py) | [✅](./tests/2.2/test_22_q.py) |
+| R. [Territory of evil](./problems/english/2.2/problem_22_r_en.md) | [✅](./solutions/2.2/22_r.py) | [✅](./tests/2.2/test_22_r.py) |
+| S. [Automation of safety](./problems/english/2.2/problem_22_s_en.md) | [✅](./solutions/2.2/22_s.py) | [✅](./tests/2.2/test_22_s.py) |
 | T. [Bunnie — 2](./problems/english/2.2/problem_22_t_en.md) | [✅](./solutions/2.2/22_t.py) | [✅](./tests/2.2/test_22_t.py) |
 
 </details>
@@ -272,26 +272,26 @@ Solutions are organized by handbook sections. Each solution:
 
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
-| А. [One, Two, Three, Tree, Light Up! ](./problems/english/2.3/problem_23_a_en.md) | [✅](./solutions/2.3/23_a.py) | [✅](./tests/2.3/test_23_a.py) |
+| А. [One, two, three, tree, light up! ](./problems/english/2.3/problem_23_a_en.md) | [✅](./solutions/2.3/23_a.py) | [✅](./tests/2.3/test_23_a.py) |
 | B. [Bunny — 3](./problems/english/2.3/problem_23_b_en.md) | [✅](./solutions/2.3/23_b.py) | [✅](./tests/2.3/test_23_b.py) |
-| C. [Counting Game](./problems/english/2.3/problem_23_c_en.md) | [✅](./solutions/2.3/23_c.py) | [✅](./tests/2.3/test_23_c.py) |
-| D. [Counting Game 2.0](./problems/english/2.3/problem_23_d_en.md) | [✅](./solutions/2.3/23_d.py) | [✅](./tests/2.3/test_23_d.py) |
+| C. [Counting game](./problems/english/2.3/problem_23_c_en.md) | [✅](./solutions/2.3/23_c.py) | [✅](./tests/2.3/test_23_c.py) |
+| D. [Counting game 2.0](./problems/english/2.3/problem_23_d_en.md) | [✅](./solutions/2.3/23_d.py) | [✅](./tests/2.3/test_23_d.py) |
 | E. [Attention! Promotion!](./problems/english/2.3/problem_23_e_en.md) | [✅](./solutions/2.3/23_e.py) | [✅](./tests/2.3/test_23_e.py) |
 | F. [GCD](./problems/english/2.3/problem_23_f_en.md) | [✅](./solutions/2.3/23_f.py) | [✅](./tests/2.3/test_23_f.py) |
 | G. [LCM](./problems/english/2.3/problem_23_g_en.md) | [✅](./solutions/2.3/23_g.py) | [✅](./tests/2.3/test_23_g.py) |
-| H. [Excessive Automation 2.0](./problems/english/2.3/problem_23_h_en.md) | [✅](./solutions/2.3/23_h.py) | [✅](./tests/2.3/test_23_h.py) |
+| H. [Excessive automation 2.0](./problems/english/2.3/problem_23_h_en.md) | [✅](./solutions/2.3/23_h.py) | [✅](./tests/2.3/test_23_h.py) |
 | I. [Factorial](./problems/english/2.3/problem_23_i_en.md) | [✅](./solutions/2.3/23_i.py) | [✅](./tests/2.3/test_23_i.py) |
-| J. [Route Built](./problems/english/2.3/problem_23_j_en.md) | [✅](./solutions/2.3/23_j.py) | [✅](./tests/2.3/test_23_j.py) |
-| K. [Digital Sum](./problems/english/2.3/problem_23_k_en.md) | [✅](./solutions/2.3/23_k.py) | [✅](./tests/2.3/test_23_k.py) |
-| L. [Strong Digit](./problems/english/2.3/problem_23_l_en.md) | [✅](./solutions/2.3/23_l.py) | [✅](./tests/2.3/test_23_l.py) |
-| M. [Player One, Prepare 2.0](./problems/english/2.3/problem_23_m_en.md) | [✅](./solutions/2.3/23_m.py) | [✅](./tests/2.3/test_23_m.py) |
-| N. [Simple Task](./problems/english/2.3/problem_23_n_en.md) | [✅](./solutions/2.3/23_n.py) | [✅](./tests/2.3/test_23_n.py) |
+| J. [Route built](./problems/english/2.3/problem_23_j_en.md) | [✅](./solutions/2.3/23_j.py) | [✅](./tests/2.3/test_23_j.py) |
+| K. [Digital sum](./problems/english/2.3/problem_23_k_en.md) | [✅](./solutions/2.3/23_k.py) | [✅](./tests/2.3/test_23_k.py) |
+| L. [Strong digit](./problems/english/2.3/problem_23_l_en.md) | [✅](./solutions/2.3/23_l.py) | [✅](./tests/2.3/test_23_l.py) |
+| M. [First player, get ready 2.0](./problems/english/2.3/problem_23_m_en.md) | [✅](./solutions/2.3/23_m.py) | [✅](./tests/2.3/test_23_m.py) |
+| N. [Simple task](./problems/english/2.3/problem_23_n_en.md) | [✅](./solutions/2.3/23_n.py) | [✅](./tests/2.3/test_23_n.py) |
 | O. [Bunny - 4](./problems/english/2.3/problem_23_o_en.md) | [✅](./solutions/2.3/23_o.py) | [✅](./tests/2.3/test_23_o.py) |
 | P. [Race car 2.0](./problems/english/2.3/problem_23_p_en.md) | [✅](./solutions/2.3/23_p.py) | [✅](./tests/2.3/test_23_p.py) |
-| Q. [Even Cleanliness](./problems/english/2.3/problem_23_q_en.md) | [✅](./solutions/2.3/23_q.py) | [✅](./tests/2.3/test_23_q.py) |
-| R. [Simple Task 2.0](./problems/english/2.3/problem_23_r_en.md) | [✅](./solutions/2.3/23_r.py) | [✅](./tests/2.3/test_23_r.py) |
-| S. [Guessing Game](./problems/english/2.3/problem_23_s_en.md) | [✅](./solutions/2.3/23_s.py) | [✅](./tests/2.3/test_23_s.py) |
-| T. [Let's Hype a Little!](./problems/english/2.3/problem_23_t_en.md) | [✅](./solutions/2.3/23_t.py) | [✅](./tests/2.3/test_23_t.py) |
+| Q. [Even cleanliness](./problems/english/2.3/problem_23_q_en.md) | [✅](./solutions/2.3/23_q.py) | [✅](./tests/2.3/test_23_q.py) |
+| R. [Simple task 2.0](./problems/english/2.3/problem_23_r_en.md) | [✅](./solutions/2.3/23_r.py) | [✅](./tests/2.3/test_23_r.py) |
+| S. [Guessing game](./problems/english/2.3/problem_23_s_en.md) | [✅](./solutions/2.3/23_s.py) | [✅](./tests/2.3/test_23_s.py) |
+| T. [Let's hype a little!](./problems/english/2.3/problem_23_t_en.md) | [✅](./solutions/2.3/23_t.py) | [✅](./tests/2.3/test_23_t.py) |
 
 </details>
 
@@ -304,12 +304,12 @@ Solutions are organized by handbook sections. Each solution:
 |----------------------|----------------------|----------------------|
 | А. [Мultiplication table](./problems/english/2.4/problem_24_a_en.md) | [✅](./solutions/2.4/24_a.py) | [✅](./tests/2.4/test_24_a.py) |
 | B. [Not multiplication table](./problems/english/2.4/problem_24_b_en.md) | [✅](./solutions/2.4/24_b.py) | [✅](./tests/2.4/test_24_b.py) |
-| C. [New Year mood](./problems/english/2.4/problem_24_c_en.md) | [✅](./solutions/2.4/24_c.py) | [✅](./tests/2.4/test_24_c.py) |
-| D. [Total amount](./problems/english/2.4/problem_24_d_en.md) | [✅](./solutions/2.4/24_d.py) | [✅](./tests/2.4/test_24_d.py) |
+| C. [New Year's spirit](./problems/english/2.4/problem_24_c_en.md) | [✅](./solutions/2.4/24_c.py) | [✅](./tests/2.4/test_24_c.py) |
+| D. [Cumulative sum](./problems/english/2.4/problem_24_d_en.md) | [✅](./solutions/2.4/24_d.py) | [✅](./tests/2.4/test_24_d.py) |
 | E. [Bunny — 5](./problems/english/2.4/problem_24_e_en.md) | [✅](./solutions/2.4/24_e.py) | [✅](./tests/2.4/test_24_e.py) |
 | F. [GCD 2.0](./problems/english/2.4/problem_24_f_en.md) | [✅](./solutions/2.4/24_f.py) | [✅](./tests/2.4/test_24_f.py) |
 | G. [Ready! Steady! Go!](./problems/english/2.4/problem_24_g_en.md) | [✅](./solutions/2.4/24_g.py) | [✅](./tests/2.4/test_24_g.py) |
-| H. [Maximum amount](./problems/english/2.4/problem_24_h_en.md) | [✅](./solutions/2.4/24_h.py) | [✅](./tests/2.4/test_24_h.py) |
+| H. [Maximum sum](./problems/english/2.4/problem_24_h_en.md) | [✅](./solutions/2.4/24_h.py) | [✅](./tests/2.4/test_24_h.py) |
 | I. [Big number](./problems/english/2.4/problem_24_i_en.md) | [✅](./solutions/2.4/24_i.py) | [✅](./tests/2.4/test_24_i.py) |
 | J. [We divided the orange](./problems/english/2.4/problem_24_j_en.md) | [✅](./solutions/2.4/24_j.py) | [✅](./tests/2.4/test_24_j.py) |
 | K. [Simple task 3.0](./problems/english/2.4/problem_24_k_en.md) | [✅](./solutions/2.4/24_k.py) | [✅](./tests/2.4/test_24_k.py) |
@@ -319,7 +319,7 @@ Solutions are organized by handbook sections. Each solution:
 | O. [Numerical snake 2.0](./problems/english/2.4/problem_24_o_en.md) | [✅](./solutions/2.4/24_o.py) | [✅](./tests/2.4/test_24_o.py) |
 | P. [Multiplication table redesign](./problems/english/2.4/problem_24_p_en.md) | [✅](./solutions/2.4/24_p.py) | [✅](./tests/2.4/test_24_p.py) |
 | Q. [Racecar 3.0](./problems/english/2.4/problem_24_q_en.md) | [✅](./solutions/2.4/24_q.py) | [✅](./tests/2.4/test_24_q.py) |
-| R. [New Year mood 2.0](./problems/english/2.4/problem_24_r_en.md) | [✅](./solutions/2.4/24_r.py) | [✅](./tests/2.4/test_24_r.py) |
+| R. [New Year's spirit 2.0](./problems/english/2.4/problem_24_r_en.md) | [✅](./solutions/2.4/24_r.py) | [✅](./tests/2.4/test_24_r.py) |
 | S. [Numerical square](./problems/english/2.4/problem_24_s_en.md) | [✅](./solutions/2.4/24_s.py) | [✅](./tests/2.4/test_24_s.py) |
 | T. [Mathematical benefit](./problems/english/2.4/problem_24_t_en.md) | [✅](./solutions/2.4/24_t.py) | [✅](./tests/2.4/test_24_t.py) |
 
@@ -338,16 +338,16 @@ Solutions are organized by handbook sections. Each solution:
 | D. [Data cleaning](./problems/english/3.1/problem_31_d_en.md) | [✅](./solutions/3.1/31_d.py) | [✅](./tests/3.1/test_31_d.py) |
 | E. [Racecar 4.0](./problems/english/3.1/problem_31_e_en.md) | [✅](./solutions/3.1/31_e.py) | [✅](./tests/3.1/test_31_e.py) |
 | F. [Bunny — 6](./problems/english/3.1/problem_31_f_en.md) | [✅](./solutions/3.1/31_f.py) | [✅](./tests/3.1/test_31_f.py) |
-| G. [A and B sat on the pipe](./problems/english/3.1/problem_31_g_en.md) | [✅](./solutions/3.1/31_g.py) | [✅](./tests/3.1/test_31_g.py) |
+| G. [A and B sat on a pipe](./problems/english/3.1/problem_31_g_en.md) | [✅](./solutions/3.1/31_g.py) | [✅](./tests/3.1/test_31_g.py) |
 | H. [Bunny — 7](./problems/english/3.1/problem_31_h_en.md) | [✅](./solutions/3.1/31_h.py) | [✅](./tests/3.1/test_31_h.py) |
 | I. [No comments](./problems/english/3.1/problem_31_i_en.md) | [✅](./solutions/3.1/31_i.py) | [✅](./tests/3.1/test_31_i.py) |
 | J. [Basic frequency analysis](./problems/english/3.1/problem_31_j_en.md) | [✅](./solutions/3.1/31_j.py) | [✅](./tests/3.1/test_31_j.py) |
 | K. [Everything will be found](./problems/english/3.1/problem_31_k_en.md) | [✅](./solutions/3.1/31_k.py) | [✅](./tests/3.1/test_31_k.py) |
 | L. [Menu](./problems/english/3.1/problem_31_l_en.md) | [✅](./solutions/3.1/31_l.py) | [✅](./tests/3.1/test_31_l.py) |
 | M. [Mass exponentiation](./problems/english/3.1/problem_31_m_en.md) | [✅](./solutions/3.1/31_m.py) | [✅](./tests/3.1/test_31_m.py) |
-| N. [Mass exponentiation 3.0](./problems/english/3.1/problem_31_n_en.md) | [✅](./solutions/3.1/31_n.py) | [✅](./tests/3.1/test_31_n.py) |
+| N. [Mass exponentiation 2.0](./problems/english/3.1/problem_31_n_en.md) | [✅](./solutions/3.1/31_n.py) | [✅](./tests/3.1/test_31_n.py) |
 | O. [GCD 3.0](./problems/english/3.1/problem_31_o_en.md) | [✅](./solutions/3.1/31_o.py) | [✅](./tests/3.1/test_31_o.py) |
-| P. [News announcement 3.0](./problems/english/3.1/problem_31_p_en.md) | [✅](./solutions/3.1/31_p.py) | [✅](./tests/3.1/test_31_p.py) |
+| P. [News announcement 2.0](./problems/english/3.1/problem_31_p_en.md) | [✅](./solutions/3.1/31_p.py) | [✅](./tests/3.1/test_31_p.py) |
 | Q. [Racecar 5.0](./problems/english/3.1/problem_31_q_en.md) | [✅](./solutions/3.1/31_q.py) | [✅](./tests/3.1/test_31_q.py) |
 | R. [RLE](./problems/english/3.1/problem_31_r_en.md) | [✅](./solutions/3.1/31_r.py) | [✅](./tests/3.1/test_31_r.py) |
 | S. [Polish calculator](./problems/english/3.1/problem_31_s_en.md) | [✅](./solutions/3.1/31_s.py) | [✅](./tests/3.1/test_31_s.py) |
@@ -474,7 +474,7 @@ Solutions are organized by handbook sections. Each solution:
 |----------------------|----------------------|----------------------|
 | А. [Functional greeting](./problems/english/4.1/problem_41_a_en.md) | [✅](./solutions/4.1/41_a.py) | [✅](./tests/4.1/test_41_a.py) |
 | B. [Functional GCD](./problems/english/4.1/problem_41_b_en.md) | [✅](./solutions/4.1/41_b.py) | [✅](./tests/4.1/test_41_b.py) |
-| C. [Length of number](./problems/english/4.1/problem_41_c_en.md) | [✅](./solutions/4.1/41_c.py) | [✅](./tests/4.1/test_41_c.py) |
+| C. [Length of a number](./problems/english/4.1/problem_41_c_en.md) | [✅](./solutions/4.1/41_c.py) | [✅](./tests/4.1/test_41_c.py) |
 | D. [Name of the month](./problems/english/4.1/problem_41_d_en.md) | [✅](./solutions/4.1/41_d.py) | [✅](./tests/4.1/test_41_d.py) |
 | E. [Numerical string](./problems/english/4.1/problem_41_e_en.md) | [✅](./solutions/4.1/41_e.py) | [✅](./tests/4.1/test_41_e.py) |
 | F. [Modernizing output system](./problems/english/4.1/problem_41_f_en.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
@@ -513,7 +513,7 @@ Solutions are organized by handbook sections. Each solution:
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [Recursive summator](./problems/english/4.3/problem_43_a_en.md) | [✅](./solutions/4.3/43_a.py) | [✅](./tests/4.3/test_43_a.py) |
-| B. [Recursive digit summator](./problems/english/4.3/problem_43_b_en.md) | [✅](./solutions/4.3/43_b.py) | [✅](./tests/4.3/test_43_b.py) |
+| B. [Recursive digits summator](./problems/english/4.3/problem_43_b_en.md) | [✅](./solutions/4.3/43_b.py) | [✅](./tests/4.3/test_43_b.py) |
 | C. [Polynomial of N-th degree](./problems/english/4.3/problem_43_c_en.md) | [✅](./solutions/4.3/43_c.py) | [✅](./tests/4.3/test_43_c.py) |
 | D. [Result decoration](./problems/english/4.3/problem_43_d_en.md) | [✅](./solutions/4.3/43_d.py) | [✅](./tests/4.3/test_43_d.py) |
 | E. [Result accumulation](./problems/english/4.3/problem_43_e_en.md) | [✅](./solutions/4.3/43_e.py) | [✅](./tests/4.3/test_43_e.py) |
@@ -521,7 +521,7 @@ Solutions are organized by handbook sections. Each solution:
 | G. [Uniformity is not a flaw](./problems/english/4.3/problem_43_g_en.md) | [✅](./solutions/4.3/43_g.py) | [✅](./tests/4.3/test_43_g.py) |
 | H. [Fibonacci generator](./problems/english/4.3/problem_43_h_en.md) | [✅](./solutions/4.3/43_h.py) | [✅](./tests/4.3/test_43_h.py) |
 | I. [Cyclic generator](./problems/english/4.3/problem_43_i_en.md) | [✅](./solutions/4.3/43_i.py) | [✅](./tests/4.3/test_43_i.py) |
-| J. ["Straightening" the list](./problems/english/4.3/problem_43_j_en.md) | [✅](./solutions/4.3/43_j.py) | [✅](./tests/4.3/test_43_j.py) |
+| J. ["Straightening" a list](./problems/english/4.3/problem_43_j_en.md) | [✅](./solutions/4.3/43_j.py) | [✅](./tests/4.3/test_43_j.py) |
 
 </details>
 
@@ -536,9 +536,9 @@ Solutions are organized by handbook sections. Each solution:
 | B. [Class point 2.0](./problems/english/5.1/problem_51_b_en.md) | [✅](./solutions/5.1/51_b.py) | [✅](./tests/5.1/test_51_b.py) |
 | C. [Don't press the red button!](./problems/english/5.1/problem_51_c_en.md) | [✅](./solutions/5.1/51_c.py) | [✅](./tests/5.1/test_51_c.py) |
 | D. [Work is not going anywhere](./problems/english/5.1/problem_51_d_en.md) | [✅](./solutions/5.1/51_d.py) | [✅](./tests/5.1/test_51_d.py) |
-| E. [Cool rectangle](./problems/english/5.1/problem_51_e_en.md) | [✅](./solutions/5.1/51_e.py) | [✅](./tests/5.1/test_51_e.py) |
-| F. [Cool rectangle 2.0](./problems/english/5.1/problem_51_f_en.md) | [✅](./solutions/5.1/51_f.py) | [✅](./tests/5.1/test_51_f.py) |
-| G. [Cool rectangle 3.0](./problems/english/5.1/problem_51_g_en.md) | [✅](./solutions/5.1/51_g.py) | [✅](./tests/5.1/test_51_g.py) |
+| E. [Class rectangle](./problems/english/5.1/problem_51_e_en.md) | [✅](./solutions/5.1/51_e.py) | [✅](./tests/5.1/test_51_e.py) |
+| F. [Class rectangle 2.0](./problems/english/5.1/problem_51_f_en.md) | [✅](./solutions/5.1/51_f.py) | [✅](./tests/5.1/test_51_f.py) |
+| G. [Class rectangle 3.0](./problems/english/5.1/problem_51_g_en.md) | [✅](./solutions/5.1/51_g.py) | [✅](./tests/5.1/test_51_g.py) |
 | H. [Checkers](./problems/english/5.1/problem_51_h_en.md) | [✅](./solutions/5.1/51_h.py) | [✅](./tests/5.1/test_51_h.py) |
 | I. [Queue](./problems/english/5.1/problem_51_i_en.md) | [✅](./solutions/5.1/51_i.py) | [✅](./tests/5.1/test_51_i.py) |
 | J. [Stack](./problems/english/5.1/problem_51_j_en.md) | [✅](./solutions/5.1/51_j.py) | [✅](./tests/5.1/test_51_j.py) |
@@ -601,7 +601,7 @@ Solutions are organized by handbook sections. Each solution:
 | G. [Chess preparation](./problems/english/6.1/problem_61_g_en.md) | [✅](./solutions/6.1/61_g.py) | [✅](./tests/6.1/test_61_g.py) |
 | H. [Numerical snake 3.0](./problems/english/6.1/problem_61_h_en.md) | [✅](./solutions/6.1/61_h.py) | [✅](./tests/6.1/test_61_h.py) |
 | I. [Rotation](./problems/english/6.1/problem_61_i_en.md) | [✅](./solutions/6.1/61_i.py) | [✅](./tests/6.1/test_61_i.py) |
-| J. [Ladder](./problems/english/6.1/problem_61_j_en.md) | [✅](./solutions/6.1/61_j.py) | [✅](./tests/6.1/test_61_j.py) |
+| J. [Stairs](./problems/english/6.1/problem_61_j_en.md) | [✅](./solutions/6.1/61_j.py) | [✅](./tests/6.1/test_61_j.py) |
 
 </details>
 
@@ -614,7 +614,7 @@ Solutions are organized by handbook sections. Each solution:
 |----------------------|----------------------|----------------------|
 | А. [Lengths of all words - 2](./problems/english/6.2/problem_62_a_en.md) | [✅](./solutions/6.2/62_a.py) | [✅](./tests/6.2/test_62_a.py) |
 | B. [Lengths of all words by parity](./problems/english/6.2/problem_62_b_en.md) | [✅](./solutions/6.2/62_b.py) | [✅](./tests/6.2/test_62_b.py) |
-| C. [Check - 2](./problems/english/6.2/problem_62_c_en.md) | [✅](./solutions/6.2/62_c.py) | [✅](./tests/6.2/test_62_c.py) |
+| C. [Receipt - 2](./problems/english/6.2/problem_62_c_en.md) | [✅](./solutions/6.2/62_c.py) | [✅](./tests/6.2/test_62_c.py) |
 | D. [Promotion](./problems/english/6.2/problem_62_d_en.md) | [✅](./solutions/6.2/62_d.py) | [✅](./tests/6.2/test_62_d.py) |
 | E. [Long words](./problems/english/6.2/problem_62_e_en.md) | [✅](./solutions/6.2/62_e.py) | [✅](./tests/6.2/test_62_e.py) |
 | F. [Progress report](./problems/english/6.2/problem_62_f_en.md) | [✅](./solutions/6.2/62_f.py) | [✅](./tests/6.2/test_62_f.py) |
@@ -633,10 +633,10 @@ Solutions are organized by handbook sections. Each solution:
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [System check](./problems/english/6.3/problem_63_a_en.md) | [✅](./solutions/6.3/63_a.py) | [✅](./tests/6.3/test_63_a.py) |
-| B. [Summing answers](./problems/english/6.3/problem_63_b_en.md) | [✅](./solutions/6.3/63_b.py) | [✅](./tests/6.3/test_63_b.py) |
-| C. [Summing answers 2](./problems/english/6.3/problem_63_c_en.md) | [✅](./solutions/6.3/63_c.py) | [✅](./tests/6.3/test_63_c.py) |
+| B. [Summing responses](./problems/english/6.3/problem_63_b_en.md) | [✅](./solutions/6.3/63_b.py) | [✅](./tests/6.3/test_63_b.py) |
+| C. [Summing responses 2](./problems/english/6.3/problem_63_c_en.md) | [✅](./solutions/6.3/63_c.py) | [✅](./tests/6.3/test_63_c.py) |
 | D. [Specific value](./problems/english/6.3/problem_63_d_en.md) | [✅](./solutions/6.3/63_d.py) | [✅](./tests/6.3/test_63_d.py) |
-| E. [Summing answers 3](./problems/english/6.3/problem_63_e_en.md) | [✅](./solutions/6.3/63_e.py) | [✅](./tests/6.3/test_63_e.py) |
+| E. [Summing responses 3](./problems/english/6.3/problem_63_e_en.md) | [✅](./solutions/6.3/63_e.py) | [✅](./tests/6.3/test_63_e.py) |
 | F. [User list](./problems/english/6.3/problem_63_f_en.md) | [✅](./solutions/6.3/63_f.py) | [✅](./tests/6.3/test_63_f.py) |
 | G. [Message mailing](./problems/english/6.3/problem_63_g_en.md) | [✅](./solutions/6.3/63_g.py) | [✅](./tests/6.3/test_63_g.py) |
 | H. [New user registration](./problems/english/6.3/problem_63_h_en.md) | [✅](./solutions/6.3/63_h.py) | [✅](./tests/6.3/test_63_h.py) |

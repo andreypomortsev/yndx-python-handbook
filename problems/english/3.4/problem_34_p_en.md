@@ -1,4 +1,4 @@
-## [The layout is as follows...](../../../solutions/3.4/34_p.py)
+## [The Layout is as Follows...](../../../solutions/3.4/34_p.py)
 
 Vitaly loves playing cards. He decided to figure out which variations of drawing certain triples of cards from the deck exist. Write a program that outputs a list of variations according to the requirements.
 

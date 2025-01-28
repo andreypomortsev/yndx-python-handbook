@@ -1,4 +1,4 @@
-## [Numerical snake 3.0](../../../solutions/6.1/61_h.py)
+## [Numerical Snake 3.0](../../../solutions/6.1/61_h.py)
 
 Once, you helped preschoolers with various snake patterns. Let's implement it using arrays.
 

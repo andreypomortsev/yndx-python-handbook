@@ -1,4 +1,4 @@
-## [Race car 2.0](../../../solutions/2.3/23_p.py)
+## [Race Car 2.0](../../../solutions/2.3/23_p.py)
 
 Let's revisit palindromes, which read the same in both directions. Write a program that checks if a number is a palindrome.
 

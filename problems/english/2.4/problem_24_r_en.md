@@ -1,4 +1,4 @@
-## [New Year Mood 2.0](../../../solutions/2.4/24_r.py)
+## [New Year's spirit 2.0](../../../solutions/2.4/24_r.py)
 
 Colleagues of the mathematician want to delight him again by creating mathematical Christmas trees to decorate the scientist's office. Help them by writing a program that builds a mathematical Christmas tree based on the entered number.
 

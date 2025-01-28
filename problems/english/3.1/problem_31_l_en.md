@@ -1,4 +1,4 @@
-## [Menu of Porridges](../../../solutions/3.1/31_l.py)
+## [Menu](../../../solutions/3.1/31_l.py)
 
 In a kindergarten, a new porridge is served for breakfast every day. The porridges alternate in the following order:
 

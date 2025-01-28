@@ -1,4 +1,4 @@
-## [Recursive Digit Summator](../../../solutions/4.3/43_b.py)
+## [Recursive Digits Summator](../../../solutions/4.3/43_b.py)
 
 Recursion is a great way to eliminate loops, especially `while`. Let's revisit one of our old tasks and modernize it.
 

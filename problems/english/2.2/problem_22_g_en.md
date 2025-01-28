@@ -1,4 +1,4 @@
-## [Race car](../../../solutions/2.2/22_g.py)
+## [Race Car](../../../solutions/2.2/22_g.py)
 
 There is an interesting concept called a palindrome — a number, word, sentence, etc., that reads the same both from left to right and from right to left.
 

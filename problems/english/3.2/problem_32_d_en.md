@@ -1,4 +1,4 @@
-## [Porridge eaters](../../../solutions/3.2/32_d.py)
+## [Porridge Eaters](../../../solutions/3.2/32_d.py)
 
 Each kindergarten child likes either semolina porridge, oatmeal porridge, or both.  
 Let's create a program that will allow the caregiver to quickly find out how many children like both types of porridge.

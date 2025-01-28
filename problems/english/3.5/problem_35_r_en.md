@@ -1,4 +1,4 @@
-## [How much does it weigh in bytes?](../../../solutions/3.5/35_r.py)
+## [How Much Does it Weigh in Bytes?](../../../solutions/3.5/35_r.py)
 
 Size is an important characteristic of any file. According to GOST 8.417-2002 in our country, the volume of information is measured in the following units:
 

@@ -1,4 +1,4 @@
-## [First player, get ready](../../../solutions/2.2/22_i.py)
+## [First Player, Get Ready](../../../solutions/2.2/22_i.py)
 
 In many games, the order is determined by the toss of a die or a coin — and in our case, the first turn goes to the player whose name is lexicographically smaller.
 

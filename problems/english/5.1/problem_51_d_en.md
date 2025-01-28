@@ -1,4 +1,4 @@
-## [Work is not going anywhere](../../../solutions/5.1/51_d.py)
+## [Work is not Going Anywhere](../../../solutions/5.1/51_d.py)
 
 Consider an object "Programmer," which is defined by a name, position, and the number of hours worked. Each position has its own hourly wage. In our improvised company, there are 3 positions:
 

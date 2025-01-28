@@ -1,4 +1,4 @@
-## [We divided the orange 2.0](../../../solutions/3.4/34_j.py)
+## [We Divided the Orange 2.0](../../../solutions/3.4/34_j.py)
 
 Anya, Borja, and Vova decided to eat an orange.\
 Tell the kids how they can divide it.

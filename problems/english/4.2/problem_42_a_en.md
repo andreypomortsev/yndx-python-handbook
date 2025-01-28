@@ -1,4 +1,4 @@
-## [List generator](../../../solutions/4.2/42_a.py)
+## [List Generator](../../../solutions/4.2/42_a.py)
 
 Most tasks in this chapter focus on practicing function development skills.
 

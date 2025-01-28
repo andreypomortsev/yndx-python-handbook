@@ -1,4 +1,4 @@
-## [Gathering for a walk](../../../solutions/3.4/34_b.py)
+## [Gathering For a Walk](../../../solutions/3.4/34_b.py)
 
 The kindergarten teacher is tired of spending time arranging children in pairs.
 

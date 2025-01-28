@@ -1,4 +1,4 @@
-## [This will be a masterpiece!](../../../solutions/3.2/32_n.py)
+## [This Will Be a Masterpiece!](../../../solutions/3.2/32_n.py)
 
 The head cook of the kindergarten wants to quickly select dishes for cooking.\
 He has a list of available ingredients and a set of dishes.

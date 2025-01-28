@@ -1,4 +1,4 @@
-## [Player One, Prepare 2.0](../../../solutions/2.3/23_m.py)
+## [First Player, Get Ready 2.0](../../../solutions/2.3/23_m.py)
 
 In many games, the order of turns is determined by a dice roll or coin flip, but in our case, the player whose name is lexicographically smaller goes first. Determine which player will take the first turn.
 

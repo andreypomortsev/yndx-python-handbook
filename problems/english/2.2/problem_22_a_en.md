@@ -1,4 +1,4 @@
-## [Just hello, just how are you.](../../../solutions/2.2/22_a.py)
+## [Just Hello, Just How are You.](../../../solutions/2.2/22_a.py)
 
 A conversation skill is an important trait for a polite person.
 

@@ -1,4 +1,4 @@
-## [Beauty will save the world](../../../solutions/2.2/22_k.py)
+## [Beauty Will Save The World](../../../solutions/2.2/22_k.py)
 
 One of the ancient beliefs says that a three-digit number is beautiful if the sum of its smallest and largest digits equals the remaining digit multiplied by 2.
 

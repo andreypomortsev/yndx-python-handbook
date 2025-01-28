@@ -1,4 +1,4 @@
-## [Porridge eaters — 4](../../../solutions/3.2/32_h.py)
+## [Porridge Eaters — 4](../../../solutions/3.2/32_h.py)
 
 Each kindergarten child loves one or more types of porridge.\
 Let's help the teacher compile a list of children who love a specific type of porridge.

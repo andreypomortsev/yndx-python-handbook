@@ -1,4 +1,4 @@
-## [Data merging](../../../solutions/3.5/35_n.py)
+## [Data Merging](../../../solutions/3.5/35_n.py)
 
 A local company is updating user data and decided to reorganize the storage system.
 

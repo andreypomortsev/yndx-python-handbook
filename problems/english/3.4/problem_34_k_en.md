@@ -1,4 +1,4 @@
-## [Number rectangle 3.0](../../../solutions/3.4/34_k.py)
+## [Numerical Rectangle 3.0](../../../solutions/3.4/34_k.py)
 
 The kids in kindergarten are learning to count again, and the teacher decided to make it easier for them to master this new skill. For that, she wants to format the list of numbers in a special way.\
 The kids are progressing quite quickly, so she needs a program that can construct number rectangles of the required size. Write a program that constructs a number rectangle of the required size.

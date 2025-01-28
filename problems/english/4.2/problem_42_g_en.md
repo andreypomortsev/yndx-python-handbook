@@ -1,4 +1,4 @@
-## [On air — 'Experiments' section](../../../solutions/4.2/42_g.py)
+## [On Air — 'Experiments' Section](../../../solutions/4.2/42_g.py)
 
 The lab assistants are conducting an experiment and have requested the development of a data processing system. The experiment results should be pairs of rational numbers.
 

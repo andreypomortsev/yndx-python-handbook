@@ -1,4 +1,4 @@
-## [Cool Rectangle 3.0](../../../solutions/5.1/51_g.py)
+## [Class Rectangle 3.0](../../../solutions/5.1/51_g.py)
 
 You need to improve the previous task a little more.
 

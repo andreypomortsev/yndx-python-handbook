@@ -1,4 +1,4 @@
-## ["Straightening" the list](../../../solutions/4.3/43_j.py)
+## ["Straightening" a List](../../../solutions/4.3/43_j.py)
 
 Often, the data we receive from various sources doesn't meet our needs. One common issue is excessive nesting of lists.
 
