@@ -12,7 +12,7 @@ with open(file_name, "rb") as file:
     read_lines = 0
     lines = []
 
-    while pointer_location > 0 and read_lines <= tail + 1:
+    while pointer_location > 0 and read_lines <= tail:
         chunk_size = min(pointer_location, SIZE)
         file.seek(pointer_location - chunk_size)
         pointer_location -= chunk_size

@@ -17,10 +17,13 @@ with open(json_file, "r+", **DEFAULT_ENCODING) as file:
         json_to_update[key] = value
 
     # Двигаем указатель в начало файла
+    # Move the file pointer to the beginning of the file
     file.seek(0)
 
     # Записываем обновленное содержание в файл
+    # Write the updated content to the file
     json.dump(json_to_update, file, ensure_ascii=False, indent=4)
 
     # Обрезаем все отсатки "старого файла"
+    # Truncate all the remains of the "old file"
     file.truncate()

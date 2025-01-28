@@ -11,6 +11,6 @@ for _ in range(days):
 dishes_left = all_dishes - served_dishes
 
 if dishes_left:
-    print(*sorted(dishes_left), sep="\n")
+    print("\n".join(sorted(dishes_left)))
 else:
     print("Готовить нечего")

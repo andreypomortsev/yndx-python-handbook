@@ -10,4 +10,4 @@ while surroundings := input().split():
             if i < n - 1:
                 closest_objects.add(surroundings[i + 1])
 
-print(*closest_objects, sep="\n")
+print("\n".join(closest_objects))

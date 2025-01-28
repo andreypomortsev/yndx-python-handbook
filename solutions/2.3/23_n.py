@@ -10,7 +10,7 @@ elif number % 2 == 0 or number % 3 == 0:
 elif is_prime:
     i = 5
     sqrt = int(number**0.5) + 1
-    while i <= sqrt:
+    while i < sqrt:
         if number % i == 0 or number % (i + 2) == 0:
             is_prime = False
             break

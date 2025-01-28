@@ -5,7 +5,7 @@ import pandas as pd
 
 
 def values(
-    func: Callable[[int | float], float], start: float, end: float, step: float
+    func: Callable[[float | int], float], start: float, end: float, step: float
 ) -> pd.Series:
     indecies = np.arange(start, end + step, step)
     values = np.vectorize(func)(indecies)

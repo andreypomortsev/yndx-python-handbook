@@ -2,4 +2,6 @@ price = int(input())
 weight = int(input())
 bill = int(input())
 
-print(bill - price * weight)
+change = bill - price * weight
+
+print(change)

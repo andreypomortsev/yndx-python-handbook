@@ -28,10 +28,12 @@ SQUARE = 256**2
 for i in range(n):
     block = int(input())
     # Вычисляем r_n и m_n из данного блока
+    # Calculate r_n and m_n from the block
     r_n = (block // 256) % 256
     m_n = block // SQUARE
 
     # Вычисляем хэш h_n
+    # Calculate the hash h_n
     h_n = (37 * (m_n + r_n + h_n)) % 256
     n_block = h_n + r_n * 256 + m_n * SQUARE
 

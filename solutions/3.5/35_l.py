@@ -16,7 +16,7 @@ with (
         even_list, odd_list, equal_list = [], [], []
         for str_number in line.split():
             length = len(str_number)
-            even, odd = 0, 0
+            even = odd = 0
 
             for i in range(length):
                 digit = int(str_number[i])

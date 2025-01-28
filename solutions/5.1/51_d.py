@@ -4,8 +4,7 @@ class Programmer:
         self.position = position
         self.position_salary = {"Junior": 10, "Middle": 15, "Senior": 20}
         self.bucks_per_hour = self.position_salary[self.position]
-        self.hours = 0
-        self.salary = 0
+        self.hours = self.salary = 0
 
     def work(self, hours: int) -> None:
         self.hours += hours

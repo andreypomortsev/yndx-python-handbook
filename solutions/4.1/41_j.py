@@ -13,6 +13,7 @@ def merge(left: tuple, right: tuple) -> tuple:
     left_index = right_index = 0
 
     # Сравниваем элементы left и right
+    # Compare elements in left and right
     while left_index < len(left) and right_index < len(right):
 
         if left[left_index] < right[right_index]:
@@ -24,6 +25,7 @@ def merge(left: tuple, right: tuple) -> tuple:
             right_index += 1
 
     # Добавляем оставшиеся элементы
+    # Add remaining elements
     merged.extend(left[left_index:])
     merged.extend(right[right_index:])
 

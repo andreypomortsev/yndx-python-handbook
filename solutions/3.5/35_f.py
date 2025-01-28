@@ -7,7 +7,7 @@ TRANS_DICT = {
     "Д": "D",
     "Е": "E",
     "Ё": "E",
-    "Ж": "ZH",
+    "Ж": "Zh",
     "З": "Z",
     "И": "I",
     "Й": "I",
@@ -22,15 +22,15 @@ TRANS_DICT = {
     "Т": "T",
     "У": "U",
     "Ф": "F",
-    "Х": "KH",
-    "Ц": "TC",
-    "Ч": "CH",
-    "Ш": "SH",
-    "Щ": "SHCH",
+    "Х": "Kh",
+    "Ц": "Tc",
+    "Ч": "Ch",
+    "Ш": "Sh",
+    "Щ": "Shch",
     "Ы": "Y",
     "Э": "E",
-    "Ю": "IU",
-    "Я": "IA",
+    "Ю": "Iu",
+    "Я": "Ia",
     "Ь": "",
     "Ъ": "",
 }
@@ -44,7 +44,7 @@ with (
         for char in cyrillic_line:
             trans_char = TRANS_DICT.get(char.upper(), char)
             if char.isupper():
-                latin_text.append(trans_char.capitalize())
+                latin_text.append(trans_char)
             else:
                 latin_text.append(trans_char.lower())
         file_out.writelines(latin_text)

@@ -6,7 +6,7 @@ searching_phrase = input().lower()
 not_found = True
 
 for file_name in stdin:
-    file_name = file_name[:-1]
+    file_name = file_name.rstrip("\n")
 
     with open(file_name, "r", **DEFAULT_ENCODING) as file:
         clean_list = []

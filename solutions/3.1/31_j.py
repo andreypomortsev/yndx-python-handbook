@@ -11,10 +11,11 @@ for word in lines:
         char_count[ord(char)] += 1
 
 max_count = 0
+most_common_char = ""
 
 for i in range(CHAR_RANGE):
     if char_count[i] > max_count:
         max_count = char_count[i]
         most_common_char = chr(i)
 
-print(most_common_char if most_common_char else "")
+print(most_common_char)

@@ -2,12 +2,12 @@ n = int(input())
 
 for _ in range(n):
     number = int(input())
-    max_number = float("-inf")
+    max_digit = float("-inf")
 
-    while number > 0:
+    while number:
         digit = number % 10
-        if digit > max_number:
-            max_number = digit
+        if digit > max_digit:
+            max_digit = digit
         number //= 10
 
-    print(max_number, end="")
+    print(max_digit, end="")

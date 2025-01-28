@@ -8,8 +8,7 @@ student_answers = [line.rstrip("\n") for line in stdin]
 with open("scoring.json", "r", **DEFAULT_ENCODING) as json_file:
     scoring = json.load(json_file)
 
-student_grade = 0
-index = 0
+index = student_grade = 0
 
 for problem in scoring:
     point_per_test = problem["points"] // len(problem["tests"])

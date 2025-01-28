@@ -1,7 +1,5 @@
 from itertools import product
 
-expression = input()
-
 REPLACEMENTS = {
     "not": " not ",
     "~": " ~ ",
@@ -12,8 +10,10 @@ REPLACEMENTS = {
     "(": " ( ",
     ")": " ) ",
 }
+expression = input()
 
 # Очищаем выражение
+# Clean the expression
 for old_value, new_value in REPLACEMENTS.items():
     expression = expression.replace(old_value, new_value)
 
@@ -76,6 +76,7 @@ print(*unique_vars, "F")
 for vars in product(range(2), repeat=repeats):
     variable_to_value = dict(zip(unique_vars, vars))
     stack = []
+
     for token in postfix_expression:
         if token.isupper():
             stack.append(variable_to_value[token])

@@ -3,7 +3,7 @@ total = 0
 
 for _ in range(n):
     number = int(input())
-    while number > 0:
+    while number:
         total += number % 10
         number //= 10
 

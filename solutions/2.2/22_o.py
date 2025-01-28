@@ -7,6 +7,7 @@ digit_three = number_two % 10
 digit_four = number_two // 10
 
 # Ищем максимумы и минимумы
+# Searching for maximums and minimums
 if digit_one < digit_two:
     digit_one, digit_two = digit_two, digit_one
 
@@ -14,10 +15,12 @@ if digit_three < digit_four:
     digit_three, digit_four = digit_four, digit_three
 
 # Ищем максимум
+# Searching for maximum
 if digit_one < digit_three:
     digit_one, digit_three = digit_three, digit_one
 
 # Ищем минимум
+# Searching for minimum
 if digit_two < digit_four:
     digit_two, digit_four = digit_four, digit_two
 

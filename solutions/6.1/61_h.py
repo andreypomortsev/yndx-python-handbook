@@ -18,13 +18,15 @@ def snake(width: int, height: int, direction: str = "H") -> np.ndarray:
     Returns:
         np.ndarray: A 2D NumPy array with the snake-like pattern.
     """
+    DTYPE = "int16"
+
     flag = direction.upper() == "V"
     if flag:
         width, height = height, width
 
-    base = np.arange(1, width + 1, dtype="int16")
+    base = np.arange(1, width + 1, dtype=DTYPE)
     matrix = np.tile(base, (height, 1)) + (
-        np.arange(height, dtype="int16")[:, np.newaxis] * width
+        np.arange(height, dtype=DTYPE)[:, np.newaxis] * width
     )
     matrix[1::2] = matrix[1::2, ::-1]
 

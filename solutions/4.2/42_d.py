@@ -1,8 +1,5 @@
-from typing import Union
-
-
-def month(number: Union[int, str], lang: str = "ru") -> str:
-    months = {
+def month(number: int | str, lang: str = "ru") -> str:
+    MONTHS = {
         "1": {"en": "January", "ru": "Январь"},
         "2": {"en": "February", "ru": "Февраль"},
         "3": {"en": "March", "ru": "Март"},
@@ -16,4 +13,4 @@ def month(number: Union[int, str], lang: str = "ru") -> str:
         "11": {"en": "November", "ru": "Ноябрь"},
         "12": {"en": "December", "ru": "Декабрь"},
     }
-    return months.get(str(number), {}).get(lang, "")
+    return MONTHS.get(str(number), {}).get(lang, "")

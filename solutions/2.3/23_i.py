@@ -1,6 +1,6 @@
 number = int(input())
 
-if number == 0:
+if not number:
     print(1)
 else:
     for i in range(1, number):

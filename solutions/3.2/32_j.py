@@ -6,7 +6,7 @@ trans_dict = {
     "Д": "D",
     "Е": "E",
     "Ё": "E",
-    "Ж": "ZH",
+    "Ж": "Zh",
     "З": "Z",
     "И": "I",
     "Й": "I",
@@ -21,15 +21,15 @@ trans_dict = {
     "Т": "T",
     "У": "U",
     "Ф": "F",
-    "Х": "KH",
-    "Ц": "TC",
-    "Ч": "CH",
-    "Ш": "SH",
-    "Щ": "SHCH",
+    "Х": "Kh",
+    "Ц": "Tc",
+    "Ч": "Ch",
+    "Ш": "Sh",
+    "Щ": "Shch",
     "Ы": "Y",
     "Э": "E",
-    "Ю": "IU",
-    "Я": "IA",
+    "Ю": "Iu",
+    "Я": "Ia",
     "Ь": "",
     "Ъ": "",
 }
@@ -40,7 +40,7 @@ latin_text = []
 for char in text:
     trans_char = trans_dict.get(char.upper(), char)
     if char.isupper():
-        latin_text.append(trans_char.capitalize())
+        latin_text.append(trans_char)
     else:
         latin_text.append(trans_char.lower())
 

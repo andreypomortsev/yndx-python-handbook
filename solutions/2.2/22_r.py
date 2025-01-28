@@ -12,6 +12,8 @@ c_square = side_c**2
 
 epsilon = 1e-9
 
+# Из-за погрешности вычислений, сравнивать числа нужно с погрешностью
+# Due to the error of calculations, numbers should be compared with an error
 if abs(c_square - sum_of_a_b_squares) < epsilon:
     print("100%")
 elif c_square < sum_of_a_b_squares:

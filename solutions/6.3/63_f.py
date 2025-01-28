@@ -2,7 +2,8 @@ import requests
 
 
 def get_users(url: str) -> list:
-    response = requests.get(url, timeout=1)
+    TIMEOUT = 1
+    response = requests.get(url, timeout=TIMEOUT)
     users = response.json()
 
     params = {"key": lambda user: (user["last_name"], user["first_name"])}
@@ -13,7 +14,7 @@ def get_users(url: str) -> list:
     ]
 
 
-url = input()
-server = f"http://{url}/users"
-fl_names = get_users(server)
+host_port = input()
+url_path = f"http://{host_port}/users"
+fl_names = get_users(url_path)
 print(*fl_names, sep="\n")

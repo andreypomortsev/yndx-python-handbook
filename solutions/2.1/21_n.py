@@ -1,4 +1,7 @@
 red = int(input())
 green = int(input())
 blue = int(input())
-print(red + blue + 1)
+
+attempts_to_green = red + blue + 1
+
+print(attempts_to_green)

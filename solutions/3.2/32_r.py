@@ -1,5 +1,6 @@
 # Для прохождения тестов Яндекса в решении нельзя использовать
 # множества тк в тестовых данных есть повторы
+# You can't use sets in the solution to pass Yandex tests
 n = int(input())
 
 counter = {}

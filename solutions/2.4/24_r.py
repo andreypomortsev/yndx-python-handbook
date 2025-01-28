@@ -1,16 +1,18 @@
 t = int(input())
 
-# Треугольные числа t = n * (n + 1) / 2
+# t = n * (n + 1) / 2
 # n = ((1 + 8*t)**0.5 - 1) / 2
 numerator_n = (1 + 8 * t) ** 0.5 - 1
 
 # Нам нужно округлить n вверх
+# We need to round n up
 n = int((numerator_n + 1) // 2)
 
 counter = 1
 formatter = 0
 
 # Считаем значение formatter чтобы избежать создания доп строки
+# Calculate the value of formatter to avoid creating an additional string
 for i in range(n + 1):
     row_length = 0
     for j in range(i):
