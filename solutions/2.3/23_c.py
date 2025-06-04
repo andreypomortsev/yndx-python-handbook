@@ -5,4 +5,4 @@ for i in range(start, end + 1):
     if i == end:
         print(i)
     else:
-        print(i, end=' ')
+        print(i, end=" ")
