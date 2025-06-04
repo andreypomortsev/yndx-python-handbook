@@ -1,6 +1,15 @@
-start, end = int(input()), int(input())
+start = int(input())
+end = int(input())
 
 if start > end:
-    print(*range(start, end - 1, -1))
+    numbers = range(start, end - 1, -1)
 else:
-    print(*range(start, end + 1))
+    numbers = range(start, end + 1)
+
+last_number = len(numbers) - 1
+
+for index, number in enumerate(numbers):
+    if index == last_number:
+        print(number)
+    else:
+        print(number, end=" ")
