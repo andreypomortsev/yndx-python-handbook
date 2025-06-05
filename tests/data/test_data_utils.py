@@ -16,16 +16,61 @@ time_limit_data_fail = [
 ]
 
 generate_error_msg_data = [
-    ("string", "another string", "strings"),
-    (["string"], ["another string"], "lists"),
-    ([], [], "empty lists"),
-    (tuple(), tuple("tuple"), "empty tuples"),
-    (["list"], tuple("tuple"), "list tuple"),
-    (tuple("another tuple"), ["another list"], "tuple list"),
-    ([""], ["another string"], "one empty list"),
-    (12, 21, "digits"),
-    (12, "21", "digit string"),
-    ("12", 221, "string digit"),
+    (
+        "string",
+        "another string",
+        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-another string\n+string",
+        "different strings",
+    ),
+    (
+        "a",
+        "b",
+        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-b\n+a",
+        "single char",
+    ),
+    (
+        "123",
+        "321",
+        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-321\n+123",
+        "digits reversed",
+    ),
+    (
+        "hello",
+        "HELLO",
+        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-HELLO\n+hello",
+        "case difference",
+    ),
+    (
+        "",
+        "non-empty",
+        "\n--- expected\n+++ actual\n@@ -1 +0,0 @@\n-non-empty",
+        "empty vs non-empty",
+    ),
+    (
+        "non-empty",
+        "",
+        "\n--- expected\n+++ actual\n@@ -0,0 +1 @@\n+non-empty",
+        "non-empty vs empty",
+    ),
+    ("same", "same", "\n", "identical"),
+    (
+        "True",
+        "False",
+        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-False\n+True",
+        "bool strings",
+    ),
+    (
+        "None",
+        "null",
+        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-null\n+None",
+        "none vs null",
+    ),
+    (
+        "list",
+        "tuple",
+        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-tuple\n+list",
+        "word diff",
+    ),
 ]
 
 compare_output_data_pas = [
