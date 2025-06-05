@@ -53,7 +53,7 @@ def test_memory_limit_with_args_fails() -> None:
     memory_limit = 1
 
     @utils.memory_limit(memory_limit)
-    def high_ram(n: int) -> List[int]:
+    def high_ram(n: int) -> None:
         long_string = ""
         multiplier = n**2
         for _ in range(20):
@@ -92,17 +92,17 @@ def test_memory_limit_no_args_fails() -> None:
 
 
 @pytest.mark.parametrize(
-    "inpt, outpt, _",
+    "inpt, outpt, expected_output, _",
     test_data.generate_error_msg_data,
     ids=[i[-1] for i in test_data.generate_error_msg_data],
 )
 def test_generate_error_msg(
-    inpt: Any,
-    outpt: Any,
+    inpt: str,
+    outpt: str,
+    expected_output: str,
     _: str,
 ) -> None:
     printed_output = utils.generate_error_msg(inpt, outpt)
-    expected_output = f"\nExpected output:\n{outpt}\n\nPrinted output:\n{inpt}"
     assert printed_output == expected_output
 
 
