@@ -2,7 +2,7 @@ import os
 import tracemalloc
 from io import StringIO
 from types import ModuleType
-from typing import Callable, List, Optional, Set, Tuple, TypeVar, Union
+from typing import Any, Callable, Optional, Tuple, TypeVar
 
 from _pytest.fixtures import SubRequest
 from func_timeout import FunctionTimedOut, func_timeout
@@ -67,11 +67,12 @@ def time_limit(
     """
 
     def decorator(func: Callable[..., T]) -> Callable[..., T]:
-        def wrapper(*args, **kwargs) -> T:
+        def wrapper(*args, **kwargs) -> Any:
             try:
-                return func_timeout(
+                result = func_timeout(
                     limit_seconds, func, args=args, kwargs=kwargs
                 )
+                return result
             except FunctionTimedOut:
                 TL = f"Execution exceeded the limit of {limit_seconds} second."
                 raise TimeLimitExceeded(TL)
@@ -81,81 +82,24 @@ def time_limit(
     return decorator
 
 
-def generate_error_msg(
-    printed_output: str,
-    expected_output: Union[Set[str], Tuple[str], List[str]],
-) -> str:
-    """
-    Формирует сообщение с напечатанными данными и ожидаемыми.
-
-    Аргументы:
-        printed_output (str): Ответ выданные модулем.
-        expected_output (Union[Set[str], Tuple[str], List[str]],): Ожидаемые
-            данные вывода, могут быть: стрококй, списком, set или кортежем.
-
-    Возвращает:
-        str: Сообщение с напечатанными данными и ожидаемыми.
-    """
-    return (
-        f"\nExpected output:\n{expected_output}\n\n"
-        f"Printed output:\n{printed_output}"
-    )
-
-
-def compare_output(
-    printed_output: str,
-    expected_output: Union[Set[str], Tuple[str], List[str], str],
-) -> None:
-    """
-    Сравнивает напечатанный вывод с ожидаемым выводом.
-
-    Аргументы:
-        printed_output (str): Ответ выданные модулем.
-        expected_output (Union[Set[str], Tuple[str], List[str]], str):
-            Ожидаемые данные вывода, могут быть: строкой, списком, set
-            или кортежем.
-    Исключения:
-        AssertionError: Если фактический вывод не совпадает с ожидаемым.
-    """
-    if isinstance(expected_output, set):
-        error_msg = generate_error_msg(printed_output, expected_output)
-        assert printed_output in expected_output, error_msg
-        return
-
-    # Передаются тесты в которых нужно оценить результат печати set
-    # Так как множества неупорядочные приходится преобразовывать в set
-    # Для сравнения двух множеств
-    if isinstance(expected_output, tuple):
-        # Когда set распечатан в одну строку
-        printed_output = set(printed_output)
-        expected_output = set(expected_output[0])
-
-    if isinstance(expected_output, list):
-        # Когда set распечатан в несколько строк
-        printed_output = set(printed_output.split("\n"))
-        expected_output = set(expected_output[0].split("\n"))
-
-    error_msg = generate_error_msg(printed_output, expected_output)
-    assert printed_output == expected_output, error_msg
-
-
-def assert_equal(
+def get_mocked_print(
     wrapped_module: ModuleType,
     monkeypatch: MonkeyPatch,
     mock_input_text: Optional[str],
-    expected_output: Union[str, Set[str], Tuple[str], List[str]],
-) -> None:
+) -> str:
     """
-    Запускает тест с заданным вводом и проверяет вывод.
+    Executes the main function of the provided module with mocked input
+    and output streams.
 
-    Аргументы:
-        wrapped_module (ModuleType): Модуль или функция,
-            которые будут протестированы.
-        monkeypatch (Any): Фикстура pytest, используемая для замены
-            ввода и вывода
-        mock_input_text (str): Входной текст для имитации ввода пользователя.
-        expected_output (Union[str, Set[str], Tuple[str], List[str]]):
-            Ожидаемые данные вывода
+    Args:
+        wrapped_module (ModuleType): The module whose main function
+            will be executed.
+        monkeypatch (MonkeyPatch): Pytest fixture for patching sys.stdin
+            and sys.stdout.
+        mock_input_text (Optional[str]): Text to simulate user input via stdin.
+
+    Returns:
+        str: The captured output produced by the module's main function.
     """
     mock_input = StringIO(mock_input_text)
     mock_print = StringIO()
@@ -165,20 +109,20 @@ def assert_equal(
     wrapped_module.main()
 
     printed_output = mock_print.getvalue()
-    compare_output(printed_output, expected_output)
+    return printed_output
 
 
 def get_tested_file_details(request: FixtureRequest) -> Tuple[str, str]:
     """
-    Функция для получения пути к тестируемому файлу и его имени.
+    Function to get the path to the file being tested and its name.
 
-    Аргументы:
-        request (FixtureRequest): Объект запроса pytest, содержащий информацию
-            о текущем тесте.
+    Args:
+        request (FixtureRequest): The pytest request object containing
+            information about the current test.
 
-    Возвращает:
-        Tuple[str, str]: Кортеж, содержащий путь к тестируемому файлу и его имя
-                без расширения.
+    Returns:
+        Tuple[str, str]: A tuple containing the path to the tested file
+            and its name without the extension.
     """
     # Получаем имя файла текущего модуля теста
     file_name = os.path.basename(request.module.__file__)
