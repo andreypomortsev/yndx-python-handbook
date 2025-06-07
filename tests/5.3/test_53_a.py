@@ -4,7 +4,7 @@ from typing import Callable, Tuple
 import pytest
 
 from tests.data.test_data_53 import a_test_data
-from tests.utils import assert_equal
+from tests.utils import get_mocked_print
 
 
 @pytest.mark.parametrize(
@@ -22,4 +22,5 @@ def test_patched_point_class(
     wrapped_module, _ = setup_environment
     setattr(wrapped_module, "func", func)
 
-    assert_equal(wrapped_module, monkeypatch, None, expected_error)
+    printed_output = get_mocked_print(wrapped_module, monkeypatch, None)
+    assert printed_output == expected_error

@@ -16,7 +16,7 @@ from tests.data.test_data_35 import k_test_data
 )
 def test_input_output(
     monkeypatch: pytest.MonkeyPatch,
-    file_names: Union[Tuple[str], str],
+    file_names: Tuple[str, str],
     mock_input_text: str,
     expected_output: Dict[str, Union[int, float]],
     _: str,

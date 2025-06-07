@@ -5,7 +5,7 @@ import pytest
 
 from tests.constants import TEST_FILE_NAMES
 from tests.data.test_data_35 import q_test_data
-from tests.utils import assert_equal
+from tests.utils import get_mocked_print
 
 
 @pytest.mark.parametrize(
@@ -24,9 +24,9 @@ def test_input_output(
 
     wrapped_module, _ = make_test_files(file_name, file_data)
 
-    assert_equal(
+    printed_output = get_mocked_print(
         wrapped_module,
         monkeypatch,
         None,
-        expected_output,
     )
+    assert printed_output in expected_output
