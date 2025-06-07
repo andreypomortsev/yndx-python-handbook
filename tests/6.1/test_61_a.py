@@ -4,7 +4,7 @@ from typing import Tuple
 import pytest
 
 from tests.data.test_data_61 import a_test_data
-from tests.utils import assert_equal
+from tests.utils import get_mocked_print
 
 
 @pytest.mark.parametrize(
@@ -20,9 +20,9 @@ def test_calculate_expression(
     _: str,
 ) -> None:
     wrapped_module, _ = setup_environment
-    assert_equal(
+    printed_output = get_mocked_print(
         wrapped_module,
         monkeypatch,
         str(real_number),
-        str(expected_output) + "\n",
     )
+    assert printed_output == str(expected_output) + "\n"

@@ -4,7 +4,7 @@ from typing import Callable, Optional, Tuple
 import pytest
 
 from tests.data.test_data_35 import p_test_data
-from tests.utils import assert_equal
+from tests.utils import get_mocked_print
 
 
 @pytest.mark.parametrize(
@@ -25,9 +25,9 @@ def test_input_output(
 
     wrapped_module, _ = make_test_files(file_names, files_data)
 
-    assert_equal(
+    printed_output = get_mocked_print(
         wrapped_module,
         monkeypatch,
         mock_input_texts,
-        expected_output,
     )
+    assert printed_output == expected_output

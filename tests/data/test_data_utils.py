@@ -15,52 +15,27 @@ time_limit_data_fail = [
     (2.0, "fails with 2 s"),
 ]
 
-generate_error_msg_data = [
-    ("string", "another string", "strings"),
-    (["string"], ["another string"], "lists"),
-    ([], [], "empty lists"),
-    (tuple(), tuple("tuple"), "empty tuples"),
-    (["list"], tuple("tuple"), "list tuple"),
-    (tuple("another tuple"), ["another list"], "tuple list"),
-    ([""], ["another string"], "one empty list"),
-    (12, 21, "digits"),
-    (12, "21", "digit string"),
-    ("12", 221, "string digit"),
-]
-
-compare_output_data_pas = [
-    ("right answer", "right answer", "strings test"),
-    ("вдисолжеп\n", ("исолвдепж\n",), "tuple test"),
+get_mocked_print = [
     (
-        "сосна\n"
-        "медведь\n"
-        "белочка\n"
-        "зайка\n"
-        "березка\n"
-        "волк\n"
-        "елочка\n",
-        [
-            "сосна\n"
-            "березка\n"
-            "волк\n"
-            "елочка\n"
-            "медведь\n"
-            "белочка\n"
-            "зайка\n",
-        ],
-        "list test",
+        "World\n",
+        "Hello, World!\n",
+        lambda: print(f"Hello, {input()}!"),
+        "Hello, World!",
     ),
-    ("item1", {"item1", "item\n"}, "set test"),
+    ("\n", "Hello, !\n", lambda: print(f"Hello, {input()}!"), "empty input"),
+    ("2\n", "4\n", lambda: print(int(input()) * 2), "double input"),
     (
-        "item1\nitem2\n",
-        {"item1\nitem2", "item1\nitem2\n", "item1\nitem2\n\n"},
-        "set test multiline",
+        "Some text\n",
+        "Some\ntext\n",
+        lambda: print(*input().split(), sep="\n"),
+        "split into lines",
     ),
-]
-
-assert_equal_data = [
-    ("World\n", "Hello, World!\n", "Hello, World!"),
-    ("\n", "Hello, !\n", "empty input"),
+    (
+        "Set Set test test test\n",
+        "Set\ntest\n",
+        lambda: print(*sorted(set(input().split())), sep="\n"),
+        "unique words",
+    ),
 ]
 
 get_tested_file_details_data = [

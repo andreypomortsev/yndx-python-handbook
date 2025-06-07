@@ -1,4 +1,4 @@
-from typing import Any, List, Optional, Set, Tuple, Union
+from typing import Callable, List, Optional, Tuple
 from unittest import mock
 
 import pytest
@@ -53,7 +53,7 @@ def test_memory_limit_with_args_fails() -> None:
     memory_limit = 1
 
     @utils.memory_limit(memory_limit)
-    def high_ram(n: int) -> List[int]:
+    def high_ram(n: int) -> None:
         long_string = ""
         multiplier = n**2
         for _ in range(20):
@@ -92,50 +92,25 @@ def test_memory_limit_no_args_fails() -> None:
 
 
 @pytest.mark.parametrize(
-    "inpt, outpt, _",
-    test_data.generate_error_msg_data,
-    ids=[i[-1] for i in test_data.generate_error_msg_data],
+    "user_input, expected_output, side_effect, _",
+    test_data.get_mocked_print,
+    ids=[i[-1] for i in test_data.get_mocked_print],
 )
-def test_generate_error_msg(
-    inpt: Any,
-    outpt: Any,
-    _: str,
-) -> None:
-    printed_output = utils.generate_error_msg(inpt, outpt)
-    expected_output = f"\nExpected output:\n{outpt}\n\nPrinted output:\n{inpt}"
-    assert printed_output == expected_output
-
-
-@pytest.mark.parametrize(
-    "printed, expected, _",
-    test_data.compare_output_data_pas,
-    ids=[i[-1] for i in test_data.compare_output_data_pas],
-)
-def test_compare_output_passes(
-    printed: str,
-    expected: Union[str, Set[str], Tuple[str], List[str], str],
-    _: str,
-) -> None:
-    result = utils.compare_output(printed, expected)
-    assert result is None
-
-
-@pytest.mark.parametrize(
-    "user_input, expected_output, _",
-    test_data.assert_equal_data,
-    ids=[i[-1] for i in test_data.assert_equal_data],
-)
-def test_assert_equal(
+def test_get_mocked_print(
     monkeypatch: pytest.MonkeyPatch,
     user_input: str,
-    expected_output: Union[str, Set[str], Tuple[str], List[str]],
+    expected_output: str,
+    side_effect: Callable,
     _: str,
 ) -> None:
     mock_module = mock.MagicMock()
 
-    mock_module.main.side_effect = lambda: print(f"Hello, {input()}!")
+    mock_module.main.side_effect = side_effect
 
-    utils.assert_equal(mock_module, monkeypatch, user_input, expected_output)
+    printed_output = utils.get_mocked_print(
+        mock_module, monkeypatch, user_input
+    )
+    assert printed_output == expected_output
 
 
 @pytest.mark.parametrize(

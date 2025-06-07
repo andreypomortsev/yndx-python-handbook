@@ -4,7 +4,7 @@ from typing import Tuple
 import pytest
 
 from tests.data.test_data_61 import c_test_data
-from tests.utils import assert_equal
+from tests.utils import get_mocked_print
 
 
 @pytest.mark.parametrize(
@@ -20,9 +20,9 @@ def test_get_chanses(
     _: str,
 ) -> None:
     wrapped_module, _ = setup_environment
-    assert_equal(
+    printed_output = get_mocked_print(
         wrapped_module,
         monkeypatch,
         guests_seats,
-        expected_output,
     )
+    assert printed_output == expected_output

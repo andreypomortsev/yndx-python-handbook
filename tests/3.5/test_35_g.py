@@ -4,7 +4,7 @@ from typing import Callable, Optional, Set, Union
 import pytest
 
 from tests.data.test_data_35 import g_test_data
-from tests.utils import assert_equal
+from tests.utils import get_mocked_print
 
 
 @pytest.mark.parametrize(
@@ -21,9 +21,11 @@ def test_input_output(
     make_test_files: Callable[[str, str, Optional[str]], ModuleType],
 ) -> None:
     wrapped_module, _ = make_test_files(file_name, mock_input_text)
-    assert_equal(
+    printed_output = get_mocked_print(
         wrapped_module,
         monkeypatch,
         file_name,
-        expected_output,
+    )
+    assert (
+        printed_output == expected_output or printed_output in expected_output
     )

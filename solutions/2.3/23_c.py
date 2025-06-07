@@ -1,3 +1,8 @@
-start, end = int(input()), int(input())
+start = int(input())
+end = int(input())
 
-print(*range(start, end + 1))
+for i in range(start, end + 1):
+    if i == end:
+        print(i)
+    else:
+        print(i, end=" ")
