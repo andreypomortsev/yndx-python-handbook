@@ -15,97 +15,27 @@ time_limit_data_fail = [
     (2.0, "fails with 2 s"),
 ]
 
-generate_error_msg_data = [
+get_mocked_print = [
     (
-        "string",
-        "another string",
-        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-another string\n+string",
-        "different strings",
+        "World\n",
+        "Hello, World!\n",
+        lambda: print(f"Hello, {input()}!"),
+        "Hello, World!",
+    ),
+    ("\n", "Hello, !\n", lambda: print(f"Hello, {input()}!"), "empty input"),
+    ("2\n", "4\n", lambda: print(int(input()) * 2), "double input"),
+    (
+        "Some text\n",
+        "Some\ntext\n",
+        lambda: print(*input().split(), sep="\n"),
+        "split into lines",
     ),
     (
-        "a",
-        "b",
-        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-b\n+a",
-        "single char",
+        "Set Set test test test\n",
+        "Set\ntest\n",
+        lambda: print(*sorted(set(input().split())), sep="\n"),
+        "unique words",
     ),
-    (
-        "123",
-        "321",
-        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-321\n+123",
-        "digits reversed",
-    ),
-    (
-        "hello",
-        "HELLO",
-        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-HELLO\n+hello",
-        "case difference",
-    ),
-    (
-        "",
-        "non-empty",
-        "\n--- expected\n+++ actual\n@@ -1 +0,0 @@\n-non-empty",
-        "empty vs non-empty",
-    ),
-    (
-        "non-empty",
-        "",
-        "\n--- expected\n+++ actual\n@@ -0,0 +1 @@\n+non-empty",
-        "non-empty vs empty",
-    ),
-    ("same", "same", "\n", "identical"),
-    (
-        "True",
-        "False",
-        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-False\n+True",
-        "bool strings",
-    ),
-    (
-        "None",
-        "null",
-        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-null\n+None",
-        "none vs null",
-    ),
-    (
-        "list",
-        "tuple",
-        "\n--- expected\n+++ actual\n@@ -1 +1 @@\n-tuple\n+list",
-        "word diff",
-    ),
-]
-
-compare_output_data_pas = [
-    ("right answer", "right answer", "strings test"),
-    ("вдисолжеп\n", ("исолвдепж\n",), "tuple test"),
-    (
-        "сосна\n"
-        "медведь\n"
-        "белочка\n"
-        "зайка\n"
-        "березка\n"
-        "волк\n"
-        "елочка\n",
-        [
-            "сосна\n"
-            "березка\n"
-            "волк\n"
-            "елочка\n"
-            "медведь\n"
-            "белочка\n"
-            "зайка\n",
-        ],
-        "list test",
-    ),
-    ("item1", {"item1", "item\n"}, "set test"),
-    (
-        "item1\nitem2\n",
-        {"item1\nitem2", "item1\nitem2\n", "item1\nitem2\n\n"},
-        "set test multiline",
-    ),
-]
-
-assert_equal_data = [
-    ("World\n", "Hello, World!\n", "Hello, World!"),
-    ("\n", "Hello, !\n", "empty input"),
 ]
 
 get_tested_file_details_data = [
