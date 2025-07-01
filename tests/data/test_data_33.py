@@ -24,9 +24,33 @@ b_test_data = [
     ({"a": -1, "b": -5}, [1, 4, 9, 16, 25], "descending negative range"),
     ({"a": 0, "b": 3}, [0, 1, 4, 9], "ascending from zero to positive"),
     ({"a": 3, "b": 0}, [9, 4, 1, 0], "descending from positive to zero"),
-    ({"a": 0, "b": -3}, [0, 1, 4, 9], "ascending from zero to negative (invalid case forced by range logic)"),
+    (
+        {"a": 0, "b": -3},
+        [0, 1, 4, 9],
+        "ascending from zero to negative (invalid case forced by range logic)",
+    ),
     ({"a": -3, "b": 0}, [9, 4, 1, 0], "descending from negative to zero"),
-    ]
+]
+
+c_test_data = [
+    ({"a": 1, "b": 5, "d": 2}, [2, 4], "first open test"),
+    (
+        {"a": -9, "b": 15, "d": 3},
+        [-9, -6, -3, 0, 3, 6, 9, 12, 15],
+        "second open test",
+    ),
+    ({"a": 5, "b": 7, "d": 4}, [], "no multiples in range"),
+    ({"a": 6, "b": 6, "d": 3}, [6], "single number divisible"),
+    ({"a": 5, "b": 5, "d": 3}, [], "single number not divisible"),
+    (
+        {"a": 1, "b": 10**7, "d": 10**7},
+        [10_000_000],
+        "large input stress test",
+    ),
+    ({"a": 0, "b": 3, "d": 1}, [0, 1, 2, 3], "from zero with step 1"),
+    ({"a": 0, "b": 6, "d": 2}, [0, 2, 4, 6], "from zero with even step"),
+    ({"a": 0, "b": -5, "d": 2}, [], "zero to negative returns empty"),
+]
 
 q_test_data = [
     ({"n": 3}, [[1, 2, 3], [2, 4, 6], [3, 6, 9]], "first open test"),
