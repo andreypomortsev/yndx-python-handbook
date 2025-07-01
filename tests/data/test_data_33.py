@@ -15,6 +15,19 @@ a_test_data = [
     ({"a": -2, "b": 0}, [4, 1, 0], "minus two to zero"),
 ]
 
+b_test_data = [
+    ({"a": 1, "b": 5}, [1, 4, 9, 16, 25], "first open test"),
+    ({"a": 5, "b": -4}, [25, 16, 9, 4, 1, 0, 1, 4, 9, 16], "second open test"),
+    ({"a": -3, "b": 2}, [9, 4, 1, 0, 1, 4], "ascending across zero"),
+    ({"a": 2, "b": -3}, [4, 1, 0, 1, 4, 9], "descending across zero"),
+    ({"a": -5, "b": -1}, [25, 16, 9, 4, 1], "ascending negative range"),
+    ({"a": -1, "b": -5}, [1, 4, 9, 16, 25], "descending negative range"),
+    ({"a": 0, "b": 3}, [0, 1, 4, 9], "ascending from zero to positive"),
+    ({"a": 3, "b": 0}, [9, 4, 1, 0], "descending from positive to zero"),
+    ({"a": 0, "b": -3}, [0, 1, 4, 9], "ascending from zero to negative (invalid case forced by range logic)"),
+    ({"a": -3, "b": 0}, [9, 4, 1, 0], "descending from negative to zero"),
+    ]
+
 q_test_data = [
     ({"n": 3}, [[1, 2, 3], [2, 4, 6], [3, 6, 9]], "first open test"),
     (
