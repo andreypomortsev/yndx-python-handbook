@@ -9,5 +9,6 @@ exclude =
 ignore = 
     E231,
     W503,
-    F824
+    F824,
+    F821
 
