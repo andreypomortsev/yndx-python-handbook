@@ -526,15 +526,25 @@ poetry --version
 | Задачи               | Решения              | Тесты                |
 |----------------------|----------------------|----------------------|
 | А. [Список квадратов](./problems/russian/3.3/problem_33_a_ru.md) | [✅](./solutions/3.3/33_a.py) | [✅](./tests/3.3/test_33_a.py) |
-| B. [Таблица умножения 2.0](./problems/russian/3.3/problem_33_b_ru.md) | [✅](./solutions/3.3/33_b.py) | [✅](./tests/3.3/test_33_b.py) |
-| C. [Длины всех слов](./problems/russian/3.3/problem_33_c_ru.md) | [✅](./solutions/3.3/33_c.py) | [✅](./tests/3.3/test_33_c.py) |
+| B. [Список квадратов 2](./problems/russian/3.3/problem_33_b_ru.md) | [✅](./solutions/3.3/33_b.py) | [✅](./tests/3.3/test_33_b.py) |
+| C. [Основы фильтрации](./problems/russian/3.3/problem_33_c_ru.md) | [✅](./solutions/3.3/33_c.py) | [✅](./tests/3.3/test_33_c.py) |
 | D. [Множество нечетных чисел](./problems/russian/3.3/problem_33_d_ru.md) | [✅](./solutions/3.3/33_d.py) | [✅](./tests/3.3/test_33_d.py) |
 | E. [Множество всех полных квадратов](./problems/russian/3.3/problem_33_e_ru.md) | [✅](./solutions/3.3/33_e.py) | [✅](./tests/3.3/test_33_e.py) |
-| F. [Буквенная статистика](./problems/russian/3.3/problem_33_f_ru.md) | [✅](./solutions/3.3/33_f.py) | [✅](./tests/3.3/test_33_f.py) |
-| G. [Делители](./problems/russian/3.3/problem_33_g_ru.md) | [✅](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
+| F. [Длины всех слов](./problems/russian/3.3/problem_33_f_ru.md) | [✅](./solutions/3.3/33_f.py) | [✅](./tests/3.3/test_33_f.py) |
+| G. [Цифровая выжимка](./problems/russian/3.3/problem_33_g_ru.md) | [✅](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
 | H. [Аббревиатура](./problems/russian/3.3/problem_33_h_ru.md) | [✅](./solutions/3.3/33_h.py) | [✅](./tests/3.3/test_33_h.py) |
 | I. [Преобразование в строку](./problems/russian/3.3/problem_33_i_ru.md) | [✅](./solutions/3.3/33_i.py) | [✅](./tests/3.3/test_33_i.py) |
-| J. [RLE наоборот](./problems/russian/3.3/problem_33_j_ru.md) | [✅](./solutions/3.3/33_j.py) | [✅](./tests/3.3/test_33_j.py) |
+| J. [Огласите список](./problems/russian/3.3/problem_33_j_ru.md) | [✅](./solutions/3.3/33_j.py) | [✅](./tests/3.3/test_33_j.py) |
+| K. [Выявление уникальности](./problems/russian/3.3/problem_33_k_ru.md) | [✅](./solutions/3.3/33_k.py) | [✅](./tests/3.3/test_33_k.py) |
+| L. [Максимальное произведение](./problems/russian/3.3/problem_33_l_ru.md) | [✅](./solutions/3.3/33_l.py) | [✅](./tests/3.3/test_33_l.py) |
+| M. [Словарный минимум](./problems/russian/3.3/problem_33_m_ru.md) | [✅](./solutions/3.3/33_m.py) | [✅](./tests/3.3/test_33_m.py) |
+| N. [Поиск ошибок](./problems/russian/3.3/problem_33_n_ru.md) | [✅](./solutions/3.3/33_n.py) | [✅](./tests/3.3/test_33_n.py) |
+| O. [Буквенная статистика](./problems/russian/3.3/problem_33_o_ru.md) | [✅](./solutions/3.3/33_o.py) | [✅](./tests/3.3/test_33_o.py) |
+| P. [RLE наоборот](./problems/russian/3.3/problem_33_p_ru.md) | [✅](./solutions/3.3/33_p.py) | [✅](./tests/3.3/test_33_p.py) |
+| Q. [Таблица умножения 2.0](./problems/russian/3.3/problem_33_q_ru.md) | [✅](./solutions/3.3/33_q.py) | [✅](./tests/3.3/test_33_q.py) |
+| R. [Делители](./problems/russian/3.3/problem_33_r_ru.md) | [✅](./solutions/3.3/33_r.py) | [✅](./tests/3.3/test_33_r.py) |
+| S. [Простое множество](./problems/russian/3.3/problem_33_s_ru.md) | [✅](./solutions/3.3/33_s.py) | [✅](./tests/3.3/test_33_s.py) |
+| T. [Обобщение](./problems/russian/3.3/problem_33_t_ru.md) | [✅](./solutions/3.3/33_t.py) | [✅](./tests/3.3/test_33_t.py) |
 
 </details>
 

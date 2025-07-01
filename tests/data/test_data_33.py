@@ -15,7 +15,7 @@ a_test_data = [
     ({"a": -2, "b": 0}, [4, 1, 0], "minus two to zero"),
 ]
 
-b_test_data = [
+q_test_data = [
     ({"n": 3}, [[1, 2, 3], [2, 4, 6], [3, 6, 9]], "first open test"),
     (
         {"n": 4},
@@ -26,7 +26,7 @@ b_test_data = [
     ({"n": 0}, [], "zero"),
 ]
 
-c_test_data = [
+f_test_data = [
     ({"sentence": "Мама мыла раму"}, [4, 4, 4], "first open test"),
     (
         {"sentence": "Ехали медведи на велосипеде"},
@@ -65,7 +65,7 @@ e_test_data = [
     ),
 ]
 
-f_test_data = [
+o_test_data = [
     (
         {"text": "Мама мыла раму!"},
         {"а": 4, "л": 1, "м": 4, "р": 1, "у": 1, "ы": 1},
@@ -102,7 +102,7 @@ f_test_data = [
     ),
 ]
 
-g_test_data = [
+r_test_data = [
     (
         {"numbers": {1, 2, 3, 4, 5}},
         {1: [1], 2: [1, 2], 3: [1, 3], 4: [1, 2, 4], 5: [1, 5]},
@@ -168,7 +168,7 @@ i_test_data = [
     ),
 ]
 
-j_test_data = [
+p_test_data = [
     ({"rle": [("a", 2), ("b", 3), ("c", 1)]}, "aabbbc", "first open test"),
     (
         {"rle": [("1", 1), ("0", 2), ("5", 1), ("0", 2)]},
