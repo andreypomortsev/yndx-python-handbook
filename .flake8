@@ -8,5 +8,6 @@ exclude =
     script.py,
 ignore = 
     E231,
-    W503
+    W503,
+    F824
 
