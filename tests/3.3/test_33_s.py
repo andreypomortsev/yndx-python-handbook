@@ -1,20 +1,20 @@
 from types import ModuleType
-from typing import Dict, List, Tuple, Union
+from typing import Dict, Set, Tuple
 
 import pytest
 
-from tests.data.test_data_33 import c_test_data
+from tests.data.test_data_33 import s_test_data
 
 
 @pytest.mark.parametrize(
     "input_data, expected_output, _",  # _ - название теста
-    c_test_data,
-    ids=[i[2] for i in c_test_data],  # Считываем названия тестов
+    s_test_data,
+    ids=[i[2] for i in s_test_data],  # Считываем названия тестов
 )
 def test_input_output(
     setup_environment: Tuple[ModuleType, str],
-    input_data: Dict[str, Union[str, int, List[int]]],
-    expected_output: List[int],
+    input_data: Dict[str, Set[int]],
+    expected_output: Set[int],
     _: str,
 ) -> None:
 
