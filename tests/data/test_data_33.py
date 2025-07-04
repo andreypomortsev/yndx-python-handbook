@@ -133,9 +133,49 @@ g_test_data = [
         "non-ASCII digits (Arabic numerals)",
     ),
     (
-        {"text": "１ that's the mood １２３４５"},  # full-width digits (used in CJK)
+        {
+            "text": "１ that's the mood １２３４５"
+        },  # full-width digits (used in CJK)
         "１１２３４５",
         "full-width unicode digits (CJK-style)",
+    ),
+]
+
+j_test_data = [
+    (
+        {"words": "Ехали медведи на велосипеде"},
+        ["Ехали", "медведи", "велосипеде"],
+        "first open test – Cyrillic with vowels > 2",
+    ),
+    (
+        {"words": "My homework is too difficult!"},
+        ["homework", "difficult!"],
+        "second open test – English sentence with punctuation",
+    ),
+    (
+        {"words": "sky fly by"},
+        [],
+        "short English words with 1 vowel or less each",
+    ),
+    (
+        {"words": "В лесу родилась ёлочка"},
+        ["родилась", "ёлочка"],
+        "Cyrillic sentence with ё and mixed vowels",
+    ),
+    (
+        {"words": "AEIOU and sometimes Y"},
+        ["AEIOU", "sometimes"],
+        "upper and lower case vowels",
+    ),
+    (
+        {"words": "aaa aaaa a"},
+        ["aaa", "aaaa"],
+        "words made entirely of vowels",
+    ),
+    (
+        {"words": "bcd fg hjklmnpqrstvwxyz"},
+        [],
+        "no vowels at all",
     ),
 ]
 
