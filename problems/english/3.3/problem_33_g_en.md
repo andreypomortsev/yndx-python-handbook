@@ -1,33 +1,54 @@
-## [Divisors](../../../solutions/3.3/33_g.py)
+## [Digital Squeeze](../../../solutions/3.3/33_g.py)
 
-You will be given a set `numbers`.
+Let's continue practicing list comprehensions.
 
-Think of an expression to generate a dictionary containing information about the divisors of each of the given numbers.
+This time, you need to find all the digits in a string.
+You will be given a variable `text` — a string that may contain any characters.
+You need to extract all the digits and collect them into a single string, preserving their order of appearance.
 
 ### Note
 
-There should be nothing in the solution except the expression.
+There should be nothing in your solution except a list comprehension.
+
+<details>
+<summary><h4>Hint</h4></summary>
+
+Use the following template:
+
+```python
+''.join(... for ... in text if ...)
+```
+
+</details>
 
 ### Example 1
 
 __Input__
 ```plaintext
-numbers = {1, 2, 3, 4, 5}
+text = '33 cows,\n' + \
+    '33 cows,\n' + \
+    '33 cows -\n' + \
+    'A fresh line.\n' + \
+    '33 cows,\n' + \
+    'A new poem was born,\n' + \
+    'Like a glass of fresh milk.\n' + \
+    'A new poem was born,\n' + \
+    'Like a glass of fresh milk.\n'
 ```
 
 __Output__
 ```plaintext
-{1: [1], 2: [1, 2], 3: [1, 3], 4: [1, 2, 4], 5: [1, 5]}
+'33333333'
 ```
 
 ### Example 2
 
 __Input__
 ```plaintext
-numbers = {15, 49, 36}
+text = '2 + 2 = 4'
 ```
 
 __Output__
 ```plaintext
-{15: [1, 3, 5, 15], 36: [1, 2, 3, 4, 6, 9, 12, 18, 36], 49: [1, 7, 49]}
+'224'
 ```

@@ -7,6 +7,9 @@ exclude =
     tests/data/*,
     script.py,
 ignore = 
+    E203,
     E231,
-    W503
+    W503,
+    F824,
+    F821
 

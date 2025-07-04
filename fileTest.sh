@@ -9,4 +9,4 @@ FILE=$(echo "$1" | cut -d'-' -f2 | tr '[:upper:]' '[:lower:]')
 DIR_NO_DOT=$(echo "$DIR" | sed 's/\.//g')
 
 # Запускаем pytest на выбранном файле
-poetry run pytest "tests/$DIR/test_${DIR_NO_DOT}_$FILE.py"
+poetry run pytest "tests/$DIR/test_${DIR_NO_DOT}_$FILE.py" -vv

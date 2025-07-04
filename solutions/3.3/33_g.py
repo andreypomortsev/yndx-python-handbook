@@ -1,4 +1,1 @@
-{
-    num: [i for i in range(1, num + 1) if not num % i]
-    for num in numbers  # noqa F821
-}
+"".join([char for char in text if char.isdigit()])

@@ -5,15 +5,6 @@ import pytest
 
 from tests.data.test_data_33 import d_test_data
 
-OUTPUT_TYPES = Union[
-    str,
-    List[Tuple[str, int]],
-    List[int],
-    List[List[int]],
-    Set[int],
-    Dict[str, Union[int, List[int]]],
-]
-
 
 @pytest.mark.parametrize(
     "input_data, expected_output, _",  # _ - название теста
@@ -23,7 +14,7 @@ OUTPUT_TYPES = Union[
 def test_input_output(
     setup_environment: Tuple[ModuleType, str],
     input_data: Dict[str, Union[str, int, List[int]]],
-    expected_output: OUTPUT_TYPES,
+    expected_output: Set[int],
     _: str,
 ) -> None:
 

@@ -393,15 +393,25 @@ Solutions are organized by handbook sections. Each solution:
 | Problems             | Solutions            | Tests                |
 |----------------------|----------------------|----------------------|
 | А. [List of squares](./problems/english/3.3/problem_33_a_en.md) | [✅](./solutions/3.3/33_a.py) | [✅](./tests/3.3/test_33_a.py) |
-| B. [Multiplication table 2.0](./problems/english/3.3/problem_33_b_en.md) | [✅](./solutions/3.3/33_b.py) | [✅](./tests/3.3/test_33_b.py) |
-| C. [Lengths of all words](./problems/english/3.3/problem_33_c_en.md) | [✅](./solutions/3.3/33_c.py) | [✅](./tests/3.3/test_33_c.py) |
+| B. [List of squares 2](./problems/english/3.3/problem_33_b_en.md) | [✅](./solutions/3.3/33_b.py) | [✅](./tests/3.3/test_33_b.py) |
+| C. [Filtration 101](./problems/english/3.3/problem_33_c_en.md) | [✅](./solutions/3.3/33_c.py) | [✅](./tests/3.3/test_33_c.py) |
 | D. [Set of odd numbers](./problems/english/3.3/problem_33_d_en.md) | [✅](./solutions/3.3/33_d.py) | [✅](./tests/3.3/test_33_d.py) |
 | E. [Set of all perfect squares](./problems/english/3.3/problem_33_e_en.md) | [✅](./solutions/3.3/33_e.py) | [✅](./tests/3.3/test_33_e.py) |
-| F. [Letter Frequency Statistics](./problems/english/3.3/problem_33_f_en.md) | [✅](./solutions/3.3/33_f.py) | [✅](./tests/3.3/test_33_f.py) |
-| G. [Divisors](./problems/english/3.3/problem_33_g_en.md) | [✅](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
+| F. [Lengths of all words](./problems/english/3.3/problem_33_f_en.md) | [✅](./solutions/3.3/33_f.py) | [✅](./tests/3.3/test_33_f.py) |
+| G. [Digital squeeze](./problems/english/3.3/problem_33_g_en.md) | [✅](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
 | H. [Abbreviation](./problems/english/3.3/problem_33_h_en.md) | [✅](./solutions/3.3/33_h.py) | [✅](./tests/3.3/test_33_h.py) |
 | I. [Conversion to string](./problems/english/3.3/problem_33_i_en.md) | [✅](./solutions/3.3/33_i.py) | [✅](./tests/3.3/test_33_i.py) |
-| J. [RLE reversed](./problems/english/3.3/problem_33_j_en.md) | [✅](./solutions/3.3/33_j.py) | [✅](./tests/3.3/test_33_j.py) |
+| J. [Announce the list](./problems/english/3.3/problem_33_j_en.md) | [✅](./solutions/3.3/33_j.py) | [✅](./tests/3.3/test_33_j.py) |
+| K. [Identifying uniqueness](./problems/english/3.3/problem_33_k_en.md) | [✅](./solutions/3.3/33_k.py) | [✅](./tests/3.3/test_33_k.py) |
+| L. [Maximum product](./problems/english/3.3/problem_33_l_en.md) | [✅](./solutions/3.3/33_l.py) | [✅](./tests/3.3/test_33_l.py) |
+| M. [Dictionary minimum](./problems/english/3.3/problem_33_m_en.md) | [✅](./solutions/3.3/33_m.py) | [✅](./tests/3.3/test_33_m.py) |
+| N. [Error detection](./problems/english/3.3/problem_33_n_en.md) | [✅](./solutions/3.3/33_n.py) | [✅](./tests/3.3/test_33_n.py) |
+| O. [Letter frequency statistics](./problems/english/3.3/problem_33_o_en.md) | [✅](./solutions/3.3/33_o.py) | [✅](./tests/3.3/test_33_o.py) |
+| P. [RLE reversed](./problems/english/3.3/problem_33_p_en.md) | [✅](./solutions/3.3/33_p.py) | [✅](./tests/3.3/test_33_p.py) |
+| Q. [Multiplication table 2.0](./problems/english/3.3/problem_33_q_en.md) | [✅](./solutions/3.3/33_q.py) | [✅](./tests/3.3/test_33_q.py) |
+| R. [Divisors](./problems/english/3.3/problem_33_r_en.md) | [✅](./solutions/3.3/33_r.py) | [✅](./tests/3.3/test_33_r.py) |
+| S. [Prime set](./problems/english/3.3/problem_33_s_en.md) | [✅](./solutions/3.3/33_s.py) | [✅](./tests/3.3/test_33_s.py) |
+| T. [Generalization](./problems/english/3.3/problem_33_t_en.md) | [✅](./solutions/3.3/33_t.py) | [✅](./tests/3.3/test_33_t.py) |
 
 </details>
 
@@ -542,6 +552,7 @@ Solutions are organized by handbook sections. Each solution:
 | H. [Checkers](./problems/english/5.1/problem_51_h_en.md) | [✅](./solutions/5.1/51_h.py) | [✅](./tests/5.1/test_51_h.py) |
 | I. [Queue](./problems/english/5.1/problem_51_i_en.md) | [✅](./solutions/5.1/51_i.py) | [✅](./tests/5.1/test_51_i.py) |
 | J. [Stack](./problems/english/5.1/problem_51_j_en.md) | [✅](./solutions/5.1/51_j.py) | [✅](./tests/5.1/test_51_j.py) |
+
 
 </details>
 
