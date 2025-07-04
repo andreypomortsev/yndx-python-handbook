@@ -141,6 +141,26 @@ g_test_data = [
     ),
 ]
 
+h_test_data = [
+    ({"string": "Российская Федерация"}, "РФ", "first open test"),
+    ({"string": "открытое акционерное общество"}, "ОАО", "second open test"),
+    ({"string": "bring Your own Booze"}, "BYOB", "english"),
+]
+
+i_test_data = [
+    ({"numbers": [3, 1, 2, 3, 2, 2, 1]}, "1 - 2 - 3", "first open test"),
+    (
+        {"numbers": [1, 1, 3, 1, 10, 2, 4, 6, 7, 1, 2, 7]},
+        "1 - 2 - 3 - 4 - 6 - 7 - 10",
+        "second open test",
+    ),
+    (
+        {"numbers": [100, 200, 300, 200, 20, 10]},
+        "10 - 20 - 100 - 200 - 300",
+        "hundreds",
+    ),
+]
+
 j_test_data = [
     (
         {"words": "Ехали медведи на велосипеде"},
@@ -209,6 +229,111 @@ k_test_data = [
     ),
 ]
 
+l_test_data = [
+    ({"numbers": {1, 2, 3, 4, 5}}, 20, "first open test"),
+    ({"numbers": {2, 4, 5, 7, -10, -8, 10, -9, -1}}, 90, "second open test"),
+    ({"numbers": {-5, -3, -1}}, 15, "all negative values"),
+    (
+        {"numbers": {-1000, -100, 0, 100, 1000}},
+        100000,
+        "symmetric large extremes",
+    ),
+    ({"numbers": {-2, 0, 3}}, 0, "product involving zero"),
+    ({"numbers": {1, 2}}, 2, "only two values"),
+    ({"numbers": {-1, 1}}, -1, "two values, one negative"),
+    (
+        {"numbers": {-10, -9, -8, 9, 10}},
+        90,
+        "balanced negatives and positives",
+    ),
+    (
+        {"numbers": {-1_000_000_000, 1, 2, 3, 999_999_999}},
+        2_999_999_997,
+        "extreme int boundaries",
+    ),
+    ({"numbers": {-5, -2, 2, 3}}, 10, "positive or negative pair gives max"),
+    (
+        {"numbers": set(range(1_000))},
+        997002,
+        "stress test – large range to reject O(n²) solutions",
+    ),
+]
+
+m_test_data = [
+    ({"data": {"a": [1, 2, 3], "b": [2, 3, 4, 5]}}, "a", "first open test"),
+    (
+        {"data": {"a": [100], "b": [20, 5], "c": [7, 15, 3]}},
+        "b",
+        "second open test",
+    ),
+    (
+        {"data": {"x": [5], "y": [5]}},
+        "x",
+        "equal sums, choose lexicographically first key",
+    ),
+    ({"data": {"z": [1], "a": [1], "m": [1]}}, "a", "3-way tie, first by key"),
+    ({"data": {"a": [], "b": [0]}}, "a", "empty list vs zero"),
+    (
+        {"data": {"a": [-1, -2], "b": [-3]}},
+        "a",
+        "negative values, smaller sum wins",
+    ),
+    ({"data": {"a": [1.5, 2.5], "b": [4.0]}}, "a", "float values, equal sum"),
+    (
+        {"data": {"aaa": [1, 2], "aa": [3]}},
+        "aa",
+        "same sum, shorter key doesn't win unless lexicographically first",
+    ),
+    ({"data": {"b": [1, 2], "a": [3]}}, "a", "same sum, 'a' comes before 'b'"),
+    (
+        {"data": {"c": [10], "b": [1, 9], "a": [5, 5]}},
+        "a",
+        "3-way tie again, lex sort decides",
+    ),
+    (
+        {"data": {"a": [1_000_000], "b": [1], "c": [2] * 1_000}},
+        "b",
+        "check large dataset and small winner",
+    ),
+]
+
+n_test_data = [
+    (
+        {"data": {"a": [1, 2, 1], "b": [2, 3, 2, 5, 1]}},
+        {"a", "b"},
+        "first open test",
+    ),
+    (
+        {"data": {"a": [1, 2, 3], "b": [5, 2, 5], "c": [7, 15, 3]}},
+        {"b"},
+        "second open test",
+    ),
+    (
+        {"data": {"x": [], "y": [1], "z": [2, 2]}},
+        {"z"},
+        "empty and one-element lists",
+    ),
+    (
+        {"data": {"a": [1, 2, 3], "b": [4, 5, 6]}},
+        set(),
+        "all values are unique",
+    ),
+    (
+        {"data": {"m": [0, -1, -2, -1], "n": [-3, -4, -5]}},
+        {"m"},
+        "negative values with one duplicate",
+    ),
+    (
+        {"data": {"k": [2**31 - 1, 0, 2**31 - 1]}},
+        {"k"},
+        "duplicate at int upper boundary",
+    ),
+    (
+        {"data": {"p": [1] * 1000, "q": list(range(1000))}},
+        {"p"},
+        "large list with all duplicates vs large unique",
+    ),
+]
 
 o_test_data = [
     (
@@ -244,6 +369,20 @@ o_test_data = [
             "ё": 1,
         },
         "second open test",
+    ),
+]
+
+p_test_data = [
+    ({"rle": [("a", 2), ("b", 3), ("c", 1)]}, "aabbbc", "first open test"),
+    (
+        {"rle": [("1", 1), ("0", 2), ("5", 1), ("0", 2)]},
+        "100500",
+        "second open test",
+    ),
+    (
+        {"rle": [("S", 1), ("O", 1), ("5", 1), ("!", 0)]},
+        "SO5",
+        "sos with zero value",
     ),
 ]
 
@@ -304,36 +443,64 @@ r_test_data = [
     ),
 ]
 
-h_test_data = [
-    ({"string": "Российская Федерация"}, "РФ", "first open test"),
-    ({"string": "открытое акционерное общество"}, "ОАО", "second open test"),
-    ({"string": "bring your own Booze"}, "BYOB", "english"),
-]
-
-i_test_data = [
-    ({"numbers": [3, 1, 2, 3, 2, 2, 1]}, "1 - 2 - 3", "first open test"),
+s_test_data = [
+    ({"numbers": {1, 2, 3, 4, 5}}, {2, 3, 5}, "first open test"),
     (
-        {"numbers": [1, 1, 3, 1, 10, 2, 4, 6, 7, 1, 2, 7]},
-        "1 - 2 - 3 - 4 - 6 - 7 - 10",
+        {"numbers": set(range(11, 50, 2))},
+        {11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47},
         "second open test",
     ),
     (
-        {"numbers": [100, 200, 300, 200, 20, 10]},
-        "10 - 20 - 100 - 200 - 300",
-        "hundreds",
+        {"numbers": set(range(0, 20))},
+        {2, 3, 5, 7, 11, 13, 17, 19},
+        "small range with mixed numbers",
     ),
+    ({"numbers": {0, 1}}, set(), "zero and one are not primes"),
+    (
+        {"numbers": {2, 3, 5, 7, 11, 13, 17, 19, 23}},
+        {2, 3, 5, 7, 11, 13, 17, 19, 23},
+        "all primes only",
+    ),
+    ({"numbers": {4, 6, 8, 9, 10, 12}}, set(), "all non-primes"),
+    ({"numbers": {997, 998, 999, 1000}}, {997}, "upper-bound edge near 1000"),
+    ({"numbers": {999_999_937}}, {999_999_937}, "your solution is too slow"),
 ]
 
-p_test_data = [
-    ({"rle": [("a", 2), ("b", 3), ("c", 1)]}, "aabbbc", "first open test"),
+t_test_data = [
     (
-        {"rle": [("1", 1), ("0", 2), ("5", 1), ("0", 2)]},
-        "100500",
-        "second open test",
+        {"text": "ехали медведи на велосипеде"},
+        {("велосипеде", "ехали"), ("велосипеде", "медведи")},
+        "first open test",
     ),
     (
-        {"rle": [("S", 1), ("O", 1), ("5", 1), ("!", 0)]},
-        "SO5",
-        "sos with zero value",
+        {"text": "а за ними кот задом наперед"},
+        set(),
+        "second open test – no pair shares more than 2 letters",
+    ),
+    (
+        {"text": "мама рама тама сама"},
+        set(),
+        "repeated syllables, many overlaps",
+    ),
+    (
+        {"text": "abcde bcdef cdefg defgh"},
+        {
+            ("abcde", "bcdef"),
+            ("abcde", "cdefg"),
+            ("bcdef", "cdefg"),
+            ("bcdef", "defgh"),
+            ("cdefg", "defgh"),
+        },
+        "cascading overlap across words",
+    ),
+    ({"text": "x y z"}, set(), "short words with no shared letters"),
+    (
+        {"text": "123abc abc321 a1b2c3"},
+        {
+            ("123abc", "a1b2c3"),
+            ("123abc", "abc321"),
+            ("a1b2c3", "abc321"),
+        },
+        "numeric+alphabetic mix with overlapping characters",
     ),
 ]
