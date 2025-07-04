@@ -179,6 +179,36 @@ j_test_data = [
     ),
 ]
 
+k_test_data = [
+    (
+        {"numbers": [1, 2, 1, 3, 1, 2, 2, 4, 1, 2, 5, 1, 2]},
+        {3, 4, 5},
+        "first open test",
+    ),
+    (
+        {"numbers": [-8, 7, -3, -2, 5, 0, 7, -2, -8, 6, -10, 4, -9, -9, 7]},
+        {0, 4, 5, 6, -10, -3},
+        "second open test",
+    ),
+    ({"numbers": [1, 2, 3, 4, 5]}, {1, 2, 3, 4, 5}, "all unique elements"),
+    ({"numbers": [1, 1, 1, 1]}, set(), "all duplicates"),
+    ({"numbers": []}, set(), "empty list"),
+    ({"numbers": [42]}, {42}, "single element list"),
+    ({"numbers": [0, 0, 0, 0, 0]}, set(), "all zeros duplicated"),
+    ({"numbers": [0, 1, 0, 1, 2]}, {2}, "only one unique among common"),
+    ({"numbers": [-1, -2, -3, -1, -2, -4]}, {-3, -4}, "negative integers mix"),
+    (
+        {"numbers": [2**31 - 1, -(2**31), 0, 2**31 - 1]},
+        {0, -(2**31)},
+        "int boundaries and zero",
+    ),
+    (
+        {"numbers": list(range(1000)) + list(range(500))},
+        set(range(500, 1000)),
+        "large list with half duplicates",
+    ),
+]
+
 
 o_test_data = [
     (
