@@ -398,7 +398,7 @@ Solutions are organized by handbook sections. Each solution:
 | D. [Set of odd numbers](./problems/english/3.3/problem_33_d_en.md) | [✅](./solutions/3.3/33_d.py) | [✅](./tests/3.3/test_33_d.py) |
 | E. [Set of all perfect squares](./problems/english/3.3/problem_33_e_en.md) | [✅](./solutions/3.3/33_e.py) | [✅](./tests/3.3/test_33_e.py) |
 | F. [Lengths of all words](./problems/english/3.3/problem_33_f_en.md) | [✅](./solutions/3.3/33_f.py) | [✅](./tests/3.3/test_33_f.py) |
-| G. [new](./problems/english/3.3/problem_33_g_en.md) | [✅](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
+| G. [Digital Squeeze](./problems/english/3.3/problem_33_g_en.md) | [✅](./solutions/3.3/33_g.py) | [✅](./tests/3.3/test_33_g.py) |
 | H. [Abbreviation](./problems/english/3.3/problem_33_h_en.md) | [✅](./solutions/3.3/33_h.py) | [✅](./tests/3.3/test_33_h.py) |
 | I. [Conversion to string](./problems/english/3.3/problem_33_i_en.md) | [✅](./solutions/3.3/33_i.py) | [✅](./tests/3.3/test_33_i.py) |
 | J. [new](./problems/english/3.3/problem_33_j_en.md) | [✅](./solutions/3.3/33_j.py) | [✅](./tests/3.3/test_33_j.py) |

@@ -52,26 +52,6 @@ c_test_data = [
     ({"a": 0, "b": -5, "d": 2}, [], "zero to negative returns empty"),
 ]
 
-q_test_data = [
-    ({"n": 3}, [[1, 2, 3], [2, 4, 6], [3, 6, 9]], "first open test"),
-    (
-        {"n": 4},
-        [[1, 2, 3, 4], [2, 4, 6, 8], [3, 6, 9, 12], [4, 8, 12, 16]],
-        "second open test",
-    ),
-    ({"n": 1}, [[1]], "one"),
-    ({"n": 0}, [], "zero"),
-]
-
-f_test_data = [
-    ({"sentence": "Мама мыла раму"}, [4, 4, 4], "first open test"),
-    (
-        {"sentence": "Ехали медведи на велосипеде"},
-        [5, 7, 2, 10],
-        "second open test",
-    ),
-]
-
 d_test_data = [
     ({"numbers": [1, 2, 3, 4, 5]}, {1, 3, 5}, "first open test"),
     ({"numbers": [1, 2, 3, 2, 1, 2, 3, 2, 1, 2]}, {1, 3}, "second open test"),
@@ -101,6 +81,64 @@ e_test_data = [
         "big nums",
     ),
 ]
+
+f_test_data = [
+    ({"sentence": "Мама мыла раму"}, [4, 4, 4], "first open test"),
+    (
+        {"sentence": "Ехали медведи на велосипеде"},
+        [5, 7, 2, 10],
+        "second open test",
+    ),
+]
+
+g_test_data = [
+    (
+        {
+            "text": "33 коровы,\n"
+            + "33 коровы,\n"
+            + "33 коровы -\n"
+            + "Свежая строка.\n"
+            + "33 коровы,\n"
+            + "Стих родился новый,\n"
+            + "Как стакан парного молока.\n"
+            + "Стих родился новый,\n"
+            + "Как стакан парного молока.\n"
+        },
+        "33333333",
+        "first open test - poem with repeated numbers",
+    ),
+    (
+        {"text": "2 + 2 = 4"},
+        "224",
+        "second open test - simple arithmetic line",
+    ),
+    (
+        {"text": "No numbers here!"},
+        "",
+        "no digits present",
+    ),
+    (
+        {"text": "Room 101, Sector 7G, Unit 42"},
+        "101742",
+        "multiple digit clusters with punctuation",
+    ),
+    (
+        {"text": "\n\t123\nabc456\n!@#789"},
+        "123456789",
+        "digits across newlines and mixed content",
+    ),
+    (
+        {"text": "٠١٢٣٤٥٦٧٨٩"},  # Arabic digits
+        "٠١٢٣٤٥٦٧٨٩",
+        "non-ASCII digits (Arabic numerals)",
+    ),
+    (
+        {"text": "１ that's the mood １２３４５"},  # full-width digits (used in CJK)
+        "１１２３４５",
+        "full-width unicode digits (CJK-style)",
+    ),
+]
+
 
 o_test_data = [
     (
@@ -137,6 +175,17 @@ o_test_data = [
         },
         "second open test",
     ),
+]
+
+q_test_data = [
+    ({"n": 3}, [[1, 2, 3], [2, 4, 6], [3, 6, 9]], "first open test"),
+    (
+        {"n": 4},
+        [[1, 2, 3, 4], [2, 4, 6, 8], [3, 6, 9, 12], [4, 8, 12, 16]],
+        "second open test",
+    ),
+    ({"n": 1}, [[1]], "one"),
+    ({"n": 0}, [], "zero"),
 ]
 
 r_test_data = [
