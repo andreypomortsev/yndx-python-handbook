@@ -1,4 +1,15 @@
 def number_length(number: int) -> int:
+    """
+    Calculates the length of a given integer via math.
+    Which is a low level approach to better understand
+    how the length of a number can be calculated.
+
+    Args:
+        number (int): The integer to calculate the length of.
+
+    Returns:
+        int: The length of the given integer.
+    """
     if not number:
         return 1
 

@@ -1,7 +1,22 @@
-def can_eat(horsey: tuple, victim: tuple) -> bool:
-    x1, y1 = horsey
-    x2, y2 = victim
-    hor = abs(x2 - x1) == 1 and abs(y2 - y1) == 2
-    vert = abs(x2 - x1) == 2 and abs(y2 - y1) == 1
+def max2D(matrix: list) -> int:
+    """
+    A low level representation of a max2D function.
+    The time complexity of this function is O(n^2) and cannot be reduced,
+    because we need to check every element in the matrix.
+    The space complexity of this function is O(1),
+    because we only use a constant amount of extra space.
 
-    return hor or vert
+    Args:
+        matrix (list): The 2D list to search.
+
+    Returns:
+        int: The maximum value found in the 2D list.
+    """
+    maximum = float("-inf")
+
+    for row in matrix:
+        for number in row:
+            if number > maximum:
+                maximum = number
+
+    return maximum

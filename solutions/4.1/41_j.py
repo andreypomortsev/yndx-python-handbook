@@ -1,32 +1,12 @@
-def merge(left: tuple, right: tuple) -> tuple:
+def split_numbers(numbers: str) -> tuple:
     """
-    Объединяет два отсортированных списка в один отсортированный кортеж.
+    Splits a string of space-separated numbers into a tuple of integers.
+    Will fail miserably if one of the symbols is not an integer.
 
-    Аргументы:
-        left (tuple): Отсортированный кортеж.
-        right (tuple): Отсортированный кортеж.
+    Args:
+        numbers (str): A string of space-separated numbers.
 
-    Возвращает:
-        tuple: Объединенный отсортированный кортеж.
+    Returns:
+        tuple: A tuple of integers.
     """
-    merged = []
-    left_index = right_index = 0
-
-    # Сравниваем элементы left и right
-    # Compare elements in left and right
-    while left_index < len(left) and right_index < len(right):
-
-        if left[left_index] < right[right_index]:
-            merged.append(left[left_index])
-            left_index += 1
-
-        else:
-            merged.append(right[right_index])
-            right_index += 1
-
-    # Добавляем оставшиеся элементы
-    # Add remaining elements
-    merged.extend(left[left_index:])
-    merged.extend(right[right_index:])
-
-    return tuple(merged)
+    return tuple(map(int, numbers.split()))
