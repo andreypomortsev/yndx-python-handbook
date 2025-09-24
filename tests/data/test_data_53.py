@@ -1,6 +1,6 @@
 import string
 
-from tests.data.test_data_41 import j_test_data as merge
+from tests.data.test_data_41 import r_test_data as merge
 
 
 def get_value_error() -> None:
