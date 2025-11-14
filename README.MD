@@ -485,13 +485,23 @@ Solutions are organized by handbook sections. Each solution:
 | А. [Functional greeting](./problems/english/4.1/problem_41_a_en.md) | [✅](./solutions/4.1/41_a.py) | [✅](./tests/4.1/test_41_a.py) |
 | B. [Functional GCD](./problems/english/4.1/problem_41_b_en.md) | [✅](./solutions/4.1/41_b.py) | [✅](./tests/4.1/test_41_b.py) |
 | C. [Length of a number](./problems/english/4.1/problem_41_c_en.md) | [✅](./solutions/4.1/41_c.py) | [✅](./tests/4.1/test_41_c.py) |
-| D. [Name of the month](./problems/english/4.1/problem_41_d_en.md) | [✅](./solutions/4.1/41_d.py) | [✅](./tests/4.1/test_41_d.py) |
-| E. [Numerical string](./problems/english/4.1/problem_41_e_en.md) | [✅](./solutions/4.1/41_e.py) | [✅](./tests/4.1/test_41_e.py) |
-| F. [Modernizing output system](./problems/english/4.1/problem_41_f_en.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
-| G. [Chess 'lunch'](./problems/english/4.1/problem_41_g_en.md) | [✅](./solutions/4.1/41_g.py) | [✅](./tests/4.1/test_41_g.py) |
-| H. [Racecar 7.0](./problems/english/4.1/problem_41_h_en.md) | [✅](./solutions/4.1/41_h.py) | [✅](./tests/4.1/test_41_h.py) |
-| I. [Simple task 5.0](./problems/english/4.1/problem_41_i_en.md) | [✅](./solutions/4.1/41_i.py) | [✅](./tests/4.1/test_41_i.py) |
-| J. [Merge](./problems/english/4.1/problem_41_j_en.md) | [✅](./solutions/4.1/41_j.py) | [✅](./tests/4.1/test_41_j.py) |
+| D. [Take care of the pennies](./problems/english/4.1/problem_41_d_en.md) | [✅](./solutions/4.1/41_d.py) | [✅](./tests/4.1/test_41_d.py) |
+| E. [Virtual clicker](./problems/english/4.1/problem_41_e_en.md) | [✅](./solutions/4.1/41_e.py) | [✅](./tests/4.1/test_41_e.py) |
+| F. [Wierd game](./problems/english/4.1/problem_41_f_en.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
+| G. [Max Max](./problems/english/4.1/problem_41_g_en.md) | [✅](./solutions/4.1/41_g.py) | [✅](./tests/4.1/test_41_g.py) |
+| H. [Numeric Fragmentation](./problems/english/4.1/problem_41_h_en.md) | [✅](./solutions/4.1/41_h.py) | [✅](./tests/4.1/test_41_h.py) |
+| I. [Name of the month](./problems/english/4.1/problem_41_i_en.md) | [✅](./solutions/4.1/41_i.py) | [✅](./tests/4.1/test_41_i.py) |
+| J. [Numerical string](./problems/english/4.1/problem_41_j_en.md) | [✅](./solutions/4.1/41_j.py) | [✅](./tests/4.1/test_41_j.py) |
+| K. [Mountain Search](./problems/english/4.1/problem_41_k_en.md) | [✅](./solutions/4.1/41_k.py) | [✅](./tests/4.1/test_41_k.py) |
+| L. [Mountain Search 2](./problems/english/4.1/problem_41_l_en.md) | [✅](./solutions/4.1/41_l.py) | [✅](./tests/4.1/test_41_l.py) |
+| M. [Modernizing output system](./problems/english/4.1/problem_41_m_en.md) | [✅](./solutions/4.1/41_m.py) | [✅](./tests/4.1/test_41_m.py) |
+| N. [Chess 'lunch'](./problems/english/4.1/problem_41_n_en.md) | [✅](./solutions/4.1/41_n.py) | [✅](./tests/4.1/test_41_n.py) |
+| O. [Dictionary String](./problems/english/4.1/problem_41_o_en.md) | [✅](./solutions/4.1/41_o.py) | [✅](./tests/4.1/test_41_o.py) |
+| P. [Racecar 7.0](./problems/english/4.1/problem_41_p_en.md) | [✅](./solutions/4.1/41_p.py) | [✅](./tests/4.1/test_41_p.py) |
+| Q. [Simple task 5.0](./problems/english/4.1/problem_41_q_en.md) | [✅](./solutions/4.1/41_q.py) | [✅](./tests/4.1/test_41_q.py) |
+| R. [Merge](./problems/english/4.1/problem_41_r_en.md) | [✅](./solutions/4.1/41_r.py) | [✅](./tests/4.1/test_41_r.py) |
+| S. [Swapping Contents](./problems/english/4.1/problem_41_s_en.md) | [✅](./solutions/4.1/41_s.py) | [✅](./tests/4.1/test_41_s.py) |
+| T. [Render Unto Caesar](./problems/english/4.1/problem_41_t_en.md) | [✅](./solutions/4.1/41_t.py) | [✅](./tests/4.1/test_41_t.py) |
 
 </details>
 
