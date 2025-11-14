@@ -15,7 +15,7 @@ result = gcd(12, 45)
 ```
 
 __Вывод__
-```plaintext
+```python
 result = 3
 ```
 
@@ -27,6 +27,6 @@ result = gcd(144, 96)
 ```
 
 __Вывод__
-```plaintext
+```python
 result = 48
 ```
