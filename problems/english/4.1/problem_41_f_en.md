@@ -6,17 +6,17 @@ It's time to practice with mutable variables and decision-making logic.
 Petya and Vanya decided to play the "Number Tug-of-War" game.
 The rules are simple:
 
-  - Petya (in input as 'Петя') increases the total number.
-  - Vanya (in input as 'Ваня') decreases it.
-  - If the result is a positive number, Petya wins.
-  - If it's negative, Vanya wins.
-  - If the sum is zero, it's a draw.
+- Petya (in input as 'Петя') increases the total number.
+- Vanya (in input as 'Ваня') decreases it.
+- If the result is a positive number, Petya wins.
+- If it's negative, Vanya wins.
+- If the sum is zero, it's a draw.
 
 Create two functions:
 
-  - `move(player, number)` — takes the player's name (in input as 'Петя' or 'Ваня') and their number, and updates the total score;
-  - `game_over()` — returns the result: 'Petya', 'Vanya', or 'Draw'.
-    The total sum is initially 0.
+- `move(player, number)` — takes the player's name (in input as 'Петя' or 'Ваня') and their number, and updates the total score;
+- `game_over()` — returns the result: 'Petya', 'Vanya', or 'Draw'.
+The total sum is initially 0.
 
 ### Note
 
