@@ -6,16 +6,21 @@ from tests.data.test_data_41 import e_test_data
 
 
 @pytest.mark.parametrize(
-    "arg, expected_output, _",
+    "args, expected_output, _",
     e_test_data,
     ids=[i[-1] for i in e_test_data],
 )
-def test_split_numbers(
+def test_clicker(
     decorated_function: Callable,
-    arg: str,
-    expected_output: Tuple[int],
+    args: Tuple[str],
+    expected_output: str,
     _: str,
 ) -> None:
-    returned_output = decorated_function(arg)
-
-    assert returned_output == expected_output
+    result = ""
+    get_count, click = decorated_function
+    for name in args:
+        if name == "get_count":
+            result += str(get_count())
+        else:
+            click()
+    assert result == expected_output

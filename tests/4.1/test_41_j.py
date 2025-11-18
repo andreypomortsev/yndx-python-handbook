@@ -6,16 +6,16 @@ from tests.data.test_data_41 import j_test_data
 
 
 @pytest.mark.parametrize(
-    "args, expected_output, _",
+    "arg, expected_output, _",
     j_test_data,
     ids=[i[-1] for i in j_test_data],
 )
-def test_merge(
+def test_split_numbers(
     decorated_function: Callable,
-    args: Tuple[Tuple[int]],
+    arg: str,
     expected_output: Tuple[int],
     _: str,
 ) -> None:
-    returned_output = decorated_function(*args)
+    returned_output = decorated_function(arg)
 
     assert returned_output == expected_output
