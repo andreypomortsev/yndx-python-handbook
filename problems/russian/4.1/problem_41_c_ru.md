@@ -15,7 +15,7 @@ result = number_length(12345)
 ```
 
 __Вывод__
-```plaintext
+```python
 result = 5
 ```
 
@@ -27,6 +27,6 @@ result = number_length(-100500)
 ```
 
 __Вывод__
-```plaintext
+```python
 result = 6
 ```

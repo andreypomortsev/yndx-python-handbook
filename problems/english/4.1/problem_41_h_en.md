@@ -1,34 +1,46 @@
-## [Racecar 7.0](../../../solutions/4.1/41_h.py)
+## [Numeric Fragmentation](../../../solutions/4.1/41_h.py)
 
-Write a function `is_palindrome` that takes a natural number, a string, a tuple, or a list, and returns a boolean value: `True` if the given value is a palindrome, and `False` otherwise.
+Suppose you have a list of numbers and want to split it into increasing fragments—segments where every next number is greater than the previous one.\
+Such a task can be useful when analyzing sequences, graphs, or user activity.
+
+Write a function `fragments(numbers)` that takes a list of integers and returns a list of nested lists, each representing an increasing segment of the original sequence.
 
 ### Note
 
-Your solution should contain only functions.\
-The solution should not contain calls to the required functions.
+Your solution must contain only functions.\
+The solution must not include calls to the required functions.
 
-To determine the type of the parameter, you can use the [type](https://docs.python.org/3/library/functions.html#type) function or the more advanced [isinstance](https://docs.python.org/3/library/functions.html#isinstance).
+<details>
+<summary>Hint</summary>
+
+Keep in mind that a single-element list is also an increasing sequence.
+
+Create a list of lists and place the first number in it. Iterate over the remaining numbers:
+
+- if the number is greater than the previous one, append it to the last inner list;
+- if the number is less than or equal to the previous one, start a new inner list with this number.
+
+</details>
 
 ### Example 1
 
 __Input__
 ```python
-result = is_palindrome(123)
+result = fragments([0, 4, 5, -9, -6, 3, 2, 3, 4, 9])
 ```
 
 __Output__
-```plaintext
-result = False
+```python
+result = [[0, 4, 5], [-9, -6, 3], [2, 3, 4, 9]]
 ```
 
 ### Example 2
 
 __Input__
 ```python
-result = is_palindrome([1, 2, 1, 2, 1])
+result = fragments([-4, -2, 5, 0, 3, 7, -8, -2, 6, 7, 6, 8, 10, 5, 7, 8])
 ```
 
 __Output__
-```plaintext
-result = True
-```
+```python
+result = [[-4, -2], [5, 0, 3, 7], [-8, -2, 6, 7, 6, 8, 10], [5, 7, 8]]

@@ -16,13 +16,23 @@ TEST_FUNCTION_NAMES = {
         "a": "print_hello",
         "b": "gcd",
         "c": "number_length",
-        "d": "month",
-        "e": "split_numbers",
-        "f": "modern_print",
-        "g": "can_eat",
-        "h": "is_palindrome",
-        "i": "is_prime",
-        "j": "merge",
+        "d": "take_small",
+        "e": ["get_count", "click"],
+        "f": ["move", "game_over"],
+        "g": "max2D",
+        "h": "fragments",
+        "i": "month",
+        "j": "split_numbers",
+        "k": "find_mountains",
+        "l": "find_mountains",
+        "m": "modern_print",
+        "n": "can_eat",
+        "o": "get_dict",
+        "p": "is_palindrome",
+        "q": "is_prime",
+        "r": "merge",
+        "s": "swap",
+        "t": "roman",
     },
     "4.2": {
         "a": "make_list",
@@ -84,3 +94,4 @@ ELEMENT_TYPE_ERROR = (
     "The return must contain elements of the expected data type."
 )
 NO_CHANGE_ERROR = "The function must not alter the input data structure."
+FUNCTION_NOT_FOUND = "Function not found"

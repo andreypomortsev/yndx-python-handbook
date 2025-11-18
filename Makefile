@@ -44,7 +44,6 @@ test-file-%: ## Run tests for specific file (usage: make test-file-test_somethin
 
 test-report-%: ## Generate test coverage report (usage: make test-report-html)
 	poetry run pytest -n auto --cov=. --cov-report=$*
-	$(MAKE) clean
 
 debug: ## Run tests in debug mode with verbose output
 	poetry run pytest -n auto -vv

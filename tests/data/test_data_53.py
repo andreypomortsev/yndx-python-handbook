@@ -1,6 +1,6 @@
 import string
 
-from tests.data.test_data_41 import j_test_data as merge
+from tests.data.test_data_41 import r_test_data as merge
 
 
 def get_value_error() -> None:
@@ -9,7 +9,7 @@ def get_value_error() -> None:
 
     Raises: ValueError
     """
-    x = int("Hello, world!")
+    int("Hello, world!")
 
 
 def get_type_error() -> None:
@@ -18,7 +18,7 @@ def get_type_error() -> None:
 
     Raises: TypeError
     """
-    x = "2" + 2
+    "2" + 2
 
 
 def get_system_error() -> None:

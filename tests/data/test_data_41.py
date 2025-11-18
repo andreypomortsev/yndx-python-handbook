@@ -29,6 +29,163 @@ c_test_data = [
 ]
 
 d_test_data = [
+    (
+        [
+            1,
+            5,
+            200,
+            0.5,
+            0.05,
+            10,
+            25,
+            1000,
+            5000,
+            1,
+            2,
+            100,
+            0.1,
+            5,
+            2000,
+            0.01,
+        ],
+        [1, 5, 0.5, 0.05, 10, 25, 1, 2, 0.1, 5, 0.01],
+        "first open test",
+    ),
+    (
+        [
+            0.01,
+            0.01,
+            500,
+            2000,
+            5000,
+            0.05,
+            1,
+            200,
+            0.1,
+            2000,
+            1000,
+            10,
+            25,
+            0.05,
+            10,
+            2000,
+            500,
+            5000,
+            0.01,
+            200,
+            2,
+            1000,
+            0.5,
+            5000,
+            10,
+            0.5,
+            5,
+            1,
+        ],
+        [
+            0.01,
+            0.01,
+            0.05,
+            1,
+            0.1,
+            10,
+            25,
+            0.05,
+            10,
+            0.01,
+            2,
+            0.5,
+            10,
+            0.5,
+            5,
+            1,
+        ],
+        "second open test",
+    ),
+]
+
+e_test_data = [
+    (("get_count", "click", "get_count"), "01", "first open test"),
+    (("click", "click", "click", "get_count"), "3", "second open test"),
+    (("get_count",), "0", "zero value counter test"),
+    (("click",), "", "zero value click test"),
+    (
+        ("get_count", "get_count", "get_count", "get_count"),
+        "0000",
+        "no increment test",
+    ),
+]
+
+f_test_data = [
+    ((("Петя", 3), ("Ваня", 4)), "Ваня", "first open test"),
+    (
+        (("Петя", 3), ("Ваня", 4), ("Петя", 4), ("Ваня", 3)),
+        "Ничья",
+        "second open test",
+    ),
+    ((("Ваня", 4), ("Коля", 3)), "Ваня", "only Vanya"),
+    ((("Коля", 3), ("Петя", 4)), "Петя", "only Petya"),
+]
+
+g_test_data = [
+    (([[1, 1, 1], [1, 2, 1], [1, 1, 1]]), 2, "first open test"),
+    (
+        ([[-5, -43, 72, 89], [-40, 92, -1, -73], [30, -75, 23, 94]]),
+        94,
+        "second open test",
+    ),
+    (([[5]]), 5, "single element matrix"),
+    (([[0]]), 0, "single zero element"),
+    (([[-100]]), -100, "single negative element"),
+    (([[1, 2, 3, 4, 5]]), 5, "single row multiple columns"),
+    (([[1], [2], [3], [4], [5]]), 5, "single column multiple rows"),
+    (([[7, 7, 7], [7, 7, 7]]), 7, "all elements identical"),
+    (([[0, 0], [0, 0], [0, 0]]), 0, "all zeros"),
+    (([[-1, -2, -3], [-4, -5, -6]]), -1, "all negative numbers"),
+    (([[-100, -200], [-50, -150]]), -50, "various negative numbers"),
+    (([[100, 1, 1], [1, 1, 1]]), 100, "max at top-left corner"),
+    (([[1, 1, 100], [1, 1, 1]]), 100, "max at top-right corner"),
+    (([[1, 1, 1], [100, 1, 1]]), 100, "max at bottom-left corner"),
+    (([[1, 1, 1], [1, 1, 100]]), 100, "max at bottom-right corner"),
+    (([[1, 1, 1], [1, 100, 1], [1, 1, 1]]), 100, "max in middle"),
+    (([[999999, 1], [2, 3]]), 999999, "large positive number"),
+    (([[-999999, -1], [-2, -3]]), -1, "large negative numbers"),
+    (([[5, 2, 5], [3, 5, 1]]), 5, "multiple occurrences of max"),
+    (([[1, 2], [3, 4], [5, 6], [7, 8]]), 8, "tall matrix 4x2"),
+    (([[1, 2, 3, 4, 5, 6]]), 6, "wide matrix 1x6"),
+    (([[0, -5, 3], [2, 0, -1]]), 3, "mixed with zeros"),
+    (([[0, 0, 0], [0, 1, 0]]), 1, "mostly zeros with one positive"),
+    (([1.5, 2.7, 3.9], [0.5, 4.2, 1.1]), 4.2, "floating point numbers"),
+    (([[-1.5, -2.7], [-0.1, -3.9]]), -0.1, "negative floats"),
+    (
+        ([[i + j for j in range(10)] for i in range(10)]),
+        18,
+        "10x10 matrix sequential",
+    ),
+    (
+        ([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]),
+        12,
+        "4x3 matrix ascending",
+    ),
+    (([[9, 8, 7], [6, 5, 4], [3, 2, 1]]), 9, "descending order"),
+    (([[42, -17, 63], [88, -3, 19], [-55, 91, 7]]), 91, "random pattern"),
+    (([[100, -100, 50], [-50, 0, 25]]), 100, "extreme value differences"),
+]
+
+h_test_data = [
+    (
+        [0, 4, 5, -9, -6, 3, 2, 3, 4, 9],
+        [[0, 4, 5], [-9, -6, 3], [2, 3, 4, 9]],
+        "first open test",
+    ),
+    (
+        [-4, -2, 5, 0, 3, 7, -8, -2, 6, 7, 6, 8, 10, 5, 7, 8],
+        [[-4, -2, 5], [0, 3, 7], [-8, -2, 6, 7], [6, 8, 10], [5, 7, 8]],
+        "second open test",
+    ),
+]
+
+i_test_data = [
     ((1, "en"), "January", "first open test"),
     ((7, "ru"), "Июль", "second open test"),
     ((2, "en"), "February", "february_en"),
@@ -75,7 +232,7 @@ d_test_data = [
     (("12", "ru"), "Декабрь", "dekabr_ru_string"),
 ]
 
-e_test_data = [
+j_test_data = [
     ("1 2 3 4 5", (1, 2, 3, 4, 5), "first open test"),
     ("1 -2 3 -4 5", (1, -2, 3, -4, 5), "second open test"),
     ("1 1 1 1 1 1", (1, 1, 1, 1, 1, 1), "the same numbers"),
@@ -88,7 +245,237 @@ e_test_data = [
     ),
 ]
 
-f_test_data = [
+k_test_data = [
+    ([1, 2, 1, 4, 1], (2, 4), "first open test"),
+    ([5, 1, 10, 2, 3, 4, 3, 20], (3, 6), "second open test"),
+    ([], (), "empty list"),
+    ([1], (), "single element"),
+    ([1, 2], (), "two elements only"),
+    ([1, 2, 3, 4, 5], (), "strictly increasing"),
+    ([5, 4, 3, 2, 1], (), "strictly decreasing"),
+    ([3, 3, 3, 3], (), "all equal values"),
+    ([1, 1, 2, 2, 3, 3], (), "no peaks only plateaus"),
+    ([1, 5, 2], (2,), "single mountain at index 1"),
+    ([0, 10, 5], (2,), "single mountain different values"),
+    ([1, 2, 3, 10, 3, 2, 1], (4,), "single mountain in middle"),
+    ([0, 5, 1, 2, 3], (2,), "mountain near start"),
+    ([1, 2, 3, 10, 0], (4,), "mountain near end"),
+    ([1, 5, 2, 8, 3], (2, 4), "two adjacent mountains"),
+    ([0, 3, 1, 5, 2, 7, 4], (2, 4, 6), "three adjacent mountains"),
+    ([1, 2, 2, 1], (), "plateau at top no mountain"),
+    ([1, 3, 3, 1], (), "equal peak values"),
+    ([1, 5, 2, 5, 1], (2, 4), "two mountains with equal heights"),
+    ([-5, -1, -3], (2,), "mountain with negative numbers"),
+    ([-10, -2, -5, -1, -8], (2, 4), "multiple mountains negative"),
+    ([1, 0, -1, -2], (), "decreasing through negatives"),
+    ([-5, 0, -3, 5, 1], (2, 4), "mountains crossing zero"),
+    ([-1, 5, -2], (2,), "positive peak negative sides"),
+    ([0, 1, 0], (2,), "mountain with zeros at sides"),
+    ([0, 0, 1, 0, 0], (3,), "mountain surrounded by zeros"),
+    ([-1, 0, -1], (2,), "zero as peak"),
+    ([1, 1000, 1], (2,), "very tall mountain"),
+    ([100, 101, 100, 200, 199], (2, 4), "mountains with large values"),
+    ([1, 2, 1, 2, 1, 2, 1, 2, 1], (2, 4, 6, 8), "alternating pattern"),
+    ([0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0], (2, 4, 6, 8, 10), "five mountains"),
+    ([1, 2, 1], (2,), "peak by one unit"),
+    ([10, 11, 10], (2,), "peak by minimal difference"),
+    ([1.0, 2.5, 1.5], (2,), "floating point mountain"),
+    ([0.1, 0.5, 0.2, 0.8, 0.3], (2, 4), "multiple float mountains"),
+    (
+        [1, 3, 2, 4, 3, 5, 4, 6, 5],
+        (2, 4, 6, 8),
+        "gradually increasing mountains",
+    ),
+    ([10, 20, 15, 25, 20, 30, 25], (2, 4, 6), "increasing peak heights"),
+    (
+        [30, 40, 35, 20, 30, 25, 10, 20, 15],
+        (2, 5, 8),
+        "decreasing peak heights",
+    ),
+    ([1, 5, 2, 5, 1], (2, 4), "two mountains same height"),
+    ([0, 3, 1, 3, 1, 3, 0], (2, 4, 6), "three mountains same height"),
+    ([5, 1, 5], (), "valley not mountain"),
+    ([1, 2, 2, 2, 1], (), "long plateau at top"),
+    ([1, 1, 1, 5, 1, 1, 1], (4,), "single mountain with flat sides"),
+    (
+        [100, 150, 120, 180, 140, 200, 160, 170, 150],
+        (2, 4, 6, 8),
+        "terrain simulation",
+    ),
+    (
+        [50, 75, 60, 70, 55, 80, 65, 60, 70],
+        (2, 4, 6),
+        "hiking trail elevation",
+    ),
+    ([0, 1, 0, 0, 0], (2,), "mountain then flat"),
+    ([0, 0, 0, 1, 0], (4,), "flat then mountain"),
+    ([-100, 100, -100], (2,), "extreme height difference"),
+    ([1, 2, 1], (2,), "minimum valid mountain"),
+    ([5, 10, 5], (2,), "simple three element mountain"),
+]
+
+l_test_data = [
+    ([[1, 1, 1], [1, 2, 1], [1, 1, 1]], ((2, 2),), "first open test"),
+    (
+        [
+            [1, 1, 1, 1, 1, 1],
+            [1, 2, 1, 5, 4, 1],
+            [1, 1, 1, 3, 4, 3],
+            [2, 3, 3, 1, 2, 3],
+            [1, 2, 1, 3, 2, 1],
+        ],
+        ((2, 2), (2, 4)),
+        "second open test",
+    ),
+    ([[]], (), "empty list"),
+    ([[1, 0, 1, 1], [1, 0, 2, 1], [1, 1, 0, 1]], ((2, 3),), "single mountain"),
+    (
+        [[0, 0, 0, 0], [0, 5, 0, 0], [0, 0, 0, 0]],
+        ((2, 2),),
+        "single mountain surrounded by zeros",
+    ),
+    (
+        [[1, 1, 1, 1], [1, 1, 1, 10], [1, 1, 1, 1], [1, 1, 1, 1]],
+        (),
+        "no mountains right side",
+    ),
+    (
+        [
+            [0, 0, 0, 0, 0],
+            [0, 5, 0, 8, 0],
+            [0, 0, 0, 0, 0],
+        ],
+        ((2, 2), (2, 4)),
+        "two mountains same row with valley triggers skip",
+    ),
+    (
+        [
+            [1, 1, 1, 1, 1],
+            [1, 5, 1, 7, 1],
+            [1, 1, 1, 1, 1],
+            [1, 3, 1, 9, 1],
+            [1, 1, 1, 1, 1],
+        ],
+        ((2, 2), (2, 4), (4, 2), (4, 4)),
+        "four mountains grid pattern",
+    ),
+    (
+        [
+            [0, 0, 0, 0, 0, 0, 0],
+            [0, 3, 0, 5, 0, 7, 0],
+            [0, 0, 0, 0, 0, 0, 0],
+        ],
+        ((2, 2), (2, 4), (2, 6)),
+        "three mountains same row evenly spaced",
+    ),
+    (
+        [
+            [1, 1, 1, 1],
+            [1, 5, 1, 1],
+            [1, 1, 1, 1],
+            [1, 1, 8, 1],
+            [1, 1, 1, 1],
+        ],
+        ((2, 2), (4, 3)),
+        "mountains in different rows",
+    ),
+    (
+        [
+            [5, 5, 5],
+            [5, 5, 5],
+            [5, 5, 5],
+        ],
+        (),
+        "center equal to all neighbors not mountain",
+    ),
+    (
+        [
+            [1, 2, 1],
+            [2, 2, 2],
+            [1, 2, 1],
+        ],
+        (),
+        "center equal to some neighbors not mountain",
+    ),
+    (
+        [
+            [-5, -10, -5],
+            [-10, -1, -10],
+            [-5, -10, -5],
+        ],
+        ((2, 2),),
+        "mountain with negative numbers",
+    ),
+    (
+        [
+            [-1, -1, -1, -1, 3],
+            [-1, 0, -1, 5, 2],
+            [-1, -1, -1, -1, 3],
+        ],
+        ((2, 2), (2, 4)),
+        "mixed negative positive mountains",
+    ),
+    (
+        [
+            [1, 1, 1, 1, 1, 1, 1],
+            [1, 2, 1, 2, 1, 2, 1],
+            [1, 1, 1, 1, 1, 1, 1],
+            [1, 2, 1, 2, 1, 2, 1],
+            [1, 1, 1, 1, 1, 1, 1],
+        ],
+        ((2, 2), (2, 4), (2, 6), (4, 2), (4, 4), (4, 6)),
+        "checkerboard pattern mountains",
+    ),
+    (
+        [
+            [0, 0, 0, 0, 0, 0],
+            [0, 1, 0, 0, 0, 0],
+            [0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 1],
+            [0, 0, 0, 0, 0, 0],
+        ],
+        ((2, 2), (3, 4)),
+        "diagonal mountains with skip affecting detection",
+    ),
+    (
+        [
+            [1, 1, 1, 1],
+            [1, 1000, 1, 100],
+            [1, 1, 1, 1],
+        ],
+        ((2, 2),),
+        "mountain with large height differences",
+    ),
+    (
+        [
+            [5, 5, 5],
+            [5, 6, 5],
+            [5, 5, 5],
+        ],
+        ((2, 2),),
+        "minimal height difference mountain",
+    ),
+    (
+        [
+            [10, 1, 1],
+            [1, 1, 1],
+            [1, 1, 10],
+        ],
+        (),
+        "high values at corners not detected",
+    ),
+    (
+        [
+            [1, 10, 1],
+            [1, 1, 1],
+            [1, 10, 1],
+        ],
+        (),
+        "high values at edges not detected",
+    ),
+]
+
+m_test_data = [
     (
         ("Hello!", "Hello!", "How do you do?", "Hello!"),
         "Hello!\nHow do you do?\n",
@@ -180,7 +567,7 @@ f_test_data = [
     ),
 ]
 
-g_test_data = [
+n_test_data = [
     (((2, 1), (4, 2)), True, "first open test"),
     (((5, 5), (6, 6)), False, "second open test"),
     (
@@ -195,7 +582,91 @@ g_test_data = [
     (((5, 5), (3, 6)), True, "capture four"),
 ]
 
-h_test_data = [
+o_test_data = [
+    ("a=A;b=2;c=-3.5", {"a": "A", "b": 2, "c": -3.5}, "first open test"),
+    (
+        "id=3-76;ip=127.0.0.1;phone=+7-(123)-456-78-90",
+        {"id": "3-76", "ip": "127.0.0.1", "phone": "+7-(123)-456-78-90"},
+        "second open test",
+    ),
+    (
+        "count=42;total=100;index=0",
+        {"count": 42, "total": 100, "index": 0},
+        "positive integers",
+    ),
+    ("temp=-10;offset=-5", {"temp": -10, "offset": -5}, "negative integers"),
+    ("zero=0;minusZero=-0", {"zero": 0, "minusZero": 0}, "zero values"),
+    (
+        "pi=3.14;e=2.71;ratio=0.5",
+        {"pi": 3.14, "e": 2.71, "ratio": 0.5},
+        "positive floats",
+    ),
+    (
+        "temp=-273.15;delta=-0.5",
+        {"temp": -273.15, "delta": -0.5},
+        "negative floats",
+    ),
+    (
+        "value=1.0;amount=10.0",
+        {"value": 1.0, "amount": 10.0},
+        "floats with trailing zero",
+    ),
+    (
+        "name=John;city=Paris;country=USA",
+        {"name": "John", "city": "Paris", "country": "USA"},
+        "simple strings",
+    ),
+    (
+        "version=1.2.3;code=ABC-123;ref=v1.0.0",
+        {"version": "1.2.3", "code": "ABC-123", "ref": "v1.0.0"},
+        "strings with multiple dots and dashes",
+    ),
+    (
+        "ip=192.168.1.1;version=1.2.3.4",
+        {"ip": "192.168.1.1", "version": "1.2.3.4"},
+        "multiple dots remain strings",
+    ),
+    (
+        "code=123ABC;hex=0xFF",
+        {"code": "123ABC", "hex": "0xFF"},
+        "alphanumeric remain strings",
+    ),
+    (
+        "status=active;count=5;ratio=0.75;id=user-123",
+        {"status": "active", "count": 5, "ratio": 0.75, "id": "user-123"},
+        "realistic mixed data",
+    ),
+    (
+        "empty=;space= ;text=hello",
+        {"empty": "", "space": " ", "text": "hello"},
+        "empty and whitespace values",
+    ),
+    (
+        "num=007;price=9.99;code=00123",
+        {"num": 7, "price": 9.99, "code": 123},
+        "leading zeros",
+    ),
+    (
+        "start=.5;end=5.;middle=2.5",
+        {"start": 0.5, "end": 5.0, "middle": 2.5},
+        "decimal at start or end",
+    ),
+    (
+        "val1=-123;val2=-45.67;val3=-10",
+        {"val1": -123, "val2": -45.67, "val3": -10},
+        "negative numbers",
+    ),
+    ("single=value", {"single": "value"}, "single pair"),
+    ("number=42", {"number": 42}, "single integer"),
+    ("decimal=3.14", {"decimal": 3.14}, "single float"),
+    (
+        "user_id=100;full_name=Test;api_key=abc123",
+        {"user_id": 100, "full_name": "Test", "api_key": "abc123"},
+        "keys with underscores",
+    ),
+]
+
+p_test_data = [
     (123, False, "first open test"),
     ([1, 2, 1, 2, 1], True, "second open test"),
     ([1, 2, 1, 2, 1, 212], False, "List[int]"),
@@ -221,7 +692,7 @@ h_test_data = [
     (-123454321, False, "-int false"),
 ]
 
-i_test_data = [
+q_test_data = [
     (1001459, True, "first open test"),
     (79701, False, "second open test"),
     (1, False, "one"),
@@ -233,7 +704,7 @@ i_test_data = [
     (25, False, "odd number"),
 ]
 
-j_test_data = [
+r_test_data = [
     (((1, 2), (3, 4, 5)), (1, 2, 3, 4, 5), "first open test"),
     (((7, 12), (1, 9, 50)), (1, 7, 9, 12, 50), "second open test"),
     (((1, 2, 3), (4, 5)), (1, 2, 3, 4, 5), "first longer"),
@@ -260,4 +731,87 @@ j_test_data = [
         tuple(sorted(list(range(10**4)) + list(range(10**4)))),
         "the same tuples",
     ),
+]
+
+s_test_data = [
+    (([1, 2], [2, 1]), "first open test"),
+    (([1, 2, 3], [4, 5, 6]), "equal length different content"),
+    (([1], [2, 3, 4]), "first shorter than second"),
+    (([1, 2, 3, 4], [5]), "first longer than second"),
+    (([], []), "both empty lists"),
+    (([], [1, 2, 3]), "first empty second full"),
+    (([1, 2, 3], []), "first full second empty"),
+    (([1], [2]), "single element each"),
+    (([42], [99]), "single different values"),
+    (([1, 2, 3], [1, 2, 3]), "identical content"),
+    (([5], [5]), "single identical element"),
+    (([7, 7, 7], [7, 7, 7]), "all same values"),
+    ((["a", "b", "c"], ["x", "y", "z"]), "string elements"),
+    (([1.5, 2.5, 3.5], [4.5, 5.5, 6.5]), "float elements"),
+    (([True, False], [False, True]), "boolean elements"),
+    (([None], [1, 2]), "None values"),
+    (([1, "a", 2.5, True], [None, False, "b", 3]), "mixed type elements"),
+    (([[1, 2], [3, 4]], [[5, 6], [7, 8]]), "nested lists"),
+    (([{"a": 1}, {"b": 2}], [{"c": 3}, {"d": 4}]), "list of dicts"),
+    (([[]], [[], []]), "nested empty lists"),
+    (
+        ([i for i in range(100)], [i for i in range(100, 200)]),
+        "100 elements each",
+    ),
+    (([1] * 500, [2] * 500), "500 repeated elements"),
+    (([0, 0, 0], [1, 1, 1]), "zeros vs ones"),
+    (([-1, -2, -3], [1, 2, 3]), "negative vs positive"),
+    (([float("inf")], [float("-inf")]), "infinity values"),
+    (([float("nan")], [1.0]), "NaN value"),
+    (([1, 1, 1, 1], [2, 2, 2, 2]), "all duplicates"),
+    (([1, 2, 1, 2, 1], [3, 4, 3, 4, 3]), "alternating patterns"),
+    (([1], [2, 3, 4, 5, 6, 7, 8, 9, 10]), "extreme length difference"),
+    (([i for i in range(50)], [99]), "50 vs 1 element"),
+    (([1, 2, 3, 4, 5], [6, 7]), "unequal lengths test slice logic"),
+    (([1, 2], [3, 4, 5, 6, 7]), "reverse unequal lengths"),
+]
+
+t_test_data = [
+    ((10, 9), "X + IX = XIX", "first open test"),
+    ((1499, 2500), "MCDXCIX + MMD = MMMCMXCIX", "second open test"),
+    ((1, 1), "I + I = II", "minimum positive values"),
+    ((1, 2), "I + II = III", "smallest different values"),
+    ((49, 1), "XLIX + I = L", "49+1=50 complex to simple conversion"),
+    ((99, 1), "XCIX + I = C", "99+1=100 subtractive to simple"),
+    ((499, 1), "CDXCIX + I = D", "499+1=500 complex to single letter"),
+    ((899, 1), "DCCCXCIX + I = CM", "899+1=900 additive to subtractive"),
+    ((999, 1), "CMXCIX + I = M", "999+1=1000 complex to single M"),
+    ((4, 5), "IV + V = IX", "both operands use subtractive notation"),
+    ((9, 40), "IX + XL = XLIX", "mixing different subtractive notations"),
+    ((90, 400), "XC + CD = CDXC", "larger subtractive notations"),
+    ((900, 94), "CM + XCIV = CMXCIV", "complex subtractive combinations"),
+    (
+        (444, 556),
+        "CDXLIV + DLVI = M",
+        "all three subtractive notations in input",
+    ),
+    ((3, 1), "III + I = IV", "three I's plus one becomes IV"),
+    ((30, 10), "XXX + X = XL", "three X's plus one becomes XL"),
+    ((300, 100), "CCC + C = CD", "three C's plus one becomes CD"),
+    ((1000, 1000), "M + M = MM", "simple M doubling"),
+    ((500, 500), "D + D = M", "two D's become M"),
+    ((5, 5), "V + V = X", "two V's become X"),
+    ((1000, 999), "M + CMXCIX = MCMXCIX", "year 1999"),
+    ((1066, 1), "MLXVI + I = MLXVII", "Battle of Hastings year + 1"),
+    ((1776, 1), "MDCCLXXVI + I = MDCCLXXVII", "American independence + 1"),
+    ((1994, 1), "MCMXCIV + I = MCMXCV", "complex year with subtractions"),
+    ((2000, 24), "MM + XXIV = MMXXIV", "year 2024"),
+    ((500, 500), "D + D = M", "D + D = M simplification"),
+    ((50, 50), "L + L = C", "L + L = C simplification"),
+    ((5, 5), "V + V = X", "V + V = X simplification"),
+    ((1, 4), "I + IV = V", "I + IV = V simplification"),
+    ((1666, 1), "MDCLXVI + I = MDCLXVII", "contains M,D,C,L,X,V,I"),
+    (
+        (3888, 1),
+        "MMMDCCCLXXXVIII + I = MMMDCCCLXXXIX",
+        "maximum repeating numerals",
+    ),
+    ((7, 7), "VII + VII = XIV", "same small numbers"),
+    ((50, 50), "L + L = C", "same medium numbers"),
+    ((1500, 1500), "MD + MD = MMM", "same large numbers"),
 ]

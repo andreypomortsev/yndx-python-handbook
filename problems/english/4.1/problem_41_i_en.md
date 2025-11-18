@@ -1,6 +1,6 @@
-## [Simple Task 5.0](../../../solutions/4.1/41_i.py)
+## [Name of the Month](../../../solutions/4.1/41_i.py)
 
-Write a function `is_prime` that takes a natural number and returns a boolean value: `True` if the number is prime, and `False` otherwise.
+Develop a function `month` that takes the month number and the language code ("ru", "en") and returns the name of the given month in the specified language with the first letter capitalized.
 
 ### Note
 
@@ -11,24 +11,22 @@ The solution should not contain calls to the required functions.
 
 __Input__
 ```python
-result = is_prime(1001459)
+result = month(1, "en")
 ```
 
 __Output__
 ```plaintext
-result = True
+result = 'January'
 ```
 
 ### Example 2
 
 __Input__
 ```python
-result = is_prime(79701)
+result = month(7, "ru")
 ```
 
 __Output__
 ```plaintext
-result = False
+result = 'Июль'
 ```
-
-## [Approach](../2.3/problem_23_n_en.md#approach-to-the-problem)

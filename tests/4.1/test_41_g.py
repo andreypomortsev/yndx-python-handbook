@@ -1,4 +1,4 @@
-from typing import Callable, Tuple
+from typing import Callable, List, Tuple
 
 import pytest
 
@@ -10,12 +10,12 @@ from tests.data.test_data_41 import g_test_data
     g_test_data,
     ids=[i[-1] for i in g_test_data],
 )
-def test_can_eat(
+def test_max2D(
     decorated_function: Callable,
-    args: Tuple[Tuple[int]],
-    expected_output: bool,
+    args: Tuple[List[int]],
+    expected_output: int,
     _: str,
 ) -> None:
-    returned_output = decorated_function(*args)
+    returned_output = decorated_function(args)
 
     assert returned_output == expected_output

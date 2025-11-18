@@ -624,13 +624,23 @@ poetry --version
 | А. [Функциональное приветствие](./problems/russian/4.1/problem_41_a_ru.md) | [✅](./solutions/4.1/41_a.py) | [✅](./tests/4.1/test_41_a.py) |
 | B. [Функциональный НОД](./problems/russian/4.1/problem_41_b_ru.md) | [✅](./solutions/4.1/41_b.py) | [✅](./tests/4.1/test_41_b.py) |
 | C. [Длина числа](./problems/russian/4.1/problem_41_c_ru.md) | [✅](./solutions/4.1/41_c.py) | [✅](./tests/4.1/test_41_c.py) |
-| D. [Имя of the month](./problems/russian/4.1/problem_41_d_ru.md) | [✅](./solutions/4.1/41_d.py) | [✅](./tests/4.1/test_41_d.py) |
-| E. [Числовая строка](./problems/russian/4.1/problem_41_e_ru.md) | [✅](./solutions/4.1/41_e.py) | [✅](./tests/4.1/test_41_e.py) |
-| F. [Модернизация системы вывода](./problems/russian/4.1/problem_41_f_ru.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
-| G. [Шахматный «обед»](./problems/russian/4.1/problem_41_g_ru.md) | [✅](./solutions/4.1/41_g.py) | [✅](./tests/4.1/test_41_g.py) |
-| H. [А роза упала на лапу Азора 7.0](./problems/russian/4.1/problem_41_h_ru.md) | [✅](./solutions/4.1/41_h.py) | [✅](./tests/4.1/test_41_h.py) |
-| I. [Простая задача 5.0](./problems/russian/4.1/problem_41_i_ru.md) | [✅](./solutions/4.1/41_i.py) | [✅](./tests/4.1/test_41_i.py) |
-| J. [Слияние](./problems/russian/4.1/problem_41_j_ru.md) | [✅](./solutions/4.1/41_j.py) | [✅](./tests/4.1/test_41_j.py) |
+| D. [Копейка рубль бережёт](./problems/russian/4.1/problem_41_d_ru.md) | [✅](./solutions/4.1/41_d.py) | [✅](./tests/4.1/test_41_d.py) |
+| E. [Виртуальный кликер](./problems/russian/4.1/problem_41_e_ru.md) | [✅](./solutions/4.1/41_e.py) | [✅](./tests/4.1/test_41_e.py) |
+| F. [Странная игра](./problems/russian/4.1/problem_41_f_ru.md) | [✅](./solutions/4.1/41_f.py) | [✅](./tests/4.1/test_41_f.py) |
+| G. [Максимальный максимум](./problems/russian/4.1/problem_41_g_ru.md) | [✅](./solutions/4.1/41_g.py) | [✅](./tests/4.1/test_41_g.py) |
+| H. [Числовое фрагментирование](./problems/russian/4.1/problem_41_h_ru.md) | [✅](./solutions/4.1/41_h.py) | [✅](./tests/4.1/test_41_h.py) |
+| I. [Имя of the month](./problems/russian/4.1/problem_41_i_ru.md) | [✅](./solutions/4.1/41_i.py) | [✅](./tests/4.1/test_41_i.py) |
+| J. [Числовая строка](./problems/russian/4.1/problem_41_j_ru.md) | [✅](./solutions/4.1/41_j.py) | [✅](./tests/4.1/test_41_j.py) |
+| K. [Поиск гор](./problems/russian/4.1/problem_41_k_ru.md) | [✅](./solutions/4.1/41_k.py) | [✅](./tests/4.1/test_41_k.py) |
+| L. [Поиск гор 2](./problems/russian/4.1/problem_41_l_ru.md) | [✅](./solutions/4.1/41_l.py) | [✅](./tests/4.1/test_41_l.py) |
+| M. [Модернизация системы вывода](./problems/russian/4.1/problem_41_m_ru.md) | [✅](./solutions/4.1/41_m.py) | [✅](./tests/4.1/test_41_m.py) |
+| N. [Шахматный «обед»](./problems/russian/4.1/problem_41_n_ru.md) | [✅](./solutions/4.1/41_n.py) | [✅](./tests/4.1/test_41_n.py) |
+| O. [Словарная строка](./problems/russian/4.1/problem_41_o_ru.md) | [✅](./solutions/4.1/41_o.py) | [✅](./tests/4.1/test_41_o.py) |
+| P. [А роза упала на лапу Азора 7.0](./problems/russian/4.1/problem_41_p_ru.md) | [✅](./solutions/4.1/41_p.py) | [✅](./tests/4.1/test_41_p.py) |
+| Q. [Простая задача 5.0](./problems/russian/4.1/problem_41_q_ru.md) | [✅](./solutions/4.1/41_q.py) | [✅](./tests/4.1/test_41_q.py) |
+| R. [Слияние](./problems/russian/4.1/problem_41_r_ru.md) | [✅](./solutions/4.1/41_r.py) | [✅](./tests/4.1/test_41_r.py) |
+| S. [Обмен содержимым](./problems/russian/4.1/problem_41_s_ru.md) | [✅](./solutions/4.1/41_s.py) | [✅](./tests/4.1/test_41_s.py) |
+| T. [Цезарю — Цезарево](./problems/russian/4.1/problem_41_t_ru.md) | [✅](./solutions/4.1/41_t.py) | [✅](./tests/4.1/test_41_t.py) |
 
 </details>
 

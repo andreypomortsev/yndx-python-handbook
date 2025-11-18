@@ -170,3 +170,6 @@ script.py
 
 # VSCode testing
 .vscode
+
+# Windsurf rules
+.windsurf

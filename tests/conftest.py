@@ -12,7 +12,8 @@ from _pytest.fixtures import SubRequest
 from _pytest.main import Session
 
 from . import utils
-from .constants import MEMORY_LIMIT, TEST_FUNCTION_NAMES, TIME_LIMIT
+from .constants import (FUNCTION_NOT_FOUND, MEMORY_LIMIT, TEST_FUNCTION_NAMES,
+                        TIME_LIMIT)
 
 # Добавить родительский каталог в системный путь
 # Это позволяет импортировать модули из родительского каталога
@@ -378,6 +379,21 @@ def decorated_function(
 
     # Получаем a из 41_a
     solution_letter = file_name[-1]
+
+    if isinstance(TEST_FUNCTION_NAMES[file_dir][solution_letter], list):
+        function_names = TEST_FUNCTION_NAMES[file_dir][solution_letter]
+        functions = []
+        for name in function_names:
+            func = getattr(solution, name, None)
+            if func is None:
+                raise AttributeError(FUNCTION_NOT_FOUND)
+
+            memory_decorated = utils.memory_limit(MEMORY_LIMIT)(func)
+            time_decorated = utils.time_limit(TIME_LIMIT)(memory_decorated)
+            functions.append(time_decorated)
+
+        return functions
+
     function_name = TEST_FUNCTION_NAMES[file_dir][solution_letter]
 
     # Импортируем модуль для тестов
@@ -385,7 +401,7 @@ def decorated_function(
     func = getattr(solution, function_name, None)
 
     if func is None:
-        raise AttributeError(f"Функция {function_name} не найдена в модуле")
+        raise AttributeError(FUNCTION_NOT_FOUND)
 
     decorated_func = utils.memory_limit(MEMORY_LIMIT)(func)
     decorated_func = utils.time_limit(TIME_LIMIT)(decorated_func)

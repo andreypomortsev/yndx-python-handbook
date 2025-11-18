@@ -1,4 +1,4 @@
-from typing import Any, Callable
+from typing import Callable, List
 
 import pytest
 
@@ -10,10 +10,10 @@ from tests.data.test_data_41 import h_test_data
     h_test_data,
     ids=[i[-1] for i in h_test_data],
 )
-def test_is_palindrome(
+def test_fragments(
     decorated_function: Callable,
-    args: Any,
-    expected_output: bool,
+    args: List[int],
+    expected_output: List[List[int]],
     _: str,
 ) -> None:
     returned_output = decorated_function(args)
