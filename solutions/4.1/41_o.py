@@ -3,12 +3,11 @@ def get_dict(text: str) -> dict:
 
     for token in text.split(";"):
         key, value = token.split("=")
-
-        if value.lstrip("-").isdigit():
+        stripped_value = value.lstrip("-")
+        if stripped_value.isdigit():
             value = int(value)
         elif (
-            value.count(".") == 1
-            and value.lstrip("-").replace(".", "").isdigit()
+            value.count(".") == 1 and stripped_value.replace(".", "").isdigit()
         ):
             value = float(value)
 

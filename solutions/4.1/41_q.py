@@ -1,6 +1,8 @@
 def is_prime(n: int) -> bool:
     """
     Checks if the given number is prime.
+    Approach: check for division on 2 and 3,
+        then check for division on 6k ± 1.
 
     Arguments:
         n (int): Number to check for primality.
