@@ -10,7 +10,7 @@ from tests.data.test_data_41 import s_test_data
     s_test_data,
     ids=[i[-1] for i in s_test_data],
 )
-def test_swap_open_test(
+def test_swap(
     decorated_function: Callable, args: Tuple[List, List], _: str
 ) -> None:
     a = b = args[0].copy()
